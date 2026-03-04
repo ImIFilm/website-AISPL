@@ -108,7 +108,7 @@ export function InitiativesPage() {
               initial={{ opacity: 0, y: 15 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.1 }}
-              className="mt-3 text-3xl font-bold text-foreground md:text-4xl lg:text-5xl font-serif text-balance"
+              className="mt-3 text-3xl font-bold text-foreground md:text-4xl lg:text-5xl text-balance"
             >
               Nasze inicjatywy
             </motion.h1>
@@ -144,7 +144,7 @@ export function InitiativesPage() {
                       <initiative.icon className="h-6 w-6" />
                     </div>
                     <div className="flex-1">
-                      <h2 className="text-xl font-bold text-foreground md:text-2xl font-serif">
+                      <h2 className="text-xl font-bold text-foreground md:text-2xl">
                         {initiative.title}
                       </h2>
                       <p className="mt-3 leading-relaxed text-muted-foreground">

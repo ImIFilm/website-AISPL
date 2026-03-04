@@ -32,7 +32,6 @@
 
 @theme inline {
   --font-sans: 'Outfit', 'Outfit Fallback', sans-serif;
-  --font-serif: 'Bona Nova', 'Bona Nova Fallback', serif;
   --font-mono: 'Geist Mono', 'Geist Mono Fallback';
   --color-background: var(--background);
   --color-foreground: var(--foreground);

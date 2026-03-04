@@ -57,7 +57,7 @@ export function FaqSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-50px" }}
           transition={{ duration: 0.5 }}
-          className="text-center text-2xl font-bold text-foreground md:text-3xl font-serif"
+          className="text-center text-2xl font-bold text-foreground md:text-3xl"
         >
           {"Często zadawane pytania"}
         </motion.h2>

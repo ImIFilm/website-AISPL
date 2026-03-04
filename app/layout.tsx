@@ -1,10 +1,9 @@
 import type { Metadata, Viewport } from 'next'
-import { Outfit, Bona_Nova } from 'next/font/google'
+import { Outfit } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
 import './globals.css'
 
 const outfit = Outfit({ subsets: ['latin', 'latin-ext'], variable: '--font-outfit' })
-const bonaNova = Bona_Nova({ subsets: ['latin', 'latin-ext'], weight: ['400', '700'], variable: '--font-bona-nova' })
 
 export const metadata: Metadata = {
   title: 'AI Safety Polska - Budujemy bezpieczną przyszłość AI',
@@ -27,7 +26,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pl">
-      <body className={`${outfit.variable} ${bonaNova.variable} font-sans antialiased`}>
+      <body className={`${outfit.variable} font-sans antialiased`}>
         {children}
         <Analytics />
       </body>

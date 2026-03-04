@@ -59,7 +59,7 @@ export function AboutSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-50px" }}
           transition={{ duration: 0.5, delay: 0.1 }}
-          className="mt-4 text-2xl font-bold text-primary-foreground md:text-3xl lg:text-4xl text-balance leading-relaxed font-serif"
+          className="mt-4 text-2xl font-bold text-primary-foreground md:text-3xl lg:text-4xl text-balance leading-relaxed"
         >
           {"AI Safety Polska to społeczność naukowców, działaczy i pasjonatów skupiona na bezpieczeństwie AI."}
         </motion.h2>

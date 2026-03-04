@@ -19,7 +19,7 @@ export function ContactFooter() {
             className="relative overflow-hidden rounded-2xl bg-card p-8 shadow-xl md:flex md:items-center md:justify-between md:p-10"
           >
             <div>
-              <h3 className="text-xl font-bold text-card-foreground md:text-2xl font-serif">
+              <h3 className="text-xl font-bold text-card-foreground md:text-2xl">
                 Masz pytanie?
               </h3>
               <a

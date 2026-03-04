@@ -124,7 +124,7 @@ export function TeamPage() {
               initial={{ opacity: 0, y: 15 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.1 }}
-              className="mt-3 text-3xl font-bold text-foreground md:text-4xl lg:text-5xl font-serif text-balance"
+              className="mt-3 text-3xl font-bold text-foreground md:text-4xl lg:text-5xl text-balance"
             >
               Ludzie stojacy za AI Safety Polska
             </motion.h1>

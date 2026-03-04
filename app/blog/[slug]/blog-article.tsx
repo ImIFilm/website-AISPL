@@ -36,7 +36,7 @@ export function BlogArticle({ article }: { article: ArticleData }) {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
             >
-              <h1 className="text-3xl font-bold text-foreground md:text-4xl lg:text-5xl font-serif text-balance leading-tight">
+              <h1 className="text-3xl font-bold text-foreground md:text-4xl lg:text-5xl text-balance leading-tight">
                 {article.title}
               </h1>
 
@@ -78,7 +78,7 @@ export function BlogArticle({ article }: { article: ArticleData }) {
                   viewport={{ once: true, margin: "-60px" }}
                   transition={{ duration: 0.5, delay: i * 0.05 }}
                 >
-                  <h2 className="text-xl font-bold text-foreground md:text-2xl font-serif">
+                  <h2 className="text-xl font-bold text-foreground md:text-2xl">
                     {section.heading}
                   </h2>
                   <p className="mt-3 leading-relaxed text-muted-foreground md:text-base">
@@ -99,7 +99,7 @@ export function BlogArticle({ article }: { article: ArticleData }) {
               <p className="text-xs font-semibold uppercase tracking-[0.2em] text-emerald">
                 Dolacz do dyskusji
               </p>
-              <h3 className="mt-3 text-lg font-bold text-primary-foreground md:text-xl font-serif text-balance">
+              <h3 className="mt-3 text-lg font-bold text-primary-foreground md:text-xl text-balance">
                 {"Chcesz porozmawiac o tym artykule? Dolacz do naszej spolecznosci na Slacku."}
               </h3>
               <a
