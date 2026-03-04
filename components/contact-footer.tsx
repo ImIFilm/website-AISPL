@@ -1,13 +1,14 @@
 "use client"
 
 import Image from "next/image"
+import Link from "next/link"
 import { motion } from "framer-motion"
-import { ArrowRight, Mail, Send } from "lucide-react"
+import { ArrowRight } from "lucide-react"
 
 export function ContactFooter() {
   return (
     <section id="kontakt" className="relative">
-      {/* Overlapping card area — sits between light bg and dark footer */}
+      {/* Overlapping card area -- sits between light bg and dark footer */}
       <div className="relative z-10 -mb-20 bg-secondary pb-0">
         <div className="mx-auto max-w-3xl px-6">
           <motion.div
@@ -18,26 +19,27 @@ export function ContactFooter() {
             className="relative overflow-hidden rounded-2xl bg-card p-8 shadow-xl md:flex md:items-center md:justify-between md:p-10"
           >
             <div>
-              <h3 className="text-xl font-bold text-card-foreground md:text-2xl">
+              <h3 className="text-xl font-bold text-card-foreground md:text-2xl font-serif">
                 Masz pytanie?
               </h3>
               <a
-                href="#"
+                href="mailto:kontakt@aisafety.pl"
                 className="mt-4 inline-flex items-center gap-2 rounded-lg bg-navy px-5 py-2.5 text-sm font-medium text-primary-foreground transition-colors hover:bg-navy-light"
               >
                 Napisz do nas
                 <ArrowRight className="h-4 w-4" />
               </a>
             </div>
-            {/* 3D envelope placeholder */}
+            {/* 3D hand/envelope illustration */}
             <div className="mt-6 flex items-center justify-center md:mt-0">
-              <div className="relative flex h-24 w-32 items-center justify-center md:h-28 md:w-36">
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="relative">
-                    <Mail className="h-16 w-16 text-emerald/30" strokeWidth={1} />
-                    <Send className="absolute -top-2 -right-3 h-8 w-8 text-emerald/60 rotate-[-10deg]" strokeWidth={1.5} />
-                  </div>
-                </div>
+              <div className="relative h-28 w-36 md:h-32 md:w-40">
+                <Image
+                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/contact-Jlff4fq5DlgNpBB6tmQQ9yGe833CpO.png"
+                  alt="Robotyczna reka trzymajaca koperte"
+                  fill
+                  className="object-contain"
+                  sizes="160px"
+                />
               </div>
             </div>
           </motion.div>
@@ -48,7 +50,7 @@ export function ContactFooter() {
       <footer className="bg-navy pt-32 pb-10">
         <div className="mx-auto max-w-6xl px-6">
           <div className="flex flex-col items-center justify-between gap-6 md:flex-row">
-            <div className="flex items-center gap-3">
+            <Link href="/" className="flex items-center gap-3">
               <Image
                 src="/images/logo-aispl.svg"
                 alt="AI Safety Polska logo"
@@ -57,35 +59,35 @@ export function ContactFooter() {
                 className="h-8 w-auto brightness-0 invert"
               />
               <span className="text-sm font-semibold text-primary-foreground">AI Safety Polska</span>
-            </div>
+            </Link>
             <nav aria-label="Stopka">
               <ul className="flex flex-wrap items-center justify-center gap-6">
                 <li>
-                  <a href="#kim-jestesmy" className="text-xs text-primary-foreground/50 transition-colors hover:text-primary-foreground">
-                    Kim jesteśmy
-                  </a>
+                  <Link href="/#kim-jestesmy" className="text-xs text-primary-foreground/50 transition-colors hover:text-primary-foreground">
+                    Kim jestesmy
+                  </Link>
                 </li>
                 <li>
-                  <a href="#co-robimy" className="text-xs text-primary-foreground/50 transition-colors hover:text-primary-foreground">
+                  <Link href="/#co-robimy" className="text-xs text-primary-foreground/50 transition-colors hover:text-primary-foreground">
                     Co robimy
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="#zaangazuj-sie" className="text-xs text-primary-foreground/50 transition-colors hover:text-primary-foreground">
-                    {"Zaangażuj się"}
-                  </a>
+                  <Link href="/#zaangazuj-sie" className="text-xs text-primary-foreground/50 transition-colors hover:text-primary-foreground">
+                    {"Zaangazuj sie"}
+                  </Link>
                 </li>
                 <li>
-                  <a href="#kontakt" className="text-xs text-primary-foreground/50 transition-colors hover:text-primary-foreground">
+                  <Link href="/#kontakt" className="text-xs text-primary-foreground/50 transition-colors hover:text-primary-foreground">
                     Kontakt
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </nav>
           </div>
           <div className="mt-8 border-t border-primary-foreground/10 pt-6 text-center">
             <p className="text-xs text-primary-foreground/30">
-              {"© 2026 AI Safety Polska. Wszelkie prawa zastrzeżone."}
+              {"© 2025 AI Safety Polska. Wszelkie prawa zastrzezone."}
             </p>
           </div>
         </div>

@@ -1,5 +1,6 @@
 "use client"
 
+import Link from "next/link"
 import { motion } from "framer-motion"
 import { Monitor, Users, GraduationCap, Briefcase, Hash } from "lucide-react"
 
@@ -15,7 +16,7 @@ const initiatives = [
     className: "md:col-span-1 md:row-span-1",
   },
   {
-    title: "Współpraca z uczelniami",
+    title: "Wspolpraca z uczelniami",
     icon: GraduationCap,
     className: "md:col-span-1 md:row-span-1",
   },
@@ -44,12 +45,12 @@ export function InitiativesSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-50px" }}
           transition={{ duration: 0.5, delay: 0.1 }}
-          className="mt-3 text-center text-2xl font-bold text-foreground md:text-3xl lg:text-4xl"
+          className="mt-3 text-center text-2xl font-bold text-foreground md:text-3xl lg:text-4xl font-serif"
         >
           Nasze inicjatywy
         </motion.h2>
 
-        {/* Bento Grid: 3 columns on desktop — 2 on left (2x2), 1 tall on right */}
+        {/* Bento Grid: 3 columns on desktop -- 2 on left (2x2), 1 tall on right */}
         <div className="mt-12 grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3">
           {/* Left 4 cards (2x2) */}
           {initiatives.map((item, i) => (
@@ -73,7 +74,7 @@ export function InitiativesSection() {
             </motion.div>
           ))}
 
-          {/* Slack card — spans 2 rows on desktop, sits in 3rd column */}
+          {/* Slack card -- spans 2 rows on desktop, sits in 3rd column */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -83,10 +84,25 @@ export function InitiativesSection() {
             style={{ minHeight: "180px" }}
           >
             <Hash className="mb-4 h-14 w-14 text-accent-foreground/80" />
-            <h3 className="text-lg font-bold text-accent-foreground">{"Społeczność online - Slack"}</h3>
-            <p className="mt-2 text-sm text-accent-foreground/70">{"Dołącz do naszej społeczności"}</p>
+            <h3 className="text-lg font-bold text-accent-foreground">{"Spolecznosc online - Slack"}</h3>
+            <p className="mt-2 text-sm text-accent-foreground/70">{"Dolacz do naszej spolecznosci"}</p>
           </motion.div>
         </div>
+
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 0.5 }}
+          className="mt-8 text-center"
+        >
+          <Link
+            href="/inicjatywy"
+            className="inline-flex items-center gap-1 text-sm font-medium text-emerald transition-colors hover:text-emerald-dark"
+          >
+            {"Dowiedz sie wiecej o naszych inicjatywach \u2192"}
+          </Link>
+        </motion.div>
       </div>
     </section>
   )

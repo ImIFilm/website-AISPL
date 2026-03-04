@@ -1,6 +1,7 @@
 "use client"
 
 import Image from "next/image"
+import Link from "next/link"
 import { motion } from "framer-motion"
 
 const coordinators = [
@@ -58,7 +59,7 @@ export function AboutSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-50px" }}
           transition={{ duration: 0.5, delay: 0.1 }}
-          className="mt-4 text-2xl font-bold text-primary-foreground md:text-3xl lg:text-4xl text-balance leading-relaxed"
+          className="mt-4 text-2xl font-bold text-primary-foreground md:text-3xl lg:text-4xl text-balance leading-relaxed font-serif"
         >
           {"AI Safety Polska to społeczność naukowców, działaczy i pasjonatów skupiona na bezpieczeństwie AI."}
         </motion.h2>
@@ -110,16 +111,19 @@ export function AboutSection() {
           ))}
         </motion.div>
 
-        <motion.a
-          href="#"
+        <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.6 }}
-          className="mt-8 inline-block text-sm text-primary-foreground/60 underline underline-offset-4 transition-colors hover:text-emerald"
         >
-          {"poznaj cały zespół →"}
-        </motion.a>
+          <Link
+            href="/zespol"
+            className="mt-8 inline-block text-sm text-primary-foreground/60 underline underline-offset-4 transition-colors hover:text-emerald"
+          >
+            {"poznaj caly zespol \u2192"}
+          </Link>
+        </motion.div>
       </div>
     </section>
   )

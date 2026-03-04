@@ -1,18 +1,19 @@
 "use client"
 
+import Link from "next/link"
 import { motion } from "framer-motion"
 import { ArrowRight } from "lucide-react"
 
 const articles = [
   {
     author: "Kelsey Piper",
-    title: "Argumenty za poważnym traktowaniem AI jako zagrożenia dla ludzkości",
-    href: "#",
+    title: "Argumenty za powaznym traktowaniem AI jako zagrozenia dla ludzkosci",
+    href: "/blog/argumenty-za-powaznym-traktowaniem-ai",
   },
   {
-    author: "Jakub Kryś",
-    title: "Wkład Polaków w rozwój bezpieczeństwa AI",
-    href: "#",
+    author: "Jakub Krys",
+    title: "Wklad Polakow w rozwoj bezpieczenstwa AI",
+    href: "/blog/wklad-polakow-w-rozwoj-bezpieczenstwa-ai",
   },
 ]
 
@@ -52,13 +53,13 @@ export function ArticlesSection() {
               <div className="flex flex-col justify-center">
                 <p className="text-xs font-medium text-muted-foreground">{article.author}</p>
                 <h3 className="mt-1 text-sm font-semibold leading-snug text-foreground">{article.title}</h3>
-                <a
+                <Link
                   href={article.href}
                   className="mt-2 inline-flex items-center gap-1 text-xs font-medium text-emerald transition-colors hover:text-emerald-dark"
                 >
-                  {"czytaj więcej"}
+                  {"czytaj wiecej"}
                   <ArrowRight className="h-3 w-3" />
-                </a>
+                </Link>
               </div>
             </motion.article>
           ))}
