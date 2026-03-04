@@ -5,7 +5,7 @@ import { motion } from "framer-motion"
 
 export function HeroSection() {
   return (
-    <section className="relative overflow-hidden bg-background pt-28 pb-32 md:pt-36 md:pb-48">
+    <section className="relative overflow-visible bg-background pt-28 pb-32 md:pt-36 md:pb-48" style={{ clipPath: 'polygon(0 0, 100% 0, 100% 85%, 50% 100%, 0 85%)' }}>
       <div className="mx-auto max-w-4xl px-6 text-center">
         <motion.h1
           initial={{ opacity: 0, y: 20 }}
@@ -43,20 +43,7 @@ export function HeroSection() {
         </motion.div>
       </div>
 
-      {/* Diagonal shape divider - white to navy transition */}
-      <div className="absolute bottom-0 left-0 right-0">
-        <svg
-          viewBox="0 0 1440 120"
-          preserveAspectRatio="none"
-          className="block h-16 w-full md:h-24 lg:h-28"
-          aria-hidden="true"
-        >
-          <polygon
-            points="0,120 1440,0 1440,120"
-            fill="#0B132B"
-          />
-        </svg>
-      </div>
+
     </section>
   )
 }
