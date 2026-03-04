@@ -43,7 +43,7 @@ const itemVariants = {
 
 export function AboutSection() {
   return (
-    <section id="kim-jestesmy" className="bg-navy py-20 md:py-28">
+    <section id="kim-jestesmy" className="bg-navy py-20 md:py-28 -mt-1">
       <div className="mx-auto max-w-4xl px-6 text-center">
         <motion.p
           initial={{ opacity: 0, y: 15 }}
