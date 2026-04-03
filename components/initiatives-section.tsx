@@ -49,7 +49,8 @@ export function InitiativesSection() {
               const isWebinary = item.title === "Webinary"
               const isUniversity = item.title === "Wspolpraca z uczelniami"
               const isMeetups = item.title === "Lokalne spotkania"
-              const hasImage = isWebinary || isUniversity || isMeetups
+              const isCareer = item.title === "Doradztwo zawodowe"
+              const hasImage = isWebinary || isUniversity || isMeetups || isCareer
               
               return (
                 <motion.div
@@ -78,7 +79,13 @@ export function InitiativesSection() {
                               backgroundSize: 'cover',
                               backgroundPosition: 'center',
                             }
-                          : { backgroundColor: 'rgb(203, 213, 225)' }
+                          : isCareer
+                            ? {
+                                backgroundImage: 'url(https://hebbkx1anhila5yf.public.blob.vercel-storage.com/zawodowe-1-pKXBXijfCOV6DLM6my88ATPuhOgN1M.jpg)',
+                                backgroundSize: 'cover',
+                                backgroundPosition: 'center',
+                              }
+                            : { backgroundColor: 'rgb(203, 213, 225)' }
                   }
                 >
                   {/* Placeholder background for cards without images */}
