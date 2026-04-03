@@ -95,11 +95,22 @@ export function InitiativesSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-50px" }}
             transition={{ duration: 0.5, delay: 0.4 }}
-            className="md:col-span-1 h-full flex flex-col items-center justify-center overflow-hidden rounded-2xl bg-emerald-500 p-8 text-center min-h-64 md:min-h-auto"
+            className="md:col-span-1 h-full flex flex-col items-center justify-center overflow-hidden rounded-2xl p-8 text-center min-h-64 md:min-h-auto relative"
+            style={{
+              backgroundImage: 'url(https://hebbkx1anhila5yf.public.blob.vercel-storage.com/slackbackground-2-X835RXYROPNIk8CZ5iTIktkvkdADwu.jpg)',
+              backgroundSize: 'cover',
+              backgroundPosition: 'center',
+            }}
           >
-            <Hash className="mb-4 h-14 w-14 text-white/80" />
-            <h3 className="text-lg font-bold text-white">{"Spolecznosc online - Slack"}</h3>
-            <p className="mt-2 text-sm text-white/70">{"Dolacz do naszej spolecznosci"}</p>
+            {/* Dark overlay for text readability */}
+            <div className="absolute inset-0 bg-gradient-to-b from-emerald-600/40 to-emerald-900/60" />
+            
+            {/* Content */}
+            <div className="relative z-10">
+              <Hash className="mb-4 h-14 w-14 text-white/90 mx-auto" />
+              <h3 className="text-lg font-bold text-white">{"Spolecznosc online - Slack"}</h3>
+              <p className="mt-2 text-sm text-white/80">{"Dolacz do naszej spolecznosci"}</p>
+            </div>
           </motion.div>
         </div>
       </div>
