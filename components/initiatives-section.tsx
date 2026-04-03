@@ -46,9 +46,10 @@ export function InitiativesSection() {
           {/* Left nested grid: 2x2 for 4 smaller cards */}
           <div className="md:col-span-2 grid grid-cols-1 sm:grid-cols-2 gap-6">
             {initiatives.map((item, i) => {
+              const isWebinary = item.title === "Webinary"
               const isUniversity = item.title === "Wspolpraca z uczelniami"
               const isMeetups = item.title === "Lokalne spotkania"
-              const hasImage = isUniversity || isMeetups
+              const hasImage = isWebinary || isUniversity || isMeetups
               
               return (
                 <motion.div
@@ -59,19 +60,25 @@ export function InitiativesSection() {
                   transition={{ duration: 0.5, delay: i * 0.1 }}
                   className="relative flex flex-col justify-end overflow-hidden rounded-2xl h-64"
                   style={
-                    isUniversity
+                    isWebinary
                       ? {
-                          backgroundImage: 'url(https://hebbkx1anhila5yf.public.blob.vercel-storage.com/uczelnie-JLiAEQwGwGiAg7aKVb3E9UpKEcvlAo.jpg)',
+                          backgroundImage: 'url(https://hebbkx1anhila5yf.public.blob.vercel-storage.com/webinar-2-6q8RsoSXYeORlygXTAhBxJLU8zRSBl.jpg)',
                           backgroundSize: 'cover',
                           backgroundPosition: 'center',
                         }
-                      : isMeetups
+                      : isUniversity
                         ? {
-                            backgroundImage: 'url(https://hebbkx1anhila5yf.public.blob.vercel-storage.com/meetupy-rUNtmS0fvG2vcG390Ot52WLfHKVVms.jpg)',
+                            backgroundImage: 'url(https://hebbkx1anhila5yf.public.blob.vercel-storage.com/uczelnie-JLiAEQwGwGiAg7aKVb3E9UpKEcvlAo.jpg)',
                             backgroundSize: 'cover',
                             backgroundPosition: 'center',
                           }
-                        : { backgroundColor: 'rgb(203, 213, 225)' }
+                        : isMeetups
+                          ? {
+                              backgroundImage: 'url(https://hebbkx1anhila5yf.public.blob.vercel-storage.com/meetupy-rUNtmS0fvG2vcG390Ot52WLfHKVVms.jpg)',
+                              backgroundSize: 'cover',
+                              backgroundPosition: 'center',
+                            }
+                          : { backgroundColor: 'rgb(203, 213, 225)' }
                   }
                 >
                   {/* Placeholder background for cards without images */}
