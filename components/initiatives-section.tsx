@@ -1,20 +1,25 @@
 "use client"
 
+import Link from "next/link"
 import { motion } from "framer-motion"
 import { Hash } from "lucide-react"
 
 const initiatives = [
   {
     title: "Webinary",
+    href: "/inicjatywy#webinary",
   },
   {
     title: "Lokalne spotkania",
+    href: "/inicjatywy#lokalne-spotkania",
   },
   {
     title: "Wspolpraca z uczelniami",
+    href: "/inicjatywy#wspolpraca-z-uczelniami",
   },
   {
     title: "Doradztwo zawodowe",
+    href: "/inicjatywy#doradztwo-zawodowe",
   },
 ]
 
@@ -59,45 +64,49 @@ export function InitiativesSection() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, margin: "-50px" }}
                   transition={{ duration: 0.5, delay: i * 0.1 }}
-                  className="relative flex flex-col justify-end overflow-hidden rounded-2xl h-64"
-                  style={
-                    isWebinary
-                      ? {
-                          backgroundImage: 'url(https://hebbkx1anhila5yf.public.blob.vercel-storage.com/webinar-2-6q8RsoSXYeORlygXTAhBxJLU8zRSBl.jpg)',
-                          backgroundSize: 'cover',
-                          backgroundPosition: 'center',
-                        }
-                      : isUniversity
+                >
+                  <Link
+                    href={item.href}
+                    className="group relative flex flex-col justify-end overflow-hidden rounded-2xl h-64 block transition-transform hover:scale-[1.02]"
+                    style={
+                      isWebinary
                         ? {
-                            backgroundImage: 'url(https://hebbkx1anhila5yf.public.blob.vercel-storage.com/uczelnie-JLiAEQwGwGiAg7aKVb3E9UpKEcvlAo.jpg)',
+                            backgroundImage: 'url(https://hebbkx1anhila5yf.public.blob.vercel-storage.com/webinar-2-6q8RsoSXYeORlygXTAhBxJLU8zRSBl.jpg)',
                             backgroundSize: 'cover',
                             backgroundPosition: 'center',
                           }
-                        : isMeetups
+                        : isUniversity
                           ? {
-                              backgroundImage: 'url(https://hebbkx1anhila5yf.public.blob.vercel-storage.com/meetupy-rUNtmS0fvG2vcG390Ot52WLfHKVVms.jpg)',
+                              backgroundImage: 'url(https://hebbkx1anhila5yf.public.blob.vercel-storage.com/uczelnie-JLiAEQwGwGiAg7aKVb3E9UpKEcvlAo.jpg)',
                               backgroundSize: 'cover',
                               backgroundPosition: 'center',
                             }
-                          : isCareer
+                          : isMeetups
                             ? {
-                                backgroundImage: 'url(https://hebbkx1anhila5yf.public.blob.vercel-storage.com/zawodowe-1-pKXBXijfCOV6DLM6my88ATPuhOgN1M.jpg)',
+                                backgroundImage: 'url(https://hebbkx1anhila5yf.public.blob.vercel-storage.com/meetupy-rUNtmS0fvG2vcG390Ot52WLfHKVVms.jpg)',
                                 backgroundSize: 'cover',
                                 backgroundPosition: 'center',
                               }
-                            : { backgroundColor: 'rgb(203, 213, 225)' }
-                  }
-                >
-                  {/* Placeholder background for cards without images */}
-                  {!hasImage && <div className="absolute inset-0 bg-slate-300" />}
-                  
-                  {/* Dark gradient overlay from bottom */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-slate-900 to-transparent" />
-                  
-                  {/* Text content */}
-                  <div className="relative z-10 p-6">
-                    <h3 className="text-base font-semibold text-white">{item.title}</h3>
-                  </div>
+                            : isCareer
+                              ? {
+                                  backgroundImage: 'url(https://hebbkx1anhila5yf.public.blob.vercel-storage.com/zawodowe-1-pKXBXijfCOV6DLM6my88ATPuhOgN1M.jpg)',
+                                  backgroundSize: 'cover',
+                                  backgroundPosition: 'center',
+                                }
+                              : { backgroundColor: 'rgb(203, 213, 225)' }
+                    }
+                  >
+                    {/* Placeholder background for cards without images */}
+                    {!hasImage && <div className="absolute inset-0 bg-slate-300" />}
+                    
+                    {/* Dark gradient overlay from bottom */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-slate-900 to-transparent" />
+                    
+                    {/* Text content */}
+                    <div className="relative z-10 p-6">
+                      <h3 className="text-base font-semibold text-white">{item.title}</h3>
+                    </div>
+                  </Link>
                 </motion.div>
               )
             })}
@@ -109,22 +118,27 @@ export function InitiativesSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-50px" }}
             transition={{ duration: 0.5, delay: 0.4 }}
-            className="md:col-span-1 h-full flex flex-col items-center justify-center overflow-hidden rounded-2xl p-8 text-center min-h-64 md:min-h-auto relative"
-            style={{
-              backgroundImage: 'url(https://hebbkx1anhila5yf.public.blob.vercel-storage.com/slackbackground-2-X835RXYROPNIk8CZ5iTIktkvkdADwu.jpg)',
-              backgroundSize: 'cover',
-              backgroundPosition: 'center',
-            }}
+            className="md:col-span-1 h-full"
           >
-            {/* Dark overlay for text readability */}
-            <div className="absolute inset-0 bg-gradient-to-b from-emerald-600/40 to-emerald-900/60" />
-            
-            {/* Content */}
-            <div className="relative z-10">
-              <Hash className="mb-4 h-14 w-14 text-white/90 mx-auto" />
-              <h3 className="text-lg font-bold text-white">{"Spolecznosc online - Slack"}</h3>
-              <p className="mt-2 text-sm text-white/80">{"Dolacz do naszej spolecznosci"}</p>
-            </div>
+            <Link
+              href="/inicjatywy#slack"
+              className="h-full flex flex-col items-center justify-center overflow-hidden rounded-2xl p-8 text-center min-h-64 md:min-h-full relative block transition-transform hover:scale-[1.02]"
+              style={{
+                backgroundImage: 'url(https://hebbkx1anhila5yf.public.blob.vercel-storage.com/slackbackground-2-X835RXYROPNIk8CZ5iTIktkvkdADwu.jpg)',
+                backgroundSize: 'cover',
+                backgroundPosition: 'center',
+              }}
+            >
+              {/* Dark overlay for text readability */}
+              <div className="absolute inset-0 bg-gradient-to-b from-emerald-600/40 to-emerald-900/60" />
+              
+              {/* Content */}
+              <div className="relative z-10">
+                <Hash className="mb-4 h-14 w-14 text-white/90 mx-auto" />
+                <h3 className="text-lg font-bold text-white">{"Spolecznosc online - Slack"}</h3>
+                <p className="mt-2 text-sm text-white/80">{"Dolacz do naszej spolecznosci"}</p>
+              </div>
+            </Link>
           </motion.div>
         </div>
       </div>

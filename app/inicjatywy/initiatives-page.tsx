@@ -2,84 +2,10 @@
 
 import Link from "next/link"
 import { motion } from "framer-motion"
-import {
-  ArrowLeft,
-  Monitor,
-  Users,
-  GraduationCap,
-  Briefcase,
-  Hash,
-} from "lucide-react"
+import { ArrowLeft, ExternalLink } from "lucide-react"
 import { Navbar } from "@/components/navbar"
 import { ContactFooter } from "@/components/contact-footer"
-
-const initiatives = [
-  {
-    id: "webinary",
-    title: "Webinary",
-    icon: Monitor,
-    color: "bg-emerald/10 text-emerald",
-    description:
-      "Organizujemy regularne webinary z ekspertami z dziedziny AI Safety, uczenia maszynowego i etyki technologii. Nasze wydarzenia online sa dostepne dla kazdego, kto chce poszerzyc wiedze na temat bezpieczenstwa sztucznej inteligencji. Zapraszamy zarowno poczatkujacych, jak i zaawansowanych uczestnikow.",
-    highlights: [
-      "Regularne sesje z ekspertami z calego swiata",
-      "Nagrania dostepne na naszym kanale",
-      "Interaktywne sesje Q&A po kazdym wystapeniu",
-    ],
-  },
-  {
-    id: "lokalne-spotkania",
-    title: "Lokalne spotkania",
-    icon: Users,
-    color: "bg-emerald/10 text-emerald",
-    description:
-      "Budujemy lokalne spolecznosci w glownych miastach Polski. Nasze spotkania to okazja do networkingu, wymiany pomyslow i wspolnej pracy nad projektami zwiazanymi z bezpieczenstwem AI. Dzialamy juz w Warszawie, Krakowie i Wroclawiu.",
-    highlights: [
-      "Spotkania w Warszawie, Krakowie i Wroclawiu",
-      "Warsztaty i dyskusje grupowe",
-      "Mozliwosc prezentacji wlasnych badan",
-    ],
-  },
-  {
-    id: "wspolpraca-z-uczelniami",
-    title: "Wspolpraca z uczelniami",
-    icon: GraduationCap,
-    color: "bg-emerald/10 text-emerald",
-    description:
-      "Nawiazujemy wspolprace z polskimi uczelniami wyzszymi, aby wlaczyc tematyke AI Safety do programow nauczania. Wspieramy studentow i doktorantow zainteresowanych prowadzeniem badan w dziedzinie bezpieczenstwa sztucznej inteligencji.",
-    highlights: [
-      "Wspieranie prac badawczych na polskich uczelniach",
-      "Wyklady gosciane i warsztaty akademickie",
-      "Program mentoringu dla studentow",
-    ],
-  },
-  {
-    id: "doradztwo-zawodowe",
-    title: "Doradztwo zawodowe",
-    icon: Briefcase,
-    color: "bg-emerald/10 text-emerald",
-    description:
-      "Pomagamy osobom zainteresowanym kariera w AI Safety znalezc odpowiednia sciezke rozwoju. Oferujemy indywidualne konsultacje, przeglad CV oraz polaczenia z organizacjami poszukujacymi talentow w dziedzinie bezpieczenstwa AI.",
-    highlights: [
-      "Indywidualne sesje doradcze",
-      "Przeglad CV i przygotowanie do rozmow",
-      "Baza ofert pracy w AI Safety",
-    ],
-  },
-  {
-    id: "slack",
-    title: "Spolecznosc online - Slack",
-    icon: Hash,
-    color: "bg-emerald text-accent-foreground",
-    description:
-      "Nasza spolecznosc na Slacku to serce AI Safety Polska. Tu dzielimy sie artykuami, prowadzimy dyskusje, organizujemy grupy badawcze i pomagamy sobie nawzajem w rozwoju. Dolacz do nas, aby byc na biezaco z najwazniejszymi wydarzeniami w swiecie AI Safety.",
-    highlights: [
-      "Ponad 500 aktywnych czlonkow",
-      "Dedykowane kanaly tematyczne",
-      "Codzienne aktualizacje i artykuly",
-    ],
-  },
-]
+import { Button } from "@/components/ui/button"
 
 export function InitiativesPage() {
   return (
@@ -118,53 +44,206 @@ export function InitiativesPage() {
               transition={{ duration: 0.5, delay: 0.2 }}
               className="mt-4 max-w-2xl text-base leading-relaxed text-muted-foreground md:text-lg"
             >
-              {"Dziaalmy na wielu frontach, zeby budowac swiadomosc i kompetencje w zakresie bezpieczenstwa sztucznej inteligencji w Polsce."}
+              {"Dzialamy na wielu frontach, zeby budowac swiadomosc i kompetencje w zakresie bezpieczenstwa sztucznej inteligencji w Polsce."}
             </motion.p>
           </div>
         </section>
 
-        {/* Initiatives list */}
+        {/* Initiatives content */}
         <section className="bg-secondary py-16 md:py-24">
           <div className="mx-auto max-w-4xl px-6">
-            <div className="flex flex-col gap-12 md:gap-16">
-              {initiatives.map((initiative, i) => (
-                <motion.article
-                  key={initiative.id}
-                  id={initiative.id}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true, margin: "-80px" }}
-                  transition={{ duration: 0.6, delay: i * 0.05 }}
-                  className="rounded-2xl bg-card p-8 shadow-sm md:p-10"
-                >
-                  <div className="flex items-start gap-4">
-                    <div
-                      className={`flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-xl ${initiative.color}`}
-                    >
-                      <initiative.icon className="h-6 w-6" />
-                    </div>
-                    <div className="flex-1">
-                      <h2 className="text-xl font-bold text-foreground md:text-2xl">
-                        {initiative.title}
-                      </h2>
-                      <p className="mt-3 leading-relaxed text-muted-foreground">
-                        {initiative.description}
-                      </p>
-                      <ul className="mt-5 flex flex-col gap-2">
-                        {initiative.highlights.map((highlight) => (
-                          <li
-                            key={highlight}
-                            className="flex items-start gap-2 text-sm text-foreground"
-                          >
-                            <span className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-emerald" />
-                            {highlight}
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
+            <div className="flex flex-col gap-16 md:gap-24">
+              
+              {/* Webinary i lokalne spotkania */}
+              <motion.article
+                id="webinary"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-80px" }}
+                transition={{ duration: 0.6 }}
+                className="scroll-mt-32"
+              >
+                <span id="lokalne-spotkania" className="block -mt-32 pt-32" />
+                <h2 className="text-2xl font-bold text-foreground md:text-3xl">
+                  Webinary i lokalne spotkania
+                </h2>
+                <p className="mt-4 leading-relaxed text-muted-foreground md:text-lg">
+                  {"Organizujemy regularne wydarzenia online i offline, ktore laczah spolecznosc zainteresowana bezpieczenstwem AI w Polsce. Nasze webinary goszcza ekspertow z calego swiata - badaczy, inzynierow i decydentow zajmujacych sie AI Safety. Lokalne spotkania odbywaja sie w Warszawie, Krakowie i Wroclawiu, oferujac mozliwosc networkingu, dyskusji i wspolnej pracy nad projektami."}
+                </p>
+                <p className="mt-4 leading-relaxed text-muted-foreground md:text-lg">
+                  {"Wszystkie wydarzenia sa otwarte i bezplatne. Ponizej znajdziesz kalendarz nadchodzacych wydarzen - mozesz zapisac sie na wybrane lub dodac caly kalendarz do swojej aplikacji."}
+                </p>
+                
+                {/* Luma Calendar Embed */}
+                <div className="mt-8 rounded-2xl overflow-hidden bg-card shadow-sm">
+                  <iframe
+                    src="https://lu.ma/embed/calendar/cal-NVnZuKq5mAMSq4Q/events"
+                    width="100%"
+                    height="600"
+                    frameBorder="0"
+                    style={{ border: "1px solid #e2e8f0", borderRadius: "16px" }}
+                    allowFullScreen
+                    aria-hidden="false"
+                    title="Kalendarz wydarzen AI Safety Polska"
+                  />
+                </div>
+              </motion.article>
+
+              {/* Doradztwo zawodowe */}
+              <motion.article
+                id="doradztwo-zawodowe"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-80px" }}
+                transition={{ duration: 0.6 }}
+                className="scroll-mt-32"
+              >
+                <h2 className="text-2xl font-bold text-foreground md:text-3xl">
+                  Doradztwo zawodowe
+                </h2>
+                <p className="mt-4 leading-relaxed text-muted-foreground md:text-lg">
+                  {"Przygotuj sie i przejdz do kariery o wysokim wplywie w AI Safety. Oferujemy indywidualne, spersonalizowane konsultacje kariery skoncentrowane na sciezkach zawodowych w AI Safety, laczace globalne mozliwosci z polskim kontekstem i kontaktami."}
+                </p>
+                
+                <div className="mt-8 grid gap-6 sm:grid-cols-2">
+                  <div className="rounded-xl bg-card p-6 shadow-sm">
+                    <h3 className="font-semibold text-foreground">Dla kogo?</h3>
+                    <ul className="mt-3 space-y-2 text-sm text-muted-foreground">
+                      <li className="flex items-start gap-2">
+                        <span className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-emerald" />
+                        Studenci informatyki, matematyki, filozofii lub polityki publicznej
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <span className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-emerald" />
+                        Osoby na poczatku kariery szukajace znaczacej zmiany
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <span className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-emerald" />
+                        Badacze chcacy polaczyc doswiadczenie z priorytetami AI Safety
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <span className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-emerald" />
+                        Kazdy zmotywowany do zaangazowania sie w AI Safety
+                      </li>
+                    </ul>
                   </div>
-                </motion.article>
-              ))}
+                  <div className="rounded-xl bg-card p-6 shadow-sm">
+                    <h3 className="font-semibold text-foreground">Jak to dziala?</h3>
+                    <ul className="mt-3 space-y-2 text-sm text-muted-foreground">
+                      <li className="flex items-start gap-2">
+                        <span className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-emerald" />
+                        Wypelnij formularz zgloszeniowy
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <span className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-emerald" />
+                        30-minutowa konsultacja z doswiadczonym specjalista
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <span className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-emerald" />
+                        Konkretne kroki, rekomendacje i kontakty
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <span className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-emerald" />
+                        Mozliwosc spotkania follow-up po 6-12 miesiacach
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                
+                <div className="mt-8">
+                  <Button asChild className="bg-emerald hover:bg-emerald-dark text-white">
+                    <a
+                      href="https://aisafety.org.pl/pl/mentoring-kariery/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2"
+                    >
+                      Aplikuj na konsultacje
+                      <ExternalLink className="h-4 w-4" />
+                    </a>
+                  </Button>
+                </div>
+              </motion.article>
+
+              {/* Spolecznosc online - Slack */}
+              <motion.article
+                id="slack"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-80px" }}
+                transition={{ duration: 0.6 }}
+                className="scroll-mt-32"
+              >
+                <h2 className="text-2xl font-bold text-foreground md:text-3xl">
+                  {"Spolecznosc online - Slack"}
+                </h2>
+                <p className="mt-4 leading-relaxed text-muted-foreground md:text-lg">
+                  {"Slack AI Safety Poland to centralne miejsce wymiany wiedzy i doswiadczen dla polskiej spolecznosci zainteresowanej bezpieczenstwem sztucznej inteligencji. Obecnie liczymy ponad 220 uzytkownikow - od profesjonalistow pracujacych w branzy AI, przez badaczy akademickich, po studentow i entuzjastow dopiero rozpoczynajacych swoja przygode z tematem."}
+                </p>
+                <p className="mt-4 leading-relaxed text-muted-foreground md:text-lg">
+                  {"Na naszym Slacku znajdziesz dedykowane kanaly tematyczne: od technicznych dyskusji o alignment i interpretability, przez polityke i governance AI, az po ogolne rozmowy i networking. Regularnie dzielimy sie najnowszymi publikacjami, komentujemy biezace wydarzenia w swiecie AI i pomagamy sobie nawzajem w rozwoju karier."}
+                </p>
+                
+                <div className="mt-8 rounded-xl bg-emerald/10 p-6">
+                  <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+                    <div>
+                      <p className="text-2xl font-bold text-foreground">220+</p>
+                      <p className="text-sm text-muted-foreground">aktywnych czlonkow spolecznosci</p>
+                    </div>
+                    <Button asChild className="bg-emerald hover:bg-emerald-dark text-white">
+                      <a
+                        href="https://join.slack.com/t/aisafetypoland/shared_invite/zt-2x6zzw3q6-~K~Q~Q~Q~Q~Q~Q~Q~Q~Q~Q"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-2"
+                      >
+                        Dolacz do Slacka
+                        <ExternalLink className="h-4 w-4" />
+                      </a>
+                    </Button>
+                  </div>
+                </div>
+              </motion.article>
+
+              {/* Wspolpraca z uczelniami */}
+              <motion.article
+                id="wspolpraca-z-uczelniami"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-80px" }}
+                transition={{ duration: 0.6 }}
+                className="scroll-mt-32"
+              >
+                <h2 className="text-2xl font-bold text-foreground md:text-3xl">
+                  {"Wspolpraca z uczelniami"}
+                </h2>
+                <p className="mt-4 leading-relaxed text-muted-foreground md:text-lg">
+                  {"Nawiazujemy wspolprace z polskimi uczelniami wyzszymi, aby wlaczyc tematyke AI Safety do programow nauczania i wspierac rozwoj badan w tej dziedzinie. Wierzymy, ze przyszlosc bezpiecznej sztucznej inteligencji zalezy od edukacji kolejnych pokolen badaczy i inzynierow."}
+                </p>
+                <p className="mt-4 leading-relaxed text-muted-foreground md:text-lg">
+                  {"Nasza wspolpraca obejmuje organizacje wykladow goscinnych i warsztatow na uczelniach, wspieranie prac dyplomowych i badawczych zwiazanych z AI Safety, laczenie studentow z mentorami z branzy oraz promowanie mozliwosci stazowych i zawodowych w organizacjach zajmujacych sie bezpieczenstwem AI."}
+                </p>
+                
+                <div className="mt-8 grid gap-4 sm:grid-cols-3">
+                  <div className="rounded-xl bg-card p-5 shadow-sm text-center">
+                    <p className="text-xl font-bold text-foreground">Wyklady</p>
+                    <p className="mt-1 text-sm text-muted-foreground">gosciane na uczelniach</p>
+                  </div>
+                  <div className="rounded-xl bg-card p-5 shadow-sm text-center">
+                    <p className="text-xl font-bold text-foreground">Warsztaty</p>
+                    <p className="mt-1 text-sm text-muted-foreground">praktyczne dla studentow</p>
+                  </div>
+                  <div className="rounded-xl bg-card p-5 shadow-sm text-center">
+                    <p className="text-xl font-bold text-foreground">Mentoring</p>
+                    <p className="mt-1 text-sm text-muted-foreground">dla prac badawczych</p>
+                  </div>
+                </div>
+                
+                <p className="mt-8 text-sm text-muted-foreground">
+                  {"Jesli reprezentujesz uczelnie i chcesz nawiazac wspolprace, skontaktuj sie z nami przez formularz kontaktowy ponizej."}
+                </p>
+              </motion.article>
+
             </div>
           </div>
         </section>
