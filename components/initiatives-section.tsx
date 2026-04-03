@@ -45,27 +45,40 @@ export function InitiativesSection() {
         <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6">
           {/* Left nested grid: 2x2 for 4 smaller cards */}
           <div className="md:col-span-2 grid grid-cols-1 sm:grid-cols-2 gap-6">
-            {initiatives.map((item, i) => (
-              <motion.div
-                key={item.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-50px" }}
-                transition={{ duration: 0.5, delay: i * 0.1 }}
-                className="relative flex flex-col justify-end overflow-hidden rounded-2xl bg-slate-300 h-64"
-              >
-                {/* Placeholder background image effect */}
-                <div className="absolute inset-0 bg-slate-300" />
-                
-                {/* Dark gradient overlay from bottom */}
-                <div className="absolute inset-0 bg-gradient-to-t from-slate-900 to-transparent" />
-                
-                {/* Text content */}
-                <div className="relative z-10 p-6">
-                  <h3 className="text-base font-semibold text-white">{item.title}</h3>
-                </div>
-              </motion.div>
-            ))}
+            {initiatives.map((item, i) => {
+              const isUniversity = item.title === "Wspolpraca z uczelniami"
+              
+              return (
+                <motion.div
+                  key={item.title}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, margin: "-50px" }}
+                  transition={{ duration: 0.5, delay: i * 0.1 }}
+                  className="relative flex flex-col justify-end overflow-hidden rounded-2xl h-64"
+                  style={
+                    isUniversity
+                      ? {
+                          backgroundImage: 'url(https://hebbkx1anhila5yf.public.blob.vercel-storage.com/uczelnie-JLiAEQwGwGiAg7aKVb3E9UpKEcvlAo.jpg)',
+                          backgroundSize: 'cover',
+                          backgroundPosition: 'center',
+                        }
+                      : { backgroundColor: 'rgb(203, 213, 225)' }
+                  }
+                >
+                  {/* Placeholder background for non-university cards */}
+                  {!isUniversity && <div className="absolute inset-0 bg-slate-300" />}
+                  
+                  {/* Dark gradient overlay from bottom */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-slate-900 to-transparent" />
+                  
+                  {/* Text content */}
+                  <div className="relative z-10 p-6">
+                    <h3 className="text-base font-semibold text-white">{item.title}</h3>
+                  </div>
+                </motion.div>
+              )
+            })}
           </div>
 
           {/* Right: Slack card -- spans full height */}
