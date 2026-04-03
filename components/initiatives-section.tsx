@@ -47,6 +47,8 @@ export function InitiativesSection() {
           <div className="md:col-span-2 grid grid-cols-1 sm:grid-cols-2 gap-6">
             {initiatives.map((item, i) => {
               const isUniversity = item.title === "Wspolpraca z uczelniami"
+              const isMeetups = item.title === "Lokalne spotkania"
+              const hasImage = isUniversity || isMeetups
               
               return (
                 <motion.div
@@ -63,11 +65,17 @@ export function InitiativesSection() {
                           backgroundSize: 'cover',
                           backgroundPosition: 'center',
                         }
-                      : { backgroundColor: 'rgb(203, 213, 225)' }
+                      : isMeetups
+                        ? {
+                            backgroundImage: 'url(https://hebbkx1anhila5yf.public.blob.vercel-storage.com/meetupy-rUNtmS0fvG2vcG390Ot52WLfHKVVms.jpg)',
+                            backgroundSize: 'cover',
+                            backgroundPosition: 'center',
+                          }
+                        : { backgroundColor: 'rgb(203, 213, 225)' }
                   }
                 >
-                  {/* Placeholder background for non-university cards */}
-                  {!isUniversity && <div className="absolute inset-0 bg-slate-300" />}
+                  {/* Placeholder background for cards without images */}
+                  {!hasImage && <div className="absolute inset-0 bg-slate-300" />}
                   
                   {/* Dark gradient overlay from bottom */}
                   <div className="absolute inset-0 bg-gradient-to-t from-slate-900 to-transparent" />
