@@ -39,26 +39,26 @@ export function HeroSection() {
           {text.subtitle}
         </motion.p>
 
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, delay: 0.3 }}
-          className="mt-10"
-        >
-          <div className="relative w-screen h-96 md:h-[600px] -mx-[calc(50vw-50%)]">
-            <Image
-              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/main-photo-1-Oo0f6K76XQmQoaiHOo5fFdb2YcOq4d.png"
-              alt="Izometryczna ilustracja 3D budynku przedstawiajacego sale konferencyjne, laboratoria badawcze i serwerownie symbolizujace prace nad bezpieczenstwem AI"
-              fill
-              className="object-contain"
-              sizes="100vw"
-              priority
-            />
-          </div>
-        </motion.div>
       </div>
 
-      {/* V-shaped SVG divider removed */}
+      {/* Full-width image - outside max-w container */}
+      <motion.div
+        initial={{ opacity: 0, y: 30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.7, delay: 0.3 }}
+        className="mt-10 w-full"
+      >
+        <div className="relative w-full" style={{ height: "clamp(300px, 50vw, 800px)" }}>
+          <Image
+            src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/main-photo-1-Oo0f6K76XQmQoaiHOo5fFdb2YcOq4d.png"
+            alt="Izometryczna ilustracja 3D budynku przedstawiajacego sale konferencyjne, laboratoria badawcze i serwerownie symbolizujace prace nad bezpieczenstwem AI"
+            fill
+            className="object-contain"
+            sizes="100vw"
+            priority
+          />
+        </div>
+      </motion.div>
     </section>
   )
 }
