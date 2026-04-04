@@ -3,21 +3,47 @@
 import Link from "next/link"
 import { motion } from "framer-motion"
 import { ArrowRight } from "lucide-react"
+import { useLanguage } from "@/context/language-context"
 
-const articles = [
-  {
-    author: "Kelsey Piper",
-    title: "Argumenty za powaznym traktowaniem AI jako zagrozenia dla ludzkosci",
-    href: "/blog/argumenty-za-powaznym-traktowaniem-ai",
+const t = {
+  pl: {
+    label: "Dlaczego AI Safety ma znaczenie?",
+    readMore: "czytaj więcej",
+    articles: [
+      {
+        author: "Kelsey Piper",
+        title: "Argumenty za poważnym traktowaniem AI jako zagrożenia dla ludzkości",
+        href: "/blog/argumenty-za-powaznym-traktowaniem-ai",
+      },
+      {
+        author: "Jakub Kryś",
+        title: "Wkład Polaków w rozwój bezpieczeństwa AI",
+        href: "/blog/wklad-polakow-w-rozwoj-bezpieczenstwa-ai",
+      },
+    ],
   },
-  {
-    author: "Jakub Krys",
-    title: "Wklad Polakow w rozwoj bezpieczenstwa AI",
-    href: "/blog/wklad-polakow-w-rozwoj-bezpieczenstwa-ai",
+  en: {
+    label: "Why does AI Safety matter?",
+    readMore: "read more",
+    articles: [
+      {
+        author: "Kelsey Piper",
+        title: "Arguments for taking AI seriously as a threat to humanity",
+        href: "/blog/argumenty-za-powaznym-traktowaniem-ai",
+      },
+      {
+        author: "Jakub Kryś",
+        title: "Polish contributions to the development of AI safety",
+        href: "/blog/wklad-polakow-w-rozwoj-bezpieczenstwa-ai",
+      },
+    ],
   },
-]
+}
 
 export function ArticlesSection() {
+  const { lang } = useLanguage()
+  const text = t[lang]
+
   return (
     <section className="bg-background py-20 md:py-28">
       <div className="mx-auto max-w-4xl px-6">
@@ -29,11 +55,11 @@ export function ArticlesSection() {
           className="text-center text-xs font-semibold uppercase tracking-[0.2em]"
           style={{ color: "#01985D" }}
         >
-          Dlaczego AI Safety ma znaczenie?
+          {text.label}
         </motion.p>
 
         <div className="mt-10 grid gap-6 md:grid-cols-2">
-          {articles.map((article, i) => (
+          {text.articles.map((article, i) => (
             <motion.article
               key={article.title}
               initial={{ opacity: 0, y: 20 }}
@@ -59,7 +85,7 @@ export function ArticlesSection() {
                   className="mt-2 inline-flex items-center gap-1 text-xs font-medium transition-colors hover:opacity-80"
                   style={{ color: "#01985D" }}
                 >
-                  {"czytaj wiecej"}
+                  {text.readMore}
                   <ArrowRight className="h-3 w-3" />
                 </Link>
               </div>

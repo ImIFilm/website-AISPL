@@ -3,6 +3,24 @@
 import Image from "next/image"
 import Link from "next/link"
 import { motion } from "framer-motion"
+import { useLanguage } from "@/context/language-context"
+
+const t = {
+  pl: {
+    label: "Kim jesteśmy",
+    heading: "AI Safety Polska to społeczność naukowców, działaczy i pasjonatów skupiona na bezpieczeństwie AI.",
+    body: "Prowadzimy działania, których celem jest redukcja ryzyk związanych z zaawansowaną sztuczną inteligencją. Organizujemy wykłady, spotkania i dyskusje, a także wspieramy rozwój polskich talentów w tej dziedzinie.",
+    coordinators: "Koordynatorzy",
+    teamLink: "poznaj cały zespół →",
+  },
+  en: {
+    label: "Who we are",
+    heading: "AI Safety Polska is a community of scientists, activists and enthusiasts focused on AI safety.",
+    body: "We carry out activities aimed at reducing risks associated with advanced artificial intelligence. We organise lectures, meetups and discussions, and support the development of Polish talent in this field.",
+    coordinators: "Coordinators",
+    teamLink: "meet the full team →",
+  },
+}
 
 const coordinators = [
   {
@@ -42,6 +60,9 @@ const itemVariants = {
 }
 
 export function AboutSection() {
+  const { lang } = useLanguage()
+  const text = t[lang]
+
   return (
     <section id="kim-jestesmy" className="py-20 md:py-28 -mt-1" style={{ backgroundImage: "linear-gradient(181deg, #029971 0%, #00162D 50%)", paddingTop: "237px" }}>
       <div className="mx-auto max-w-4xl px-6 text-center">
@@ -53,7 +74,7 @@ export function AboutSection() {
           className="text-xs font-semibold uppercase tracking-[0.2em]"
           style={{ color: "#01985D" }}
         >
-          Kim jesteśmy
+          {text.label}
         </motion.p>
         <motion.h2
           initial={{ opacity: 0, y: 15 }}
@@ -63,7 +84,7 @@ export function AboutSection() {
           className="mt-4 text-2xl font-normal text-primary-foreground md:text-3xl lg:text-4xl text-balance"
           style={{ lineHeight: "1.4", fontWeight: 400, fontSize: "26px" }}
         >
-          {"AI Safety Polska to społeczność naukowców, działaczy i pasjonatów skupiona na bezpieczeństwie AI."}
+          {text.heading}
         </motion.h2>
         <motion.p
           initial={{ opacity: 0, y: 15 }}
@@ -73,7 +94,7 @@ export function AboutSection() {
           className="mx-auto mt-6 max-w-2xl text-sm text-primary-foreground/60 md:text-base"
           style={{ lineHeight: "1.4", fontSize: "18px" }}
         >
-          {"Prowadzimy działania, których celem jest redukcja ryzyk związanych z zaawansowaną sztuczną inteligencją. Organizujemy wykłady, spotkania i dyskusje, a także wspieramy rozwój polskich talentów w tej dziedzinie."}
+          {text.body}
         </motion.p>
 
         {/* Coordinators */}
@@ -85,7 +106,7 @@ export function AboutSection() {
           className="mt-16 text-xs font-semibold uppercase tracking-[0.2em]"
           style={{ color: "#FFDAAA" }}
         >
-          Koordynatorzy
+          {text.coordinators}
         </motion.p>
 
         <motion.div
@@ -125,7 +146,7 @@ export function AboutSection() {
             href="/zespol"
             className="mt-8 inline-block text-sm text-primary-foreground/60 underline underline-offset-4 transition-colors hover:text-emerald"
           >
-            {"poznaj cały zespół →"}
+            {text.teamLink}
           </Link>
         </motion.div>
       </div>

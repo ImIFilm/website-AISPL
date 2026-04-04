@@ -2,8 +2,21 @@
 
 import Image from "next/image"
 import { motion } from "framer-motion"
+import { useLanguage } from "@/context/language-context"
+
+const t = {
+  pl: {
+    subtitle: "Budujemy bezpieczną przyszłość sztucznej inteligencji",
+  },
+  en: {
+    subtitle: "Building a safe future for artificial intelligence",
+  },
+}
 
 export function HeroSection() {
+  const { lang } = useLanguage()
+  const text = t[lang]
+
   return (
     <section className="relative bg-background pt-28 pb-40 md:pt-36 md:pb-56">
       <div className="mx-auto max-w-4xl px-6 text-center">
@@ -23,7 +36,7 @@ export function HeroSection() {
           className="mt-4 text-lg text-pretty"
           style={{ color: "#008644", fontWeight: 300, fontSize: "18px" }}
         >
-          {"Budujemy bezpieczną przyszłość sztucznej inteligencji"}
+          {text.subtitle}
         </motion.p>
 
         <motion.div

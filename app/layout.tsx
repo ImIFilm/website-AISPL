@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from 'next'
 import { Outfit } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
+import { LanguageProvider } from '@/context/language-context'
 import './globals.css'
 
 const outfit = Outfit({ subsets: ['latin', 'latin-ext'], variable: '--font-outfit' })
@@ -27,7 +28,9 @@ export default function RootLayout({
   return (
     <html lang="pl">
       <body className={`${outfit.variable} font-sans antialiased`}>
-        {children}
+        <LanguageProvider>
+          {children}
+        </LanguageProvider>
         <Analytics />
       </body>
     </html>

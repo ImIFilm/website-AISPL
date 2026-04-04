@@ -5,16 +5,26 @@ import Link from "next/link"
 import Image from "next/image"
 import { Menu, X } from "lucide-react"
 import { motion, AnimatePresence } from "framer-motion"
+import { useLanguage } from "@/context/language-context"
 
-const navLinks = [
+const navLinksPL = [
   { label: "Kim jesteśmy", href: "/#kim-jestesmy" },
   { label: "Co robimy", href: "/#co-robimy" },
   { label: "Zaangażuj się", href: "/#zaangazuj-sie" },
   { label: "Kontakt", href: "/#kontakt" },
 ]
 
+const navLinksEN = [
+  { label: "About us", href: "/#kim-jestesmy" },
+  { label: "What we do", href: "/#co-robimy" },
+  { label: "Get involved", href: "/#zaangazuj-sie" },
+  { label: "Contact", href: "/#kontakt" },
+]
+
 export function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false)
+  const { lang, setLang } = useLanguage()
+  const navLinks = lang === "pl" ? navLinksPL : navLinksEN
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border/50">
@@ -29,19 +39,47 @@ export function Navbar() {
           />
         </Link>
 
-        {/* Desktop links */}
-        <ul className="hidden items-center gap-8 md:flex">
-          {navLinks.map((link) => (
-            <li key={link.href}>
-              <Link
-                href={link.href}
-                className="text-sm text-muted-foreground transition-colors hover:text-foreground"
-              >
-                {link.label}
-              </Link>
-            </li>
-          ))}
-        </ul>
+        {/* Desktop links + switcher */}
+        <div className="hidden items-center gap-8 md:flex">
+          <ul className="flex items-center gap-8">
+            {navLinks.map((link) => (
+              <li key={link.href}>
+                <Link
+                  href={link.href}
+                  className="text-sm text-muted-foreground transition-colors hover:text-foreground"
+                >
+                  {link.label}
+                </Link>
+              </li>
+            ))}
+          </ul>
+
+          {/* Language switcher */}
+          <div className="flex items-center rounded-full border border-border bg-muted/40 p-0.5 text-xs font-semibold">
+            <button
+              onClick={() => setLang("pl")}
+              className={`rounded-full px-2.5 py-1 transition-colors ${
+                lang === "pl"
+                  ? "bg-foreground text-background shadow-sm"
+                  : "text-muted-foreground hover:text-foreground"
+              }`}
+              aria-pressed={lang === "pl"}
+            >
+              PL
+            </button>
+            <button
+              onClick={() => setLang("en")}
+              className={`rounded-full px-2.5 py-1 transition-colors ${
+                lang === "en"
+                  ? "bg-foreground text-background shadow-sm"
+                  : "text-muted-foreground hover:text-foreground"
+              }`}
+              aria-pressed={lang === "en"}
+            >
+              EN
+            </button>
+          </div>
+        </div>
 
         {/* Mobile hamburger */}
         <button
@@ -75,6 +113,34 @@ export function Navbar() {
                 </li>
               ))}
             </ul>
+            {/* Mobile language switcher */}
+            <div className="flex items-center gap-2 border-t border-border px-9 py-4">
+              <span className="text-xs text-muted-foreground">
+                {lang === "pl" ? "Język:" : "Language:"}
+              </span>
+              <div className="flex items-center rounded-full border border-border bg-muted/40 p-0.5 text-xs font-semibold">
+                <button
+                  onClick={() => setLang("pl")}
+                  className={`rounded-full px-2.5 py-1 transition-colors ${
+                    lang === "pl"
+                      ? "bg-foreground text-background shadow-sm"
+                      : "text-muted-foreground hover:text-foreground"
+                  }`}
+                >
+                  PL
+                </button>
+                <button
+                  onClick={() => setLang("en")}
+                  className={`rounded-full px-2.5 py-1 transition-colors ${
+                    lang === "en"
+                      ? "bg-foreground text-background shadow-sm"
+                      : "text-muted-foreground hover:text-foreground"
+                  }`}
+                >
+                  EN
+                </button>
+              </div>
+            </div>
           </motion.div>
         )}
       </AnimatePresence>
