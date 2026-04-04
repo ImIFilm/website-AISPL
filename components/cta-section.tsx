@@ -57,7 +57,9 @@ export function CtaSection() {
           transition={{ duration: 0.5, delay: 0.2 }}
         >
           <a
-            href="#"
+            href="https://forms.gle/J2yTVJXYcaMyR5i56"
+            target="_blank"
+            rel="noopener noreferrer"
             className="mt-8 inline-flex items-center gap-2 rounded-full border border-primary-foreground/40 px-7 py-3 text-sm font-medium text-primary-foreground transition-all hover:border-primary-foreground hover:bg-primary-foreground/10"
           >
             {text.cta}
