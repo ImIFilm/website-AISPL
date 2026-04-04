@@ -26,7 +26,8 @@ export function ArticlesSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-50px" }}
           transition={{ duration: 0.5 }}
-          className="text-center text-xs font-semibold uppercase tracking-[0.2em] text-muted-foreground"
+          className="text-center text-xs font-semibold uppercase tracking-[0.2em]"
+          style={{ color: "#01985D" }}
         >
           Dlaczego AI Safety ma znaczenie?
         </motion.p>
@@ -55,7 +56,8 @@ export function ArticlesSection() {
                 <h3 className="mt-1 text-sm font-semibold leading-snug text-foreground">{article.title}</h3>
                 <Link
                   href={article.href}
-                  className="mt-2 inline-flex items-center gap-1 text-xs font-medium text-emerald transition-colors hover:text-emerald-dark"
+                  className="mt-2 inline-flex items-center gap-1 text-xs font-medium transition-colors hover:opacity-80"
+                  style={{ color: "#01985D" }}
                 >
                   {"czytaj wiecej"}
                   <ArrowRight className="h-3 w-3" />

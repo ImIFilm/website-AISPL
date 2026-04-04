@@ -43,14 +43,15 @@ const itemVariants = {
 
 export function AboutSection() {
   return (
-    <section id="kim-jestesmy" className="bg-navy py-20 md:py-28 -mt-1">
+    <section id="kim-jestesmy" className="py-20 md:py-28 -mt-1" style={{ backgroundImage: "linear-gradient(181deg, #029971 0%, #00162D 50%)" }}>
       <div className="mx-auto max-w-4xl px-6 text-center">
         <motion.p
           initial={{ opacity: 0, y: 15 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-50px" }}
           transition={{ duration: 0.5 }}
-          className="text-xs font-semibold uppercase tracking-[0.2em] text-emerald"
+          className="text-xs font-semibold uppercase tracking-[0.2em]"
+          style={{ color: "#01985D" }}
         >
           Kim jesteśmy
         </motion.p>
@@ -59,8 +60,8 @@ export function AboutSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-50px" }}
           transition={{ duration: 0.5, delay: 0.1 }}
-          className="mt-4 text-2xl font-bold text-primary-foreground md:text-3xl lg:text-4xl text-balance"
-          style={{ lineHeight: "1.4" }}
+          className="mt-4 text-2xl font-normal text-primary-foreground md:text-3xl lg:text-4xl text-balance"
+          style={{ lineHeight: "1.4", fontWeight: 400 }}
         >
           {"AI Safety Polska to społeczność naukowców, działaczy i pasjonatów skupiona na bezpieczeństwie AI."}
         </motion.h2>
@@ -81,7 +82,8 @@ export function AboutSection() {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.3 }}
-          className="mt-16 text-xs font-semibold uppercase tracking-[0.2em] text-primary-foreground/50"
+          className="mt-16 text-xs font-semibold uppercase tracking-[0.2em]"
+          style={{ color: "#FFDAAA" }}
         >
           Koordynatorzy
         </motion.p>

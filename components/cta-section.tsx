@@ -18,16 +18,18 @@ export function CtaSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-50px" }}
           transition={{ duration: 0.5 }}
-          className="text-xs font-semibold uppercase tracking-[0.2em] text-emerald/80"
+          className="text-xs font-semibold uppercase tracking-[0.2em]"
+          style={{ color: "#01985D" }}
         >
-          {"Zaangażuj się \u{1F91D}"}
+          {"Zaangażuj się 🤝"}
         </motion.p>
         <motion.h2
           initial={{ opacity: 0, y: 15 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-50px" }}
           transition={{ duration: 0.5, delay: 0.1 }}
-          className="mt-4 text-xl font-bold text-primary-foreground md:text-2xl lg:text-3xl text-balance leading-relaxed"
+          className="mt-4 text-xl font-normal text-primary-foreground md:text-2xl lg:text-3xl text-balance"
+          style={{ fontWeight: 400, lineHeight: "1.25" }}
         >
           {"Jeśli temat bezpieczeństwa AI jest Ci bliski, dołącz do naszej społeczności na Slack i dowiedz się jak możesz pomóc"}
         </motion.h2>

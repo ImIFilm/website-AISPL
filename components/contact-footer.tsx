@@ -64,7 +64,7 @@ export function ContactFooter() {
               <ul className="flex flex-wrap items-center justify-center gap-6">
                 <li>
                   <Link href="/#kim-jestesmy" className="text-xs text-primary-foreground/50 transition-colors hover:text-primary-foreground">
-                    Kim jestesmy
+                    Kim jesteśmy
                   </Link>
                 </li>
                 <li>
@@ -74,7 +74,7 @@ export function ContactFooter() {
                 </li>
                 <li>
                   <Link href="/#zaangazuj-sie" className="text-xs text-primary-foreground/50 transition-colors hover:text-primary-foreground">
-                    {"Zaangazuj sie"}
+                    {"Zaangażuj się"}
                   </Link>
                 </li>
                 <li>

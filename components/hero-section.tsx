@@ -11,7 +11,8 @@ export function HeroSection() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="text-4xl font-bold tracking-tight text-foreground md:text-5xl lg:text-6xl text-balance"
+          className="text-4xl font-medium tracking-normal text-foreground md:text-5xl lg:text-6xl text-balance"
+          style={{ fontSize: "40px", fontWeight: 500 }}
         >
           AI Safety Polska
         </motion.h1>
@@ -19,9 +20,10 @@ export function HeroSection() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.15 }}
-          className="mt-4 text-lg text-emerald font-medium md:text-xl text-pretty"
+          className="mt-4 text-lg text-pretty"
+          style={{ color: "#008644", fontWeight: 300, fontSize: "18px" }}
         >
-          {"Budujemy bezpieczna przyszlosc sztucznej inteligencji"}
+          {"Budujemy bezpieczną przyszłość sztucznej inteligencji"}
         </motion.p>
 
         <motion.div
