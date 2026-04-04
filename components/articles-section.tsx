@@ -13,7 +13,7 @@ const t = {
       {
         author: "Marcel Windys",
         title: "Dlaczego powinieneś zainteresować się AI Safety?",
-        href: "https://aisafety.org.pl/pl/dlaczego-warto-pracowac-nad-bezpieczenstwem-sztucznej-inteligencji/",
+        href: "/blog/intro-ai-safety",
       },
       {
         author: "Jakub Kryś",
@@ -29,7 +29,7 @@ const t = {
       {
         author: "Marcel Windys",
         title: "Why should you care about AI Safety?",
-        href: "https://aisafety.org.pl/pl/dlaczego-warto-pracowac-nad-bezpieczenstwem-sztucznej-inteligencji/",
+        href: "/blog/intro-ai-safety",
       },
       {
         author: "Jakub Kryś",

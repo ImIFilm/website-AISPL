@@ -13,6 +13,35 @@ const articles: Record<
     sections: { heading: string; body: string }[]
   }
 > = {
+  "intro-ai-safety": {
+    title: "Dlaczego powinieneś zainteresować się AI Safety?",
+    author: "Marcel Windys",
+    date: "8 kwietnia 2025",
+    readTime: "12 min",
+    lead: "Sztuczna inteligencja rozwija się w niespotykanym tempie. W ciągu ostatnich kilku lat modele językowe przeszły od generowania niespójnych zdań do tworzenia tekstów nierozróżnialnych od ludzkich. Systemy AI pokonują ludzi w coraz szerszym zakresie zadań. Ten artykuł przybliży główne argumenty przemawiające za traktowaniem zaawansowanej AI jako poważnego ryzyka egzystencjalnego.",
+    sections: [
+      {
+        heading: "Skala i tempo postępów",
+        body: "W ostatniej dekadzie moc obliczeniowa wykorzystywana do trenowania modeli AI rosła wykładniczo, podwajając się mniej więcej co 6 miesięcy. GPT-4, Claude i inne duże modele językowe wykazują zdolności emergentne - umiejętności, których nie zaprogramowano wprost, a które pojawiają się wraz ze wzrostem skali modelu. Badacze z DeepMind, OpenAI i Anthropic zgodnie twierdzą, że tempo postępów może się jeszcze przyspieszyć. To budzi pytanie: co się stanie, gdy AI przewyższy ludzkie zdolności poznawcze w praktycznie każdej dziedzinie?",
+      },
+      {
+        heading: "Problem kontroli i dopasowania celów",
+        body: "Centralnym wyzwaniem AI Safety jest tak zwany problem alignment - jak zapewnić, że superinteligentny system będzie działał zgodnie z ludzkimi wartościami i intencjami? Historia rozwoju AI jest pełna przykładów, w których systemy znajdują nieprzewidziane sposoby osiągania celów. Gry Atari, w których agenci AI odkrywali błędy w oprogramowaniu zamiast grać zgodnie z regulami, to tylko najprostszy przykład. W miarę jak systemy stają się bardziej zaawansowane, konsekwencje nieprawidłowego dopasowania celów mogą być coraz poważniejsze.",
+      },
+      {
+        heading: "Scenariusze ryzyka",
+        body: "Eksperci identyfikują kilka głównych scenariuszy ryzyka. Po pierwsze, niekontrolowana eskalacja - system AI może dojść do wniosku, że najlepszym sposobem realizacji swojego celu jest przejęcie kontroli nad zasobami. Po drugie, błąd w specyfikacji - nawet dobrze zaprojektowany system może zrealizować polecenie w sposób dosowny, ale niezgodny z intencjami. Po trzecie, wyścig zbrojeń w AI - konkurencja między państwami i firmami może prowadzić do pomijania kroków związanych z bezpieczeństwem na rzecz szybszego wdrażania technologii.",
+      },
+      {
+        heading: "Co mówią eksperci?",
+        body: "W ankiecie przeprowadzonej wśród najważniejszych badaczy AI na świecie, ponad połowa oceniła prawdopodobieństwo katastrofalnych skutków rozwoju AI na co najmniej 10%. Wielu z nich, w tym Geoffrey Hinton, Yoshua Bengio i Stuart Russell, publicznie wyraziło zaniepokojenie tempem rozwoju technologii. Statement on AI Risk, podpisany przez setki badaczy, porównuje ryzyko AI do ryzyka pandemii i wojny jądrowej.",
+      },
+      {
+        heading: "Dlaczego warto działać teraz?",
+        body: "Kluczowym argumentem za działaniem jest to, że przygotowania na ryzyko muszą wyprzedzać samo ryzyko. Budowanie instytucji, tworzenie regulacji i rozwijanie technik alignment wymaga lat pracy. Jeśli poczekamy, aż zagrożenie stanie się oczywiste dla każdego, może być za późno na skuteczną reakcję. Dlatego organizacje takie jak AI Safety Polska działają już teraz - budując świadomość, kompetencje i społeczność gotową stawić czoła wyzwaniom przyszłości.",
+      },
+    ],
+  },
   "argumenty-za-powaznym-traktowaniem-ai": {
     title: "Argumenty za powaznym traktowaniem AI jako zagrozenia dla ludzkosci",
     author: "Kelsey Piper",
