@@ -3,7 +3,7 @@
 import Image from "next/image"
 import Link from "next/link"
 import { motion } from "framer-motion"
-import { Linkedin, Github } from "lucide-react"
+import { Mail, Linkedin, Github } from "lucide-react"
 import { useLanguage } from "@/context/language-context"
 
 const t = {
