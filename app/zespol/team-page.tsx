@@ -118,7 +118,7 @@ export function TeamPage() {
               transition={{ duration: 0.5 }}
               className="text-xs font-semibold uppercase tracking-[0.2em] text-emerald"
             >
-              Nasz zespol
+              Nasz zespół
             </motion.p>
             <motion.h1
               initial={{ opacity: 0, y: 15 }}
@@ -134,7 +134,7 @@ export function TeamPage() {
               transition={{ duration: 0.5, delay: 0.2 }}
               className="mt-4 max-w-2xl text-base leading-relaxed text-muted-foreground md:text-lg"
             >
-              Łączymy wiedzę z zakresu nauk technicznych, humanistycznych i społecznych. To właśnie to wielowymiarowe podejście pozwala nam skutecznie działać na rzecz bezpiecznego rozwoju AI. Na chwilę obecną wszyscy działamy jako wolontariusze.
+              Łączymy wiedzę z zakresu nauk technicznych, humanistycznych i społecznych. To wielowymiarowe podejście pozwala nam skutecznie działać na rzecz bezpiecznego rozwoju AI. Na chwilę obecną wszyscy działamy jako wolontariusze.
             </motion.p>
           </div>
         </section>
