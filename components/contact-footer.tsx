@@ -56,7 +56,7 @@ export function ContactFooter() {
                 {text.cardHeading}
               </h3>
               <p className="mt-4 text-muted-foreground" style={{ fontSize: "16px", fontWeight: "300" }}>
-                kontakt@aisafety.pl
+                contact@aisafety.org.pl
               </p>
             </div>
             <div className="flex-shrink-0">
