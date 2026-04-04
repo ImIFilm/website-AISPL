@@ -20,24 +20,22 @@ const faqPL = [
   },
   {
     question: "Czy muszę być programistą lub ekspertem ML, żeby dołączyć?",
-    answer: "Zdecydowanie nie! Choć badacze techniczni są kluczowi, bezpieczeństwo AI to wyzwanie, które wymaga bardzo zróżnicowanych kompetencji. Środowisko pilnie potrzebuje prawników, analityków polityk, ekspertów ds. stosunków międzynarodowych, a także etyków, filozofów, ekonomistów i badaczy społecznych. Ogromną rolę odgrywają również specjaliści od cyberbezpieczeństwa, biosecurity, infrastruktury (hardware), a także prognostycy (forecasters), managerowie programów i produktów oraz eksperci ds. komunikacji i operacji.<br> <br>
-    
-    Jeśli nie wiesz, jak Twoje obecne umiejętności pasują do tej układanki, w AI Safety Poland prowadzimy<a href = "https://v0-aisafetypoland.vercel.app/inicjatywy#doradztwo-zawodowe">indywidualne konsultacje kariery.</a> Pomożemy Ci przeanalizować Twoje doświadczenie i podpowiemy, w jaki sposób możesz wnieść największą wartość do obszaru bezpieczeństwa AI – niezależnie od tego, jakie masz wykształcenie i na jakim etapie zawodowym jesteś.",
+    answer: "Zdecydowanie nie! Choć badacze techniczni są kluczowi, bezpieczeństwo AI to wyzwanie, które wymaga bardzo zróżnicowanych kompetencji. Środowisko pilnie potrzebuje prawników, analityków polityk, ekspertów ds. stosunków międzynarodowych, a także etyków, filozofów, ekonomistów i badaczy społecznych. Ogromną rolę odgrywają również specjaliści od cyberbezpieczeństwa, biosecurity, infrastruktury (hardware), a także prognostycy (forecasters), managerowie programów i produktów oraz eksperci ds. komunikacji i operacji. <br><br> Jeśli nie wiesz, jak Twoje obecne umiejętności pasują do tej układanki, w AI Safety Poland prowadzimy indywidualne konsultacje kariery. Pomożemy Ci przeanalizować Twoje doświadczenie i podpowiemy, w jaki sposób możesz wnieść największą wartość do obszaru bezpieczeństwa AI – niezależnie od tego, jakie masz wykształcenie i na jakim etapie zawodowym jesteś.",
   },
-{
-  question: "Gdzie znajdę informacje o nadchodzących wydarzeniach?",
+  {
+    question: "Gdzie znajdę informacje o nadchodzących wydarzeniach?",
     answer: "Informacje o wydarzeniach publikujemy na naszym Slacku, Linkedinie oraz Lumie: https://luma.com/aisafetypl",
   },
-{
-  question: "W jaki sposób mógłbym wesprzeć AI Safety Polska?",
+  {
+    question: "W jaki sposób mógłbym wesprzeć AI Safety Polska?",
     answer: "Możesz udostępniać nasze materiały, polecać nas znajomym lub wspierać finansowo. Nawet małe działania pomagają budować świadomość tematu bezpieczeństwa AI w Polsce.",
   },
-{
-  question: "Od jakich książek lub materiałów polecacie zacząć?",
+  {
+    question: "Od jakich książek lub materiałów polecacie zacząć?",
     answer: 'Polecamy zacząć od "Superintelligence" Nicka Bostroma, "Human Compatible" Stuarta Russella, oraz materiałów dostępnych na stronach takich jak AI Alignment Forum czy 80,000 Hours.',
   },
-{
-  question: "Jestem dziennikarzem/przedstawicielem mediów. Jak mogę się z Wami skontaktować?",
+  {
+    question: "Jestem dziennikarzem/przedstawicielem mediów. Jak mogę się z Wami skontaktować?",
     answer: "Zapraszamy do kontaktu przez formularz na naszej stronie lub bezpośrednio przez e-mail. Chętnie udzielamy wywiadów i komentarzy na temat bezpieczeństwa AI.",
   },
 ]
