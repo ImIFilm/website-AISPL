@@ -19,7 +19,7 @@ const initiativesEN = [
 ]
 
 const backgroundStyles = [
-  { backgroundImage: "url(https://hebbkx1anhila5yf.public.blob.vercel-storage.com/webinar-2-6q8RsoSXYeORlygXTAhBxJLU8zRSBl.jpg)",    backgroundSize: "cover", backgroundPosition: "center" },
+  { backgroundImage: "url(https://hebbkx1anhila5yf.public.blob.vercel-storage.com/webinary%20%281%29-pt8FBYDjrYNshTPHlI6lA5DnbK4Pm9.jpg)",    backgroundSize: "cover", backgroundPosition: "center" },
   { backgroundImage: "url(https://hebbkx1anhila5yf.public.blob.vercel-storage.com/meetupy-rUNtmS0fvG2vcG390Ot52WLfHKVVms.jpg)",    backgroundSize: "cover", backgroundPosition: "center" },
   { backgroundImage: "url(https://hebbkx1anhila5yf.public.blob.vercel-storage.com/uczelnie-JLiAEQwGwGiAg7aKVb3E9UpKEcvlAo.jpg)",   backgroundSize: "cover", backgroundPosition: "center" },
   { backgroundImage: "url(https://hebbkx1anhila5yf.public.blob.vercel-storage.com/zawodowe-1-pKXBXijfCOV6DLM6my88ATPuhOgN1M.jpg)", backgroundSize: "cover", backgroundPosition: "center" },
