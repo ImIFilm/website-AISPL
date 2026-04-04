@@ -12,11 +12,11 @@ import { useLanguage } from "@/context/language-context"
 const faqPL = [
   {
     question: 'Czym dokładnie jest "AI Safety"?',
-    answer: "AI Safety to dziedzina badań i praktyk skupiona na zapewnieniu, że systemy sztucznej inteligencji działają w sposób bezpieczny, przewidywalny i zgodny z ludzkimi wartościami. Obejmuje zarówno aspekty techniczne, jak i etyczne rozwoju AI.",
+    answer: "AI Safety to szeroka dziedzina badawcza skupiająca się na redukcji wielu rodzajów ryzyk i zagrożeń związanych z zaawansowaną sztuczną inteligencją. Jednym z najsłynniejszych problemów jest tzw. 'alignment', czyli możliwość sterowania systemów AI zgodnie z intencjami ich twórców. AI Safety obejmuje również badania nad kwestiami takimi jak: wpływ systemów AI na ekonomię i społeczeństwo, zapobieganie wykorzystaniu AI do niepożądanych celów (np. cyberataki), regulacje prawne, a nawet świadomość AI.",
   },
   {
     question: "Jaki jest główny cel AI Safety Polska?",
-    answer: "Naszym głównym celem jest budowanie polskiej społeczności ekspertów, badaczy i entuzjastów zainteresowanych bezpieczeństwem AI, a także prowadzenie działań edukacyjnych i badawczych w tym obszarze.",
+    answer: "Głównym celem AI Safety Polska jest stworzenie silnej, merytorycznej społeczności, która aktywnie pracuje nad bezpieczeństwem AI. Edukujemy, łączymy ekspertów z różnych dziedzin i wspieramy badania, które mają zapobiec potencjalnym zagrożeniom wynikającym z niekontrolowanego rozwoju sztucznej inteligencji w przyszłości.",
   },
   {
     question: "Czy muszę być programistą lub ekspertem ML, żeby dołączyć?",
@@ -24,10 +24,10 @@ const faqPL = [
   },
   {
     question: "Gdzie znajdę informacje o nadchodzących wydarzeniach?",
-    answer: "Informacje o wydarzeniach publikujemy na naszym kanale Slack, w mediach społecznościowych oraz na stronie internetowej. Dołącz do naszej społeczności, aby być na bieżąco.",
+    answer: "Informacje o wydarzeniach publikujemy na naszym Slacku, Linkedinie oraz Lumie: https://luma.com/aisafetypl",
   },
   {
-    question: "Jak mogę wesprzeć AI Safety Polska, jeśli nie mam czasu na większe zaangażowanie?",
+    question: "W jaki sposób mógłbym wesprzeć AI Safety Polska?",
     answer: "Możesz udostępniać nasze materiały, polecać nas znajomym lub wspierać finansowo. Nawet małe działania pomagają budować świadomość tematu bezpieczeństwa AI w Polsce.",
   },
   {
