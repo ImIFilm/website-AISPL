@@ -25,7 +25,7 @@ export function HeroSection() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           className="text-4xl font-medium tracking-normal text-foreground md:text-5xl lg:text-6xl text-balance"
-          style={{ fontSize: "40px", fontWeight: 500 }}
+          style={{ fontSize: "40px", fontWeight: 600 }}
         >
           AI Safety Polska
         </motion.h1>
