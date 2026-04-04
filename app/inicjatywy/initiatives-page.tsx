@@ -197,7 +197,7 @@ export function InitiativesPage() {
                     </div>
                     <Button asChild className="bg-emerald hover:bg-emerald-dark text-white">
                       <a
-                        href="https://join.slack.com/t/aisafetypoland/shared_invite/zt-2x6zzw3q6-~K~Q~Q~Q~Q~Q~Q~Q~Q~Q~Q"
+                        href="https://forms.gle/J2yTVJXYcaMyR5i56"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="inline-flex items-center gap-2"
