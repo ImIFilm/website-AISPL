@@ -18,7 +18,7 @@ export function HeroSection() {
   const text = t[lang]
 
   return (
-    <section className="relative bg-background pt-28 pb-40 md:pt-36 md:pb-56">
+    <section className="relative bg-background pt-28 pb-0 md:pt-36">
       <div className="mx-auto max-w-4xl px-6 text-center">
         <motion.h1
           initial={{ opacity: 0, y: 20 }}
@@ -38,26 +38,24 @@ export function HeroSection() {
         >
           {text.subtitle}
         </motion.p>
-
       </div>
 
-      {/* Full-width image - outside max-w container */}
+      {/* Centered image that overlaps into the about section below */}
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7, delay: 0.3 }}
-        className="mt-10 w-full"
+        className="relative z-10 mx-auto mt-10 w-full max-w-3xl px-6"
       >
-        <div className="relative w-full" style={{ height: "clamp(300px, 50vw, 800px)" }}>
-          <Image
-            src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/main-photo-1-Oo0f6K76XQmQoaiHOo5fFdb2YcOq4d.png"
-            alt="Izometryczna ilustracja 3D budynku przedstawiajacego sale konferencyjne, laboratoria badawcze i serwerownie symbolizujace prace nad bezpieczenstwem AI"
-            fill
-            className="object-contain"
-            sizes="100vw"
-            priority
-          />
-        </div>
+        <Image
+          src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/main-photo-1-Oo0f6K76XQmQoaiHOo5fFdb2YcOq4d.png"
+          alt="Izometryczna ilustracja 3D budynku przedstawiajacego sale konferencyjne, laboratoria badawcze i serwerownie symbolizujace prace nad bezpieczenstwem AI"
+          width={1200}
+          height={900}
+          className="w-full object-contain"
+          sizes="(max-width: 768px) 100vw, 896px"
+          priority
+        />
       </motion.div>
     </section>
   )

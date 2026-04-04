@@ -64,8 +64,8 @@ export function AboutSection() {
   const text = t[lang]
 
   return (
-    <section id="kim-jestesmy" className="py-20 md:py-28" style={{ backgroundImage: "linear-gradient(181deg, #029971 0%, #00162D 50%)", paddingTop: "0px", paddingBottom: "0px" }}>
-      <div className="mx-auto max-w-4xl px-6 text-center" style={{ paddingBottom: "40px" }}>
+    <section id="kim-jestesmy" className="relative py-20 md:py-28" style={{ backgroundImage: "linear-gradient(181deg, #029971 0%, #00162D 50%)", paddingTop: "0px", paddingBottom: "0px", marginTop: "-35%" }}>
+      <div className="mx-auto max-w-4xl px-6 text-center" style={{ paddingTop: "calc(35% + 40px)", paddingBottom: "40px" }}>
         <motion.p
           initial={{ opacity: 0, y: 15 }}
           whileInView={{ opacity: 1, y: 0 }}
