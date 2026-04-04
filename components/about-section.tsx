@@ -64,7 +64,7 @@ export function AboutSection() {
   const text = t[lang]
 
   return (
-    <section id="kim-jestesmy" className="py-20 md:py-28" style={{ backgroundColor: "#001A33", paddingTop: "0px", paddingBottom: "0px" }}>
+    <section id="kim-jestesmy" className="py-20 md:py-28" style={{ backgroundColor: "#011F39", paddingTop: "0px", paddingBottom: "0px" }}>
       <div className="mx-auto max-w-4xl px-6 text-center" style={{ paddingBottom: "40px" }}>
         <motion.p
           initial={{ opacity: 0, y: 15 }}
