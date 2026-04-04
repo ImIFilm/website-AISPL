@@ -18,7 +18,7 @@ const teamMembers = [
   {
     name: "Jakub Kryś",
     role: "Career advising, Webinar Host",
-    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Jakub%20Krys-xPJqEnzEux6Khj9dYp5fdsbgw86aMC.png",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Jakub%20Krys%20%281%29-6tL4FEexK8MnfkGWL2FxMlMOgnCUJr.png",
     linkedin: "https://www.linkedin.com/in/jakub-krys/",
     isCoordinator: true,
   },
