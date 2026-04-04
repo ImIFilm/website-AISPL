@@ -82,7 +82,7 @@ export function AboutSection() {
           viewport={{ once: true, margin: "-50px" }}
           transition={{ duration: 0.5, delay: 0.1 }}
           className="mt-4 text-2xl font-normal text-primary-foreground md:text-3xl lg:text-4xl text-balance"
-          style={{ lineHeight: "1.4", fontWeight: 400, fontSize: "26px" }}
+          style={{ lineHeight: "1.4", fontWeight: 500, fontSize: "26px" }}
         >
           {text.heading}
         </motion.h2>

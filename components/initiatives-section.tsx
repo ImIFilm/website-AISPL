@@ -63,6 +63,7 @@ export function InitiativesSection() {
           viewport={{ once: true, margin: "-50px" }}
           transition={{ duration: 0.5, delay: 0.1 }}
           className="mt-3 text-center text-2xl font-bold text-foreground md:text-3xl lg:text-4xl"
+          style={{ fontWeight: 500 }}
         >
           {text.heading}
         </motion.h2>
