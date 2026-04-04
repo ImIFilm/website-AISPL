@@ -35,7 +35,7 @@ export function InitiativesPage() {
             >
               Nasze inicjatywy
             </motion.h1>
-            
+
             {/* Table of Contents */}
             <motion.div
               initial={{ opacity: 0, y: 15 }}
@@ -66,7 +66,7 @@ export function InitiativesPage() {
         <section className="bg-secondary py-16 md:py-24">
           <div className="mx-auto max-w-4xl px-6">
             <div className="flex flex-col gap-16 md:gap-24">
-              
+
               {/* Webinary i lokalne spotkania */}
               <motion.article
                 id="webinary"
@@ -81,12 +81,12 @@ export function InitiativesPage() {
                   Webinary i lokalne spotkania
                 </h2>
                 <p className="mt-4 leading-relaxed text-muted-foreground md:text-lg">
-                  Organizujemy wydarzenia, które łączą pasjonatów i profesjonalistów dbających o bezpieczny rozwój sztucznej inteligencji. Od webinarów z międzynarodowymi liderami opinii, po lokalne meetupy – tworzymy warunki do nauki, dyskusji i realnego działania.
+                  Organizujemy wydarzenia, które łączą pasjonatów i profesjonalistów dbających o bezpieczny rozwój sztucznej inteligencji. Od webinarów, przez klub czytelniczy, aż po lokalnie spotkania – tworzymy warunki do nauki, dyskusji i realnego działania.
                 </p>
                 <p className="mt-4 leading-relaxed text-muted-foreground md:text-lg">
-                  Nasze najbliższe wydarzenia znajdziesz na Lumie: https://luma.com/aisafetypl
+                  Nasze najbliższe wydarzenia znajdziesz na <a href="https://luma.com/aisafetypl"> naszym kalendarzu na Lumie </a>
                 </p>
-                
+
                 {/* Luma Calendar Embed */}
                 <div className="mt-8 rounded-2xl overflow-hidden bg-card shadow-sm">
                   <iframe
@@ -117,7 +117,7 @@ export function InitiativesPage() {
                 <p className="mt-4 leading-relaxed text-muted-foreground md:text-lg">
                   {"Przygotuj sie i przejdz do kariery o wysokim wplywie w AI Safety. Oferujemy indywidualne, spersonalizowane konsultacje kariery skoncentrowane na sciezkach zawodowych w AI Safety, laczace globalne mozliwosci z polskim kontekstem i kontaktami."}
                 </p>
-                
+
                 <div className="mt-8 grid gap-6 sm:grid-cols-2">
                   <div className="rounded-xl bg-card p-6 shadow-sm">
                     <h3 className="font-semibold text-foreground">Dla kogo?</h3>
@@ -162,7 +162,7 @@ export function InitiativesPage() {
                     </ul>
                   </div>
                 </div>
-                
+
                 <div className="mt-8">
                   <Button asChild className="bg-emerald hover:bg-emerald-dark text-white">
                     <a
@@ -196,7 +196,7 @@ export function InitiativesPage() {
                 <p className="mt-4 leading-relaxed text-muted-foreground md:text-lg">
                   {"Na naszym Slacku znajdziesz dedykowane kanaly tematyczne: od technicznych dyskusji o alignment i interpretability, przez polityke i governance AI, az po ogolne rozmowy i networking. Regularnie dzielimy sie najnowszymi publikacjami, komentujemy biezace wydarzenia w swiecie AI i pomagamy sobie nawzajem w rozwoju karier."}
                 </p>
-                
+
                 <div className="mt-8 rounded-xl bg-emerald/10 p-6">
                   <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
                     <div>
@@ -236,7 +236,7 @@ export function InitiativesPage() {
                 <p className="mt-4 leading-relaxed text-muted-foreground md:text-lg">
                   Nasza współpraca obejmuje organizacje wykładów gościnnych i warsztatów na uczelniach, wspieranie prac badawczych związanych z AI Safety, łączenie studentów i doktorantów z mentorami z branży oraz promowanie możliwości stażowych i zawodowych w organizacjach zajmujących się AI Safety.
                 </p>
-                
+
                 <div className="mt-8 grid gap-4 sm:grid-cols-3">
                   <div className="rounded-xl bg-card p-5 shadow-sm text-center">
                     <p className="text-xl font-bold text-foreground">Wykłady</p>
@@ -251,7 +251,7 @@ export function InitiativesPage() {
                     <p className="mt-1 text-sm text-muted-foreground">dla doktorantów</p>
                   </div>
                 </div>
-                
+
                 <p className="mt-8 text-sm text-muted-foreground">
                   Jeśli reprezentujesz uczelnie i chcesz nawiązać współpracę, skontaktuj się z nami przez formularz kontaktowy poniżej.
                 </p>
