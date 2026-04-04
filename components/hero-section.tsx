@@ -18,7 +18,7 @@ export function HeroSection() {
   const text = t[lang]
 
   return (
-    <section className="relative bg-background pt-28 pb-40 md:pt-36 md:pb-56">
+    <section className="relative bg-background pt-28 pb-0 md:pt-36 md:pb-0">
       <div className="mx-auto max-w-4xl px-6 text-center">
         <motion.h1
           initial={{ opacity: 0, y: 20 }}
