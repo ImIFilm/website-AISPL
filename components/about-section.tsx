@@ -65,7 +65,7 @@ export function AboutSection() {
 
   return (
     <section id="kim-jestesmy" className="py-20 md:py-28" style={{ backgroundImage: "linear-gradient(181deg, #029971 0%, #00162D 50%)", paddingTop: "0px", paddingBottom: "0px" }}>
-      <div className="mx-auto max-w-4xl px-6 text-center" style={{ paddingBottom: "40px" }}>
+      <div className="mx-auto max-w-4xl px-6 text-center" style={{ paddingBottom: "40px", backgroundColor: "#001A33" }}>
         <motion.p
           initial={{ opacity: 0, y: 15 }}
           whileInView={{ opacity: 1, y: 0 }}
