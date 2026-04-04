@@ -27,14 +27,6 @@ export function InitiativesPage() {
               <ArrowLeft className="h-4 w-4" />
               Strona główna
             </Link>
-            <motion.p
-              initial={{ opacity: 0, y: 15 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
-              className="text-xs font-semibold uppercase tracking-[0.2em] text-emerald"
-            >
-              Co robimy?
-            </motion.p>
             <motion.h1
               initial={{ opacity: 0, y: 15 }}
               animate={{ opacity: 1, y: 0 }}
@@ -89,10 +81,10 @@ export function InitiativesPage() {
                   Webinary i lokalne spotkania
                 </h2>
                 <p className="mt-4 leading-relaxed text-muted-foreground md:text-lg">
-                  {"Organizujemy regularne wydarzenia online i offline, ktore laczah spolecznosc zainteresowana bezpieczenstwem AI w Polsce. Nasze webinary goszcza ekspertow z calego swiata - badaczy, inzynierow i decydentow zajmujacych sie AI Safety. Lokalne spotkania odbywaja sie w Warszawie, Krakowie i Wroclawiu, oferujac mozliwosc networkingu, dyskusji i wspolnej pracy nad projektami."}
+                  Organizujemy wydarzenia, które łączą pasjonatów i profesjonalistów dbających o bezpieczny rozwój sztucznej inteligencji. Od webinarów z międzynarodowymi liderami opinii, po lokalne meetupy – tworzymy warunki do nauki, dyskusji i realnego działania.
                 </p>
                 <p className="mt-4 leading-relaxed text-muted-foreground md:text-lg">
-                  {"Wszystkie wydarzenia sa otwarte i bezplatne. Ponizej znajdziesz kalendarz nadchodzacych wydarzen - mozesz zapisac sie na wybrane lub dodac caly kalendarz do swojej aplikacji."}
+                  Nasze najbliższe wydarzenia znajdziesz na Lumie: https://luma.com/aisafetypl
                 </p>
                 
                 {/* Luma Calendar Embed */}
