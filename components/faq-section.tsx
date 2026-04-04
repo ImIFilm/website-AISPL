@@ -16,7 +16,7 @@ const faqPL = [
   },
   {
     question: "Jaki jest główny cel AI Safety Polska?",
-    answer: "Głównym celem AI Safety Polska jest stworzenie silnej, merytorycznej społeczności, która aktywnie pracuje nad bezpieczeństwem AI. Edukujemy, łączymy ekspertów z różnych dziedzin i wspieramy badania, które mają zapobiec potencjalnym zagrożeniom wynikającym z niekontrolowanego rozwoju sztucznej inteligencji w przyszłości.",
+    answer: "Głównym celem AI Safety Polska jest stworzenie silnej, merytorycznej społeczności, która aktywnie pracuje nad bezpieczeństwem AI. Edukujemy, łączymy ekspertów z różnych dziedzin i wspieramy badania, które mają zapobiec potencjalnym zagrożeniom wynikającym z niekontrolowanego rozwoju sztucznej inteligencji w przyszłości. Prowadzimy regularne webinary o AI Safety, organizujemy lokalne meetupy, prowadzimy reading club oraz dyskutujemy na Slacku.",
   },
   {
     question: "Czy muszę być programistą lub ekspertem ML, żeby zangażować się w AI Safety?",
