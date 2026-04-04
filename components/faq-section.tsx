@@ -16,11 +16,11 @@ const faqPL = [
   },
   {
     question: "Jaki jest główny cel AI Safety Polska?",
-    answer: "Głównym celem AI Safety Polska jest stworzenie silnej, merytorycznej społeczności, która aktywnie pracuje nad bezpieczeństwem AI. Edukujemy, łączymy ekspertów z różnych dziedzin i wspieramy badania, które mają zapobiec potencjalnym zagrożeniom wynikającym z niekontrolowanego rozwoju sztucznej inteligencji w przyszłości. Prowadzimy regularne webinary o AI Safety, organizujemy lokalne meetupy, prowadzimy reading club oraz dyskutujemy na Slacku.",
+    answer: "Głównym celem AI Safety Polska jest stworzenie silnej, merytorycznej społeczności, która aktywnie pracuje nad bezpieczeństwem AI. Edukujemy, łączymy ekspertów z różnych dziedzin i wspieramy badania, które mają zapobiec potencjalnym zagrożeniom wynikającym z zaawansowanej sztucznej inteligencji. Prowadzimy regularne webinary, klub czytelniczy i społeczność na Slacku, a także organizujemy lokalne spotkania.",
   },
   {
-    question: "Czy muszę być programistą lub ekspertem ML, żeby zangażować się w AI Safety?",
-    answer: "Zdecydowanie nie! Choć badacze techniczni są kluczowi, bezpieczeństwo AI to wyzwanie, które wymaga bardzo zróżnicowanych kompetencji. Środowisko pilnie potrzebuje prawników, analityków polityk, ekspertów ds. stosunków międzynarodowych, a także etyków, filozofów, ekonomistów i badaczy społecznych. Ogromną rolę odgrywają również specjaliści od cyberbezpieczeństwa, biosecurity, infrastruktury (hardware), a także prognostycy (forecasters), managerowie programów i produktów oraz eksperci ds. komunikacji i operacji. Jeśli nie wiesz, jak Twoje obecne umiejętności pasują do tej układanki, w AI Safety Poland prowadzimy indywidualne konsultacje kariery. Pomożemy Ci przeanalizować Twoje doświadczenie i podpowiemy, w jaki sposób możesz wnieść największą wartość do obszaru bezpieczeństwa AI – niezależnie od tego, jakie masz wykształcenie i na jakim etapie zawodowym jesteś.",
+    question: "Czy umieć programować, żeby zangażować się w AI Safety?",
+    answer: "Zdecydowanie nie! Choć badacze techniczni są kluczowi, bezpieczeństwo AI to wyzwanie, które wymaga bardzo zróżnicowanych kompetencji. Środowisko pilnie potrzebuje prawników, analityków, badaczy społecznych, filozofów, ekspertów ds. stosunków międzynarodowych i wielu innych. Ogromną rolę odgrywają również specjaliści od cyberbezpieczeństwa, biosecurity, infrastruktury, a także specjaliści HR, managerowie projektów oraz eksperci ds. komunikacji i operacji. Jeśli nie wiesz, jak Twoje obecne umiejętności pasują do tej układanki, w AI Safety Poland prowadzimy indywidualne konsultacje kariery. Pomożemy Ci przeanalizować Twoje doświadczenie i podpowiemy, w jaki sposób możesz wnieść największą wartość do obszaru bezpieczeństwa AI – niezależnie od tego, jakie masz wykształcenie i na jakim etapie zawodowym jesteś.",
   },
   {
     question: "Gdzie znajdę informacje o nadchodzących wydarzeniach?",
@@ -28,15 +28,15 @@ const faqPL = [
   },
   {
     question: "W jaki sposób mógłbym wesprzeć AI Safety Polska?",
-    answer: "Możesz udostępniać nasze materiały, polecać nas znajomym lub wspierać finansowo. Nawet małe działania pomagają budować świadomość tematu bezpieczeństwa AI w Polsce.",
+    answer: "Aktualnie szukamy osób do pomocy przy stronie internetowej (frontent, DevOps), prowadzeniu mediów społecznościowych, pisaniu artykułów na temat AI i AI Safety oraz specjalistów do automatyzacji procesów. Jeśli natomiast chciałbyś wesprzeć finansowo działania dotyczące AI Safety w Polsce, prosimy o kontakt mailowy.",
   },
   {
     question: "Od jakich książek lub materiałów polecacie zacząć?",
-    answer: 'Na start polecamy artykuł Marcela Windysa, dostępny na naszej stronie. Ponadto polecamy kanały na yt: Rational Animations, Robert Miles AI Safety oraz AI in Context. Świetnym źródłem wiedzy jest również strona 80,000 Hours. Jeśli macie czas na książki, polecamy „Human Compatible” oraz „If Anyone Builds It, Everyone Dies”.',
+    answer: 'Na start polecamy nasz dedykowany artykuł wprowadzający do AI Safety. Na YouTube dostępne są również świetnie materiały wideo: Rational Animations, Robert Miles AI Safety oraz AI in Context. Polecamy również dogłębne artykuły od organizacji 80,000 Hours [https://80000hours.org/ai/]. Jeśli macie czas na książki, polecamy „Human Compatible” Stuarta Russella oraz "The Alignment Problem" Briana Christiana.',
   },
   {
     question: "Jestem dziennikarzem/przedstawicielem mediów. Jak mogę się z Wami skontaktować?",
-    answer: "Zapraszamy do kontaktu bezpośrednio przez e-mail. Chętnie udzielamy wywiadów i komentarzy na temat bezpieczeństwa AI.",
+    answer: "Zapraszamy do kontaktu bezpośrednio przez nasz e-mail: contact@aisafety.org.pl Chętnie udzielamy wywiadów i komentarzy na temat bezpieczeństwa AI.",
   },
 ]
 
