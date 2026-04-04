@@ -43,15 +43,15 @@ export function HeroSection() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.3 }}
-          className="mx-auto mt-10 max-w-2xl"
+          className="mt-10"
         >
-          <div className="relative aspect-square w-full overflow-hidden">
+          <div className="relative w-screen h-96 md:h-[600px] -mx-[calc(50vw-50%)]">
             <Image
               src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/main-photo-1-Oo0f6K76XQmQoaiHOo5fFdb2YcOq4d.png"
               alt="Izometryczna ilustracja 3D budynku przedstawiajacego sale konferencyjne, laboratoria badawcze i serwerownie symbolizujace prace nad bezpieczenstwem AI"
               fill
               className="object-contain"
-              sizes="(max-width: 768px) 100vw, 672px"
+              sizes="100vw"
               priority
             />
           </div>
