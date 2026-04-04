@@ -96,8 +96,8 @@ export function ContactFooter() {
               </Link>
               <p className="mt-4 max-w-xs text-sm leading-relaxed text-primary-foreground/50">
                 {lang === "pl"
-                  ? "Budujemy świadomość i kompetencje w zakresie bezpieczeństwa AI w Polsce."
-                  : "Building awareness and competencies in AI safety in Poland."
+                  ? "Budujemy świadomość i kompetencje w zakresie bezpieczeństwa AI."
+                  : "Building awareness and competencies in AI safety."
                 }
               </p>
               {/* Social Links */}

@@ -115,7 +115,7 @@ export function InitiativesPage() {
                   Doradztwo zawodowe
                 </h2>
                 <p className="mt-4 leading-relaxed text-muted-foreground md:text-lg">
-                  {"Przygotuj sie i przejdz do kariery o wysokim wplywie w AI Safety. Oferujemy indywidualne, spersonalizowane konsultacje kariery skoncentrowane na sciezkach zawodowych w AI Safety, laczace globalne mozliwosci z polskim kontekstem i kontaktami."}
+                  {"Oferujemy indywidualne, spersonalizowane konsultacje kariery skoncentrowane na ścieżkach zawodowych w AI Safety. Pomożemy Ci wyznaczyć plan działania, znaleźć odpowiednie materiały, a także połączymy z innymi osobami o podobnych zainteresowaniach."}
                 </p>
 
                 <div className="mt-8 grid gap-6 sm:grid-cols-2">
@@ -124,7 +124,7 @@ export function InitiativesPage() {
                     <ul className="mt-3 space-y-2 text-sm text-muted-foreground">
                       <li className="flex items-start gap-2">
                         <span className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-emerald" />
-                        Studenci informatyki, matematyki, filozofii lub polityki publicznej
+                        Pomagamy zarówno osobom na poważnie myślącym o karierze w AI Safety, jak i tym, którzy dopiero wchodzą w temat.
                       </li>
                       <li className="flex items-start gap-2">
                         <span className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-emerald" />
@@ -132,11 +132,7 @@ export function InitiativesPage() {
                       </li>
                       <li className="flex items-start gap-2">
                         <span className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-emerald" />
-                        Badacze chcacy polaczyc doswiadczenie z priorytetami AI Safety
-                      </li>
-                      <li className="flex items-start gap-2">
-                        <span className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-emerald" />
-                        Kazdy zmotywowany do zaangazowania sie w AI Safety
+                        AI Safety potrzebuje nie tylko specjalistów od AI! Chętnie pomożemy osobom zajmującym się informatyką, fizyką, matematyką, prawem, ekonomią, cyberbezpieczeństwem, etyką, psychologią, naukami społecznymi, stosunkami międzynarodowymi czy komunikacją.
                       </li>
                     </ul>
                   </div>
@@ -145,11 +141,11 @@ export function InitiativesPage() {
                     <ul className="mt-3 space-y-2 text-sm text-muted-foreground">
                       <li className="flex items-start gap-2">
                         <span className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-emerald" />
-                        Wypelnij formularz zgloszeniowy
+                        Wypełnij formularz zgłoszeniowy
                       </li>
                       <li className="flex items-start gap-2">
                         <span className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-emerald" />
-                        30-minutowa konsultacja z doswiadczonym specjalista
+                        Rozmowa z doświadczonym specjalistą
                       </li>
                       <li className="flex items-start gap-2">
                         <span className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-emerald" />
@@ -157,7 +153,7 @@ export function InitiativesPage() {
                       </li>
                       <li className="flex items-start gap-2">
                         <span className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-emerald" />
-                        Mozliwosc spotkania follow-up po 6-12 miesiacach
+                        Możliwość następnego spotkania w zależności od potrzeb
                       </li>
                     </ul>
                   </div>
@@ -191,16 +187,16 @@ export function InitiativesPage() {
                   Społeczność online - Slack
                 </h2>
                 <p className="mt-4 leading-relaxed text-muted-foreground md:text-lg">
-                  {"Slack AI Safety Poland to centralne miejsce wymiany wiedzy i doswiadczen dla polskiej spolecznosci zainteresowanej bezpieczenstwem sztucznej inteligencji. Obecnie liczymy ponad 220 uzytkownikow - od profesjonalistow pracujacych w branzy AI, przez badaczy akademickich, po studentow i entuzjastow dopiero rozpoczynajacych swoja przygode z tematem."}
+                  {"Nasz Slack to główne miejsce wymiany wiedzy i doświadczeń dla polskiej społeczności zainteresowanej bezpieczeństwem AI. Obecnie liczymy ponad 200 członków - od profesjonalistów pracujących w branży AI, przez badaczy akademickich, po studentów i entuzjastów dopiero rozpoczynających swoja przygodę z tematem."}
                 </p>
                 <p className="mt-4 leading-relaxed text-muted-foreground md:text-lg">
-                  {"Na naszym Slacku znajdziesz dedykowane kanaly tematyczne: od technicznych dyskusji o alignment i interpretability, przez polityke i governance AI, az po ogolne rozmowy i networking. Regularnie dzielimy sie najnowszymi publikacjami, komentujemy biezace wydarzenia w swiecie AI i pomagamy sobie nawzajem w rozwoju karier."}
+                  {"Prowadzimy tu wiele dedykowanych kanałów tematycznych: zagadnienia techniczne, polityka publiczna ds. AI, a nawet dyskusje o możliwej świadomości systemów AI. Dzielimy się najnowszymi publikacjami i newsami ze świata AI safety, a także dajemy znać o nadchodzących wydarzeniach i możliwościach rozwoju kariery. Nie brakuje też luźniejszych rozmów i networkingu!"}
                 </p>
 
                 <div className="mt-8 rounded-xl bg-emerald/10 p-6">
                   <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
                     <div>
-                      <p className="text-2xl font-bold text-foreground">220+</p>
+                      <p className="text-2xl font-bold text-foreground">200+</p>
                       <p className="text-sm text-muted-foreground">członków społeczności</p>
                     </div>
                     <Button asChild className="bg-emerald hover:bg-emerald-dark text-white">
