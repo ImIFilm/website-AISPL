@@ -41,47 +41,41 @@ export function ContactFooter() {
 
   return (
     <section id="kontakt" className="relative">
-      {/* Contact Card - Overlapping design */}
-      <div className="relative z-10 -mb-24 bg-secondary pb-0">
-        <div className="mx-auto max-w-4xl px-6">
+      {/* Contact Section - Full width subtle gray background */}
+      <div className="relative z-10 -mb-24 w-full bg-slate-50 pb-0">
+        <div className="mx-auto max-w-6xl px-6 py-16 md:py-20">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-50px" }}
             transition={{ duration: 0.5 }}
-            className="relative overflow-hidden rounded-3xl border border-emerald/20 bg-gradient-to-br from-navy to-navy-light shadow-2xl"
+            className="flex flex-col items-center justify-between gap-12 md:flex-row md:gap-16"
           >
-            {/* Decorative gradient orb */}
-            <div className="absolute -right-20 -top-20 h-64 w-64 rounded-full bg-emerald/10 blur-3xl" />
-            <div className="absolute -left-10 -bottom-10 h-40 w-40 rounded-full bg-emerald/5 blur-2xl" />
-            
-            <div className="relative flex flex-col items-center justify-between gap-8 p-8 md:flex-row md:p-12">
-              <div className="text-center md:text-left">
-                <h3 className="text-2xl font-bold text-primary-foreground md:text-3xl">
-                  {text.cardHeading}
-                </h3>
-                <p className="mt-2 text-primary-foreground/60">
-                  kontakt@aisafety.pl
-                </p>
-                <a
-                  href="mailto:kontakt@aisafety.pl"
-                  className="mt-6 inline-flex items-center gap-3 rounded-full bg-emerald px-8 py-3.5 text-sm font-semibold text-white transition-all hover:bg-emerald-dark hover:shadow-lg hover:shadow-emerald/25"
-                >
-                  <Mail className="h-4 w-4" />
-                  {text.cardCta}
-                  <ArrowRight className="h-4 w-4" />
-                </a>
-              </div>
-              <div className="flex-shrink-0">
-                <div className="relative h-36 w-44 md:h-40 md:w-48">
-                  <Image
-                    src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/contact-Jlff4fq5DlgNpBB6tmQQ9yGe833CpO.png"
-                    alt={text.imgAlt}
-                    fill
-                    className="object-contain drop-shadow-2xl"
-                    sizes="192px"
-                  />
-                </div>
+            <div className="flex-1 text-center md:text-left">
+              <h3 className="text-3xl font-bold text-foreground md:text-4xl lg:text-5xl text-balance">
+                {text.cardHeading}
+              </h3>
+              <p className="mt-4 text-lg text-muted-foreground">
+                kontakt@aisafety.pl
+              </p>
+              <a
+                href="mailto:kontakt@aisafety.pl"
+                className="mt-8 inline-flex items-center gap-3 rounded-full bg-emerald px-8 py-3.5 text-sm font-semibold text-white transition-all hover:bg-emerald-dark hover:shadow-lg hover:shadow-emerald/30"
+              >
+                <Mail className="h-4 w-4" />
+                {text.cardCta}
+                <ArrowRight className="h-4 w-4" />
+              </a>
+            </div>
+            <div className="flex-shrink-0">
+              <div className="relative h-48 w-56 md:h-56 md:w-64">
+                <Image
+                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/contact-Jlff4fq5DlgNpBB6tmQQ9yGe833CpO.png"
+                  alt={text.imgAlt}
+                  fill
+                  className="object-contain"
+                  sizes="256px"
+                />
               </div>
             </div>
           </motion.div>
