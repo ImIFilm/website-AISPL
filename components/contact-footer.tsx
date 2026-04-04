@@ -17,7 +17,7 @@ const t = {
       { label: "Zaangażuj się", href: "/#zaangazuj-sie" },
       { label: "Kontakt", href: "/#kontakt" },
     ],
-    copyright: "© 2025 AI Safety Polska. Wszelkie prawa zastrzeżone.",
+    copyright: "© 2026 AI Safety Polska. Wszelkie prawa zastrzeżone.",
     footerAriaLabel: "Stopka",
   },
   en: {
@@ -103,7 +103,7 @@ export function ContactFooter() {
               {/* Social Links */}
               <div className="mt-6 flex items-center gap-4">
                 <a
-                  href="https://www.linkedin.com/company/ai-safety-polska/"
+                  href="https://www.linkedin.com/company/ai-safety-poland"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex h-10 w-10 items-center justify-center rounded-full bg-primary-foreground/5 text-primary-foreground/60 transition-all hover:bg-emerald hover:text-white"
@@ -112,7 +112,7 @@ export function ContactFooter() {
                   <Linkedin className="h-4 w-4" />
                 </a>
                 <a
-                  href="mailto:kontakt@aisafety.pl"
+                  href="mailto:contact@aisafety.org.pl"
                   className="flex h-10 w-10 items-center justify-center rounded-full bg-primary-foreground/5 text-primary-foreground/60 transition-all hover:bg-emerald hover:text-white"
                   aria-label="Email"
                 >
