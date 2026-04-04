@@ -48,12 +48,15 @@ export function HeroSection() {
         transition={{ duration: 0.7, delay: 0.3 }}
         className="mt-10 w-full"
       >
-        <div className="relative w-full" style={{ height: "clamp(300px, 50vw, 800px)" }}>
+        <div
+          className="relative w-full overflow-hidden"
+          style={{ aspectRatio: "1920 / 910", minHeight: "350px" }}
+        >
           <Image
             src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/main-photo-1-Oo0f6K76XQmQoaiHOo5fFdb2YcOq4d.png"
-            alt="Izometryczna ilustracja 3D budynku przedstawiajacego sale konferencyjne, laboratoria badawcze i serwerownie symbolizujace prace nad bezpieczenstwem AI"
+            alt="Izometryczna ilustracja 3D budynku..."
             fill
-            className="object-contain"
+            className="object-cover object-bottom"
             sizes="100vw"
             priority
           />
