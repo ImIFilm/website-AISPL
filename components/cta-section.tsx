@@ -36,7 +36,7 @@ export function CtaSection() {
           viewport={{ once: true, margin: "-50px" }}
           transition={{ duration: 0.5 }}
           className="text-xs font-semibold uppercase tracking-[0.2em]"
-          style={{ color: "#01985D" }}
+          style={{ color: "rgb(255, 218, 170)" }}
         >
           {text.label}
         </motion.p>
