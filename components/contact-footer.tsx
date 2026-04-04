@@ -95,7 +95,7 @@ export function ContactFooter() {
                 </span>
               </Link>
               <p className="mt-4 max-w-xs text-sm leading-relaxed text-primary-foreground/50">
-                {lang === "pl" 
+                {lang === "pl"
                   ? "Budujemy świadomość i kompetencje w zakresie bezpieczeństwa AI w Polsce."
                   : "Building awareness and competencies in AI safety in Poland."
                 }
@@ -147,9 +147,8 @@ export function ContactFooter() {
               {text.copyright}
             </p>
             <div className="flex items-center gap-1 text-xs text-primary-foreground/40">
-              <span>{lang === "pl" ? "Zbudowane z" : "Built with"}</span>
-              <span className="text-emerald">{"<3"}</span>
-              <span>{lang === "pl" ? "dla bezpiecznej AI" : "for safe AI"}</span>
+              <span>{lang === "pl" ? "2026"
+              </span>
             </div>
           </div>
         </div>
