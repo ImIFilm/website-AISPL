@@ -9,16 +9,16 @@ import { ContactFooter } from "@/components/contact-footer"
 
 const teamMembers = [
   {
-    name: "Jakub Krys",
-    role: "Koordynacja i strategia",
-    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Jakub%20Kry%C5%9B-dq1KmxDFTvxQ3zQDZnuALJpgMgBUWm.png",
+    name: "Jakub Nowak",
+    role: "Koordynacja i webinary",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Jakub%20Nowak-VZCVFCZXHBHej75gV7AhEzlY9mMI8g.png",
     linkedin: "https://linkedin.com/in/",
     isCoordinator: true,
   },
   {
-    name: "Jakub Nowak",
-    role: "Koordynacja i webinary",
-    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Jakub%20Nowak-VZCVFCZXHBHej75gV7AhEzlY9mMI8g.png",
+    name: "Jakub Krys",
+    role: "Koordynacja i strategia",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Jakub%20Kry%C5%9B-dq1KmxDFTvxQ3zQDZnuALJpgMgBUWm.png",
     linkedin: "https://linkedin.com/in/",
     isCoordinator: true,
   },

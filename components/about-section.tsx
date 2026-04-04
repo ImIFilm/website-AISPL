@@ -24,12 +24,12 @@ const t = {
 
 const coordinators = [
   {
-    name: "Jakub Kryś",
-    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Jakub%20Kry%C5%9B-dq1KmxDFTvxQ3zQDZnuALJpgMgBUWm.png",
-  },
-  {
     name: "Jakub Nowak",
     image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Jakub%20Nowak-VZCVFCZXHBHej75gV7AhEzlY9mMI8g.png",
+  },
+  {
+    name: "Jakub Kryś",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Jakub%20Kry%C5%9B-dq1KmxDFTvxQ3zQDZnuALJpgMgBUWm.png",
   },
   {
     name: "Patryk Wielopolski",
