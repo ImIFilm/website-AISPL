@@ -42,8 +42,8 @@ export function ContactFooter() {
   return (
     <section id="kontakt" className="relative">
       {/* Contact Section - Full width subtle gray background */}
-      <div className="relative z-10 -mb-24 w-full bg-slate-50 pb-0">
-        <div className="mx-auto max-w-6xl px-6 py-16 md:py-20">
+      <div className="relative z-10 -mb-24 w-full" style={{ backgroundColor: "rgba(143, 176, 146, 0.14)" }}>
+        <div className="mx-auto max-w-6xl px-6" style={{ paddingTop: "16px", paddingBottom: "0px" }}>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -52,10 +52,10 @@ export function ContactFooter() {
             className="flex flex-col items-center justify-between gap-12 md:flex-row md:gap-16"
           >
             <div className="flex-1 text-center md:text-left">
-              <h3 className="text-3xl font-bold text-foreground md:text-4xl lg:text-5xl text-balance">
+              <h3 className="text-foreground md:text-4xl lg:text-5xl text-balance" style={{ fontSize: "28px", fontWeight: "500" }}>
                 {text.cardHeading}
               </h3>
-              <p className="mt-4 text-lg text-muted-foreground">
+              <p className="mt-4 text-muted-foreground" style={{ fontSize: "16px", fontWeight: "300" }}>
                 kontakt@aisafety.pl
               </p>
               <a
@@ -74,6 +74,7 @@ export function ContactFooter() {
                   alt={text.imgAlt}
                   fill
                   className="object-contain"
+                  style={{ paddingTop: "13px", paddingBottom: "-7px" }}
                   sizes="256px"
                 />
               </div>
