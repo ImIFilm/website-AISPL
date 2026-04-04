@@ -18,14 +18,14 @@ export function InitiativesPage() {
       </div>
       <main className="pb-0">
         {/* Header */}
-        <section className="bg-background py-16 md:py-24">
+        <section className="bg-background py-16 md:py-24" style={{ paddingTop: "50px", paddingBottom: "50px" }}>
           <div className="mx-auto max-w-4xl px-6">
             <Link
               href="/"
               className="mb-8 inline-flex items-center gap-2 text-sm text-muted-foreground transition-colors hover:text-foreground"
             >
               <ArrowLeft className="h-4 w-4" />
-              Strona glowna
+              Strona główna
             </Link>
             <motion.p
               initial={{ opacity: 0, y: 15 }}
@@ -43,14 +43,30 @@ export function InitiativesPage() {
             >
               Nasze inicjatywy
             </motion.h1>
-            <motion.p
+            
+            {/* Table of Contents */}
+            <motion.div
               initial={{ opacity: 0, y: 15 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
-              className="mt-4 max-w-2xl text-base leading-relaxed text-muted-foreground md:text-lg"
+              className="mt-8 flex flex-wrap gap-4"
             >
-              {"Dzialamy na wielu frontach, zeby budowac swiadomosc i kompetencje w zakresie bezpieczenstwa sztucznej inteligencji w Polsce."}
-            </motion.p>
+              <a href="#webinary" className="text-sm font-medium text-emerald hover:text-emerald-dark transition-colors">
+                Webinary i spotkania
+              </a>
+              <span className="text-muted-foreground">•</span>
+              <a href="#slack" className="text-sm font-medium text-emerald hover:text-emerald-dark transition-colors">
+                Społeczność Slack
+              </a>
+              <span className="text-muted-foreground">•</span>
+              <a href="#wspolpraca-z-uczelniami" className="text-sm font-medium text-emerald hover:text-emerald-dark transition-colors">
+                Współpraca z uczelniami
+              </a>
+              <span className="text-muted-foreground">•</span>
+              <a href="#doradztwo-zawodowe" className="text-sm font-medium text-emerald hover:text-emerald-dark transition-colors">
+                Doradztwo zawodowe
+              </a>
+            </motion.div>
           </div>
         </section>
 
@@ -68,7 +84,7 @@ export function InitiativesPage() {
                 transition={{ duration: 0.6 }}
                 className="scroll-mt-32"
               >
-                <span id="lokalne-spotkania" className="block -mt-32 pt-32" />
+                <span id="lokalne-spotkania" className="block -mt-32 pt-32" style={{ paddingTop: "92px" }} />
                 <h2 className="text-2xl font-bold text-foreground md:text-3xl">
                   Webinary i lokalne spotkania
                 </h2>
@@ -180,7 +196,7 @@ export function InitiativesPage() {
                 className="scroll-mt-32"
               >
                 <h2 className="text-2xl font-bold text-foreground md:text-3xl">
-                  {"Spolecznosc online - Slack"}
+                  Społeczność online - Slack
                 </h2>
                 <p className="mt-4 leading-relaxed text-muted-foreground md:text-lg">
                   {"Slack AI Safety Poland to centralne miejsce wymiany wiedzy i doswiadczen dla polskiej spolecznosci zainteresowanej bezpieczenstwem sztucznej inteligencji. Obecnie liczymy ponad 220 uzytkownikow - od profesjonalistow pracujacych w branzy AI, przez badaczy akademickich, po studentow i entuzjastow dopiero rozpoczynajacych swoja przygode z tematem."}
@@ -193,7 +209,7 @@ export function InitiativesPage() {
                   <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
                     <div>
                       <p className="text-2xl font-bold text-foreground">220+</p>
-                      <p className="text-sm text-muted-foreground">aktywnych czlonkow spolecznosci</p>
+                      <p className="text-sm text-muted-foreground">członków społeczności</p>
                     </div>
                     <Button asChild className="bg-emerald hover:bg-emerald-dark text-white">
                       <a
@@ -220,32 +236,32 @@ export function InitiativesPage() {
                 className="scroll-mt-32"
               >
                 <h2 className="text-2xl font-bold text-foreground md:text-3xl">
-                  {"Wspolpraca z uczelniami"}
+                  Współpraca z uczelniami
                 </h2>
                 <p className="mt-4 leading-relaxed text-muted-foreground md:text-lg">
                   {"Nawiazujemy wspolprace z polskimi uczelniami wyzszymi, aby wlaczyc tematyke AI Safety do programow nauczania i wspierac rozwoj badan w tej dziedzinie. Wierzymy, ze przyszlosc bezpiecznej sztucznej inteligencji zalezy od edukacji kolejnych pokolen badaczy i inzynierow."}
                 </p>
                 <p className="mt-4 leading-relaxed text-muted-foreground md:text-lg">
-                  {"Nasza wspolpraca obejmuje organizacje wykladow goscinnych i warsztatow na uczelniach, wspieranie prac dyplomowych i badawczych zwiazanych z AI Safety, laczenie studentow z mentorami z branzy oraz promowanie mozliwosci stazowych i zawodowych w organizacjach zajmujacych sie bezpieczenstwem AI."}
+                  Nasza współpraca obejmuje organizacje wykładów gościnnych i warsztatów na uczelniach, wspieranie prac badawczych związanych z AI Safety, łączenie studentów i doktorantów z mentorami z branży oraz promowanie możliwości stażowych i zawodowych w organizacjach zajmujących się AI Safety.
                 </p>
                 
                 <div className="mt-8 grid gap-4 sm:grid-cols-3">
                   <div className="rounded-xl bg-card p-5 shadow-sm text-center">
-                    <p className="text-xl font-bold text-foreground">Wyklady</p>
-                    <p className="mt-1 text-sm text-muted-foreground">gosciane na uczelniach</p>
+                    <p className="text-xl font-bold text-foreground">Wykłady</p>
+                    <p className="mt-1 text-sm text-muted-foreground">gościnne na uczelniach</p>
                   </div>
                   <div className="rounded-xl bg-card p-5 shadow-sm text-center">
                     <p className="text-xl font-bold text-foreground">Warsztaty</p>
-                    <p className="mt-1 text-sm text-muted-foreground">praktyczne dla studentow</p>
+                    <p className="mt-1 text-sm text-muted-foreground">praktyczne dla studentów</p>
                   </div>
                   <div className="rounded-xl bg-card p-5 shadow-sm text-center">
                     <p className="text-xl font-bold text-foreground">Mentoring</p>
-                    <p className="mt-1 text-sm text-muted-foreground">dla prac badawczych</p>
+                    <p className="mt-1 text-sm text-muted-foreground">dla doktorantów</p>
                   </div>
                 </div>
                 
                 <p className="mt-8 text-sm text-muted-foreground">
-                  {"Jesli reprezentujesz uczelnie i chcesz nawiazac wspolprace, skontaktuj sie z nami przez formularz kontaktowy ponizej."}
+                  Jeśli reprezentujesz uczelnie i chcesz nawiązać współpracę, skontaktuj się z nami przez formularz kontaktowy poniżej.
                 </p>
               </motion.article>
 
