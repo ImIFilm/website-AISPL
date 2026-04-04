@@ -47,7 +47,7 @@ export function HeroSection() {
         >
           <div className="relative aspect-square w-full overflow-hidden">
             <Image
-              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/main%20picture-XoDPeVwySoFvlSvcZLrJm1tTlY7r1w.png"
+              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/main-photo-1-Oo0f6K76XQmQoaiHOo5fFdb2YcOq4d.png"
               alt="Izometryczna ilustracja 3D budynku przedstawiajacego sale konferencyjne, laboratoria badawcze i serwerownie symbolizujace prace nad bezpieczenstwem AI"
               fill
               className="object-contain"
@@ -58,12 +58,7 @@ export function HeroSection() {
         </motion.div>
       </div>
 
-      {/* V-shaped SVG divider - white to navy transition */}
-      <div className="absolute bottom-0 left-0 w-full overflow-hidden leading-[0] translate-y-[99%] z-10 pointer-events-none">
-        <svg viewBox="0 0 1200 120" preserveAspectRatio="none" className="block w-full h-[80px] md:h-[160px]">
-          <polygon points="0,0 1200,0 600,120" className="fill-white" />
-        </svg>
-      </div>
+      {/* V-shaped SVG divider removed */}
     </section>
   )
 }
