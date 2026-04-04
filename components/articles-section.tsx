@@ -45,7 +45,7 @@ export function ArticlesSection() {
   const text = t[lang]
 
   return (
-    <section className="bg-background py-20 md:py-28">
+    <section className="bg-background py-20 md:py-28" style={{ paddingTop: "50px", paddingBottom: "20px" }}>
       <div className="mx-auto max-w-4xl px-6">
         <motion.p
           initial={{ opacity: 0, y: 15 }}
