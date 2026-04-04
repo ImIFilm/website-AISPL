@@ -43,7 +43,7 @@ export function ContactFooter() {
     <section id="kontakt" className="relative">
       {/* Contact Section - Full width subtle gray background */}
       <div className="relative z-10 -mb-24 w-full" style={{ backgroundColor: "#f7fffa" }}>
-        <div className="mx-auto max-w-6xl px-6" style={{ paddingTop: "16px", paddingBottom: "0px", boxShadow: "0px -2px 37px 0px rgba(2, 3, 2, 0.06)" }}>
+        <div className="mx-auto max-w-6xl px-6" style={{ paddingTop: "0px", paddingLeft: "44px", paddingRight: "44px", paddingBottom: "0px", boxShadow: "0px -2px 37px 0px rgba(2, 3, 2, 0.06)" }}>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
