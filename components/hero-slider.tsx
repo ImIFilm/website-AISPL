@@ -48,7 +48,7 @@ export function HeroSlider() {
   }, [next])
 
   return (
-    <div className="relative w-full overflow-hidden" style={{ height: "clamp(240px, 45vw, 560px)" }}>
+    <div className="relative w-full overflow-hidden" style={{ height: "clamp(240px, 40vw, 480px)" }}>
       <AnimatePresence initial={false}>
         <motion.div
           key={current}
