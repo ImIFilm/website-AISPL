@@ -16,15 +16,17 @@ export function ContactFooter() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-50px" }}
             transition={{ duration: 0.5 }}
-            className="relative overflow-hidden rounded-2xl bg-card p-8 shadow-xl md:flex md:items-center md:justify-between md:p-10"
+            className="relative overflow-hidden rounded-2xl bg-card shadow-xl md:flex md:items-center md:justify-between"
+            style={{ paddingTop: "0px", paddingBottom: "0px", paddingRight: "0px", paddingLeft: "0px" }}
           >
-            <div>
+            <div style={{ marginLeft: "40px" }}>
               <h3 className="text-xl font-bold text-card-foreground md:text-2xl">
                 Masz pytanie?
               </h3>
               <a
                 href="mailto:kontakt@aisafety.pl"
                 className="mt-4 inline-flex items-center gap-2 rounded-lg bg-navy px-5 py-2.5 text-sm font-medium text-primary-foreground transition-colors hover:bg-navy-light"
+                style={{ marginLeft: "40px" }}
               >
                 Napisz do nas
                 <ArrowRight className="h-4 w-4" />

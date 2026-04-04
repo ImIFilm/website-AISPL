@@ -43,7 +43,7 @@ const itemVariants = {
 
 export function AboutSection() {
   return (
-    <section id="kim-jestesmy" className="py-20 md:py-28 -mt-1" style={{ backgroundImage: "linear-gradient(181deg, #029971 0%, #00162D 50%)" }}>
+    <section id="kim-jestesmy" className="py-20 md:py-28 -mt-1" style={{ backgroundImage: "linear-gradient(181deg, #029971 0%, #00162D 50%)", paddingTop: "237px" }}>
       <div className="mx-auto max-w-4xl px-6 text-center">
         <motion.p
           initial={{ opacity: 0, y: 15 }}
@@ -61,7 +61,7 @@ export function AboutSection() {
           viewport={{ once: true, margin: "-50px" }}
           transition={{ duration: 0.5, delay: 0.1 }}
           className="mt-4 text-2xl font-normal text-primary-foreground md:text-3xl lg:text-4xl text-balance"
-          style={{ lineHeight: "1.4", fontWeight: 400 }}
+          style={{ lineHeight: "1.4", fontWeight: 400, fontSize: "26px" }}
         >
           {"AI Safety Polska to społeczność naukowców, działaczy i pasjonatów skupiona na bezpieczeństwie AI."}
         </motion.h2>
@@ -71,7 +71,7 @@ export function AboutSection() {
           viewport={{ once: true, margin: "-50px" }}
           transition={{ duration: 0.5, delay: 0.2 }}
           className="mx-auto mt-6 max-w-2xl text-sm text-primary-foreground/60 md:text-base"
-          style={{ lineHeight: "1.4" }}
+          style={{ lineHeight: "1.4", fontSize: "18px" }}
         >
           {"Prowadzimy działania, których celem jest redukcja ryzyk związanych z zaawansowaną sztuczną inteligencją. Organizujemy wykłady, spotkania i dyskusje, a także wspieramy rozwój polskich talentów w tej dziedzinie."}
         </motion.p>
@@ -125,7 +125,7 @@ export function AboutSection() {
             href="/zespol"
             className="mt-8 inline-block text-sm text-primary-foreground/60 underline underline-offset-4 transition-colors hover:text-emerald"
           >
-            {"poznaj caly zespol \u2192"}
+            {"poznaj cały zespół →"}
           </Link>
         </motion.div>
       </div>
