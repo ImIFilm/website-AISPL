@@ -32,42 +32,42 @@ const faqPL = [
   },
   {
     question: "Od jakich książek lub materiałów polecacie zacząć?",
-    answer: 'Polecamy zacząć od "Superintelligence" Nicka Bostroma, "Human Compatible" Stuarta Russella, oraz materiałów dostępnych na stronach takich jak AI Alignment Forum czy 80,000 Hours.',
+    answer: 'Na start polecamy artykuł Marcela Windysa, dostępny na naszej stronie. Ponadto polecamy kanały na yt: Rational Animations, Robert Miles AI Safety oraz AI in Context. Świetnym źródłem wiedzy jest również strona 80,000 Hours. Jeśli macie czas na książki, polecamy „Human Compatible” oraz „If Anyone Builds It, Everyone Dies”.',
   },
   {
     question: "Jestem dziennikarzem/przedstawicielem mediów. Jak mogę się z Wami skontaktować?",
-    answer: "Zapraszamy do kontaktu przez formularz na naszej stronie lub bezpośrednio przez e-mail. Chętnie udzielamy wywiadów i komentarzy na temat bezpieczeństwa AI.",
+    answer: "Zapraszamy do kontaktu bezpośrednio przez e-mail. Chętnie udzielamy wywiadów i komentarzy na temat bezpieczeństwa AI.",
   },
 ]
 
 const faqEN = [
   {
     question: 'What exactly is "AI Safety"?',
-    answer: "AI Safety is a field of research and practice focused on ensuring that artificial intelligence systems operate in a safe, predictable and human-values-aligned way. It covers both the technical and ethical aspects of AI development.",
+    answer: "",
   },
   {
     question: "What is the main goal of AI Safety Polska?",
-    answer: "Our main goal is to build a Polish community of experts, researchers and enthusiasts interested in AI safety, as well as to carry out educational and research activities in this area.",
+    answer: "",
   },
   {
     question: "Do I need to be a programmer or ML expert to join?",
-    answer: "Not at all! We welcome people from all fields - philosophy, law, public policy, as well as those without a technical background. Every perspective is valuable in discussions about AI safety.",
+    answer: "",
   },
   {
     question: "Where can I find information about upcoming events?",
-    answer: "We publish event information on our Slack channel, social media and website. Join our community to stay up to date.",
+    answer: "",
   },
   {
     question: "How can I support AI Safety Polska if I don't have time for a bigger commitment?",
-    answer: "You can share our materials, recommend us to friends or provide financial support. Even small actions help raise awareness of AI safety in Poland.",
+    answer: "",
   },
   {
     question: "Which books or materials do you recommend to get started?",
-    answer: 'We recommend starting with "Superintelligence" by Nick Bostrom, "Human Compatible" by Stuart Russell, and materials available on sites such as AI Alignment Forum or 80,000 Hours.',
+    answer: '',
   },
   {
     question: "I am a journalist/media representative. How can I contact you?",
-    answer: "Please get in touch via the form on our website or directly by e-mail. We are happy to give interviews and comments on AI safety.",
+    answer: "",
   },
 ]
 
