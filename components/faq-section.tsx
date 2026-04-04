@@ -19,12 +19,12 @@ const faqPL = [
     answer: "Głównym celem AI Safety Polska jest stworzenie silnej, merytorycznej społeczności, która aktywnie pracuje nad bezpieczeństwem AI. Edukujemy, łączymy ekspertów z różnych dziedzin i wspieramy badania, które mają zapobiec potencjalnym zagrożeniom wynikającym z niekontrolowanego rozwoju sztucznej inteligencji w przyszłości.",
   },
   {
-    question: "Czy muszę być programistą lub ekspertem ML, żeby dołączyć?",
-    answer: "Zdecydowanie nie! Choć badacze techniczni są kluczowi, bezpieczeństwo AI to wyzwanie, które wymaga bardzo zróżnicowanych kompetencji. Środowisko pilnie potrzebuje prawników, analityków polityk, ekspertów ds. stosunków międzynarodowych, a także etyków, filozofów, ekonomistów i badaczy społecznych. Ogromną rolę odgrywają również specjaliści od cyberbezpieczeństwa, biosecurity, infrastruktury (hardware), a także prognostycy (forecasters), managerowie programów i produktów oraz eksperci ds. komunikacji i operacji. <br><br> Jeśli nie wiesz, jak Twoje obecne umiejętności pasują do tej układanki, w AI Safety Poland prowadzimy indywidualne konsultacje kariery. Pomożemy Ci przeanalizować Twoje doświadczenie i podpowiemy, w jaki sposób możesz wnieść największą wartość do obszaru bezpieczeństwa AI – niezależnie od tego, jakie masz wykształcenie i na jakim etapie zawodowym jesteś.",
+    question: "Czy muszę być programistą lub ekspertem ML, żeby zangażować się w AI Safety?",
+    answer: "Zdecydowanie nie! Choć badacze techniczni są kluczowi, bezpieczeństwo AI to wyzwanie, które wymaga bardzo zróżnicowanych kompetencji. Środowisko pilnie potrzebuje prawników, analityków polityk, ekspertów ds. stosunków międzynarodowych, a także etyków, filozofów, ekonomistów i badaczy społecznych. Ogromną rolę odgrywają również specjaliści od cyberbezpieczeństwa, biosecurity, infrastruktury (hardware), a także prognostycy (forecasters), managerowie programów i produktów oraz eksperci ds. komunikacji i operacji. Jeśli nie wiesz, jak Twoje obecne umiejętności pasują do tej układanki, w AI Safety Poland prowadzimy indywidualne konsultacje kariery. Pomożemy Ci przeanalizować Twoje doświadczenie i podpowiemy, w jaki sposób możesz wnieść największą wartość do obszaru bezpieczeństwa AI – niezależnie od tego, jakie masz wykształcenie i na jakim etapie zawodowym jesteś.",
   },
   {
     question: "Gdzie znajdę informacje o nadchodzących wydarzeniach?",
-    answer: "Informacje o wydarzeniach publikujemy na naszym Slacku, Linkedinie oraz Lumie: https://luma.com/aisafetypl",
+    answer: "Informacje o wydarzeniach publikujemy na naszym Slacku, LinkedInie oraz Lumie: https://luma.com/aisafetypl",
   },
   {
     question: "W jaki sposób mógłbym wesprzeć AI Safety Polska?",
