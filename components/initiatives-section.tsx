@@ -2,14 +2,13 @@
 
 import Link from "next/link"
 import { motion } from "framer-motion"
-import { Hash } from "lucide-react"
 import { useLanguage } from "@/context/language-context"
 
 const initiativesPL = [
-  { title: "Webinary",                href: "/inicjatywy#webinary" },
-  { title: "Lokalne spotkania",       href: "/inicjatywy#lokalne-spotkania" },
-  { title: "Wspolpraca z uczelniami", href: "/inicjatywy#wspolpraca-z-uczelniami" },
-  { title: "Doradztwo zawodowe",      href: "/inicjatywy#doradztwo-zawodowe" },
+  { title: "Webinary",                 href: "/inicjatywy#webinary" },
+  { title: "Lokalne spotkania",        href: "/inicjatywy#lokalne-spotkania" },
+  { title: "Współpraca z uczelniami",  href: "/inicjatywy#wspolpraca-z-uczelniami" },
+  { title: "Doradztwo zawodowe",       href: "/inicjatywy#doradztwo-zawodowe" },
 ]
 
 const initiativesEN = [
@@ -30,14 +29,14 @@ const t = {
   pl: {
     label: "Co robimy?",
     heading: "Nasze inicjatywy",
-    slackTitle: "Spolecznosc online - Slack",
-    slackSub: "Dolacz do naszej spolecznosci",
+    slackTitle: "Społeczność online - Slack",
+    slackSub: "",
   },
   en: {
     label: "What we do?",
     heading: "Our initiatives",
     slackTitle: "Online community - Slack",
-    slackSub: "Join our community",
+    slackSub: "",
   },
 }
 
@@ -112,9 +111,13 @@ export function InitiativesSection() {
             >
               <div className="absolute inset-0 bg-gradient-to-b from-emerald-600/40 to-emerald-900/60" />
               <div className="relative z-10">
-                <Hash className="mx-auto mb-4 h-14 w-14 text-white/90" />
+                <img 
+                  src="https://upload.wikimedia.org/wikipedia/commons/d/d5/Slack_icon_2019.svg" 
+                  alt="Slack" 
+                  className="mx-auto mb-4 h-14 w-14"
+                />
                 <h3 className="text-lg font-bold text-white">{text.slackTitle}</h3>
-                <p className="mt-2 text-sm text-white/80">{text.slackSub}</p>
+                {text.slackSub && <p className="mt-2 text-sm text-white/80">{text.slackSub}</p>}
               </div>
             </Link>
           </motion.div>
