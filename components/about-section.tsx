@@ -25,23 +25,23 @@ const t = {
 const coordinators = [
   {
     name: "Jakub Nowak",
-    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Jakub%20Nowak-VZCVFCZXHBHej75gV7AhEzlY9mMI8g.png",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Jakub%20Nowak-dgqTuTYz4hu7V5B14VMQQhGCxJfKqJ.png",
   },
   {
     name: "Jakub Kryś",
-    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Jakub%20Kry%C5%9B-dq1KmxDFTvxQ3zQDZnuALJpgMgBUWm.png",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Jakub%20Krys-xPJqEnzEux6Khj9dYp5fdsbgw86aMC.png",
   },
   {
     name: "Patryk Wielopolski",
-    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Patryk%20Wielopolski-ymboVxNC8EOitIa7gepriKkSVyDyNs.png",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Patryk%20Wielopolski-VSvDe0bkoOike7WbzqZSCzIOQZ9e2m.png",
   },
   {
     name: "Marcel Windys",
-    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Marcel%20Windys-G4SNL2BL61Mf99csCxyuiA8bOIVCYl.png",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Marcel%20Windys-BJWzRZI9TbCj90cBvlL9yaGXmJRKcv.png",
   },
   {
     name: "Piotr Kędziora",
-    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Piotr%20K%C4%99dziora-OLGbMWOsn49Rzfu1AmCbbAXfR6IU70.png",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Piotr%20Kedziora-D552vu7Lv1K3SX0XHSUSen4G95BwPF.png",
   },
 ]
 
