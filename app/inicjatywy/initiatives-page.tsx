@@ -5,13 +5,18 @@ import { motion } from "framer-motion"
 import { ArrowLeft, ExternalLink } from "lucide-react"
 import { Navbar } from "@/components/navbar"
 import { ContactFooter } from "@/components/contact-footer"
+import { HeroSlider } from "@/components/hero-slider"
 import { Button } from "@/components/ui/button"
 
 export function InitiativesPage() {
   return (
     <>
       <Navbar />
-      <main className="pt-24 pb-0">
+      {/* Full-width auto-advancing photo slider, sits below the fixed navbar */}
+      <div className="pt-[72px]">
+        <HeroSlider />
+      </div>
+      <main className="pb-0">
         {/* Header */}
         <section className="bg-background py-16 md:py-24">
           <div className="mx-auto max-w-4xl px-6">
