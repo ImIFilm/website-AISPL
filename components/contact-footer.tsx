@@ -146,10 +146,6 @@ export function ContactFooter() {
             <p className="text-xs text-primary-foreground/40">
               {text.copyright}
             </p>
-            <div className="flex items-center gap-1 text-xs text-primary-foreground/40">
-              <span>{lang === "pl" ? "2026"
-              </span>
-            </div>
           </div>
         </div>
       </footer>
