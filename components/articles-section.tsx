@@ -11,9 +11,9 @@ const t = {
     readMore: "czytaj więcej",
     articles: [
       {
-        author: "Kelsey Piper",
-        title: "Argumenty za poważnym traktowaniem AI jako zagrożenia dla ludzkości",
-        href: "/blog/argumenty-za-powaznym-traktowaniem-ai",
+        author: "Marcel Windys",
+        title: "Dlaczego powinieneś zainteresować się AI Safety?",
+        href: "/blog/dlaczego-powinienes-zainteresowac-sie-ai-safety",
       },
       {
         author: "Jakub Kryś",
@@ -27,9 +27,9 @@ const t = {
     readMore: "read more",
     articles: [
       {
-        author: "Kelsey Piper",
-        title: "Arguments for taking AI seriously as a threat to humanity",
-        href: "/blog/argumenty-za-powaznym-traktowaniem-ai",
+        author: "Marcel Windys",
+        title: "Why should you care about AI Safety?",
+        href: "/blog/dlaczego-powinienes-zainteresowac-sie-ai-safety",
       },
       {
         author: "Jakub Kryś",
