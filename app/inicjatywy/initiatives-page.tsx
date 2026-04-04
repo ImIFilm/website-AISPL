@@ -158,7 +158,7 @@ export function InitiativesPage() {
                 <div className="mt-8">
                   <Button asChild className="bg-emerald hover:bg-emerald-dark text-white">
                     <a
-                      href="https://aisafety.org.pl/pl/mentoring-kariery/"
+                      href="https://forms.gle/r3pHarn2cN2dzYrm8"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="inline-flex items-center gap-2"
