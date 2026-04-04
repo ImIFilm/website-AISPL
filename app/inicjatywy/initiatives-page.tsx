@@ -223,10 +223,7 @@ export function InitiativesPage() {
                   Współpraca z uczelniami
                 </h2>
                 <p className="mt-4 leading-relaxed text-muted-foreground md:text-lg">
-                  {"Nawiazujemy wspolprace z polskimi uczelniami wyzszymi, aby wlaczyc tematyke AI Safety do programow nauczania i wspierac rozwoj badan w tej dziedzinie. Wierzymy, ze przyszlosc bezpiecznej sztucznej inteligencji zalezy od edukacji kolejnych pokolen badaczy i inzynierow."}
-                </p>
-                <p className="mt-4 leading-relaxed text-muted-foreground md:text-lg">
-                  Nasza współpraca obejmuje organizacje wykładów gościnnych i warsztatów na uczelniach, wspieranie prac badawczych związanych z AI Safety, łączenie studentów i doktorantów z mentorami z branży oraz promowanie możliwości stażowych i zawodowych w organizacjach zajmujących się AI Safety.
+                  Współpraca z polskimi uczelniami obejmuje organizację wykładów gościnnych i warsztatów na uczelniach, wspieranie prac badawczych związanych z AI Safety, łączenie studentów i doktorantów z mentorami z branży oraz promowanie możliwości stażowych i zawodowych w organizacjach zajmujących się AI Safety. Zapraszamy do kontaktu przedstawicieli wydziałów oraz kół naukowych.
                 </p>
 
                 <div className="mt-8 grid gap-4 sm:grid-cols-3">
