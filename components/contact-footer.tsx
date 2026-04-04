@@ -3,7 +3,7 @@
 import Image from "next/image"
 import Link from "next/link"
 import { motion } from "framer-motion"
-import { ArrowRight, Mail, Linkedin, Github } from "lucide-react"
+import { Linkedin, Github } from "lucide-react"
 import { useLanguage } from "@/context/language-context"
 
 const t = {
@@ -58,14 +58,6 @@ export function ContactFooter() {
               <p className="mt-4 text-muted-foreground" style={{ fontSize: "16px", fontWeight: "300" }}>
                 kontakt@aisafety.pl
               </p>
-              <a
-                href="mailto:kontakt@aisafety.pl"
-                className="mt-8 inline-flex items-center gap-3 rounded-full bg-emerald px-8 py-3.5 text-sm font-semibold text-white transition-all hover:bg-emerald-dark hover:shadow-lg hover:shadow-emerald/30"
-              >
-                <Mail className="h-4 w-4" />
-                {text.cardCta}
-                <ArrowRight className="h-4 w-4" />
-              </a>
             </div>
             <div className="flex-shrink-0">
               <div className="relative h-48 w-56 md:h-56 md:w-64">
