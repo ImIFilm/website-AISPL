@@ -59,7 +59,8 @@ export function AboutSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-50px" }}
           transition={{ duration: 0.5, delay: 0.1 }}
-          className="mt-4 text-2xl font-bold text-primary-foreground md:text-3xl lg:text-4xl text-balance leading-relaxed"
+          className="mt-4 text-2xl font-bold text-primary-foreground md:text-3xl lg:text-4xl text-balance"
+          style={{ lineHeight: "1.4" }}
         >
           {"AI Safety Polska to społeczność naukowców, działaczy i pasjonatów skupiona na bezpieczeństwie AI."}
         </motion.h2>
@@ -68,7 +69,8 @@ export function AboutSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-50px" }}
           transition={{ duration: 0.5, delay: 0.2 }}
-          className="mx-auto mt-6 max-w-2xl text-sm leading-relaxed text-primary-foreground/60 md:text-base"
+          className="mx-auto mt-6 max-w-2xl text-sm text-primary-foreground/60 md:text-base"
+          style={{ lineHeight: "1.4" }}
         >
           {"Prowadzimy działania, których celem jest redukcja ryzyk związanych z zaawansowaną sztuczną inteligencją. Organizujemy wykłady, spotkania i dyskusje, a także wspieramy rozwój polskich talentów w tej dziedzinie."}
         </motion.p>

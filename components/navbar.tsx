@@ -7,9 +7,9 @@ import { Menu, X } from "lucide-react"
 import { motion, AnimatePresence } from "framer-motion"
 
 const navLinks = [
-  { label: "Kim jestesmy", href: "/#kim-jestesmy" },
+  { label: "Kim jesteśmy", href: "/#kim-jestesmy" },
   { label: "Co robimy", href: "/#co-robimy" },
-  { label: "Zaangazuj sie", href: "/#zaangazuj-sie" },
+  { label: "Zaangażuj się", href: "/#zaangazuj-sie" },
   { label: "Kontakt", href: "/#kontakt" },
 ]
 
