@@ -126,7 +126,7 @@ export function TeamPage() {
               transition={{ duration: 0.5, delay: 0.1 }}
               className="mt-3 text-3xl font-bold text-foreground md:text-4xl lg:text-5xl text-balance"
             >
-              Ludzie stojacy za AI Safety Polska
+              Ludzie stojący za AI Safety Polska
             </motion.h1>
             <motion.p
               initial={{ opacity: 0, y: 15 }}
@@ -134,7 +134,7 @@ export function TeamPage() {
               transition={{ duration: 0.5, delay: 0.2 }}
               className="mt-4 max-w-2xl text-base leading-relaxed text-muted-foreground md:text-lg"
             >
-              {"Nasz zespol laczy ekspertow z roznych dziedzin - od sztucznej inteligencji i informatyki, przez filozofie i prawo, az po komunikacje i edukacje."}
+              Łączymy wiedzę z zakresu nauk technicznych, humanistycznych i społecznych. To właśnie to wielowymiarowe podejście pozwala nam skutecznie działać na rzecz bezpiecznego rozwoju AI. Na chwilę obecną wszyscy działamy jako wolontariusze.
             </motion.p>
           </div>
         </section>
@@ -212,7 +212,7 @@ export function TeamPage() {
               transition={{ duration: 0.5 }}
               className="text-center text-xs font-semibold uppercase tracking-[0.2em] text-muted-foreground"
             >
-              Czlonkowie zespolu
+              Członkowie zespołu
             </motion.p>
             <motion.div
               variants={containerVariants}
