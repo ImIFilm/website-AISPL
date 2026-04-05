@@ -16,7 +16,7 @@ const faqPL = [
   },
   {
     question: "Jaki jest główny cel AI Safety Polska?",
-    answer: "Głównym celem AI Safety Polska jest stworzenie silnej, merytorycznej społeczności, która aktywnie pracuje nad bezpieczeństwem AI. Edukujemy, łączymy ekspertów z różnych dziedzin i wspieramy badania, które mają zapobiec potencjalnym zagrożeniom wynikającym z zaawansowanej sztucznej inteligencji. Prowadzimy regularne webinary, klub czytelniczy i społeczność na Slacku, a także organizujemy lokalne spotkania.",
+    answer: (<>Głównym celem AI Safety Polska jest stworzenie silnej, merytorycznej społeczności, która aktywnie pracuje nad bezpieczeństwem AI. Edukujemy, łączymy ekspertów z różnych dziedzin i wspieramy badania, które mają zapobiec potencjalnym zagrożeniom wynikającym z zaawansowanej sztucznej inteligencji. Prowadzimy <a href="/inicjatywy#webinary" className="text-emerald hover:text-emerald-dark font-semibold transition-colors">regularne webinary, klub czytelniczy</a> i <a href="/inicjatywy#slack" className="text-emerald hover:text-emerald-dark font-semibold transition-colors">społeczność na Slacku</a>, a także organizujemy <a href="/inicjatywy#lokalne-spotkania" className="text-emerald hover:text-emerald-dark font-semibold transition-colors">lokalne spotkania</a>.</>),
   },
   {
     question: "Czy umieć programować, żeby zangażować się w AI Safety?",
