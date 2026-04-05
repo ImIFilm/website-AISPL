@@ -190,7 +190,8 @@ export function TeamPage() {
                     href={person.linkedin}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="mt-3 inline-flex items-center gap-1.5 text-xs font-medium text-emerald transition-colors hover:text-emerald-dark"
+                    className="mt-3 inline-flex items-center gap-1.5 text-xs font-medium transition-colors"
+                    style={{ color: "#0077B7" }}
                     aria-label={`Profil LinkedIn: ${person.name}`}
                   >
                     <Image
@@ -258,7 +259,8 @@ export function TeamPage() {
                       href={person.linkedin}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="mt-1.5 inline-flex items-center gap-1 text-xs text-emerald transition-colors hover:text-emerald-dark"
+                      className="mt-1.5 inline-flex items-center gap-1 text-xs transition-colors"
+                      style={{ color: "#0077B7" }}
                       aria-label={`Profil LinkedIn: ${person.name}`}
                     >
                       <Image
