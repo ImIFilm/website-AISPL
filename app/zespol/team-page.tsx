@@ -186,23 +186,23 @@ export function TeamPage() {
                     {person.name}
                   </h3>
                   <p className="mt-1 text-sm text-primary-foreground/50">{person.role}</p>
-                  <a
-                    href={person.linkedin}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="mt-3 inline-flex items-center gap-1.5 text-xs font-medium transition-colors"
-                    style={{ color: "#0077B7" }}
-                    aria-label={`Profil LinkedIn: ${person.name}`}
-                  >
-                    <Image
-                      src="/linkedin-square-icon.svg"
-                      alt="LinkedIn"
-                      width={16}
-                      height={16}
-                      className="h-4 w-4"
-                    />
-                    LinkedIn
-                  </a>
+                    <a
+                      href={person.linkedin}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="mt-1.5 inline-flex items-center gap-1 text-xs transition-colors"
+                      style={{ color: "#1193d9" }}
+                      aria-label={`Profil LinkedIn: ${person.name}`}
+                    >
+                      <Image
+                        src="/linkedin-square-icon.svg"
+                        alt="LinkedIn"
+                        width={14}
+                        height={14}
+                        className="h-3.5 w-3.5"
+                      />
+                      LinkedIn
+                    </a>
                 </motion.div>
               ))}
             </motion.div>
@@ -259,8 +259,7 @@ export function TeamPage() {
                       href={person.linkedin}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="mt-1.5 inline-flex items-center gap-1 text-xs transition-colors"
-                      style={{ color: "#0077B7" }}
+                      className="mt-1.5 inline-flex items-center gap-1 text-xs text-emerald transition-colors hover:text-emerald-dark"
                       aria-label={`Profil LinkedIn: ${person.name}`}
                     >
                       <Image
