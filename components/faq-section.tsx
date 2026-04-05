@@ -20,22 +20,22 @@ const faqPL = [
   },
   {
     question: "Czy umieć programować, żeby zangażować się w AI Safety?",
-    answer: "Zdecydowanie nie! Choć badacze techniczni są kluczowi, bezpieczeństwo AI to wyzwanie, które wymaga bardzo zróżnicowanych kompetencji. Środowisko pilnie potrzebuje prawników, analityków, badaczy społecznych, filozofów, ekspertów ds. stosunków międzynarodowych i wielu innych. Ogromną rolę odgrywają również specjaliści od cyberbezpieczeństwa, biosecurity, infrastruktury, a także specjaliści HR, managerowie projektów oraz eksperci ds. komunikacji i operacji. Jeśli nie wiesz, jak Twoje obecne umiejętności pasują do tej układanki, w AI Safety Poland prowadzimy <a href=\"/inicjatywy#doradztwo-zawodowe\" className=\"text-emerald hover:text-emerald-dark font-semibold transition-colors\">indywidualne konsultacje kariery</a>. Pomożemy Ci przeanalizować Twoje doświadczenie i podpowiemy, w jaki sposób możesz wnieść największą wartość do obszaru bezpieczeństwa AI – niezależnie od tego, jakie masz wykształcenie i na jakim etapie zawodowym jesteś.",
+    answer: "Zdecydowanie nie! Choć badacze techniczni są kluczowi, bezpieczeństwo AI to wyzwanie, które wymaga bardzo zróżnicowanych kompetencji. Środowisko pilnie potrzebuje prawników, analityków, badaczy społecznych, filozofów, ekspertów ds. stosunków międzynarodowych i wielu innych. Ogromną rolę odgrywają również specjaliści od cyberbezpieczeństwa, biosecurity, infrastruktury, a także specjaliści HR, managerowie projektów oraz eksperci ds. komunikacji i operacji. Jeśli nie wiesz, jak Twoje obecne umiejętności pasują do tej układanki, w AI Safety Poland prowadzimy <a href=" / inicjatywy#doradztwo-zawodowe" className="text - emerald hover: text - emerald - dark font- semibold transition - colors">indywidualne konsultacje kariery</a>. Pomożemy Ci przeanalizować Twoje doświadczenie i podpowiemy, w jaki sposób możesz wnieść największą wartość do obszaru bezpieczeństwa AI – niezależnie od tego, jakie masz wykształcenie i na jakim etapie zawodowym jesteś.",
   },
-  {
-    question: "Gdzie znajdę informacje o nadchodzących wydarzeniach?",
+{
+  question: "Gdzie znajdę informacje o nadchodzących wydarzeniach?",
     answer: "Informacje o wydarzeniach publikujemy na naszym Slacku, LinkedInie oraz Lumie: https://luma.com/aisafetypl",
   },
-  {
-    question: "W jaki sposób mógłbym wesprzeć AI Safety Polska?",
+{
+  question: "W jaki sposób mógłbym wesprzeć AI Safety Polska?",
     answer: "Aktualnie szukamy osób do pomocy przy stronie internetowej (frontent, DevOps), prowadzeniu mediów społecznościowych, pisaniu artykułów na temat AI i AI Safety oraz specjalistów do automatyzacji procesów. Jeśli natomiast chciałbyś wesprzeć finansowo działania dotyczące AI Safety w Polsce, prosimy o kontakt mailowy.",
   },
-  {
-    question: "Od jakich książek lub materiałów polecacie zacząć?",
+{
+  question: "Od jakich książek lub materiałów polecacie zacząć?",
     answer: (<>Na start polecamy nasz dedykowany <a href="/blog/intro-ai-safety" className="text-emerald hover:text-emerald-dark font-semibold transition-colors">artykuł wprowadzający do AI Safety</a>. Na YouTube dostępne są również świetnie materiały wideo: <a href="https://www.youtube.com/RationalAnimations" className="text-emerald hover:text-emerald-dark font-semibold transition-colors">Rational Animations</a>, <a href="https://www.youtube.com/@RobertMilesAI" className="text-emerald hover:text-emerald-dark font-semibold transition-colors">Robert Miles AI Safety</a> oraz <a href="https://www.youtube.com/@AI_In_Context" className="text-emerald hover:text-emerald-dark font-semibold transition-colors">AI in Context</a>. Polecamy również <a href="https://80000hours.org/ai/" className="text-emerald hover:text-emerald-dark font-semibold transition-colors">dogłębne artykuły od organizacji 80,000 Hours</a>. Jeśli macie czas na książki, polecamy <a href="https://www.goodreads.com/book/show/44767248-human-compatible" className="text-emerald hover:text-emerald-dark font-semibold transition-colors">„Human Compatible"</a> Stuarta Russella oraz <a href="https://www.goodreads.com/book/show/50489349-the-alignment-problem" className="text-emerald hover:text-emerald-dark font-semibold transition-colors">"The Alignment Problem"</a> Briana Christiana.</>),
   },
-  {
-    question: "Jestem dziennikarzem/przedstawicielem mediów. Jak mogę się z Wami skontaktować?",
+{
+  question: "Jestem dziennikarzem/przedstawicielem mediów. Jak mogę się z Wami skontaktować?",
     answer: "Zapraszamy do kontaktu bezpośrednio przez nasz e-mail: contact@aisafety.org.pl Chętnie udzielamy wywiadów i komentarzy na temat bezpieczeństwa AI.",
   },
 ]
