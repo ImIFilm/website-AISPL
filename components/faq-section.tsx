@@ -104,10 +104,10 @@ export function FaqSection() {
           <Accordion type="single" collapsible className="w-full">
             {text.items.map((item, i) => (
               <AccordionItem key={i} value={`item-${i}`} className="border-border/60">
-                <AccordionTrigger className="text-left text-sm font-medium text-foreground hover:no-underline md:text-base">
+                <AccordionTrigger className="text-left font-medium text-foreground hover:no-underline" style={{ fontSize: "18px" }}>
                   {item.question}
                 </AccordionTrigger>
-                <AccordionContent className="text-sm leading-relaxed text-muted-foreground">
+                <AccordionContent className="leading-relaxed text-muted-foreground" style={{ fontSize: "16px" }}>
                   {item.answer}
                 </AccordionContent>
               </AccordionItem>
