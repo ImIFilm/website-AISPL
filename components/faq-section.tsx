@@ -32,7 +32,7 @@ const faqPL = [
   },
   {
     question: "Od jakich książek lub materiałów polecacie zacząć?",
-    answer: 'Na start polecamy nasz dedykowany artykuł wprowadzający do AI Safety. Na YouTube dostępne są również świetnie materiały wideo: Rational Animations, Robert Miles AI Safety oraz AI in Context. Polecamy również dogłębne artykuły od organizacji 80,000 Hours [https://80000hours.org/ai/]. Jeśli macie czas na książki, polecamy „Human Compatible” Stuarta Russella oraz "The Alignment Problem" Briana Christiana.',
+    answer: (<>Na start polecamy nasz dedykowany artykuł wprowadzający do AI Safety. Na YouTube dostępne są również świetnie materiały wideo: Rational Animations, Robert Miles AI Safety oraz AI in Context. Polecamy również <a href="https://80000hours.org/ai/" className="text-emerald hover:text-emerald-dark font-semibold transition-colors">dogłębne artykuły od organizacji 80,000 Hours</a>. Jeśli macie czas na książki, polecamy „Human Compatible" Stuarta Russella oraz "The Alignment Problem" Briana Christiana.</>),
   },
   {
     question: "Jestem dziennikarzem/przedstawicielem mediów. Jak mogę się z Wami skontaktować?",
