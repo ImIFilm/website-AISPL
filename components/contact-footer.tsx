@@ -3,7 +3,7 @@
 import Image from "next/image"
 import Link from "next/link"
 import { motion } from "framer-motion"
-import { Mail, Linkedin, Github } from "lucide-react"
+import { Mail, ExternalLink, Github } from "lucide-react"
 import { useLanguage } from "@/context/language-context"
 
 const t = {
@@ -109,7 +109,7 @@ export function ContactFooter() {
                   className="flex h-10 w-10 items-center justify-center rounded-full bg-primary-foreground/5 text-primary-foreground/60 transition-all hover:bg-emerald hover:text-white"
                   aria-label="LinkedIn"
                 >
-                  <Linkedin className="h-4 w-4" />
+                  <ExternalLink className="h-4 w-4" />
                 </a>
                 <a
                   href="mailto:contact@aisafety.org.pl"
