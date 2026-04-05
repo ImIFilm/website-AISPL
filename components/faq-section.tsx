@@ -24,7 +24,7 @@ const faqPL = [
   },
   {
     question: "Gdzie znajdę informacje o nadchodzących wydarzeniach?",
-    answer: "Informacje o wydarzeniach publikujemy na naszym Slacku, LinkedInie oraz Lumie: https://luma.com/aisafetypl",
+    answer: (<>Informacje o wydarzeniach publikujemy na <a href="/inicjatywy#slack" className="text-emerald hover:text-emerald-dark font-semibold transition-colors">naszym Slacku</a>, <a href="https://www.linkedin.com/company/ai-safety-poland/" className="text-emerald hover:text-emerald-dark font-semibold transition-colors">LinkedInie</a> oraz <a href="https://luma.com/aisafetypl" className="text-emerald hover:text-emerald-dark font-semibold transition-colors">Lumie</a>.</>),
   },
   {
     question: "W jaki sposób mógłbym wesprzeć AI Safety Polska?",
