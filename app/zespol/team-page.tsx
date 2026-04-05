@@ -3,7 +3,7 @@
 import Image from "next/image"
 import Link from "next/link"
 import { motion } from "framer-motion"
-import { ExternalLink, ArrowLeft } from "lucide-react"
+import { Linkedin, ArrowLeft } from "lucide-react"
 import { Navbar } from "@/components/navbar"
 import { ContactFooter } from "@/components/contact-footer"
 
@@ -193,7 +193,7 @@ export function TeamPage() {
                     className="mt-3 inline-flex items-center gap-1.5 text-xs font-medium text-emerald transition-colors hover:text-emerald-dark"
                     aria-label={`Profil LinkedIn: ${person.name}`}
                   >
-                    <ExternalLink className="h-4 w-4" />
+                    <Linkedin className="h-4 w-4" />
                     LinkedIn
                   </a>
                 </motion.div>
@@ -255,7 +255,7 @@ export function TeamPage() {
                       className="mt-1.5 inline-flex items-center gap-1 text-xs text-emerald transition-colors hover:text-emerald-dark"
                       aria-label={`Profil LinkedIn: ${person.name}`}
                     >
-                      <ExternalLink className="h-3.5 w-3.5" />
+                      <Linkedin className="h-3.5 w-3.5" />
                       LinkedIn
                     </a>
                   </div>
