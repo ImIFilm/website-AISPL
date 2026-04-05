@@ -81,10 +81,10 @@ export function InitiativesPage() {
                   Webinary i lokalne spotkania
                 </h2>
                 <p className="mt-4 leading-relaxed text-muted-foreground md:text-lg">
-                  Organizujemy wydarzenia, które łączą pasjonatów i profesjonalistów dbających o bezpieczny rozwój sztucznej inteligencji. Od webinarów, przez klub czytelniczy, aż po lokalnie spotkania – tworzymy warunki do nauki, dyskusji i realnego działania.
+                  Organizujemy wydarzenia, które łączą pasjonatów i profesjonalistów dbających o bezpieczny rozwój sztucznej inteligencji. Od webinarów, przez klub czytelniczy, aż po lokalne spotkania – tworzymy warunki do nauki, dyskusji i realnego działania.
                 </p>
                 <p className="mt-4 leading-relaxed text-muted-foreground md:text-lg">
-                  Nasze najbliższe wydarzenia znajdziesz na <a href="https://luma.com/aisafetypl" className="text-emerald hover:text-emerald-dark font-semibold transition-colors"> naszym kalendarzu na Lumie </a>
+                  Nasze najbliższe wydarzenia znajdziesz na <a href="https://luma.com/aisafetypl" className="text-emerald hover:text-emerald-dark font-semibold transition-colors"> naszym kalendarzu na Lumie.</a>
                 </p>
 
                 {/* Luma Calendar Embed */}

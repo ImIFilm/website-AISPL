@@ -28,7 +28,7 @@ const faqPL = [
   },
   {
     question: "W jaki sposób mógłbym wesprzeć AI Safety Polska?",
-    answer: "Aktualnie szukamy osób do pomocy przy stronie internetowej (frontent, DevOps), prowadzeniu mediów społecznościowych, pisaniu artykułów na temat AI i AI Safety oraz specjalistów do automatyzacji procesów. Jeśli natomiast chciałbyś wesprzeć finansowo działania dotyczące AI Safety w Polsce, prosimy o kontakt mailowy.",
+    answer: "Aktualnie szukamy osób do pomocy przy stronie internetowej (frontend, DevOps), prowadzeniu mediów społecznościowych, pisaniu artykułów na temat AI i AI Safety oraz specjalistów do automatyzacji procesów. Jeśli natomiast chciałbyś wesprzeć finansowo działania dotyczące AI Safety w Polsce, prosimy o kontakt mailowy.",
   },
   {
     question: "Od jakich książek lub materiałów polecacie zacząć?",
