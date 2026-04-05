@@ -3,7 +3,7 @@
 import Image from "next/image"
 import Link from "next/link"
 import { motion } from "framer-motion"
-import { Mail, Linkedin, Github } from "lucide-react"
+import { Mail, Github } from "lucide-react"
 import { useLanguage } from "@/context/language-context"
 
 const t = {
@@ -106,10 +106,16 @@ export function ContactFooter() {
                   href="https://www.linkedin.com/company/ai-safety-poland"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex h-10 w-10 items-center justify-center rounded-full bg-primary-foreground/5 text-primary-foreground/60 transition-all hover:bg-emerald hover:text-white"
+                  className="flex h-10 w-10 items-center justify-center transition-transform hover:scale-110"
                   aria-label="LinkedIn"
                 >
-                  <Linkedin className="h-4 w-4" />
+                  <Image
+                    src="/linkedin-square-icon.svg"
+                    alt="LinkedIn"
+                    width={40}
+                    height={40}
+                    className="h-10 w-10"
+                  />
                 </a>
                 <a
                   href="mailto:contact@aisafety.org.pl"
