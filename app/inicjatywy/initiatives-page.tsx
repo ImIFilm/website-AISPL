@@ -225,27 +225,10 @@ export function InitiativesPage() {
                 <p className="mt-4 leading-relaxed text-muted-foreground md:text-lg">
                   Współpraca z polskimi uczelniami obejmuje organizację wykładów gościnnych i warsztatów na uczelniach, wspieranie prac badawczych związanych z AI Safety, łączenie studentów i doktorantów z mentorami z branży oraz promowanie możliwości stażowych i zawodowych w organizacjach zajmujących się AI Safety.
                 </p>
-
-                <div className="mt-8 grid gap-4 sm:grid-cols-3">
-                  <div className="rounded-xl bg-card p-5 shadow-sm text-center">
-                    <p className="text-xl font-bold text-foreground">Wykłady</p>
-                    <p className="mt-1 text-sm text-muted-foreground">gościnne na uczelniach</p>
-                  </div>
-                  <div className="rounded-xl bg-card p-5 shadow-sm text-center">
-                    <p className="text-xl font-bold text-foreground">Warsztaty</p>
-                    <p className="mt-1 text-sm text-muted-foreground">praktyczne dla studentów</p>
-                  </div>
-                  <div className="rounded-xl bg-card p-5 shadow-sm text-center">
-                    <p className="text-xl font-bold text-foreground">Mentoring</p>
-                    <p className="mt-1 text-sm text-muted-foreground">dla doktorantów</p>
-                  </div>
-                </div>
-
-                <p className="mt-8 text-sm text-muted-foreground">
+                <p className="mt-4 leading-relaxed text-muted-foreground md:text-lg">
                   Jeśli reprezentujesz uczelnię, wydział lub koło naukowe i chcesz nawiązać współpracę, skontaktuj się z nami bezpośrednio przez mail: contact@aisafety.org.pl
                 </p>
               </motion.article>
-
             </div>
           </div>
         </section>
