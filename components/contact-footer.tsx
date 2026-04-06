@@ -3,7 +3,6 @@
 import Image from "next/image"
 import Link from "next/link"
 import { motion } from "framer-motion"
-import { Mail, Github } from "lucide-react"
 import { useLanguage } from "@/context/language-context"
 
 const t = {
@@ -118,11 +117,32 @@ export function ContactFooter() {
                   />
                 </a>
                 <a
+                  href="https://youtube.com/@aisafetypl?si=Qi2241l4_nT3xxx8"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex h-10 w-10 items-center justify-center transition-transform hover:scale-110"
+                  aria-label="YouTube"
+                >
+                  <Image
+                    src="/youtube-square-icon.svg"
+                    alt="YouTube"
+                    width={40}
+                    height={40}
+                    className="h-10 w-10"
+                  />
+                </a>
+                <a
                   href="mailto:contact@aisafety.org.pl"
-                  className="flex h-10 w-10 items-center justify-center transition-all text-muted-foreground hover:text-emerald"
+                  className="flex h-10 w-10 items-center justify-center transition-transform hover:scale-110"
                   aria-label="Email"
                 >
-                  <Mail className="h-4 w-4" />
+                  <Image
+                    src="/email-square-icon.svg"
+                    alt="Email"
+                    width={40}
+                    height={40}
+                    className="h-10 w-10"
+                  />
                 </a>
               </div>
             </div>
