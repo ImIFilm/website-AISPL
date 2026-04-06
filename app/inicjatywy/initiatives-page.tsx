@@ -128,7 +128,7 @@ export function InitiativesPage() {
                       </li>
                       <li className="flex items-start gap-2">
                         <span className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-emerald" />
-                        AI Safety potrzebuje nie tylko specjalistów od AI! Chętnie pomożemy osobom zajmującym się informatyką, fizyką, matematyką, prawem, ekonomią, cyberbezpieczeństwem, etyką, psychologią, naukami społecznymi, stosunkami międzynarodowymi czy komunikacją.
+                        AI Safety potrzebuje nie tylko specjalistów od AI! Chętnie pomożemy osobom zajmującym się szeroko pojętą informatyką, fizyką, matematyką, prawem, ekonomią, cyberbezpieczeństwem, etyką, psychologią, naukami społecznymi, stosunkami międzynarodowymi czy komunikacją.
                       </li>
                     </ul>
                   </div>
