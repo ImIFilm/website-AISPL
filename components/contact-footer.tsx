@@ -119,7 +119,7 @@ export function ContactFooter() {
                 </a>
                 <a
                   href="mailto:contact@aisafety.org.pl"
-                  className="flex h-10 w-10 items-center justify-center rounded-full bg-primary-foreground/5 text-primary-foreground/60 transition-all hover:bg-emerald hover:text-white"
+                  className="flex h-10 w-10 items-center justify-center transition-all text-muted-foreground hover:text-emerald"
                   aria-label="Email"
                 >
                   <Mail className="h-4 w-4" />
