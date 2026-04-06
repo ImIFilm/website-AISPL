@@ -31,11 +31,11 @@ const faqPL = [
     answer: (<>Informacje o wydarzeniach publikujemy na <a href="/inicjatywy#slack" className="text-emerald hover:text-emerald-dark font-semibold transition-colors">naszym Slacku</a>, <a href="https://www.linkedin.com/company/ai-safety-poland/" className="text-emerald hover:text-emerald-dark font-semibold transition-colors">LinkedInie</a> oraz <a href="https://luma.com/aisafetypl" className="text-emerald hover:text-emerald-dark font-semibold transition-colors">Lumie</a>.</>),
   },
   {
-    question: "W jaki sposób mógłbym wesprzeć AI Safety Polska?",
+    question: "W jaki sposób mogę wesprzeć AI Safety Polska?",
     answer: "Aktualnie szukamy osób do pomocy przy stronie internetowej (frontend, DevOps), prowadzeniu mediów społecznościowych, pisaniu artykułów na temat AI i AI Safety oraz specjalistów do automatyzacji procesów. Jeśli natomiast chciałbyś wesprzeć finansowo działania dotyczące AI Safety w Polsce, prosimy o kontakt mailowy.",
   },
   {
-    question: "Od jakich książek lub materiałów polecacie zacząć?",
+    question: "Od jakich materiałów polecacie zacząć naukę AI Safety?",
     answer: (<>Na start polecamy nasz dedykowany <a href="/blog/intro-ai-safety" className="text-emerald hover:text-emerald-dark font-semibold transition-colors">artykuł wprowadzający do AI Safety</a>. Na YouTube dostępne są również świetnie materiały wideo: <a href="https://www.youtube.com/RationalAnimations" className="text-emerald hover:text-emerald-dark font-semibold transition-colors">Rational Animations</a>, <a href="https://www.youtube.com/@RobertMilesAI" className="text-emerald hover:text-emerald-dark font-semibold transition-colors">Robert Miles AI Safety</a> oraz <a href="https://www.youtube.com/@AI_In_Context" className="text-emerald hover:text-emerald-dark font-semibold transition-colors">AI in Context</a>. Polecamy również <a href="https://80000hours.org/ai/" className="text-emerald hover:text-emerald-dark font-semibold transition-colors">dogłębne artykuły od organizacji 80,000 Hours</a>. Jeśli macie czas na książki, polecamy <a href="https://www.goodreads.com/book/show/44767248-human-compatible" className="text-emerald hover:text-emerald-dark font-semibold transition-colors">„Human Compatible"</a> Stuarta Russella oraz <a href="https://www.goodreads.com/book/show/50489349-the-alignment-problem" className="text-emerald hover:text-emerald-dark font-semibold transition-colors">"The Alignment Problem"</a> Briana Christiana.</>),
   },
   {
