@@ -29,7 +29,7 @@ const t = {
       { label: "Get involved", href: "/#zaangazuj-sie" },
       { label: "Contact", href: "/#kontakt" },
     ],
-    copyright: "© 2025 AI Safety Polska. All rights reserved.",
+    copyright: "© 2026 AI Safety Polska. All rights reserved.",
     footerAriaLabel: "Footer",
   },
 }

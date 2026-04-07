@@ -5,17 +5,43 @@ import { motion } from "framer-motion"
 import { ArrowLeft, Clock, User } from "lucide-react"
 import { Navbar } from "@/components/navbar"
 import { ContactFooter } from "@/components/contact-footer"
+import { useLanguage } from "@/context/language-context"
+
+const t = {
+  pl: {
+    backLink: "Strona glowna",
+    joinDiscussion: "Dolacz do dyskusji",
+    discussCta: "Chcesz porozmawiac o tym artykule? Dolacz do naszej spolecznosci na Slacku.",
+    joinSlack: "Dolacz na Slack",
+  },
+  en: {
+    backLink: "Homepage",
+    joinDiscussion: "Join the discussion",
+    discussCta: "Want to discuss this article? Join our Slack community.",
+    joinSlack: "Join Slack",
+  },
+}
 
 interface ArticleData {
   title: string
+  titleEN?: string
   author: string
   date: string
+  dateEN?: string
   readTime: string
   lead: string
-  sections: { heading: string; body: string }[]
+  leadEN?: string
+  sections: { heading: string; headingEN?: string; body: string; bodyEN?: string }[]
 }
 
 export function BlogArticle({ article }: { article: ArticleData }) {
+  const { lang } = useLanguage()
+  const text = t[lang]
+
+  const title = lang === "en" && article.titleEN ? article.titleEN : article.title
+  const date = lang === "en" && article.dateEN ? article.dateEN : article.date
+  const lead = lang === "en" && article.leadEN ? article.leadEN : article.lead
+
   return (
     <>
       <Navbar />
@@ -28,7 +54,7 @@ export function BlogArticle({ article }: { article: ArticleData }) {
               className="mb-8 inline-flex items-center gap-2 text-sm text-muted-foreground transition-colors hover:text-foreground"
             >
               <ArrowLeft className="h-4 w-4" />
-              Strona glowna
+              {text.backLink}
             </Link>
 
             <motion.header
@@ -37,7 +63,7 @@ export function BlogArticle({ article }: { article: ArticleData }) {
               transition={{ duration: 0.6 }}
             >
               <h1 className="text-3xl font-bold text-foreground md:text-4xl lg:text-5xl text-balance leading-tight">
-                {article.title}
+                {title}
               </h1>
 
               <div className="mt-6 flex flex-wrap items-center gap-4 text-sm text-muted-foreground">
@@ -46,7 +72,7 @@ export function BlogArticle({ article }: { article: ArticleData }) {
                   {article.author}
                 </span>
                 <span className="text-border">|</span>
-                <span>{article.date}</span>
+                <span>{date}</span>
                 <span className="text-border">|</span>
                 <span className="inline-flex items-center gap-1.5">
                   <Clock className="h-4 w-4" />
@@ -62,7 +88,7 @@ export function BlogArticle({ article }: { article: ArticleData }) {
               transition={{ duration: 0.6, delay: 0.15 }}
               className="mt-10 text-lg leading-relaxed text-foreground/80 md:text-xl"
             >
-              {article.lead}
+              {lead}
             </motion.p>
 
             {/* Divider */}
@@ -70,22 +96,26 @@ export function BlogArticle({ article }: { article: ArticleData }) {
 
             {/* Article body */}
             <div className="flex flex-col gap-10">
-              {article.sections.map((section, i) => (
-                <motion.section
-                  key={section.heading}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true, margin: "-60px" }}
-                  transition={{ duration: 0.5, delay: i * 0.05 }}
-                >
-                  <h2 className="text-xl font-bold text-foreground md:text-2xl">
-                    {section.heading}
-                  </h2>
-                  <p className="mt-3 leading-relaxed text-muted-foreground md:text-base">
-                    {section.body}
-                  </p>
-                </motion.section>
-              ))}
+              {article.sections.map((section, i) => {
+                const sectionHeading = lang === "en" && section.headingEN ? section.headingEN : section.heading
+                const sectionBody = lang === "en" && section.bodyEN ? section.bodyEN : section.body
+                return (
+                  <motion.section
+                    key={section.heading}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, margin: "-60px" }}
+                    transition={{ duration: 0.5, delay: i * 0.05 }}
+                  >
+                    <h2 className="text-xl font-bold text-foreground md:text-2xl">
+                      {sectionHeading}
+                    </h2>
+                    <p className="mt-3 leading-relaxed text-muted-foreground md:text-base">
+                      {sectionBody}
+                    </p>
+                  </motion.section>
+                )
+              })}
             </div>
 
             {/* Bottom CTA */}
@@ -97,16 +127,18 @@ export function BlogArticle({ article }: { article: ArticleData }) {
               className="mt-16 rounded-2xl bg-navy p-8 text-center md:p-10"
             >
               <p className="text-xs font-semibold uppercase tracking-[0.2em] text-emerald">
-                Dolacz do dyskusji
+                {text.joinDiscussion}
               </p>
               <h3 className="mt-3 text-lg font-bold text-primary-foreground md:text-xl text-balance">
-                {"Chcesz porozmawiac o tym artykule? Dolacz do naszej spolecznosci na Slacku."}
+                {text.discussCta}
               </h3>
               <a
-                href="#"
+                href="https://forms.gle/J2yTVJXYcaMyR5i56"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="mt-5 inline-flex items-center gap-2 rounded-full border border-primary-foreground/40 px-6 py-2.5 text-sm font-medium text-primary-foreground transition-all hover:border-primary-foreground hover:bg-primary-foreground/10"
               >
-                {"Dolacz na Slack"}
+                {text.joinSlack}
               </a>
             </motion.div>
           </div>

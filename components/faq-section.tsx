@@ -47,31 +47,35 @@ const faqPL = [
 const faqEN = [
   {
     question: 'What exactly is "AI Safety"?',
-    answer: "",
+    answer: "AI Safety is a broad research field focused on reducing various types of risks and threats associated with advanced artificial intelligence. One of the most famous problems is 'alignment' - ensuring AI systems can be steered according to their creators' intentions. AI Safety also includes research on topics such as: the impact of AI systems on the economy and society, preventing AI from being used for undesirable purposes (e.g., cyberattacks), legal regulations, and even AI consciousness.",
   },
   {
     question: "What is the main goal of AI Safety Polska?",
-    answer: "",
+    answer: (<>The main goal of AI Safety Polska is to create a strong, competent community that actively works on AI safety. We educate, connect experts from various fields, and support research aimed at preventing potential threats from advanced artificial intelligence. We run <a href="/inicjatywy#webinary" className="text-emerald hover:text-emerald-dark font-semibold transition-colors">regular webinars, a reading club</a> and a <a href="/inicjatywy#slack" className="text-emerald hover:text-emerald-dark font-semibold transition-colors">Slack community</a>, and we also organise <a href="/inicjatywy#lokalne-spotkania" className="text-emerald hover:text-emerald-dark font-semibold transition-colors">local meetups</a>.</>),
   },
   {
-    question: "Do I need to be a programmer or ML expert to join?",
-    answer: "",
+    question: "What is the difference between AI Safety and AI Security?",
+    answer: "AI Security deals with protecting AI systems from external attacks, such as jailbreaks, model weight theft, or software supply chain attacks. It is related to adversarial machine learning and broader cybersecurity. AI Safety, on the other hand, focuses mainly on threats coming from within such systems: how to ensure that advanced AI systems act in accordance with human intentions and values. It also examines the impact of AI on society and the economy. In practice, these fields often overlap - for example, IT security expertise helps ensure that autonomous AI agents do not escape their permitted boundaries.",
+  },
+  {
+    question: "Do I need to know how to code to get involved in AI Safety?",
+    answer: (<>Definitely not! While technical researchers are crucial, AI safety is a challenge that requires very diverse skills. The field urgently needs lawyers, analysts, social scientists, philosophers, international relations experts, and many others. Specialists in cybersecurity, biosecurity, infrastructure, as well as HR specialists, project managers, and communications and operations experts also play a huge role. If you don&apos;t know how your current skills fit into this puzzle, at AI Safety Poland we offer <a href="/inicjatywy#doradztwo-zawodowe" className="text-emerald hover:text-emerald-dark font-semibold transition-colors">individual career consultations</a>. We will help you analyse your experience and suggest how you can bring the greatest value to the AI safety field - regardless of your educational background or career stage.</>),
   },
   {
     question: "Where can I find information about upcoming events?",
-    answer: "",
+    answer: (<>We publish event information on <a href="/inicjatywy#slack" className="text-emerald hover:text-emerald-dark font-semibold transition-colors">our Slack</a>, <a href="https://www.linkedin.com/company/ai-safety-poland/" className="text-emerald hover:text-emerald-dark font-semibold transition-colors">LinkedIn</a>, and <a href="https://luma.com/aisafetypl" className="text-emerald hover:text-emerald-dark font-semibold transition-colors">Luma</a>.</>),
   },
   {
-    question: "How can I support AI Safety Polska if I don't have time for a bigger commitment?",
-    answer: "",
+    question: "How can I support AI Safety Polska?",
+    answer: "We are currently looking for people to help with our website (frontend, DevOps), running social media, writing articles about AI and AI Safety, and specialists for process automation. If you would like to financially support AI Safety activities in Poland, please contact us by email.",
   },
   {
-    question: "Which books or materials do you recommend to get started?",
-    answer: '',
+    question: "Which materials do you recommend to start learning about AI Safety?",
+    answer: (<>To start, we recommend our dedicated <a href="/blog/intro-ai-safety" className="text-emerald hover:text-emerald-dark font-semibold transition-colors">introductory article on AI Safety</a>. On YouTube, there are also excellent video materials: <a href="https://www.youtube.com/RationalAnimations" className="text-emerald hover:text-emerald-dark font-semibold transition-colors">Rational Animations</a>, <a href="https://www.youtube.com/@RobertMilesAI" className="text-emerald hover:text-emerald-dark font-semibold transition-colors">Robert Miles AI Safety</a>, and <a href="https://www.youtube.com/@AI_In_Context" className="text-emerald hover:text-emerald-dark font-semibold transition-colors">AI in Context</a>. We also recommend <a href="https://80000hours.org/ai/" className="text-emerald hover:text-emerald-dark font-semibold transition-colors">in-depth articles from 80,000 Hours</a>. If you have time for books, we recommend <a href="https://www.goodreads.com/book/show/44767248-human-compatible" className="text-emerald hover:text-emerald-dark font-semibold transition-colors">"Human Compatible"</a> by Stuart Russell and <a href="https://www.goodreads.com/book/show/50489349-the-alignment-problem" className="text-emerald hover:text-emerald-dark font-semibold transition-colors">"The Alignment Problem"</a> by Brian Christian.</>),
   },
   {
     question: "I am a journalist/media representative. How can I contact you?",
-    answer: "",
+    answer: "Please contact us directly via our email: contact@aisafety.org.pl. We are happy to give interviews and comments on AI safety.",
   },
 ]
 

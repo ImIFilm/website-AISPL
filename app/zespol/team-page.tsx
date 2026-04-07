@@ -6,6 +6,26 @@ import { motion } from "framer-motion"
 import { ArrowLeft } from "lucide-react"
 import { Navbar } from "@/components/navbar"
 import { ContactFooter } from "@/components/contact-footer"
+import { useLanguage } from "@/context/language-context"
+
+const t = {
+  pl: {
+    backLink: "Strona główna",
+    label: "Nasz zespół",
+    heading: "Ludzie stojący za AI Safety Polska",
+    description: "Łączymy wiedzę z zakresu nauk technicznych, humanistycznych i społecznych. To wielowymiarowe podejście pozwala nam skutecznie działać na rzecz bezpiecznego rozwoju AI. Na chwilę obecną wszyscy działamy jako wolontariusze.",
+    coordinators: "Koordynatorzy",
+    teamMembers: "Członkowie zespołu",
+  },
+  en: {
+    backLink: "Homepage",
+    label: "Our team",
+    heading: "The people behind AI Safety Polska",
+    description: "We combine knowledge from technical, humanities, and social sciences. This multidimensional approach allows us to effectively work towards safe AI development. Currently, we all work as volunteers.",
+    coordinators: "Coordinators",
+    teamMembers: "Team members",
+  },
+}
 
 const teamMembers = [
   {
@@ -95,6 +115,8 @@ const itemVariants = {
 }
 
 export function TeamPage() {
+  const { lang } = useLanguage()
+  const text = t[lang]
   const coordinators = teamMembers.filter((m) => m.isCoordinator)
   const members = teamMembers.filter((m) => !m.isCoordinator)
 
@@ -110,7 +132,7 @@ export function TeamPage() {
               className="mb-8 inline-flex items-center gap-2 text-sm text-muted-foreground transition-colors hover:text-foreground"
             >
               <ArrowLeft className="h-4 w-4" />
-              Strona główna
+              {text.backLink}
             </Link>
             <motion.p
               initial={{ opacity: 0, y: 15 }}
@@ -118,7 +140,7 @@ export function TeamPage() {
               transition={{ duration: 0.5 }}
               className="text-xs font-semibold uppercase tracking-[0.2em] text-emerald"
             >
-              Nasz zespół
+              {text.label}
             </motion.p>
             <motion.h1
               initial={{ opacity: 0, y: 15 }}
@@ -126,7 +148,7 @@ export function TeamPage() {
               transition={{ duration: 0.5, delay: 0.1 }}
               className="mt-3 text-3xl font-bold text-foreground md:text-4xl lg:text-5xl text-balance"
             >
-              Ludzie stojący za AI Safety Polska
+              {text.heading}
             </motion.h1>
             <motion.p
               initial={{ opacity: 0, y: 15 }}
@@ -134,7 +156,7 @@ export function TeamPage() {
               transition={{ duration: 0.5, delay: 0.2 }}
               className="mt-4 max-w-2xl text-base leading-relaxed text-muted-foreground md:text-lg"
             >
-              Łączymy wiedzę z zakresu nauk technicznych, humanistycznych i społecznych. To wielowymiarowe podejście pozwala nam skutecznie działać na rzecz bezpiecznego rozwoju AI. Na chwilę obecną wszyscy działamy jako wolontariusze.
+              {text.description}
             </motion.p>
           </div>
         </section>
@@ -149,7 +171,7 @@ export function TeamPage() {
               transition={{ duration: 0.5 }}
               className="text-center text-xs font-semibold uppercase tracking-[0.2em] text-emerald"
             >
-              Koordynatorzy
+              {text.coordinators}
             </motion.p>
             <motion.div
               variants={containerVariants}
@@ -219,7 +241,7 @@ export function TeamPage() {
               transition={{ duration: 0.5 }}
               className="text-center text-xs font-semibold uppercase tracking-[0.2em] text-muted-foreground"
             >
-              Członkowie zespołu
+              {text.teamMembers}
             </motion.p>
             <motion.div
               variants={containerVariants}

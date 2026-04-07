@@ -7,8 +7,86 @@ import { Navbar } from "@/components/navbar"
 import { ContactFooter } from "@/components/contact-footer"
 import { HeroSlider } from "@/components/hero-slider"
 import { Button } from "@/components/ui/button"
+import { useLanguage } from "@/context/language-context"
+
+const t = {
+  pl: {
+    backLink: "Strona główna",
+    heading: "Nasze inicjatywy",
+    tocWebinars: "Webinary i spotkania",
+    tocSlack: "Społeczność Slack",
+    tocUniversities: "Współpraca z uczelniami",
+    tocCareer: "Doradztwo zawodowe",
+    webinarsTitle: "Webinary i lokalne spotkania",
+    webinarsDesc1: "Organizujemy wydarzenia, które łączą pasjonatów i profesjonalistów dbających o bezpieczny rozwój sztucznej inteligencji. Od webinarów, przez klub czytelniczy, aż po lokalne spotkania – tworzymy warunki do nauki, dyskusji i realnego działania.",
+    webinarsDesc2: "Najbliższe wydarzenia znajdziesz na",
+    webinarsLink: "naszym kalendarzu na Lumie.",
+    calendarTitle: "Kalendarz wydarzen AI Safety Polska",
+    careerTitle: "Doradztwo zawodowe",
+    careerDesc: "Oferujemy indywidualne, spersonalizowane konsultacje kariery skoncentrowane na ścieżkach zawodowych w AI Safety. Pomożemy Ci wyznaczyć plan działania, znaleźć odpowiednie materiały, a także połączymy z innymi osobami o podobnych zainteresowaniach.",
+    careerForWhom: "Dla kogo?",
+    careerForWhomItems: [
+      "Pomagamy zarówno osobom na poważnie myślącym o karierze w AI Safety, jak i tym, którzy dopiero zaczynają się nad tym zastanawiać.",
+      "AI Safety potrzebuje nie tylko specjalistów od AI! Chętnie pomożemy osobom zajmującym się szeroko pojętą informatyką, fizyką, matematyką, prawem, ekonomią, cyberbezpieczeństwem, etyką, psychologią, naukami społecznymi, stosunkami międzynarodowymi czy komunikacją.",
+    ],
+    careerHowTitle: "Jak to dziala?",
+    careerHowItems: [
+      "Wypełnij formularz zgłoszeniowy",
+      "Rozmowa z doświadczonym specjalistą",
+      "Konkretne kroki, rekomendacje i kontakty",
+      "Możliwość następnego spotkania w zależności od potrzeb",
+    ],
+    careerApply: "Aplikuj na konsultacje",
+    slackTitle: "Społeczność online - Slack",
+    slackDesc1: "Nasz Slack to główne miejsce wymiany wiedzy i doświadczeń dla polskiej społeczności zainteresowanej bezpieczeństwem AI. Obecnie liczymy ponad 200 członków - od profesjonalistów pracujących w branży AI, przez badaczy akademickich, po studentów i entuzjastów dopiero rozpoczynających swoja przygodę z tematem.",
+    slackDesc2: "Prowadzimy tu wiele dedykowanych kanałów tematycznych: zagadnienia techniczne, polityka publiczna ds. AI, a nawet dyskusje o możliwej świadomości systemów AI. Dzielimy się najnowszymi publikacjami i newsami ze świata AI safety, a także dajemy znać o nadchodzących wydarzeniach i możliwościach rozwoju kariery. Nie brakuje też luźniejszych rozmów i networkingu!",
+    slackMembers: "członków społeczności",
+    slackJoin: "Dolacz do Slacka",
+    universitiesTitle: "Współpraca z uczelniami",
+    universitiesDesc1: "Współpraca z polskimi uczelniami obejmuje organizację wykładów gościnnych i warsztatów na uczelniach, wspieranie prac badawczych związanych z AI Safety, łączenie studentów i doktorantów z mentorami z branży oraz promowanie możliwości stażowych i zawodowych w organizacjach zajmujących się AI Safety.",
+    universitiesDesc2: "Jeśli reprezentujesz uczelnię, wydział lub koło naukowe i chcesz nawiązać współpracę, skontaktuj się z nami bezpośrednio przez mail: contact@aisafety.org.pl",
+  },
+  en: {
+    backLink: "Homepage",
+    heading: "Our initiatives",
+    tocWebinars: "Webinars and meetups",
+    tocSlack: "Slack community",
+    tocUniversities: "University collaboration",
+    tocCareer: "Career counselling",
+    webinarsTitle: "Webinars and local meetups",
+    webinarsDesc1: "We organise events that bring together enthusiasts and professionals dedicated to the safe development of artificial intelligence. From webinars, through reading clubs, to local meetups – we create conditions for learning, discussion, and real action.",
+    webinarsDesc2: "You can find upcoming events on",
+    webinarsLink: "our calendar on Luma.",
+    calendarTitle: "AI Safety Polska events calendar",
+    careerTitle: "Career counselling",
+    careerDesc: "We offer individual, personalised career consultations focused on career paths in AI Safety. We will help you set an action plan, find the right materials, and connect you with others who share similar interests.",
+    careerForWhom: "For whom?",
+    careerForWhomItems: [
+      "We help both those seriously considering a career in AI Safety and those just starting to think about it.",
+      "AI Safety needs more than just AI specialists! We are happy to help people working in broadly understood computer science, physics, mathematics, law, economics, cybersecurity, ethics, psychology, social sciences, international relations, or communications.",
+    ],
+    careerHowTitle: "How does it work?",
+    careerHowItems: [
+      "Fill out the application form",
+      "Conversation with an experienced specialist",
+      "Concrete steps, recommendations, and contacts",
+      "Possibility of a follow-up meeting depending on needs",
+    ],
+    careerApply: "Apply for consultation",
+    slackTitle: "Online community - Slack",
+    slackDesc1: "Our Slack is the main place for knowledge and experience exchange for the Polish community interested in AI safety. We currently have over 200 members - from professionals working in the AI industry, academic researchers, to students and enthusiasts just starting their journey with this topic.",
+    slackDesc2: "We run many dedicated thematic channels: technical issues, AI public policy, and even discussions about the possible consciousness of AI systems. We share the latest publications and news from the AI safety world, and we also let you know about upcoming events and career development opportunities. There is also plenty of casual conversation and networking!",
+    slackMembers: "community members",
+    slackJoin: "Join our Slack",
+    universitiesTitle: "University collaboration",
+    universitiesDesc1: "Collaboration with Polish universities includes organising guest lectures and workshops at universities, supporting research related to AI Safety, connecting students and PhD candidates with industry mentors, and promoting internship and career opportunities at organisations working on AI Safety.",
+    universitiesDesc2: "If you represent a university, faculty, or student organisation and want to collaborate, please contact us directly by email: contact@aisafety.org.pl",
+  },
+}
 
 export function InitiativesPage() {
+  const { lang } = useLanguage()
+  const text = t[lang]
   return (
     <>
       <Navbar />
@@ -25,7 +103,7 @@ export function InitiativesPage() {
               className="mb-8 inline-flex items-center gap-2 text-sm text-muted-foreground transition-colors hover:text-foreground"
             >
               <ArrowLeft className="h-4 w-4" />
-              Strona główna
+              {text.backLink}
             </Link>
             <motion.h1
               initial={{ opacity: 0, y: 15 }}
@@ -33,7 +111,7 @@ export function InitiativesPage() {
               transition={{ duration: 0.5, delay: 0.1 }}
               className="mt-3 text-3xl font-bold text-foreground md:text-4xl lg:text-5xl text-balance"
             >
-              Nasze inicjatywy
+              {text.heading}
             </motion.h1>
 
             {/* Table of Contents */}
@@ -44,19 +122,19 @@ export function InitiativesPage() {
               className="mt-8 flex flex-wrap gap-4"
             >
               <a href="#webinary" className="text-sm font-medium text-emerald hover:text-emerald-dark transition-colors">
-                Webinary i spotkania
+                {text.tocWebinars}
               </a>
               <span className="text-muted-foreground">•</span>
               <a href="#slack" className="text-sm font-medium text-emerald hover:text-emerald-dark transition-colors">
-                Społeczność Slack
+                {text.tocSlack}
               </a>
               <span className="text-muted-foreground">•</span>
               <a href="#wspolpraca-z-uczelniami" className="text-sm font-medium text-emerald hover:text-emerald-dark transition-colors">
-                Współpraca z uczelniami
+                {text.tocUniversities}
               </a>
               <span className="text-muted-foreground">•</span>
               <a href="#doradztwo-zawodowe" className="text-sm font-medium text-emerald hover:text-emerald-dark transition-colors">
-                Doradztwo zawodowe
+                {text.tocCareer}
               </a>
             </motion.div>
           </div>
@@ -78,13 +156,13 @@ export function InitiativesPage() {
               >
                 <span id="lokalne-spotkania" className="block -mt-32 pt-32" style={{ paddingTop: "92px" }} />
                 <h2 className="text-2xl font-bold text-foreground md:text-3xl">
-                  Webinary i lokalne spotkania
+                  {text.webinarsTitle}
                 </h2>
                 <p className="mt-4 leading-relaxed text-muted-foreground md:text-lg">
-                  Organizujemy wydarzenia, które łączą pasjonatów i profesjonalistów dbających o bezpieczny rozwój sztucznej inteligencji. Od webinarów, przez klub czytelniczy, aż po lokalne spotkania – tworzymy warunki do nauki, dyskusji i realnego działania.
+                  {text.webinarsDesc1}
                 </p>
                 <p className="mt-4 leading-relaxed text-muted-foreground md:text-lg">
-                  Najbliższe wydarzenia znajdziesz na <a href="https://luma.com/aisafetypl" className="text-emerald hover:text-emerald-dark font-semibold transition-colors"> naszym kalendarzu na Lumie.</a>
+                  {text.webinarsDesc2} <a href="https://luma.com/aisafetypl" className="text-emerald hover:text-emerald-dark font-semibold transition-colors">{text.webinarsLink}</a>
                 </p>
 
                 {/* Luma Calendar Embed */}
@@ -97,7 +175,7 @@ export function InitiativesPage() {
                     style={{ border: "1px solid #e2e8f0", borderRadius: "16px" }}
                     allowFullScreen
                     aria-hidden="false"
-                    title="Kalendarz wydarzen AI Safety Polska"
+                    title={text.calendarTitle}
                   />
                 </div>
               </motion.article>
@@ -112,45 +190,33 @@ export function InitiativesPage() {
                 className="scroll-mt-32"
               >
                 <h2 className="text-2xl font-bold text-foreground md:text-3xl">
-                  Doradztwo zawodowe
+                  {text.careerTitle}
                 </h2>
                 <p className="mt-4 leading-relaxed text-muted-foreground md:text-lg">
-                  {"Oferujemy indywidualne, spersonalizowane konsultacje kariery skoncentrowane na ścieżkach zawodowych w AI Safety. Pomożemy Ci wyznaczyć plan działania, znaleźć odpowiednie materiały, a także połączymy z innymi osobami o podobnych zainteresowaniach."}
+                  {text.careerDesc}
                 </p>
 
                 <div className="mt-8 grid gap-6 sm:grid-cols-2">
                   <div className="rounded-xl bg-card p-6 shadow-sm">
-                    <h3 className="font-semibold text-foreground">Dla kogo?</h3>
+                    <h3 className="font-semibold text-foreground">{text.careerForWhom}</h3>
                     <ul className="mt-3 space-y-2 text-sm text-muted-foreground">
-                      <li className="flex items-start gap-2">
-                        <span className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-emerald" />
-                        Pomagamy zarówno osobom na poważnie myślącym o karierze w AI Safety, jak i tym, którzy dopiero zaczynają się nad tym zastanawiać.
-                      </li>
-                      <li className="flex items-start gap-2">
-                        <span className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-emerald" />
-                        AI Safety potrzebuje nie tylko specjalistów od AI! Chętnie pomożemy osobom zajmującym się szeroko pojętą informatyką, fizyką, matematyką, prawem, ekonomią, cyberbezpieczeństwem, etyką, psychologią, naukami społecznymi, stosunkami międzynarodowymi czy komunikacją.
-                      </li>
+                      {text.careerForWhomItems.map((item, i) => (
+                        <li key={i} className="flex items-start gap-2">
+                          <span className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-emerald" />
+                          {item}
+                        </li>
+                      ))}
                     </ul>
                   </div>
                   <div className="rounded-xl bg-card p-6 shadow-sm">
-                    <h3 className="font-semibold text-foreground">Jak to dziala?</h3>
+                    <h3 className="font-semibold text-foreground">{text.careerHowTitle}</h3>
                     <ul className="mt-3 space-y-2 text-sm text-muted-foreground">
-                      <li className="flex items-start gap-2">
-                        <span className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-emerald" />
-                        Wypełnij formularz zgłoszeniowy
-                      </li>
-                      <li className="flex items-start gap-2">
-                        <span className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-emerald" />
-                        Rozmowa z doświadczonym specjalistą
-                      </li>
-                      <li className="flex items-start gap-2">
-                        <span className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-emerald" />
-                        Konkretne kroki, rekomendacje i kontakty
-                      </li>
-                      <li className="flex items-start gap-2">
-                        <span className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-emerald" />
-                        Możliwość następnego spotkania w zależności od potrzeb
-                      </li>
+                      {text.careerHowItems.map((item, i) => (
+                        <li key={i} className="flex items-start gap-2">
+                          <span className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-emerald" />
+                          {item}
+                        </li>
+                      ))}
                     </ul>
                   </div>
                 </div>
@@ -163,7 +229,7 @@ export function InitiativesPage() {
                       rel="noopener noreferrer"
                       className="inline-flex items-center gap-2"
                     >
-                      Aplikuj na konsultacje
+                      {text.careerApply}
                       <ExternalLink className="h-4 w-4" />
                     </a>
                   </Button>
@@ -180,20 +246,20 @@ export function InitiativesPage() {
                 className="scroll-mt-32"
               >
                 <h2 className="text-2xl font-bold text-foreground md:text-3xl">
-                  Społeczność online - Slack
+                  {text.slackTitle}
                 </h2>
                 <p className="mt-4 leading-relaxed text-muted-foreground md:text-lg">
-                  {"Nasz Slack to główne miejsce wymiany wiedzy i doświadczeń dla polskiej społeczności zainteresowanej bezpieczeństwem AI. Obecnie liczymy ponad 200 członków - od profesjonalistów pracujących w branży AI, przez badaczy akademickich, po studentów i entuzjastów dopiero rozpoczynających swoja przygodę z tematem."}
+                  {text.slackDesc1}
                 </p>
                 <p className="mt-4 leading-relaxed text-muted-foreground md:text-lg">
-                  {"Prowadzimy tu wiele dedykowanych kanałów tematycznych: zagadnienia techniczne, polityka publiczna ds. AI, a nawet dyskusje o możliwej świadomości systemów AI. Dzielimy się najnowszymi publikacjami i newsami ze świata AI safety, a także dajemy znać o nadchodzących wydarzeniach i możliwościach rozwoju kariery. Nie brakuje też luźniejszych rozmów i networkingu!"}
+                  {text.slackDesc2}
                 </p>
 
                 <div className="mt-8 rounded-xl bg-emerald/10 p-6">
                   <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
                     <div>
                       <p className="text-2xl font-bold text-foreground">200+</p>
-                      <p className="text-sm text-muted-foreground">członków społeczności</p>
+                      <p className="text-sm text-muted-foreground">{text.slackMembers}</p>
                     </div>
                     <Button asChild className="bg-emerald hover:bg-emerald-dark text-white">
                       <a
@@ -202,7 +268,7 @@ export function InitiativesPage() {
                         rel="noopener noreferrer"
                         className="inline-flex items-center gap-2"
                       >
-                        Dolacz do Slacka
+                        {text.slackJoin}
                         <ExternalLink className="h-4 w-4" />
                       </a>
                     </Button>
@@ -220,13 +286,13 @@ export function InitiativesPage() {
                 className="scroll-mt-32"
               >
                 <h2 className="text-2xl font-bold text-foreground md:text-3xl">
-                  Współpraca z uczelniami
+                  {text.universitiesTitle}
                 </h2>
                 <p className="mt-4 leading-relaxed text-muted-foreground md:text-lg">
-                  Współpraca z polskimi uczelniami obejmuje organizację wykładów gościnnych i warsztatów na uczelniach, wspieranie prac badawczych związanych z AI Safety, łączenie studentów i doktorantów z mentorami z branży oraz promowanie możliwości stażowych i zawodowych w organizacjach zajmujących się AI Safety.
+                  {text.universitiesDesc1}
                 </p>
                 <p className="mt-4 leading-relaxed text-muted-foreground md:text-lg">
-                  Jeśli reprezentujesz uczelnię, wydział lub koło naukowe i chcesz nawiązać współpracę, skontaktuj się z nami bezpośrednio przez mail: contact@aisafety.org.pl
+                  {text.universitiesDesc2}
                 </p>
               </motion.article>
             </div>
