@@ -196,12 +196,12 @@ export function InitiativesPage() {
                   {text.careerDesc}
                 </p>
 
-                <div className="mt-8 grid gap-6 sm:grid-cols-2">
+                <div className="mt-8 grid gap-6">
                   <div className="rounded-xl bg-card p-6 shadow-sm">
-                    <h3 className="font-semibold text-foreground">{text.careerForWhom}</h3>
-                    <ul className="mt-3 space-y-2 text-sm text-muted-foreground">
+                    <h3 className="text-lg font-semibold text-foreground">{text.careerForWhom}</h3>
+                    <ul className="mt-3 space-y-3 text-muted-foreground">
                       {text.careerForWhomItems.map((item, i) => (
-                        <li key={i} className="flex items-start gap-2">
+                        <li key={i} className="flex items-start gap-2 text-base">
                           <span className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-emerald" />
                           {item}
                         </li>
@@ -209,10 +209,10 @@ export function InitiativesPage() {
                     </ul>
                   </div>
                   <div className="rounded-xl bg-card p-6 shadow-sm">
-                    <h3 className="font-semibold text-foreground">{text.careerHowTitle}</h3>
-                    <ul className="mt-3 space-y-2 text-sm text-muted-foreground">
+                    <h3 className="text-lg font-semibold text-foreground">{text.careerHowTitle}</h3>
+                    <ul className="mt-3 space-y-3 text-muted-foreground">
                       {text.careerHowItems.map((item, i) => (
-                        <li key={i} className="flex items-start gap-2">
+                        <li key={i} className="flex items-start gap-2 text-base">
                           <span className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-emerald" />
                           {item}
                         </li>
