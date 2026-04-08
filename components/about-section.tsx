@@ -63,8 +63,8 @@ export function AboutSection() {
   const { lang } = useLanguage()
 
   return (
-    <section id="kim-jestesmy" style={{ backgroundColor: "#011F39" }}>
-      <div className="mx-auto max-w-4xl px-6 pb-10 text-center">
+    <section id="kim-jestesmy" className="scroll-mt-20" style={{ backgroundColor: "#011F39" }}>
+      <div className="mx-auto max-w-4xl px-6 pb-10 pt-16 text-center">
         <motion.p
           initial={{ opacity: 0, y: 15 }}
           whileInView={{ opacity: 1, y: 0 }}

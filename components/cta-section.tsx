@@ -23,7 +23,7 @@ export function CtaSection() {
   return (
     <section
       id="zaangazuj-sie"
-      className="relative overflow-hidden py-20 md:py-28"
+      className="scroll-mt-20 relative overflow-hidden py-20 md:py-28"
       style={{
         background: "linear-gradient(135deg, #059669 0%, #0B132B 100%)",
       }}
