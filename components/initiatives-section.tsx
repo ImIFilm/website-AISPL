@@ -45,7 +45,7 @@ export function InitiativesSection() {
   const initiatives = lang === "pl" ? initiativesPL : initiativesEN
 
   return (
-    <section id="co-robimy" className="bg-background py-12 md:py-14">
+    <section id="co-robimy" className="scroll-mt-20 bg-background py-12 md:py-14">
       <div className="mx-auto max-w-5xl px-6">
         <motion.p
           initial={{ opacity: 0, y: 15 }}

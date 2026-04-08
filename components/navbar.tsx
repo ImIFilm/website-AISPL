@@ -33,9 +33,9 @@ export function Navbar() {
           <Image
             src="/images/logo-aispl.svg"
             alt="AI Safety Polska logo"
-            width={40}
-            height={44}
-            className="h-10 w-auto"
+            width={52}
+            height={57}
+            className="h-13 w-auto"
           />
         </Link>
 
