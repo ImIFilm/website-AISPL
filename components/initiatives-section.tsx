@@ -25,7 +25,7 @@ const backgroundStyles = [
   { backgroundImage: "url(https://hebbkx1anhila5yf.public.blob.vercel-storage.com/zawodowe-1-pKXBXijfCOV6DLM6my88ATPuhOgN1M.jpg)", backgroundSize: "cover", backgroundPosition: "center" },
 ]
 
-const t = {
+const translations = {
   pl: {
     label: "Co robimy?",
     heading: "Nasze inicjatywy",
@@ -38,15 +38,14 @@ const t = {
     slackTitle: "Online community - Slack",
     slackSub: "",
   },
-}
+} as const
 
 export function InitiativesSection() {
   const { lang } = useLanguage()
-  const text = t[lang]
   const initiatives = lang === "pl" ? initiativesPL : initiativesEN
 
   return (
-    <section id="co-robimy" className="bg-background py-20 md:py-28" style={{ paddingTop: "50px", paddingBottom: "50px" }}>
+    <section id="co-robimy" className="bg-background py-12 md:py-14">
       <div className="mx-auto max-w-5xl px-6">
         <motion.p
           initial={{ opacity: 0, y: 15 }}
@@ -55,17 +54,17 @@ export function InitiativesSection() {
           transition={{ duration: 0.5 }}
           className="text-center text-xs font-semibold uppercase tracking-[0.2em] text-emerald"
         >
-          {text.label}
+          {translations[lang].label}
         </motion.p>
         <motion.h2
           initial={{ opacity: 0, y: 15 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-50px" }}
           transition={{ duration: 0.5, delay: 0.1 }}
-          className="mt-3 text-center text-2xl font-bold text-foreground md:text-3xl lg:text-4xl"
-          style={{ fontWeight: 500 }}
+          className="mt-3 text-center text-foreground"
+          style={{ fontWeight: 500, fontSize: "2rem" }}
         >
-          {text.heading}
+          {translations[lang].heading}
         </motion.h2>
 
         <div className="mt-12 grid grid-cols-1 gap-6 md:grid-cols-3">
@@ -117,8 +116,8 @@ export function InitiativesSection() {
                   alt="Slack" 
                   className="mx-auto mb-4 h-14 w-14"
                 />
-                <h3 className="text-lg font-bold text-white">{text.slackTitle}</h3>
-                {text.slackSub && <p className="mt-2 text-sm text-white/80">{text.slackSub}</p>}
+                <h3 className="text-lg font-bold text-white">{translations[lang].slackTitle}</h3>
+                {translations[lang].slackSub && <p className="mt-2 text-sm text-white/80">{translations[lang].slackSub}</p>}
               </div>
             </Link>
           </motion.div>

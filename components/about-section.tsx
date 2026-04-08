@@ -5,7 +5,7 @@ import Link from "next/link"
 import { motion } from "framer-motion"
 import { useLanguage } from "@/context/language-context"
 
-const t = {
+const translations = {
   pl: {
     label: "Kim jesteśmy",
     heading: "AI Safety Polska to społeczność naukowców, działaczy i pasjonatów skupiona na bezpieczeństwie AI.",
@@ -20,7 +20,7 @@ const t = {
     coordinators: "Coordinators",
     teamLink: "meet the full team →",
   },
-}
+} as const
 
 const coordinators = [
   {
@@ -61,11 +61,10 @@ const itemVariants = {
 
 export function AboutSection() {
   const { lang } = useLanguage()
-  const text = t[lang]
 
   return (
-    <section id="kim-jestesmy" className="py-20 md:py-28" style={{ backgroundColor: "#011F39", paddingTop: "0px", paddingBottom: "0px" }}>
-      <div className="mx-auto max-w-4xl px-6 text-center" style={{ paddingBottom: "40px" }}>
+    <section id="kim-jestesmy" style={{ backgroundColor: "#011F39" }}>
+      <div className="mx-auto max-w-4xl px-6 pb-10 text-center">
         <motion.p
           initial={{ opacity: 0, y: 15 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -74,27 +73,27 @@ export function AboutSection() {
           className="text-xs font-semibold uppercase tracking-[0.2em]"
           style={{ color: "rgb(255, 218, 170)" }}
         >
-          {text.label}
+          {translations[lang].label}
         </motion.p>
         <motion.h2
           initial={{ opacity: 0, y: 15 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-50px" }}
           transition={{ duration: 0.5, delay: 0.1 }}
-          className="mt-4 text-2xl font-normal text-primary-foreground md:text-3xl lg:text-4xl text-balance"
+          className="mt-4 text-balance text-primary-foreground"
           style={{ lineHeight: "1.4", fontWeight: 500, fontSize: "26px" }}
         >
-          {text.heading}
+          {translations[lang].heading}
         </motion.h2>
         <motion.p
           initial={{ opacity: 0, y: 15 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-50px" }}
           transition={{ duration: 0.5, delay: 0.2 }}
-          className="mx-auto mt-6 max-w-2xl text-sm text-primary-foreground/60 md:text-base"
+          className="mx-auto mt-6 max-w-2xl text-primary-foreground/60"
           style={{ lineHeight: "1.4", fontSize: "18px" }}
         >
-          {text.body}
+          {translations[lang].body}
         </motion.p>
 
         {/* Coordinators */}
@@ -106,7 +105,7 @@ export function AboutSection() {
           className="mt-16 text-xs font-semibold uppercase tracking-[0.2em]"
           style={{ color: "#FFDAAA" }}
         >
-          {text.coordinators}
+          {translations[lang].coordinators}
         </motion.p>
 
         <motion.div
@@ -146,7 +145,7 @@ export function AboutSection() {
             href="/zespol"
             className="mt-8 inline-block text-sm text-primary-foreground/60 underline underline-offset-4 transition-colors hover:text-emerald"
           >
-            {text.teamLink}
+            {translations[lang].teamLink}
           </Link>
         </motion.div>
       </div>

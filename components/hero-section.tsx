@@ -4,27 +4,26 @@ import Image from "next/image"
 import { motion } from "framer-motion"
 import { useLanguage } from "@/context/language-context"
 
-const t = {
+const translations = {
   pl: {
     subtitle: "Budujemy bezpieczną przyszłość sztucznej inteligencji",
   },
   en: {
     subtitle: "Building a safe future for artificial intelligence",
   },
-}
+} as const
 
 export function HeroSection() {
   const { lang } = useLanguage()
-  const text = t[lang]
 
   return (
-    <section className="relative bg-background pt-28 pb-0 md:pt-36 md:pb-0">
+    <section className="relative bg-background pt-28 md:pt-36">
       <div className="mx-auto max-w-4xl px-6 text-center">
         <motion.h1
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="text-4xl font-medium tracking-normal text-foreground md:text-5xl lg:text-6xl text-balance"
+          className="text-balance text-foreground"
           style={{ fontSize: "40px", fontWeight: 600 }}
         >
           AI Safety Polska
@@ -33,23 +32,21 @@ export function HeroSection() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.15 }}
-          className="mt-4 text-lg text-pretty"
+          className="mt-4 text-pretty"
           style={{ color: "#008644", fontWeight: 300, fontSize: "18px" }}
         >
-          {text.subtitle}
+          {translations[lang].subtitle}
         </motion.p>
-
       </div>
 
-      {/* Full-width image - outside max-w container */}
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7, delay: 0.3 }}
-        className="mt-10 w-full"
+        className="mt-10"
       >
         <div
-          className="relative w-full overflow-hidden"
+          className="relative overflow-hidden"
           style={{ aspectRatio: "1920 / 910", minHeight: "350px" }}
         >
           <Image

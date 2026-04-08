@@ -5,7 +5,7 @@ import { motion } from "framer-motion"
 import { ArrowRight } from "lucide-react"
 import { useLanguage } from "@/context/language-context"
 
-const t = {
+const translations = {
   pl: {
     label: "Dlaczego AI Safety ma znaczenie?",
     readMore: "czytaj więcej",
@@ -38,14 +38,13 @@ const t = {
       },
     ],
   },
-}
+} as const
 
 export function ArticlesSection() {
   const { lang } = useLanguage()
-  const text = t[lang]
 
   return (
-    <section className="bg-background py-20 md:py-28" style={{ paddingTop: "50px", paddingBottom: "20px" }}>
+    <section className="bg-background py-20" style={{ paddingBottom: "20px" }}>
       <div className="mx-auto max-w-4xl px-6">
         <motion.p
           initial={{ opacity: 0, y: 15 }}
@@ -55,11 +54,11 @@ export function ArticlesSection() {
           className="text-center text-xs font-semibold uppercase tracking-[0.2em]"
           style={{ color: "#01985D" }}
         >
-          {text.label}
+          {translations[lang].label}
         </motion.p>
 
         <div className="mt-10 grid gap-6 md:grid-cols-2">
-          {text.articles.map((article, i) => (
+          {translations[lang].articles.map((article, i) => (
             <motion.article
               key={article.title}
               initial={{ opacity: 0, y: 20 }}
@@ -85,7 +84,7 @@ export function ArticlesSection() {
                   className="mt-2 inline-flex items-center gap-1 text-xs font-medium transition-colors hover:opacity-80"
                   style={{ color: "#01985D" }}
                 >
-                  {text.readMore}
+                  {translations[lang].readMore}
                   <ArrowRight className="h-3 w-3" />
                 </Link>
               </div>
