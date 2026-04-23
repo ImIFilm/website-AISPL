@@ -1,5 +1,6 @@
 "use client"
 
+import type React from "react"
 import Link from "next/link"
 import { motion } from "framer-motion"
 import { ArrowLeft, Clock, User } from "lucide-react"
@@ -7,7 +8,7 @@ import { Navbar } from "@/components/navbar"
 import { ContactFooter } from "@/components/contact-footer"
 import { useLanguage } from "@/context/language-context"
 
-const t = {
+const translations = {
   pl: {
     backLink: "Strona glowna",
     joinDiscussion: "Dolacz do dyskusji",
@@ -20,9 +21,25 @@ const t = {
     discussCta: "Want to discuss this article? Join our Slack community.",
     joinSlack: "Join Slack",
   },
+} as const
+
+export type LinkItem = {
+  href: string
+  label: string
+  labelEN?: string
 }
 
-interface ArticleData {
+export type ArticleSection = {
+  heading: string
+  headingEN?: string
+  body: string
+  bodyEN?: string
+  linksTitle?: string
+  linksTitleEN?: string
+  links?: LinkItem[]
+}
+
+export type ArticleData = {
   title: string
   titleEN?: string
   author: string
@@ -31,22 +48,68 @@ interface ArticleData {
   readTime: string
   lead: string
   leadEN?: string
-  sections: { heading: string; headingEN?: string; body: string; bodyEN?: string }[]
+  leadNote?: string
+  leadNoteEN?: string
+  sections: ArticleSection[]
+  outroNote?: string
+  outroNoteEN?: string
+}
+
+/**
+ * Render a plain-text string with inline markdown-style links: [label](url)
+ * Links open in a new tab with safe rel attributes.
+ */
+function renderInline(text: string): React.ReactNode {
+  const parts: React.ReactNode[] = []
+  const regex = /\[([^\]]+)\]\(([^)]+)\)/g
+  let lastIndex = 0
+  let match: RegExpExecArray | null
+  let keyIdx = 0
+
+  while ((match = regex.exec(text)) !== null) {
+    if (match.index > lastIndex) {
+      parts.push(text.slice(lastIndex, match.index))
+    }
+    parts.push(
+      <a
+        key={`link-${keyIdx++}`}
+        href={match[2]}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="text-emerald underline underline-offset-2 transition-colors hover:text-emerald/80"
+      >
+        {match[1]}
+      </a>,
+    )
+    lastIndex = match.index + match[0].length
+  }
+
+  if (lastIndex < text.length) {
+    parts.push(text.slice(lastIndex))
+  }
+
+  return parts.length > 0 ? parts : text
+}
+
+/** Split body on blank lines to produce paragraphs. */
+function splitParagraphs(body: string): string[] {
+  return body.split(/\n\s*\n/).map((p) => p.trim()).filter(Boolean)
 }
 
 export function BlogArticle({ article }: { article: ArticleData }) {
   const { lang } = useLanguage()
-  const text = t[lang]
+  const text = translations[lang]
 
   const title = lang === "en" && article.titleEN ? article.titleEN : article.title
   const date = lang === "en" && article.dateEN ? article.dateEN : article.date
   const lead = lang === "en" && article.leadEN ? article.leadEN : article.lead
+  const leadNote = lang === "en" && article.leadNoteEN ? article.leadNoteEN : article.leadNote
+  const outroNote = lang === "en" && article.outroNoteEN ? article.outroNoteEN : article.outroNote
 
   return (
     <>
       <Navbar />
-      <main className="pt-24 pb-0">
-        {/* Article header */}
+      <main className="pt-24">
         <article className="bg-background py-16 md:py-24">
           <div className="mx-auto max-w-3xl px-6">
             <Link
@@ -62,7 +125,7 @@ export function BlogArticle({ article }: { article: ArticleData }) {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
             >
-              <h1 className="text-3xl font-bold text-foreground md:text-4xl lg:text-5xl text-balance leading-tight">
+              <h1 className="text-balance text-3xl font-bold leading-tight text-foreground md:text-4xl lg:text-5xl">
                 {title}
               </h1>
 
@@ -81,44 +144,105 @@ export function BlogArticle({ article }: { article: ArticleData }) {
               </div>
             </motion.header>
 
-            {/* Lead paragraph */}
             <motion.p
               initial={{ opacity: 0, y: 15 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.15 }}
               className="mt-10 text-lg leading-relaxed text-foreground/80 md:text-xl"
             >
-              {lead}
+              {renderInline(lead)}
             </motion.p>
 
-            {/* Divider */}
+            {leadNote && (
+              <motion.p
+                initial={{ opacity: 0, y: 15 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+                className="mt-4 italic text-muted-foreground"
+              >
+                {renderInline(leadNote)}
+              </motion.p>
+            )}
+
             <div className="my-10 h-px bg-border" />
 
-            {/* Article body */}
             <div className="flex flex-col gap-10">
               {article.sections.map((section, i) => {
-                const sectionHeading = lang === "en" && section.headingEN ? section.headingEN : section.heading
+                const sectionHeading =
+                  lang === "en" && section.headingEN ? section.headingEN : section.heading
                 const sectionBody = lang === "en" && section.bodyEN ? section.bodyEN : section.body
+                const linksTitle =
+                  lang === "en" && section.linksTitleEN ? section.linksTitleEN : section.linksTitle
+
+                const paragraphs = splitParagraphs(sectionBody)
+
                 return (
                   <motion.section
                     key={section.heading}
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true, margin: "-60px" }}
-                    transition={{ duration: 0.5, delay: i * 0.05 }}
+                    transition={{ duration: 0.5, delay: Math.min(i * 0.03, 0.2) }}
                   >
                     <h2 className="text-xl font-bold text-foreground md:text-2xl">
                       {sectionHeading}
                     </h2>
-                    <p className="mt-3 leading-relaxed text-muted-foreground md:text-base">
-                      {sectionBody}
-                    </p>
+
+                    {paragraphs.map((para, pIdx) => (
+                      <p
+                        key={pIdx}
+                        className="mt-3 leading-relaxed text-muted-foreground md:text-base"
+                      >
+                        {renderInline(para)}
+                      </p>
+                    ))}
+
+                    {section.links && section.links.length > 0 && (
+                      <div className="mt-5">
+                        {linksTitle && (
+                          <p className="font-semibold text-foreground">{linksTitle}</p>
+                        )}
+                        <ul className="mt-2 list-disc space-y-1.5 pl-6 marker:text-emerald">
+                          {section.links.map((link, lIdx) => {
+                            const label =
+                              lang === "en" && link.labelEN ? link.labelEN : link.label
+                            return (
+                              <li key={lIdx} className="leading-relaxed text-muted-foreground">
+                                <a
+                                  href={link.href}
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  className="text-emerald underline underline-offset-2 transition-colors hover:text-emerald/80"
+                                >
+                                  {label}
+                                </a>
+                              </li>
+                            )
+                          })}
+                        </ul>
+                      </div>
+                    )}
                   </motion.section>
                 )
               })}
             </div>
 
-            {/* Bottom CTA */}
+            {outroNote && (
+              <motion.div
+                initial={{ opacity: 0, y: 15 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5 }}
+                className="mt-12 flex flex-col gap-4 border-l-2 border-emerald/40 pl-5"
+              >
+                {splitParagraphs(outroNote).map((para, i) => (
+                  <p key={i} className="italic leading-relaxed text-muted-foreground">
+                    {renderInline(para)}
+                  </p>
+                ))}
+              </motion.div>
+            )}
+
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -129,7 +253,7 @@ export function BlogArticle({ article }: { article: ArticleData }) {
               <p className="text-xs font-semibold uppercase tracking-[0.2em] text-emerald">
                 {text.joinDiscussion}
               </p>
-              <h3 className="mt-3 text-lg font-bold text-primary-foreground md:text-xl text-balance">
+              <h3 className="mt-3 text-balance text-lg font-bold text-primary-foreground md:text-xl">
                 {text.discussCta}
               </h3>
               <a
