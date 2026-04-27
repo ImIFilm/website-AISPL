@@ -58,7 +58,7 @@ export function Navbar() {
           <div className="flex items-center rounded-full border border-border bg-muted/40 p-0.5 text-xs font-semibold">
             <button
               onClick={() => setLang("pl")}
-              className={`rounded-full px-2.5 py-1 transition-colors ${
+              className={`cursor-pointer rounded-full px-2.5 py-1 transition-colors ${
                 lang === "pl"
                   ? "bg-foreground text-background shadow-sm"
                   : "text-muted-foreground hover:text-foreground"
@@ -69,7 +69,7 @@ export function Navbar() {
             </button>
             <button
               onClick={() => setLang("en")}
-              className={`rounded-full px-2.5 py-1 transition-colors ${
+              className={`cursor-pointer rounded-full px-2.5 py-1 transition-colors ${
                 lang === "en"
                   ? "bg-foreground text-background shadow-sm"
                   : "text-muted-foreground hover:text-foreground"
@@ -83,7 +83,7 @@ export function Navbar() {
 
         {/* Mobile hamburger */}
         <button
-          className="relative z-50 md:hidden"
+          className="relative z-50 cursor-pointer md:hidden"
           onClick={() => setMobileOpen((prev) => !prev)}
           aria-label={mobileOpen ? "Zamknij menu" : "Otworz menu"}
         >
@@ -121,7 +121,7 @@ export function Navbar() {
               <div className="flex items-center rounded-full border border-border bg-muted/40 p-0.5 text-xs font-semibold">
                 <button
                   onClick={() => setLang("pl")}
-                  className={`rounded-full px-2.5 py-1 transition-colors ${
+                  className={`cursor-pointer rounded-full px-2.5 py-1 transition-colors ${
                     lang === "pl"
                       ? "bg-foreground text-background shadow-sm"
                       : "text-muted-foreground hover:text-foreground"
@@ -131,7 +131,7 @@ export function Navbar() {
                 </button>
                 <button
                   onClick={() => setLang("en")}
-                  className={`rounded-full px-2.5 py-1 transition-colors ${
+                  className={`cursor-pointer rounded-full px-2.5 py-1 transition-colors ${
                     lang === "en"
                       ? "bg-foreground text-background shadow-sm"
                       : "text-muted-foreground hover:text-foreground"

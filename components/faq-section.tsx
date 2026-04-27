@@ -112,7 +112,7 @@ export function FaqSection() {
           <Accordion type="single" collapsible className="w-full">
             {text.items.map((item, i) => (
               <AccordionItem key={i} value={`item-${i}`} className="border-border/60">
-                <AccordionTrigger className="text-left font-medium text-foreground hover:no-underline" style={{ fontSize: "18px" }}>
+                <AccordionTrigger className="cursor-pointer text-left font-medium text-foreground hover:no-underline" style={{ fontSize: "18px" }}>
                   {item.question}
                 </AccordionTrigger>
                 <AccordionContent className="leading-relaxed text-muted-foreground" style={{ fontSize: "16px" }}>

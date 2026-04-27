@@ -43,10 +43,10 @@ export function HeroSection() {
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7, delay: 0.3 }}
-        className="mt-10"
+        className="mt-10 flex justify-center"
       >
         <div
-          className="relative overflow-hidden"
+          className="relative w-full max-w-4xl overflow-hidden"
           style={{ aspectRatio: "1920 / 910", minHeight: "350px" }}
         >
           <Image

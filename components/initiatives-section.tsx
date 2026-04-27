@@ -2,6 +2,7 @@
 
 import Link from "next/link"
 import { motion } from "framer-motion"
+import { ArrowRight } from "lucide-react"
 import { useLanguage } from "@/context/language-context"
 
 const initiativesPL = [
@@ -80,10 +81,13 @@ export function InitiativesSection() {
               >
                 <Link
                   href={item.href}
-                  className="group relative flex h-64 flex-col justify-end overflow-hidden rounded-2xl transition-transform hover:scale-[1.02]"
+                  className="group relative flex h-64 flex-col justify-between overflow-hidden rounded-2xl transition-transform hover:scale-[1.02]"
                   style={backgroundStyles[i]}
                 >
                   <div className="absolute inset-0 bg-gradient-to-t from-slate-900 to-transparent" />
+                  <div className="relative z-10 flex items-center justify-end p-4 opacity-0 transition-opacity group-hover:opacity-100">
+                    <ArrowRight className="h-6 w-6 text-white" />
+                  </div>
                   <div className="relative z-10 p-6">
                     <h3 className="text-base font-semibold text-white">{item.title}</h3>
                   </div>
@@ -102,7 +106,7 @@ export function InitiativesSection() {
           >
             <Link
               href="/inicjatywy#slack"
-              className="relative flex min-h-64 h-full flex-col items-center justify-center overflow-hidden rounded-2xl p-8 text-center transition-transform hover:scale-[1.02] md:min-h-full"
+              className="group relative flex min-h-64 h-full flex-col items-center justify-center overflow-hidden rounded-2xl p-8 text-center transition-transform hover:scale-[1.02] md:min-h-full"
               style={{
                 backgroundImage: "url(https://hebbkx1anhila5yf.public.blob.vercel-storage.com/slackbackground-2-X835RXYROPNIk8CZ5iTIktkvkdADwu.jpg)",
                 backgroundSize: "cover",
@@ -110,6 +114,9 @@ export function InitiativesSection() {
               }}
             >
               <div className="absolute inset-0 bg-gradient-to-b from-emerald-600/40 to-emerald-900/60" />
+              <div className="absolute right-4 top-4 z-20 opacity-0 transition-opacity group-hover:opacity-100">
+                <ArrowRight className="h-6 w-6 text-white" />
+              </div>
               <div className="relative z-10">
                 <img 
                   src="https://upload.wikimedia.org/wikipedia/commons/d/d5/Slack_icon_2019.svg" 
