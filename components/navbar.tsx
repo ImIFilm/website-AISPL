@@ -83,7 +83,7 @@ export function Navbar() {
 
         {/* Mobile hamburger */}
         <button
-          className="relative z-50 md:hidden"
+          className="relative z-50 cursor-pointer md:hidden"
           onClick={() => setMobileOpen((prev) => !prev)}
           aria-label={mobileOpen ? "Zamknij menu" : "Otworz menu"}
         >
