@@ -1,9 +1,15 @@
 "use client"
 
+import Image from "next/image"
 import Link from "next/link"
 import { motion } from "framer-motion"
 import { ArrowRight } from "lucide-react"
 import { useLanguage } from "@/context/language-context"
+
+const INTRO_IMAGE =
+  "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/AI%20Safety%20intro%20%281%29-1B1vOKdBoscnbWwzrJNw0YjFMdABjr.jpg"
+const POLES_IMAGE =
+  "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Polacy%20w%20AI%20Safety%20%281%29-PB4vwSVK6kUCwRTuWVT9L5afZ9jWmg.jpg"
 
 const translations = {
   pl: {
@@ -14,11 +20,15 @@ const translations = {
         author: "Marcel Windys",
         title: "Dlaczego powinieneś zainteresować się AI Safety?",
         href: "/blog/intro-ai-safety",
+        image: INTRO_IMAGE,
+        imageAlt: "Abstrakcyjna wizualizacja sieci AI",
       },
       {
         author: "Jakub Kryś",
         title: "Wkład Polaków w rozwój bezpieczeństwa AI",
         href: "/blog/wklad-polakow-w-rozwoj-bezpieczenstwa-ai",
+        image: POLES_IMAGE,
+        imageAlt: "Abstrakcyjna wizualizacja AI z mózgiem",
       },
     ],
   },
@@ -30,11 +40,15 @@ const translations = {
         author: "Marcel Windys",
         title: "Why should you care about AI Safety?",
         href: "/blog/intro-ai-safety",
+        image: INTRO_IMAGE,
+        imageAlt: "Abstract visualization of an AI network",
       },
       {
         author: "Jakub Kryś",
         title: "Polish contributions to the development of AI safety",
         href: "/blog/wklad-polakow-w-rozwoj-bezpieczenstwa-ai",
+        image: POLES_IMAGE,
+        imageAlt: "Abstract AI visualization with a brain motif",
       },
     ],
   },
@@ -71,14 +85,14 @@ export function ArticlesSection() {
                 whileHover={{ scale: 1.05 }}
                 className="flex cursor-pointer gap-4 rounded-xl bg-secondary p-4 transition-transform duration-300 md:p-5"
               >
-                <div className="h-24 w-24 flex-shrink-0 overflow-hidden rounded-lg bg-muted md:h-28 md:w-28">
-                  <div className="flex h-full w-full items-center justify-center bg-gradient-to-br from-navy/10 to-emerald/10">
-                    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1" className="text-muted-foreground/40" aria-hidden="true">
-                      <rect x="3" y="3" width="18" height="18" rx="2" />
-                      <circle cx="8.5" cy="8.5" r="1.5" />
-                      <path d="M21 15l-5-5L5 21" />
-                    </svg>
-                  </div>
+                <div className="relative h-24 w-24 flex-shrink-0 overflow-hidden rounded-lg bg-muted md:h-28 md:w-28">
+                  <Image
+                    src={article.image}
+                    alt={article.imageAlt}
+                    fill
+                    sizes="(min-width: 768px) 112px, 96px"
+                    className="object-cover"
+                  />
                 </div>
                 <div className="flex flex-col justify-center">
                   <p className="text-xs font-medium text-muted-foreground">{article.author}</p>
