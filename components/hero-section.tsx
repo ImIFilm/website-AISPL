@@ -66,7 +66,7 @@ export function HeroSection() {
         </div>
         {/* Wide image (shown only on ultra-wide screens) */}
         <div
-          className="relative hidden w-full overflow-hidden min-[1920px]:block"
+          className="relative hidden w-full overflow-hidden min-[1920px]:block min-[1920px]:-mb-px"
           style={{ aspectRatio: "1920 / 540" }}
         >
           <Image
