@@ -16,7 +16,7 @@ const translations = {
 const HERO_IMAGE_DEFAULT =
   "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/main-photo-1-Oo0f6K76XQmQoaiHOo5fFdb2YcOq4d.png"
 const HERO_IMAGE_WIDE =
-  "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/main%20photo%204k%20%281%29-aqWtREMgjHdYPECQikNj0huLDJqhEv.png"
+  "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/main%20photo%204k%20%282%29-iJte7LYLL5iHtrX9csRBo69iNQZvta.png"
 
 export function HeroSection() {
   const { lang } = useLanguage()
