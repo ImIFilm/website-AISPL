@@ -81,7 +81,7 @@ export function AboutSection() {
           viewport={{ once: true, margin: "-50px" }}
           transition={{ duration: 0.5, delay: 0.1 }}
           className="mt-4 text-balance text-primary-foreground"
-          style={{ lineHeight: "1.4", fontWeight: 500, fontSize: "26px" }}
+          style={{ lineHeight: "1.4", fontWeight: 500, fontSize: "1.625rem" }}
         >
           {translations[lang].heading}
         </motion.h2>
@@ -91,7 +91,7 @@ export function AboutSection() {
           viewport={{ once: true, margin: "-50px" }}
           transition={{ duration: 0.5, delay: 0.2 }}
           className="mx-auto mt-6 max-w-2xl text-primary-foreground/60"
-          style={{ lineHeight: "1.4", fontSize: "18px" }}
+          style={{ lineHeight: "1.4", fontSize: "1.125rem" }}
         >
           {translations[lang].body}
         </motion.p>

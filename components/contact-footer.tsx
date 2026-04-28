@@ -51,10 +51,10 @@ export function ContactFooter() {
             className="flex flex-col items-center justify-between gap-12 md:flex-row md:gap-16"
           >
             <div className="flex-1 text-center md:text-left">
-              <h3 className="text-foreground md:text-4xl lg:text-5xl text-balance" style={{ fontSize: "28px", fontWeight: "500" }}>
+              <h3 className="text-foreground md:text-4xl lg:text-5xl text-balance" style={{ fontSize: "1.75rem", fontWeight: "500" }}>
                 {text.cardHeading}
               </h3>
-              <p className="mt-4 text-muted-foreground" style={{ fontSize: "16px", fontWeight: "300" }}>
+              <p className="mt-4 text-muted-foreground" style={{ fontSize: "1rem", fontWeight: "300" }}>
                 contact@aisafety.org.pl
               </p>
             </div>
