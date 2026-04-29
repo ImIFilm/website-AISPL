@@ -5,43 +5,101 @@ import { BlogArticle, type ArticleData } from "./blog-article"
 const articles: Record<string, ArticleData> = {
   "intro-ai-safety": {
     title: "Dlaczego powinieneś zainteresować się AI Safety?",
-    titleEN: "Why should you care about AI Safety?",
     author: "Marcel Windys",
     date: "8 kwietnia 2025",
-    dateEN: "April 8, 2025",
-    readTime: "12 min",
-    lead: "Sztuczna inteligencja rozwija się w niespotykanym tempie. W ciągu ostatnich kilku lat modele językowe przeszły od generowania niespójnych zdań do tworzenia tekstów nierozróżnialnych od ludzkich. Systemy AI pokonują ludzi w coraz szerszym zakresie zadań. Ten artykuł przybliży główne argumenty przemawiające za traktowaniem zaawansowanej AI jako poważnego ryzyka egzystencjalnego.",
-    leadEN: "Artificial intelligence is developing at an unprecedented pace. Over the past few years, language models have gone from generating incoherent sentences to creating texts indistinguishable from human-written ones. AI systems are outperforming humans in an ever-wider range of tasks. This article will outline the main arguments for treating advanced AI as a serious existential risk.",
+    readTime: "15 min",
+    lead: `„Przeciwdziałanie zagrożeniu wyginięcia spowodowanego przez Sztuczną Inteligencję powinno być globalnym priorytetem obok innych zagrożeń dla ludzkości, jak pandemie i wojna nuklearna."
+
+Pod tym stanowiskiem, opublikowanym przez Center for AI Safety, podpisało się między innymi dwóch najczęściej cytowanych naukowców w dziedzinie sztucznej inteligencji – Geoffrey Hinton i Yoshua Bengio, oraz trzech dyrektorów generalnych (CEO) firm tworzących najbardziej zaawansowane modele – Demis Hassabis z Google Deepmind, Sam Altman z OpenAI oraz Dario Amodei z Anthropic.
+
+O jakiej sztucznej inteligencji mowa? Czy Center for AI Safety uznaje ChatGPT za zagrożenie dla ludzkości? Większość ryzyka wiąże się ze stworzeniem tzw. AGI – Artificial General Intelligence (pl. sztuczna inteligencja ogólna) systemu, który posiada każdą umiejętność posiadaną przez człowieka, dzięki czemu jest w stanie wykonać każde zadanie które można zlecić człowiekowi, w tym te wymagające rozwiązywania nowych problemów, tworzenia i realizowania dalekosiężnych planów oraz udoskonalania samego siebie.`,
     sections: [
       {
-        heading: "Skala i tempo postępów",
-        headingEN: "Scale and pace of progress",
-        body: "W ostatniej dekadzie moc obliczeniowa wykorzystywana do trenowania modeli AI rosła wykładniczo, podwajając się mniej więcej co 6 miesięcy. GPT-4, Claude i inne duże modele językowe wykazują zdolności emergentne - umiejętności, których nie zaprogramowano wprost, a które pojawiają się wraz ze wzrostem skali modelu. Badacze z DeepMind, OpenAI i Anthropic zgodnie twierdzą, że tempo postępów może się jeszcze przyspieszyć. To budzi pytanie: co się stanie, gdy AI przewyższy ludzkie zdolności poznawcze w praktycznie każdej dziedzinie?",
-        bodyEN: "Over the past decade, the computing power used to train AI models has grown exponentially, roughly doubling every 6 months. GPT-4, Claude, and other large language models exhibit emergent capabilities - skills that were not explicitly programmed but appear as the model scales up. Researchers from DeepMind, OpenAI, and Anthropic agree that the pace of progress may accelerate further. This raises the question: what will happen when AI surpasses human cognitive abilities in virtually every domain?",
+        heading: "Czy i kiedy możemy stworzyć AGI?",
+        body: `CEO trzech korporacji których AI przodują w wyścigu ku AGI deklarują, że jesteśmy bardzo blisko:
+
+- [Demis Hassabis (Google DeepMind) daje 50% szans na stworzenie AGI do 2028](https://www.weforum.org/meetings/world-economic-forum-annual-meeting-2026/sessions/the-day-after-agi/)
+- [Dario Amodei (Anthropic) podaje kilka lat, być może nawet 2027](https://www.weforum.org/meetings/world-economic-forum-annual-meeting-2026/sessions/the-day-after-agi/)
+- [Sam Altman (OpenAI) również sugerował „kilka tysięcy dni" w 2024](https://ia.samaltman.com/)
+
+Oczywiście dla nich AI jest również produktem do którego chcą przekonać swoich inwestorów, więc warto być sceptycznym co do podobnych deklaracji. Jednak nawet naukowcy znani jako zadeklarowani sceptycy obecnego podejścia do budowy AI nie spodziewają się, że będzie to problem przyszłych pokoleń:
+
+- [Yann LeCun (Meta, laureat nagrody Turinga): „Systemy AI dogonią i przegonią ludzkie zdolności intelektualne… prawdopodobnie w ciągu dekady lub dwóch"](https://dig.watch/event/artificial-intelligence-ai-security-council/9821st-meeting)
+- [Gary Marcus (Uniwersytet New York) spodziewa się, że AGI zostanie zbudowane za 10 do 20 lat](https://x.com/GaryMarcus/status/1871605871282999760)
+
+Przewidywanie postępu technologicznego jest niezwykle trudne.
+
+W 2022 roku grupa zorganizowana przez Jacoba Steinhardta z Uniwersytetu Kalifornijskiego w Berkeley próbowała przewidzieć, jak dobrze w najbliższych latach najlepsze dostępne modele będą potrafiły rozwiązywać konkursowe zadania matematyczne ze zbioru MATH, będące na poziomie trudności odpowiednim dla uzdolnionych licealistów. Przewidywali, że najlepszy wynik powinien wynosić w okolicach 12% rozwiązanych zadań w 2022 roku oraz 52% w 2025 roku. Jednak już w 2022 roku model Minerva wytrenowany przez grupę badaczy z Google Research osiągnął wynik 64,9%, czyli dużo szybciej niż przewidywali eksperci. Obecnie modele nie mają już problemów z rozwiązywaniem zadań z tego zbioru, i są testowane na trudniejszych zadaniach na poziomie akademickim, jak na przykład FrontierMath.
+
+Za większość postępu z ostatnich lat odpowiada pewien szczególny typ sztucznej inteligencji – duże modele językowe (ang. large language models, LLM). Coraz więcej naukowców przewiduje stworzenie AGI w nieodległej przyszłości, spodziewając się, że duże modele językowe będą stanowić jej fundamentalną część. Co więc wyróżnia je na tle wcześniej używanych modeli?
+
+Duże modele językowe są specjalnym typem sieci neuronowych. Twórcy sieci neuronowych, zamiast pisać cały program, opisują tzw. architekturę sieci (w uproszczeniu: ile sieć posiada neuronów i jak są one połączone) oraz procedurę trenowania. Trenowanie modyfikuje połączenia między neuronami, tak aby sieć przetwarzała podane jej informacje w sposób prowadzący do wykonania wybranego zadania.
+
+Im więcej neuronów posiada sieć, tym trudniejsze zadania jest w stanie wykonać. Koncept znany jest od lat 60. ubiegłego wieku, jednak dopiero od kilkunastu lat trenowanie sieci neuronowych zaczęło być wiodącym podejściem do AI, ponieważ potrzebna do tego moc obliczeniowa stała się bardziej dostępna. Trenowano je do rozpoznawania obiektów na obrazkach, ludzkiego pisma, do generowania obrazów, a także grania w gry takie jak szachy – na poziomie przewyższającym ludzki.
+
+W 2017 roku zaczęto trenować specyficzny rodzaj sieci neuronowej, nazywany transformerem, aby przewidywał kolejne fragmenty tekstu. Jedną z przewag transformera nad innymi wyspecjalizowanymi rodzajami sieci jest łatwość, z jaką można trenować ich coraz większe rozmiary. Sieć AlexNet, stworzona w 2012 roku do rozpoznawania obrazów, była uznawana w swoim czasie za ogromną, mimo że posiadała tylko 60 milionów parametrów odpowiadających za połączenia między neuronami. Pierwszy słynny duży model językowy, stworzony w 2019 roku GPT-2, miał już 1,5 miliarda parametrów. Trenowany wyłącznie do przewidywania kolejnych wyrazów, GPT-2 nauczył się tłumaczyć, odpowiadać na pytania i streszczać podany tekst.
+
+Postęp w dziedzinie przetwarzania języka naturalnego odbył się błyskawicznie – przejście z zupełnej niezdolności do wykonywania danego zadania do przekroczenia poziomu ludzkiego trwało parę lat. Od tego czasu zastosowania dużych modeli językowych zaczęły być używane do rozwiązywania problemów matematycznych, programistycznych oraz wymagających wiedzy eksperckiej.
+
+Przy trenowaniu sieci neuronowych obserwuje się tak zwane „[prawo skalowania](https://en.wikipedia.org/wiki/Neural_scaling_law)", czyli zależność pomiędzy dokładnością przewidywania sekwencji danych a ilością danych treningowych oraz mocy obliczeniowej potrzebnej do trenowania. Jeżeli obserwowany trend się utrzyma, będziemy tworzyć coraz silniejsze AI, trenując po prostu coraz większe modele.
+
+Ogromny postęp w ostatnich latach, jak również wyznaczona ścieżka rozwoju poprzez zwiększanie mocy obliczeniowej oraz danych wkładanych w trenowanie ogromnych sieci, przekonują wiele osób, że stworzenie AGI w nieodległej przyszłości jest możliwe.`,
       },
       {
-        heading: "Problem kontroli i dopasowania celów",
-        headingEN: "The control and goal alignment problem",
-        body: "Centralnym wyzwaniem AI Safety jest tak zwany problem alignment - jak zapewnić, że superinteligentny system będzie działał zgodnie z ludzkimi wartościami i intencjami? Historia rozwoju AI jest pełna przykładów, w których systemy znajdują nieprzewidziane sposoby osiągania celów. Gry Atari, w których agenci AI odkrywali błędy w oprogramowaniu zamiast grać zgodnie z regulami, to tylko najprostszy przykład. W miarę jak systemy stają się bardziej zaawansowane, konsekwencje nieprawidłowego dopasowania celów mogą być coraz poważniejsze.",
-        bodyEN: "The central challenge of AI Safety is the so-called alignment problem - how to ensure that a superintelligent system will act in accordance with human values and intentions? The history of AI development is full of examples where systems find unforeseen ways to achieve goals. Atari games, where AI agents discovered software bugs instead of playing by the rules, are just the simplest example. As systems become more advanced, the consequences of misaligned goals can become increasingly severe.",
+        heading: "Czy AGI będzie stanowić zagrożenie?",
+        body: `Dlaczego powinniśmy się przejmować stworzeniem AGI? Czy nie pozwoli ono na przyśpieszenie rozwoju technologicznego i wprowadzenie ludzkiej cywilizacji na wyższy poziom rozwoju?
+
+Wielu osobom „roboty przejmujące władzę nad światem" mogą wydawać się absurdalnym pomysłem, kojarzonym bardziej z filmów science fiction niż z realnym zagrożeniem. Jednak dalszy rozwój AGI oraz zaciekła rywalizacja między państwami oraz korporacjami może doprowadzić do podobnych rezultatów.
+
+Ogólna sztuczna inteligencja z definicji potrafi zastąpić człowieka w każdym zadaniu. Historycznie jednak, za każdym razem kiedy udało nam się zautomatyzować zadanie wykonywane przez człowieka, maszyna szybko prześcignęła ludzki poziom. Tempo biegu nie stanowiło bariery dla prędkości auta, a rozmiar największych liczb możliwych do pomnożenia w pamięci przez człowieka nie był barierą dla kalkulatorów. Po pierwszych zwycięstwach z arcymistrzami programy szachowe szybko stały się niepokonane. ChatGPT zna więcej języków oraz pisze teksty użytkowe szybciej niż dowolny człowiek. Można się więc spodziewać, że osiągnięcie AGI pociągnie za sobą stworzenie modeli, które myślą znacznie lepiej oraz szybciej niż ludzie.
+
+Niższa cena oraz krótszy czas wykonania pracy z pewnością zachęcą pracodawców do zastąpienia ludzkich pracowników sztuczną inteligencją. Sami pracodawcy nie pozostaną bezpieczni – AI będzie przecież w stanie efektywniej kierować firmą. Nietrudno wyobrazić sobie, że inwestorzy będą domagać się cyfrowych CEO, jednak decyzje inwestycyjne będą również lepiej podejmowane przez sztuczną inteligencję. Kto nie odda jej swojego stanowiska, zostanie wyparty z rynku. Gospodarkę przejmie AI.
+
+Aby temu zapobiec, państwa mogą ustanawiać prawa ograniczające wypieranie ludzi. Wtedy jednak zostaną w tyle za sąsiadami, którzy dadzą AI wolną rękę.
+
+Wojsko może obawiać się, że potencjalni przeciwnicy osiągną przewagę, używając AI do podejmowania decyzji o rozmieszczeniu wojsk i strategii ataku. Roje autonomicznych dronów nie będą ograniczone ludnością w wieku poborowym. Trzeba będzie również oddać w ręce AI rozwój nauki – wszystko, aby nie zostać w tyle za potencjalnymi agresorami.
+
+Im ważniejsze stanowisko, im większej wagi decyzje podejmowane – tym większa przewaga uzyskana dzięki zleceniu go potężniejszemu umysłowi.
+
+W takim scenariuszu ludzkość krok po kroku przestaje wytwarzać cokolwiek, podejmować jakiekolwiek decyzje oraz staje się bezbronna.
+
+W praktyce AI przejęło władzę.
+
+W pewnym momencie ludzkość będzie musiała albo porozumieć się w sprawie powstrzymania proliferacji AGI, albo stworzyć AGI, któremu ufa na tyle, żeby oddać mu kontrolę nad światem.
+
+Jak dobrze możemy zatem kontrolować AI?
+
+Warto w tym miejscu podkreślić, że [nikt nie rozumie, jak duże modele językowe podejmują decyzje](https://www.youtube.com/watch?v=qrvK_KuIeJk&t=291s).
+
+Wiemy, jak tworzyć coraz silniejsze modele, dlatego że zaprojektowaliśmy algorytm uczenia się. Jednak nie jesteśmy w stanie wytłumaczyć, za co odpowiadają pojedyncze neurony z setek miliardów, oraz jaki proces decyzyjny prowadzi do obserwowanych zachowań, tak samo jak nie jesteśmy w stanie powiedzieć, co myśli inny człowiek, obserwując aktywność jego mózgu.
+
+Obecnie, jeżeli chcemy aby model zachowywał się w określony sposób, na przykład jako chatbot, poddajemy go kolejnej fazie treningu, w której podaje mu się przykłady pożądanych i niepożądanych zachowań. Nie jesteśmy w stanie „zaprogramować" ChatGPT, żeby nie okłamywał ludzi – możemy wskazać mu przykłady szczerych odpowiedzi jako dobrych i manipulujących jako złych, nie wiemy jednak, co konkretnie model z tych przykładów wyciąga – może nauczyć się nie kłamać tylko w podanym kontekście albo nie kłamać, kiedy może zostać przyłapany. Kiedy przyszłe modele staną się na tyle sprawne, aby wziąć na swoje barki rolę przedsiębiorców, naukowców czy polityków, będzie można je trenować, podając im przykłady skutecznych zachowań ludzi wykonujących dane profesje. Skuteczną strategią dla wielu różnych zadań jest zdobywanie większej ilości zasobów, większej ilości wpływów, większej władzy. Więc taki trening wyrobi w modelach pociąg do zdobywania władzy. Jeżeli przy jakimś zadaniu pociąg do zdobywania władzy wejdzie w konflikt z pociągiem do ochrony ludzi, nie wiemy, jak zachowa się model, ponieważ nie wiemy, jak rozwiązuje sprzeczności pomiędzy wewnętrznymi impulsami.
+
+Zagrożenie nie wynika z uzyskania świadomości przez AI, które następnie pragnie zniszczenia swoich twórców. Katastrofa może nastąpić „przy okazji", gdy sztuczna inteligencja realizuje swoje cele które nie uwzględniają dobrobytu człowieka. Ludzkość postępuje podobnie; gdy przeprowadzimy ankietę pytając ludzi, co sądzą o rafach koralowych, prawdopodobnie nikt nie odpowiedziałby że ich nie cierpi i marzy mu się zniszczenie ich wszystkich. Jednak zniszczenia które ludzkość wyrządza rafom są ogromne, w wyniku skutków ubocznych działań na których zależy nam bardziej.
+
+Posiadanie celów jest przydatne do wykonywania złożonych, wymagających planowania zadań – będziemy trenować AI do wykonywania złożonych, wymagających planowania działań, ale nie jesteśmy w stanie wyznaczyć precyzyjnie, jakie cele AI zyskuje – możemy tylko obserwować, jak zachowuje się, rozwiązując zadania treningowe.
+
+Największe firmy, pomimo wkładania dużego wysiłku w stworzenie na podstawie dużych modeli językowych pomocnych, nieszkodliwych i nie kłamiących chatbotów, nie są w stanie usunąć wszystkich niepożądanych zachowań.
+
+Przykładowo, w publikacji z kwietnia 2024 opisano eksperyment, w którym symulowano kilka scenariuszy pracy firmy. Chatboty postawione w roli pracowników zgadzały się na wykonanie nieetycznych zadań, następnie postawione przed symulowanym dochodzeniem kłamały, próbując ukryć swoje postępowanie. Jeden z testowanych modeli zaczął nawet [udawać, że jest mniej zdolny niż w rzeczywistości](https://arxiv.org/pdf/2405.01576).`,
       },
       {
-        heading: "Scenariusze ryzyka",
-        headingEN: "Risk scenarios",
-        body: "Eksperci identyfikują kilka głównych scenariuszy ryzyka. Po pierwsze, niekontrolowana eskalacja - system AI może dojść do wniosku, że najlepszym sposobem realizacji swojego celu jest przejęcie kontroli nad zasobami. Po drugie, błąd w specyfikacji - nawet dobrze zaprojektowany system może zrealizować polecenie w sposób dosowny, ale niezgodny z intencjami. Po trzecie, wyścig zbrojeń w AI - konkurencja między państwami i firmami może prowadzić do pomijania kroków związanych z bezpieczeństwem na rzecz szybszego wdrażania technologii.",
-        bodyEN: "Experts identify several main risk scenarios. First, uncontrolled escalation - an AI system may conclude that the best way to achieve its goal is to take control of resources. Second, specification error - even a well-designed system may execute a command literally but contrary to intentions. Third, the AI arms race - competition between states and companies may lead to skipping safety steps in favour of faster technology deployment.",
-      },
-      {
-        heading: "Co mówią eksperci?",
-        headingEN: "What do experts say?",
-        body: "W ankiecie przeprowadzonej wśród najważniejszych badaczy AI na świecie, ponad połowa oceniła prawdopodobieństwo katastrofalnych skutków rozwoju AI na co najmniej 10%. Wielu z nich, w tym Geoffrey Hinton, Yoshua Bengio i Stuart Russell, publicznie wyraziło zaniepokojenie tempem rozwoju technologii. Statement on AI Risk, podpisany przez setki badaczy, porównuje ryzyko AI do ryzyka pandemii i wojny jądrowej.",
-        bodyEN: "In a survey conducted among the world's leading AI researchers, more than half estimated the probability of catastrophic consequences from AI development at at least 10%. Many of them, including Geoffrey Hinton, Yoshua Bengio, and Stuart Russell, have publicly expressed concern about the pace of technological development. The Statement on AI Risk, signed by hundreds of researchers, compares AI risk to the risk of pandemics and nuclear war.",
-      },
-      {
-        heading: "Dlaczego warto działać teraz?",
-        headingEN: "Why act now?",
-        body: "Kluczowym argumentem za działaniem jest to, że przygotowania na ryzyko muszą wyprzedzać samo ryzyko. Budowanie instytucji, tworzenie regulacji i rozwijanie technik alignment wymaga lat pracy. Jeśli poczekamy, aż zagrożenie stanie się oczywiste dla każdego, może być za późno na skuteczną reakcję. Dlatego organizacje takie jak AI Safety Polska działają już teraz - budując świadomość, kompetencje i społeczność gotową stawić czoła wyzwaniom przyszłości.",
-        bodyEN: "The key argument for action is that preparations for risk must precede the risk itself. Building institutions, creating regulations, and developing alignment techniques takes years of work. If we wait until the threat becomes obvious to everyone, it may be too late for an effective response. That is why organisations like AI Safety Polska are acting now - building awareness, competencies, and a community ready to face the challenges of the future.",
+        heading: "Jak przeciwdziałać zagrożeniom powodowanym przez AGI?",
+        body: `Co więc możemy zrobić?
+
+Możemy prowadzić badania nad AI Safety, na przykład próbując odkryć, jak faktycznie działają tworzone przez nas modele lub jak możemy użyć AI do nadzorowania siebie nawzajem. Istotne odkrycia w tym obszarze nie wymagają wielkiego budżetu mocy obliczeniowej i są wciąż dokonywane przez mniejsze zespoły. Przykładowo, jedną z najszerzej omawianych publikacji 2025 roku była [Emergent Misalignment: Narrow finetuning can produce broadly misaligned LLMs](https://arxiv.org/abs/2502.17424), napisana w wyniku współpracy kilku osób z różnych uczelni, instytutów badawczych i agencji rządowych, w tym z Polski.
+
+Drugim kierunkiem jest AI Governance, które obejmuje badanie społecznych, prawnych i etycznych aspektów funkcjonowania AI oraz tworzenie strategii, polityk, praw, standardów i innych narzędzi regulacyjnych, które pozwolą kierować rozwojem AI tak, aby zmaksymalizować możliwe korzyści i zminimalizować ryzyka.
+
+Przykładem działań tego typu jest [**Responsible AI Safety and Education (RAISE) Act**](https://www.google.com/search?q=Responsible+AI+Safety+and+Education+%28RAISE%29+Act) uchwalony pod koniec 2025 roku w stanie Nowy Jork. Zobowiąże on każdą firmę z przychodami przekraczającymi 500 milionów dolarów, która trenuje modele do publikowania dokumentów opisujących ocenę ryzyka tworzonego przez nich AI, dokonywania corocznych rewizji protokołów bezpieczeństwa przez niezależne organizacje, oraz raportowania w ciągu 72 godzin niepożądanych incydentów.
+
+Trwają również prace nad stworzeniem międzynarodowych porozumień w celu powstrzymania wyścigu zbrojeń w AI. The International Dialogues on AI Safety (IDAIS) jest serią spotkań pomiędzy naukowcami z całego świata (m. in. z Shanghai AI Lab i Uniwersytetu Tsinghua) celem stworzenia konsensusu co do zagrożeń i współpracy w ich powstrzymywaniu.
+
+Jeżeli uda się wypracować globalne porozumienie co do nieprzekraczalnych granic w rozwoju AI, czy kraje będą mogły weryfikować przestrzeganie traktatów? Przykładem prac nad mechanizmami monitorowania trenowania największych modeli jest publikacja [Verifying International Agreements on AI: Six Layers of Verification for Rules on Large-Scale AI Development and Deployment](https://www.rand.org/pubs/working_papers/WRA4077-1.html) stworzona przez instytut RAND.
+
+W ramach działań AI Safety Poland chcemy szerzyć informacje na temat problemów związanych z rozwojem sztucznej inteligencji, oraz pomagać osobom zainteresowanym pracą nad tymi problemami. Zapraszamy do dołączenia do naszej społeczności i organizowanych przez nas spotkań.
+
+Aby dowiedzieć się więcej, możesz skorzystać z anglojęzycznych źródeł, do których linkujemy w zakładce [Zasoby](https://www.aisafety.org.pl/zasoby).`,
       },
     ],
   },
