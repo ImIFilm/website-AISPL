@@ -128,7 +128,7 @@ export function TeamPage() {
         <section className="bg-background py-16 md:py-24">
           <div className="mx-auto max-w-4xl px-6">
             <Link
-              href="/"
+              href={`/${lang}`}
               className="mb-8 inline-flex items-center gap-2 text-sm text-muted-foreground transition-colors hover:text-foreground"
             >
               <ArrowLeft className="h-4 w-4" />

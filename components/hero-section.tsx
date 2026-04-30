@@ -65,15 +65,13 @@ export function HeroSection() {
           />
         </div>
         {/* Wide image (shown only on ultra-wide screens) */}
-        <div
-          className="relative hidden w-full overflow-hidden min-[1920px]:block"
-          style={{ aspectRatio: "1920 / 540" }}
-        >
+        <div className="relative hidden w-full overflow-hidden min-[1920px]:block">
           <Image
             src={HERO_IMAGE_WIDE}
             alt="Izometryczna ilustracja 3D budynku..."
-            fill
-            className="object-cover object-bottom"
+            width={1920}
+            height={540}
+            className="block h-auto w-full"
             sizes="100vw"
             priority
           />

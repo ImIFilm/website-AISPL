@@ -142,7 +142,7 @@ export function AboutSection() {
           transition={{ duration: 0.5, delay: 0.6 }}
         >
           <Link
-            href="/zespol"
+            href={`/${lang}/zespol`}
             className="mt-8 inline-block text-sm text-primary-foreground/60 underline underline-offset-4 transition-colors hover:text-emerald"
           >
             {translations[lang].teamLink}

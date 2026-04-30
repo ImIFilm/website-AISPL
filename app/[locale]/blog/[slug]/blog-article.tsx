@@ -56,12 +56,14 @@ export type ArticleData = {
 }
 
 /**
- * Render a plain-text string with inline markdown-style links: [label](url)
+ * Render a plain-text string with inline markdown-style links [label](url)
+ * and bold spans (**text** or __text__).
  * Links open in a new tab with safe rel attributes.
  */
 function renderInline(text: string): React.ReactNode {
+  // Combined regex for links and bold. Order matters: links first.
+  const regex = /\[([^\]]+)\]\(([^)]+)\)|\*\*([^*]+)\*\*|__([^_]+)__/g
   const parts: React.ReactNode[] = []
-  const regex = /\[([^\]]+)\]\(([^)]+)\)/g
   let lastIndex = 0
   let match: RegExpExecArray | null
   let keyIdx = 0
@@ -70,17 +72,28 @@ function renderInline(text: string): React.ReactNode {
     if (match.index > lastIndex) {
       parts.push(text.slice(lastIndex, match.index))
     }
-    parts.push(
-      <a
-        key={`link-${keyIdx++}`}
-        href={match[2]}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="text-emerald underline underline-offset-2 transition-colors hover:text-emerald/80"
-      >
-        {match[1]}
-      </a>,
-    )
+    if (match[1] !== undefined && match[2] !== undefined) {
+      // Markdown link
+      parts.push(
+        <a
+          key={`link-${keyIdx++}`}
+          href={match[2]}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-emerald underline underline-offset-2 transition-colors hover:text-emerald/80"
+        >
+          {match[1]}
+        </a>,
+      )
+    } else {
+      // Bold span
+      const boldText = match[3] ?? match[4] ?? ""
+      parts.push(
+        <strong key={`b-${keyIdx++}`} className="font-semibold text-foreground">
+          {boldText}
+        </strong>,
+      )
+    }
     lastIndex = match.index + match[0].length
   }
 
@@ -91,7 +104,37 @@ function renderInline(text: string): React.ReactNode {
   return parts.length > 0 ? parts : text
 }
 
-/** Split body on blank lines to produce paragraphs. */
+type Block =
+  | { kind: "paragraph"; text: string }
+  | { kind: "list"; items: string[] }
+
+/**
+ * Split body on blank lines to produce blocks.
+ * A block whose every non-empty line begins with "- " (or "* ") is rendered as a bulleted list.
+ */
+function splitBlocks(body: string): Block[] {
+  const paragraphs = body
+    .split(/\n\s*\n/)
+    .map((p) => p.trim())
+    .filter(Boolean)
+
+  const blocks: Block[] = []
+  for (const para of paragraphs) {
+    const lines = para.split("\n").map((l) => l.trim()).filter(Boolean)
+    const isList = lines.length > 0 && lines.every((l) => /^[-*]\s+/.test(l))
+    if (isList) {
+      blocks.push({
+        kind: "list",
+        items: lines.map((l) => l.replace(/^[-*]\s+/, "")),
+      })
+    } else {
+      blocks.push({ kind: "paragraph", text: para })
+    }
+  }
+  return blocks
+}
+
+/** Backwards-compatible: returns a flat list of paragraphs (used for outroNote/leadNote). */
 function splitParagraphs(body: string): string[] {
   return body.split(/\n\s*\n/).map((p) => p.trim()).filter(Boolean)
 }
@@ -113,7 +156,7 @@ export function BlogArticle({ article }: { article: ArticleData }) {
         <article className="bg-background py-16 md:py-24">
           <div className="mx-auto max-w-3xl px-6">
             <Link
-              href="/"
+              href={`/${lang}`}
               className="mb-8 inline-flex items-center gap-2 text-sm text-muted-foreground transition-colors hover:text-foreground"
             >
               <ArrowLeft className="h-4 w-4" />
@@ -144,14 +187,21 @@ export function BlogArticle({ article }: { article: ArticleData }) {
               </div>
             </motion.header>
 
-            <motion.p
+            <motion.div
               initial={{ opacity: 0, y: 15 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.15 }}
-              className="mt-10 text-lg leading-relaxed text-foreground/80 md:text-xl"
+              className="mt-10 flex flex-col gap-5"
             >
-              {renderInline(lead)}
-            </motion.p>
+              {splitParagraphs(lead).map((para, i) => (
+                <p
+                  key={i}
+                  className="text-lg leading-relaxed text-foreground/80 md:text-xl"
+                >
+                  {renderInline(para)}
+                </p>
+              ))}
+            </motion.div>
 
             {leadNote && (
               <motion.p
@@ -174,7 +224,7 @@ export function BlogArticle({ article }: { article: ArticleData }) {
                 const linksTitle =
                   lang === "en" && section.linksTitleEN ? section.linksTitleEN : section.linksTitle
 
-                const paragraphs = splitParagraphs(sectionBody)
+                const blocks = splitBlocks(sectionBody)
 
                 return (
                   <motion.section
@@ -188,14 +238,33 @@ export function BlogArticle({ article }: { article: ArticleData }) {
                       {sectionHeading}
                     </h2>
 
-                    {paragraphs.map((para, pIdx) => (
-                      <p
-                        key={pIdx}
-                        className="mt-3 leading-relaxed text-muted-foreground md:text-base"
-                      >
-                        {renderInline(para)}
-                      </p>
-                    ))}
+                    {blocks.map((block, bIdx) => {
+                      if (block.kind === "list") {
+                        return (
+                          <ul
+                            key={bIdx}
+                            className="mt-3 list-disc space-y-2 pl-6 marker:text-emerald"
+                          >
+                            {block.items.map((item, iIdx) => (
+                              <li
+                                key={iIdx}
+                                className="leading-relaxed text-muted-foreground md:text-base"
+                              >
+                                {renderInline(item)}
+                              </li>
+                            ))}
+                          </ul>
+                        )
+                      }
+                      return (
+                        <p
+                          key={bIdx}
+                          className="mt-3 leading-relaxed text-muted-foreground md:text-base"
+                        >
+                          {renderInline(block.text)}
+                        </p>
+                      )
+                    })}
 
                     {section.links && section.links.length > 0 && (
                       <div className="mt-5">

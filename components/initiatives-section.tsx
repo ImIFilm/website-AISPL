@@ -80,7 +80,7 @@ export function InitiativesSection() {
                 transition={{ duration: 0.5, delay: i * 0.1 }}
               >
                 <Link
-                  href={item.href}
+                  href={`/${lang}${item.href}`}
                   className="group relative flex h-64 flex-col justify-between overflow-hidden rounded-2xl transition-transform hover:scale-[1.02]"
                   style={backgroundStyles[i]}
                 >
@@ -105,7 +105,7 @@ export function InitiativesSection() {
             className="h-full md:col-span-1"
           >
             <Link
-              href="/inicjatywy#slack"
+              href={`/${lang}/inicjatywy#slack`}
               className="group relative flex min-h-64 h-full flex-col items-center justify-center overflow-hidden rounded-2xl p-8 text-center transition-transform hover:scale-[1.02] md:min-h-full"
               style={{
                 backgroundImage: "url(https://hebbkx1anhila5yf.public.blob.vercel-storage.com/slackbackground-2-X835RXYROPNIk8CZ5iTIktkvkdADwu.jpg)",
