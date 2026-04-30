@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next"
 import { notFound } from "next/navigation"
 import { Outfit } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
+import { SpeedInsights } from "@vercel/speed-insights/next"
 import { LanguageProvider } from "@/context/language-context"
 import { htmlLang, isLocale, locales, type Locale } from "@/lib/i18n/config"
 import { getDictionary } from "@/lib/i18n/dictionaries"
@@ -72,6 +73,7 @@ export default async function LocaleLayout({
       <body className={`${outfit.variable} font-sans antialiased`}>
         <LanguageProvider>{children}</LanguageProvider>
         <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   )
