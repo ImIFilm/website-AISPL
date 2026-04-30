@@ -11,10 +11,10 @@ const t = {
     cardCta: "Napisz do nas",
     imgAlt: "Robotyczna reka trzymajaca koperte",
     footerNav: [
-      { label: "Kim jesteśmy", href: "/#kim-jestesmy" },
-      { label: "Co robimy", href: "/#co-robimy" },
-      { label: "Zaangażuj się", href: "/#zaangazuj-sie" },
-      { label: "Kontakt", href: "/#kontakt" },
+      { label: "Kim jesteśmy", href: "#kim-jestesmy" },
+      { label: "Co robimy", href: "#co-robimy" },
+      { label: "Zaangażuj się", href: "#zaangazuj-sie" },
+      { label: "Kontakt", href: "#kontakt" },
     ],
     copyright: "© 2026 AI Safety Polska. Wszelkie prawa zastrzeżone.",
     footerAriaLabel: "Stopka",
@@ -24,10 +24,10 @@ const t = {
     cardCta: "Write to us",
     imgAlt: "Robotic hand holding an envelope",
     footerNav: [
-      { label: "About us", href: "/#kim-jestesmy" },
-      { label: "What we do", href: "/#co-robimy" },
-      { label: "Get involved", href: "/#zaangazuj-sie" },
-      { label: "Contact", href: "/#kontakt" },
+      { label: "About us", href: "#kim-jestesmy" },
+      { label: "What we do", href: "#co-robimy" },
+      { label: "Get involved", href: "#zaangazuj-sie" },
+      { label: "Contact", href: "#kontakt" },
     ],
     copyright: "© 2026 AI Safety Polska. All rights reserved.",
     footerAriaLabel: "Footer",
@@ -81,7 +81,7 @@ export function ContactFooter() {
           <div className="flex flex-col items-center gap-10 text-center md:flex-row md:items-start md:justify-between md:text-left">
             {/* Logo & Description */}
             <div className="flex flex-col items-center md:items-start">
-              <Link href="/" className="flex items-center gap-3 group">
+              <Link href={`/${lang}`} className="flex items-center gap-3 group">
                 <Image
                   src="/images/logo-aispl.svg"
                   alt="AI Safety Polska logo"
@@ -156,7 +156,7 @@ export function ContactFooter() {
                 {text.footerNav.map((link) => (
                   <li key={link.href}>
                     <Link
-                      href={link.href}
+                      href={`/${lang}${link.href}`}
                       className="text-sm text-primary-foreground/60 transition-colors hover:text-primary-foreground"
                     >
                       {link.label}

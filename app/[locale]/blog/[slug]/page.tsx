@@ -1,5 +1,7 @@
 import type { Metadata } from "next"
 import { notFound } from "next/navigation"
+import { isLocale } from "@/lib/i18n/config"
+import { getDictionary } from "@/lib/i18n/dictionaries"
 import { BlogArticle, type ArticleData } from "./blog-article"
 
 const articles: Record<string, ArticleData> = {
@@ -585,16 +587,32 @@ Follow our events on our [Luma](https://luma.com/aisafetypl) calendar and join o
 }
 
 type Props = {
-  params: Promise<{ slug: string }>
+  params: Promise<{ locale: string; slug: string }>
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const { slug } = await params
+  const { locale, slug } = await params
+  if (!isLocale(locale)) return {}
+
+  const dict = getDictionary(locale)
   const article = articles[slug]
-  if (!article) return { title: "Artykul nie znaleziony" }
+  if (!article) return { title: dict.meta.blog.notFoundTitle }
+
+  // Pick the localized variants when available, fall back to the Polish source.
+  const title = locale === "en" && article.titleEN ? article.titleEN : article.title
+  const lead = locale === "en" && article.leadEN ? article.leadEN : article.lead
+
   return {
-    title: `${article.title} - AI Safety Polska`,
-    description: article.lead.slice(0, 160),
+    title: `${title} - ${dict.meta.blog.suffix}`,
+    description: lead.slice(0, 160),
+    alternates: {
+      canonical: `/${locale}/blog/${slug}`,
+      languages: {
+        "pl-PL": `/pl/blog/${slug}`,
+        "en-US": `/en/blog/${slug}`,
+        "x-default": `/pl/blog/${slug}`,
+      },
+    },
   }
 }
 

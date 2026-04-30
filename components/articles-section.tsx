@@ -74,7 +74,7 @@ export function ArticlesSection() {
         <div className="mt-10 grid gap-6 md:grid-cols-2">
           {translations[lang].articles.map((article, i) => (
             <Link
-              href={article.href}
+              href={`/${lang}${article.href}`}
               key={article.title}
             >
               <motion.article
