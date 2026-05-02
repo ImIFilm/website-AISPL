@@ -49,7 +49,7 @@ export function Navbar() {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border/50">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
-        <Link href={`/${lang}`} className="flex-shrink-0" aria-label="AI Safety Polska - Strona glowna">
+        <Link href={`/${lang}`} className="flex-shrink-0" aria-label="AI Safety Polska - Strona główna">
           <Image
             src="/images/logo-aispl.svg"
             alt="AI Safety Polska logo"

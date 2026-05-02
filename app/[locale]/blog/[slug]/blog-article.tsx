@@ -10,10 +10,10 @@ import { useLanguage } from "@/context/language-context"
 
 const translations = {
   pl: {
-    backLink: "Strona glowna",
-    joinDiscussion: "Dolacz do dyskusji",
-    discussCta: "Chcesz porozmawiac o tym artykule? Dolacz do naszej spolecznosci na Slacku.",
-    joinSlack: "Dolacz na Slack",
+    backLink: "Strona główna",
+    joinDiscussion: "Dołącz do dyskusji",
+    discussCta: "Chcesz porozmawiać o tym artykule? Dołącz do naszej społeczności na Slacku.",
+    joinSlack: "Dołącz na Slack",
   },
   en: {
     backLink: "Homepage",
