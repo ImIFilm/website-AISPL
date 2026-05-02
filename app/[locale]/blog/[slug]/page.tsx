@@ -31,9 +31,15 @@ Oczywiście dla nich AI jest również produktem do którego chcą przekonać sw
 
 Przewidywanie postępu technologicznego jest niezwykle trudne.
 
-W 2022 roku grupa zorganizowana przez Jacoba Steinhardta z Uniwersytetu Kalifornijskiego w Berkeley próbowała przewidzieć, jak dobrze w najbliższych latach najlepsze dostępne modele będą potrafiły rozwiązywać konkursowe zadania matematyczne ze zbioru MATH, będące na poziomie trudności odpowiednim dla uzdolnionych licealistów. Przewidywali, że najlepszy wynik powinien wynosić w okolicach 12% rozwiązanych zadań w 2022 roku oraz 52% w 2025 roku. Jednak już w 2022 roku model Minerva wytrenowany przez grupę badaczy z Google Research osiągnął wynik 64,9%, czyli dużo szybciej niż przewidywali eksperci. Obecnie modele nie mają już problemów z rozwiązywaniem zadań z tego zbioru, i są testowane na trudniejszych zadaniach na poziomie akademickim, jak na przykład FrontierMath.
-
-Za większość postępu z ostatnich lat odpowiada pewien szczególny typ sztucznej inteligencji – duże modele językowe (ang. large language models, LLM). Coraz więcej naukowców przewiduje stworzenie AGI w nieodległej przyszłości, spodziewając się, że duże modele językowe będą stanowić jej fundamentalną część. Co więc wyróżnia je na tle wcześniej używanych modeli?
+W 2022 roku grupa zorganizowana przez Jacoba Steinhardta z Uniwersytetu Kalifornijskiego w Berkeley próbowała przewidzieć, jak dobrze w najbliższych latach najlepsze dostępne modele będą potrafiły rozwiązywać konkursowe zadania matematyczne ze zbioru MATH, będące na poziomie trudności odpowiednim dla uzdolnionych licealistów. Przewidywali, że najlepszy wynik powinien wynosić w okolicach 12% rozwiązanych zadań w 2022 roku oraz 52% w 2025 roku. Jednak już w 2022 roku model Minerva wytrenowany przez grupę badaczy z Google Research osiągnął wynik 64,9%, czyli dużo szybciej niż przewidywali eksperci. Obecnie modele nie mają już problemów z rozwiązywaniem zadań z tego zbioru, i są testowane na trudniejszych zadaniach na poziomie akademickim, jak na przykład FrontierMath.`,
+        iframeAfter: {
+          src: "https://ourworldindata.org/grapher/test-scores-ai-capabilities-relative-human-performance?tab=chart",
+          height: 600,
+        },
+      },
+      {
+        heading: "",
+        body: `Za większość postępu z ostatnich lat odpowiada pewien szczególny typ sztucznej inteligencji – duże modele językowe (ang. large language models, LLM). Coraz więcej naukowców przewiduje stworzenie AGI w nieodległej przyszłości, spodziewając się, że duże modele językowe będą stanowić jej fundamentalną część. Co więc wyróżnia je na tle wcześniej używanych modeli?
 
 Duże modele językowe są specjalnym typem sieci neuronowych. Twórcy sieci neuronowych, zamiast pisać cały program, opisują tzw. architekturę sieci (w uproszczeniu: ile sieć posiada neuronów i jak są one połączone) oraz procedurę trenowania. Trenowanie modyfikuje połączenia między neuronami, tak aby sieć przetwarzała podane jej informacje w sposób prowadzący do wykonania wybranego zadania.
 

@@ -38,6 +38,13 @@ export type ArticleImage = {
   captionEN?: string
 }
 
+export type ArticleIframe = {
+  src: string
+  height?: number
+  caption?: string
+  captionEN?: string
+}
+
 export type ArticleSection = {
   heading: string
   headingEN?: string
@@ -47,6 +54,10 @@ export type ArticleSection = {
   imageBefore?: ArticleImage
   /** Image displayed after the section body */
   imageAfter?: ArticleImage
+  /** Iframe displayed before the section body */
+  iframeBefore?: ArticleIframe
+  /** Iframe displayed after the section body */
+  iframeAfter?: ArticleIframe
   linksTitle?: string
   linksTitleEN?: string
   links?: LinkItem[]
@@ -268,9 +279,28 @@ export function BlogArticle({ article }: { article: ArticleData }) {
                     viewport={{ once: true, margin: "-60px" }}
                     transition={{ duration: 0.5, delay: Math.min(i * 0.03, 0.2) }}
                   >
-                    <h2 className="text-xl font-bold text-foreground md:text-2xl">
-                      {sectionHeading}
-                    </h2>
+                    {sectionHeading && (
+                      <h2 className="text-xl font-bold text-foreground md:text-2xl">
+                        {sectionHeading}
+                      </h2>
+                    )}
+
+                    {/* Iframe before section body */}
+                    {section.iframeBefore && (
+                      <figure className="my-6">
+                        <iframe
+                          src={section.iframeBefore.src}
+                          loading="lazy"
+                          style={{ width: "100%", height: section.iframeBefore.height ?? 600, border: "none" }}
+                          allow="web-share; clipboard-write"
+                        />
+                        {(lang === "en" ? section.iframeBefore.captionEN : section.iframeBefore.caption) && (
+                          <figcaption className="mt-2 text-center text-sm text-muted-foreground">
+                            {lang === "en" ? section.iframeBefore.captionEN : section.iframeBefore.caption}
+                          </figcaption>
+                        )}
+                      </figure>
+                    )}
 
                     {/* Image before section body */}
                     {imageBefore && (
@@ -319,6 +349,23 @@ export function BlogArticle({ article }: { article: ArticleData }) {
                         </p>
                       )
                     })}
+
+                    {/* Iframe after section body */}
+                    {section.iframeAfter && (
+                      <figure className="my-6">
+                        <iframe
+                          src={section.iframeAfter.src}
+                          loading="lazy"
+                          style={{ width: "100%", height: section.iframeAfter.height ?? 600, border: "none" }}
+                          allow="web-share; clipboard-write"
+                        />
+                        {(lang === "en" ? section.iframeAfter.captionEN : section.iframeAfter.caption) && (
+                          <figcaption className="mt-2 text-center text-sm text-muted-foreground">
+                            {lang === "en" ? section.iframeAfter.captionEN : section.iframeAfter.caption}
+                          </figcaption>
+                        )}
+                      </figure>
+                    )}
 
                     {/* Image after section body */}
                     {imageAfter && (
