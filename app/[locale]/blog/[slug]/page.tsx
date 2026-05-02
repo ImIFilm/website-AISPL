@@ -41,9 +41,19 @@ Im więcej neuronów posiada sieć, tym trudniejsze zadania jest w stanie wykona
 
 W 2017 roku zaczęto trenować specyficzny rodzaj sieci neuronowej, nazywany transformerem, aby przewidywał kolejne fragmenty tekstu. Jedną z przewag transformera nad innymi wyspecjalizowanymi rodzajami sieci jest łatwość, z jaką można trenować ich coraz większe rozmiary. Sieć AlexNet, stworzona w 2012 roku do rozpoznawania obrazów, była uznawana w swoim czasie za ogromną, mimo że posiadała tylko 60 milionów parametrów odpowiadających za połączenia między neuronami. Pierwszy słynny duży model językowy, stworzony w 2019 roku GPT-2, miał już 1,5 miliarda parametrów. Trenowany wyłącznie do przewidywania kolejnych wyrazów, GPT-2 nauczył się tłumaczyć, odpowiadać na pytania i streszczać podany tekst.
 
-Postęp w dziedzinie przetwarzania języka naturalnego odbył się błyskawicznie – przejście z zupełnej niezdolności do wykonywania danego zadania do przekroczenia poziomu ludzkiego trwało parę lat. Od tego czasu zastosowania dużych modeli językowych zaczęły być używane do rozwiązywania problemów matematycznych, programistycznych oraz wymagających wiedzy eksperckiej.
-
-Przy trenowaniu sieci neuronowych obserwuje się tak zwane „[prawo skalowania](https://en.wikipedia.org/wiki/Neural_scaling_law)", czyli zależność pomiędzy dokładnością przewidywania sekwencji danych a ilością danych treningowych oraz mocy obliczeniowej potrzebnej do trenowania. Jeżeli obserwowany trend się utrzyma, będziemy tworzyć coraz silniejsze AI, trenując po prostu coraz większe modele.
+Postęp w dziedzinie przetwarzania języka naturalnego odbył się błyskawicznie – przejście z zupełnej niezdolności do wykonywania danego zadania do przekroczenia poziomu ludzkiego trwało parę lat. Od tego czasu zastosowania dużych modeli językowych zaczęły być używane do rozwiązywania problemów matematycznych, programistycznych oraz wymagających wiedzy eksperckiej.`,
+        imageAfter: {
+          src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/benchmarks-sqt2KitO60PwbCM8BdZkxoxOIOvkUn.svg",
+          alt: "Wykres przedstawiający postęp AI w benchmarkach - Epoch AI Composite Benchmarks",
+          altEN: "Chart showing AI progress on benchmarks - Epoch AI Composite Benchmarks",
+          caption: "Źródło: Epoch AI Composite Benchmarks",
+          captionEN: "Source: Epoch AI Composite Benchmarks",
+        },
+      },
+      {
+        heading: "Prawo skalowania i przyszłość AGI",
+        headingEN: "Scaling Laws and the Future of AGI",
+        body: `Przy trenowaniu sieci neuronowych obserwuje się tak zwane „[prawo skalowania](https://en.wikipedia.org/wiki/Neural_scaling_law)", czyli zależność pomiędzy dokładnością przewidywania sekwencji danych a ilością danych treningowych oraz mocy obliczeniowej potrzebnej do trenowania. Jeżeli obserwowany trend się utrzyma, będziemy tworzyć coraz silniejsze AI, trenując po prostu coraz większe modele.
 
 Ogromny postęp w ostatnich latach, jak również wyznaczona ścieżka rozwoju poprzez zwiększanie mocy obliczeniowej oraz danych wkładanych w trenowanie ogromnych sieci, przekonują wiele osób, że stworzenie AGI w nieodległej przyszłości jest możliwe.`,
       },

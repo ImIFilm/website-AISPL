@@ -1,6 +1,7 @@
 "use client"
 
 import type React from "react"
+import Image from "next/image"
 import Link from "next/link"
 import { motion } from "framer-motion"
 import { ArrowLeft, Clock, User } from "lucide-react"
@@ -29,11 +30,23 @@ export type LinkItem = {
   labelEN?: string
 }
 
+export type ArticleImage = {
+  src: string
+  alt: string
+  altEN?: string
+  caption?: string
+  captionEN?: string
+}
+
 export type ArticleSection = {
   heading: string
   headingEN?: string
   body: string
   bodyEN?: string
+  /** Image displayed before the section body */
+  imageBefore?: ArticleImage
+  /** Image displayed after the section body */
+  imageAfter?: ArticleImage
   linksTitle?: string
   linksTitleEN?: string
   links?: LinkItem[]
@@ -226,6 +239,27 @@ export function BlogArticle({ article }: { article: ArticleData }) {
 
                 const blocks = splitBlocks(sectionBody)
 
+                // Resolve localized image properties
+                const imageBefore = section.imageBefore
+                const imageBeforeAlt =
+                  lang === "en" && section.imageBefore?.altEN
+                    ? section.imageBefore.altEN
+                    : section.imageBefore?.alt ?? ""
+                const imageBeforeCaption =
+                  lang === "en" && section.imageBefore?.captionEN
+                    ? section.imageBefore.captionEN
+                    : section.imageBefore?.caption
+
+                const imageAfter = section.imageAfter
+                const imageAfterAlt =
+                  lang === "en" && section.imageAfter?.altEN
+                    ? section.imageAfter.altEN
+                    : section.imageAfter?.alt ?? ""
+                const imageAfterCaption =
+                  lang === "en" && section.imageAfter?.captionEN
+                    ? section.imageAfter.captionEN
+                    : section.imageAfter?.caption
+
                 return (
                   <motion.section
                     key={section.heading}
@@ -237,6 +271,26 @@ export function BlogArticle({ article }: { article: ArticleData }) {
                     <h2 className="text-xl font-bold text-foreground md:text-2xl">
                       {sectionHeading}
                     </h2>
+
+                    {/* Image before section body */}
+                    {imageBefore && (
+                      <figure className="my-6">
+                        <div className="overflow-hidden rounded-lg">
+                          <Image
+                            src={imageBefore.src}
+                            alt={imageBeforeAlt}
+                            width={960}
+                            height={540}
+                            className="h-auto w-full"
+                          />
+                        </div>
+                        {imageBeforeCaption && (
+                          <figcaption className="mt-2 text-center text-sm text-muted-foreground">
+                            {imageBeforeCaption}
+                          </figcaption>
+                        )}
+                      </figure>
+                    )}
 
                     {blocks.map((block, bIdx) => {
                       if (block.kind === "list") {
@@ -265,6 +319,26 @@ export function BlogArticle({ article }: { article: ArticleData }) {
                         </p>
                       )
                     })}
+
+                    {/* Image after section body */}
+                    {imageAfter && (
+                      <figure className="my-6">
+                        <div className="overflow-hidden rounded-lg">
+                          <Image
+                            src={imageAfter.src}
+                            alt={imageAfterAlt}
+                            width={960}
+                            height={540}
+                            className="h-auto w-full"
+                          />
+                        </div>
+                        {imageAfterCaption && (
+                          <figcaption className="mt-2 text-center text-sm text-muted-foreground">
+                            {imageAfterCaption}
+                          </figcaption>
+                        )}
+                      </figure>
+                    )}
 
                     {section.links && section.links.length > 0 && (
                       <div className="mt-5">
