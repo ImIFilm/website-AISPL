@@ -4,7 +4,7 @@ import type React from "react"
 import Image from "next/image"
 import Link from "next/link"
 import { motion } from "framer-motion"
-import { ArrowLeft, Clock, User } from "lucide-react"
+import { ArrowLeft, Clock, Info, User } from "lucide-react"
 import { Navbar } from "@/components/navbar"
 import { ContactFooter } from "@/components/contact-footer"
 import { useLanguage } from "@/context/language-context"
@@ -15,12 +15,16 @@ const translations = {
     joinDiscussion: "Dołącz do dyskusji",
     discussCta: "Chcesz porozmawiać o tym artykule? Dołącz do naszej społeczności na Slacku.",
     joinSlack: "Dołącz na Slack",
+    autoTranslatedNotice:
+      "Ten artykuł został automatycznie przetłumaczony z polskiego na angielski przy użyciu Claude Opus 4.7 i może zawierać błędy tłumaczenia.",
   },
   en: {
     backLink: "Homepage",
     joinDiscussion: "Join the discussion",
     discussCta: "Want to discuss this article? Join our Slack community.",
     joinSlack: "Join Slack",
+    autoTranslatedNotice:
+      "This article was automatically translated from Polish to English using Claude Opus 4.7 and may contain translation errors.",
   },
 } as const
 
@@ -77,6 +81,8 @@ export type ArticleData = {
   sections: ArticleSection[]
   outroNote?: string
   outroNoteEN?: string
+  /** When true and the active locale is "en", a subtle banner is shown at the top of the article. */
+  autoTranslated?: boolean
 }
 
 /**
@@ -186,6 +192,16 @@ export function BlogArticle({ article }: { article: ArticleData }) {
               <ArrowLeft className="h-4 w-4" />
               {text.backLink}
             </Link>
+
+            {article.autoTranslated && lang === "en" && (
+              <div
+                role="note"
+                className="mb-8 flex items-start gap-2.5 rounded-lg border border-border bg-muted/40 px-4 py-3 text-xs leading-relaxed text-muted-foreground md:text-sm"
+              >
+                <Info className="mt-0.5 h-4 w-4 flex-shrink-0 text-muted-foreground/80" aria-hidden />
+                <span>{text.autoTranslatedNotice}</span>
+              </div>
+            )}
 
             <motion.header
               initial={{ opacity: 0, y: 20 }}

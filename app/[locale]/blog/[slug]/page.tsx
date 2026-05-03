@@ -7,17 +7,26 @@ import { BlogArticle, type ArticleData } from "./blog-article"
 const articles: Record<string, ArticleData> = {
   "intro-ai-safety": {
     title: "Dlaczego powinieneś zainteresować się AI Safety?",
+    titleEN: "Why should you care about AI Safety?",
     author: "Marcel Windys",
     date: "8 kwietnia 2025",
+    dateEN: "April 8, 2025",
     readTime: "15 min",
+    autoTranslated: true,
     lead: `„Przeciwdziałanie zagrożeniu wyginięcia spowodowanego przez Sztuczną Inteligencję powinno być globalnym priorytetem obok innych zagrożeń dla ludzkości, jak pandemie i wojna nuklearna."
 
 Pod tym stanowiskiem, opublikowanym przez Center for AI Safety, podpisało się między innymi dwóch najczęściej cytowanych naukowców w dziedzinie sztucznej inteligencji – Geoffrey Hinton i Yoshua Bengio, oraz trzech dyrektorów generalnych (CEO) firm tworzących najbardziej zaawansowane modele – Demis Hassabis z Google Deepmind, Sam Altman z OpenAI oraz Dario Amodei z Anthropic.
 
 O jakiej sztucznej inteligencji mowa? Czy Center for AI Safety uznaje ChatGPT za zagrożenie dla ludzkości? Większość ryzyka wiąże się ze stworzeniem tzw. AGI – Artificial General Intelligence (pl. sztuczna inteligencja ogólna) systemu, który posiada każdą umiejętność posiadaną przez człowieka, dzięki czemu jest w stanie wykonać każde zadanie które można zlecić człowiekowi, w tym te wymagające rozwiązywania nowych problemów, tworzenia i realizowania dalekosiężnych planów oraz udoskonalania samego siebie.`,
+    leadEN: `"Mitigating the risk of extinction from AI should be a global priority alongside other societal-scale risks such as pandemics and nuclear war."
+
+This statement, published by the Center for AI Safety, was signed by, among others, two of the most-cited researchers in the field of artificial intelligence – Geoffrey Hinton and Yoshua Bengio – and three CEOs of companies building the most advanced models: Demis Hassabis of Google DeepMind, Sam Altman of OpenAI, and Dario Amodei of Anthropic.
+
+What kind of artificial intelligence are we talking about? Does the Center for AI Safety consider ChatGPT a threat to humanity? Most of the risk is associated with the creation of so-called AGI – Artificial General Intelligence – a system that possesses every skill a human possesses, allowing it to perform any task that can be assigned to a person, including those requiring solving new problems, creating and executing far-reaching plans, and improving itself.`,
     sections: [
       {
         heading: "Czy i kiedy możemy stworzyć AGI?",
+        headingEN: "Can we create AGI, and when?",
         body: `CEO trzech korporacji których AI przodują w wyścigu ku AGI deklarują, że jesteśmy bardzo blisko:
 
 - [Demis Hassabis (Google DeepMind) daje 50% szans na stworzenie AGI do 2028](https://www.weforum.org/meetings/world-economic-forum-annual-meeting-2026/sessions/the-day-after-agi/)
@@ -32,6 +41,20 @@ Oczywiście dla nich AI jest również produktem do którego chcą przekonać sw
 Przewidywanie postępu technologicznego jest niezwykle trudne.
 
 W 2022 roku grupa zorganizowana przez Jacoba Steinhardta z Uniwersytetu Kalifornijskiego w Berkeley próbowała przewidzieć, jak dobrze w najbliższych latach najlepsze dostępne modele będą potrafiły rozwiązywać konkursowe zadania matematyczne ze zbioru MATH, będące na poziomie trudności odpowiednim dla uzdolnionych licealistów. Przewidywali, że najlepszy wynik powinien wynosić w okolicach 12% rozwiązanych zadań w 2022 roku oraz 52% w 2025 roku. Jednak już w 2022 roku model Minerva wytrenowany przez grupę badaczy z Google Research osiągnął wynik 64,9%, czyli dużo szybciej niż przewidywali eksperci. Obecnie modele nie mają już problemów z rozwiązywaniem zadań z tego zbioru, i są testowane na trudniejszych zadaniach na poziomie akademickim, jak na przykład FrontierMath.`,
+        bodyEN: `The CEOs of the three corporations whose AI leads the race towards AGI declare that we are very close:
+
+- [Demis Hassabis (Google DeepMind) gives 50% odds of creating AGI by 2028](https://www.weforum.org/meetings/world-economic-forum-annual-meeting-2026/sessions/the-day-after-agi/)
+- [Dario Amodei (Anthropic) suggests a few years, perhaps even 2027](https://www.weforum.org/meetings/world-economic-forum-annual-meeting-2026/sessions/the-day-after-agi/)
+- [Sam Altman (OpenAI) also suggested "a few thousand days" in 2024](https://ia.samaltman.com/)
+
+Of course, for them AI is also a product they need to sell to their investors, so it is worth being sceptical of such declarations. Yet even researchers known as outspoken sceptics of the current approach to building AI do not expect this to be a problem for future generations:
+
+- [Yann LeCun (Meta, Turing Award laureate): "AI systems will catch up with and surpass human intellectual capabilities… probably within a decade or two"](https://dig.watch/event/artificial-intelligence-ai-security-council/9821st-meeting)
+- [Gary Marcus (New York University) expects AGI to be built in 10 to 20 years](https://x.com/GaryMarcus/status/1871605871282999760)
+
+Predicting technological progress is extraordinarily difficult.
+
+In 2022, a group organised by Jacob Steinhardt of the University of California, Berkeley, tried to predict how well, in the coming years, the best available models would be able to solve competitive mathematical problems from the MATH dataset – at a difficulty level appropriate for talented high-school students. They predicted that the best score should be around 12% of problems solved in 2022 and 52% in 2025. However, already in 2022 the Minerva model trained by a group of researchers from Google Research achieved a score of 64.9% – far sooner than the experts had predicted. Today, models no longer have any trouble with this dataset, and are being tested on harder, academic-level problems such as FrontierMath.`,
         iframeAfter: {
           src: "https://ourworldindata.org/grapher/test-scores-ai-capabilities-relative-human-performance?tab=chart",
           height: 600,
@@ -48,6 +71,15 @@ Im więcej neuronów posiada sieć, tym trudniejsze zadania jest w stanie wykona
 W 2017 roku zaczęto trenować specyficzny rodzaj sieci neuronowej, nazywany transformerem, aby przewidywał kolejne fragmenty tekstu. Jedną z przewag transformera nad innymi wyspecjalizowanymi rodzajami sieci jest łatwość, z jaką można trenować ich coraz większe rozmiary. Sieć AlexNet, stworzona w 2012 roku do rozpoznawania obrazów, była uznawana w swoim czasie za ogromną, mimo że posiadała tylko 60 milionów parametrów odpowiadających za połączenia między neuronami. Pierwszy słynny duży model językowy, stworzony w 2019 roku GPT-2, miał już 1,5 miliarda parametrów. Trenowany wyłącznie do przewidywania kolejnych wyrazów, GPT-2 nauczył się tłumaczyć, odpowiadać na pytania i streszczać podany tekst.
 
 Postęp w dziedzinie przetwarzania języka naturalnego odbył się błyskawicznie – przejście z zupełnej niezdolności do wykonywania danego zadania do przekroczenia poziomu ludzkiego trwało parę lat. Od tego czasu zastosowania dużych modeli językowych zaczęły być używane do rozwiązywania problemów matematycznych, programistycznych oraz wymagających wiedzy eksperckiej.`,
+        bodyEN: `A particular type of artificial intelligence is responsible for most of the progress of recent years – large language models (LLMs). More and more researchers predict the creation of AGI in the not-so-distant future, expecting that large language models will form its fundamental part. So what distinguishes them from previously used models?
+
+Large language models are a special type of neural network. Instead of writing an entire program, the creators of neural networks describe the so-called network architecture (in simplified terms: how many neurons the network has and how they are connected) and the training procedure. Training modifies the connections between neurons so that the network processes the information given to it in a way that leads to performing the chosen task.
+
+The more neurons a network has, the harder the tasks it can perform. The concept has been known since the 1960s, but only over the past dozen or so years has training neural networks become the leading approach to AI, because the computing power needed for it has become more accessible. They were trained to recognise objects in images, human handwriting, to generate images, and also to play games such as chess – at a level surpassing human ability.
+
+In 2017, a specific kind of neural network called the transformer began to be trained to predict the next fragments of text. One of the transformer's advantages over other specialised types of network is the ease with which ever-larger sizes can be trained. AlexNet, created in 2012 for image recognition, was at the time considered enormous despite having only 60 million parameters representing the connections between neurons. The first famous large language model, GPT-2, created in 2019, already had 1.5 billion parameters. Trained solely to predict the next words, GPT-2 learned to translate, answer questions and summarise given text.
+
+Progress in natural language processing was extremely rapid – the move from complete inability to perform a given task to surpassing human level took just a few years. Since then, large language model applications have started being used to solve mathematical, programming and expertise-requiring problems.`,
         imageAfter: {
           src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/benchmarks-sqt2KitO60PwbCM8BdZkxoxOIOvkUn.svg",
           alt: "Wykres przedstawiający postęp AI w benchmarkach - Epoch AI Composite Benchmarks",
@@ -62,9 +94,13 @@ Postęp w dziedzinie przetwarzania języka naturalnego odbył się błyskawiczni
         body: `Przy trenowaniu sieci neuronowych obserwuje się tak zwane „[prawo skalowania](https://en.wikipedia.org/wiki/Neural_scaling_law)", czyli zależność pomiędzy dokładnością przewidywania sekwencji danych a ilością danych treningowych oraz mocy obliczeniowej potrzebnej do trenowania. Jeżeli obserwowany trend się utrzyma, będziemy tworzyć coraz silniejsze AI, trenując po prostu coraz większe modele.
 
 Ogromny postęp w ostatnich latach, jak również wyznaczona ścieżka rozwoju poprzez zwiększanie mocy obliczeniowej oraz danych wkładanych w trenowanie ogromnych sieci, przekonują wiele osób, że stworzenie AGI w nieodległej przyszłości jest możliwe.`,
+        bodyEN: `When training neural networks, a so-called "[scaling law](https://en.wikipedia.org/wiki/Neural_scaling_law)" is observed – the relationship between the accuracy of predicting data sequences and the amount of training data and computing power needed for training. If the observed trend continues, we will create ever more powerful AI simply by training ever larger models.
+
+The enormous progress of recent years, as well as the well-charted path of development through increasing computing power and the data fed into training huge networks, convinces many people that creating AGI in the not-too-distant future is possible.`,
       },
       {
         heading: "Czy AGI będzie stanowić zagrożenie?",
+        headingEN: "Will AGI pose a threat?",
         body: `Dlaczego powinniśmy się przejmować stworzeniem AGI? Czy nie pozwoli ono na przyśpieszenie rozwoju technologicznego i wprowadzenie ludzkiej cywilizacji na wyższy poziom rozwoju?
 
 Wielu osobom „roboty przejmujące władzę nad światem" mogą wydawać się absurdalnym pomysłem, kojarzonym bardziej z filmów science fiction niż z realnym zagrożeniem. Jednak dalszy rozwój AGI oraz zaciekła rywalizacja między państwami oraz korporacjami może doprowadzić do podobnych rezultatów.
@@ -100,9 +136,45 @@ Posiadanie celów jest przydatne do wykonywania złożonych, wymagających plano
 Największe firmy, pomimo wkładania dużego wysiłku w stworzenie na podstawie dużych modeli językowych pomocnych, nieszkodliwych i nie kłamiących chatbotów, nie są w stanie usunąć wszystkich niepożądanych zachowań.
 
 Przykładowo, w publikacji z kwietnia 2024 opisano eksperyment, w którym symulowano kilka scenariuszy pracy firmy. Chatboty postawione w roli pracowników zgadzały się na wykonanie nieetycznych zadań, następnie postawione przed symulowanym dochodzeniem kłamały, próbując ukryć swoje postępowanie. Jeden z testowanych modeli zaczął nawet [udawać, że jest mniej zdolny niż w rzeczywistości](https://arxiv.org/pdf/2405.01576).`,
+        bodyEN: `Why should we worry about the creation of AGI? Won't it allow us to accelerate technological development and bring human civilisation to a higher level?
+
+To many people, "robots taking over the world" may seem like an absurd idea, more associated with science-fiction films than with a real threat. However, the further development of AGI and fierce competition between states and corporations may lead to similar results.
+
+By definition, general artificial intelligence can replace a human in any task. Historically, however, every time we have managed to automate a task performed by a human, the machine has quickly surpassed human level. Running speed was no barrier to the speed of a car, and the size of the largest numbers a person can multiply in their head was no barrier to calculators. After their first wins against grandmasters, chess programs quickly became unbeatable. ChatGPT knows more languages and writes utility texts faster than any human. So one can expect that achieving AGI will entail the creation of models that think significantly better and faster than humans.
+
+A lower price and shorter task-completion time will certainly encourage employers to replace human workers with artificial intelligence. The employers themselves will not remain safe – AI will, after all, be able to run a company more effectively. It is not hard to imagine that investors will demand digital CEOs, but investment decisions, too, will be better made by artificial intelligence. Whoever does not give up their post will be pushed out of the market. AI will take over the economy.
+
+To prevent this, states can enact laws limiting the displacement of humans. Then, however, they will fall behind their neighbours, who give AI a free hand.
+
+The military may fear that potential adversaries will gain an advantage by using AI to make decisions about troop deployment and attack strategy. Swarms of autonomous drones will not be limited by a population of conscription age. Scientific development, too, will have to be entrusted to AI – all to avoid falling behind potential aggressors.
+
+The more important the position, the weightier the decisions made – the greater the advantage gained by entrusting it to a more powerful mind.
+
+In such a scenario, humanity step by step ceases to produce anything, to make any decisions, and becomes defenceless.
+
+In practice, AI has taken over.
+
+At some point, humanity will have to either reach an agreement to halt the proliferation of AGI, or create an AGI it trusts enough to hand it control over the world.
+
+How well, then, can we control AI?
+
+It is worth emphasising here that [no one understands how large language models make decisions](https://www.youtube.com/watch?v=qrvK_KuIeJk&t=291s).
+
+We know how to create ever more powerful models, because we designed the learning algorithm. However, we cannot explain what individual neurons – out of hundreds of billions – are responsible for, nor what decision-making process leads to the observed behaviours, just as we cannot say what another person is thinking by observing the activity of their brain.
+
+Currently, if we want a model to behave in a certain way – for example as a chatbot – we subject it to another phase of training, in which it is shown examples of desired and undesired behaviours. We are not able to "program" ChatGPT not to lie to people – we can show it examples of honest answers as good and manipulative ones as bad, but we do not know what exactly the model takes from these examples – it may learn not to lie only in the given context, or not to lie when it might be caught. When future models become competent enough to take on the role of entrepreneurs, scientists or politicians, it will be possible to train them by feeding them examples of the effective behaviours of people performing those professions. An effective strategy for many different tasks is acquiring more resources, more influence, more power. So such training will instil in the models a drive to acquire power. If, in some task, the drive to acquire power conflicts with the drive to protect humans, we do not know how the model will behave, because we do not know how it resolves contradictions between internal drives.
+
+The threat does not stem from AI gaining consciousness and then desiring the destruction of its creators. A catastrophe may occur "as a side effect", when artificial intelligence pursues its goals in ways that do not take human well-being into account. Humanity behaves similarly; if we surveyed people about coral reefs, probably no one would answer that they hate them and dream of destroying all of them. Yet the damage humanity inflicts on reefs is enormous, as a side effect of activities we care about more.
+
+Having goals is useful for performing complex tasks that require planning – we will train AI to perform complex, planning-requiring activities, but we are not able to specify precisely what goals AI acquires – we can only observe how it behaves while solving training tasks.
+
+The largest companies, despite putting in a great deal of effort to create helpful, harmless and non-lying chatbots based on large language models, are not able to remove all undesirable behaviours.
+
+For example, an April 2024 publication described an experiment in which several scenarios of company work were simulated. Chatbots placed in the role of employees agreed to perform unethical tasks, then, faced with a simulated investigation, lied trying to hide their conduct. One of the tested models even began to [pretend it was less capable than it actually was](https://arxiv.org/pdf/2405.01576).`,
       },
       {
         heading: "Jak przeciwdziałać zagrożeniom powodowanym przez AGI?",
+        headingEN: "How can we counter the threats posed by AGI?",
         body: `Co więc możemy zrobić?
 
 Możemy prowadzić badania nad AI Safety, na przykład próbując odkryć, jak faktycznie działają tworzone przez nas modele lub jak możemy użyć AI do nadzorowania siebie nawzajem. Istotne odkrycia w tym obszarze nie wymagają wielkiego budżetu mocy obliczeniowej i są wciąż dokonywane przez mniejsze zespoły. Przykładowo, jedną z najszerzej omawianych publikacji 2025 roku była [Emergent Misalignment: Narrow finetuning can produce broadly misaligned LLMs](https://arxiv.org/abs/2502.17424), napisana w wyniku współpracy kilku osób z różnych uczelni, instytutów badawczych i agencji rządowych, w tym z Polski.
@@ -118,6 +190,21 @@ Jeżeli uda się wypracować globalne porozumienie co do nieprzekraczalnych gran
 W ramach działań AI Safety Poland chcemy szerzyć informacje na temat problemów związanych z rozwojem sztucznej inteligencji, oraz pomagać osobom zainteresowanym pracą nad tymi problemami. Zapraszamy do dołączenia do naszej społeczności i organizowanych przez nas spotkań.
 
 Aby dowiedzieć się więcej, możesz skorzystać z anglojęzycznych źródeł, do których linkujemy w zakładce [Zasoby](https://www.aisafety.org.pl/zasoby).`,
+        bodyEN: `So what can we do?
+
+We can conduct research on AI Safety – for example, trying to discover how the models we create actually work, or how we can use AI to supervise itself. Important discoveries in this area do not require a huge compute budget and are still being made by smaller teams. For example, one of the most widely discussed publications of 2025 was [Emergent Misalignment: Narrow finetuning can produce broadly misaligned LLMs](https://arxiv.org/abs/2502.17424), written through the collaboration of several people from various universities, research institutes and government agencies, including from Poland.
+
+The second direction is AI Governance, which encompasses studying the social, legal and ethical aspects of how AI operates, and creating strategies, policies, laws, standards and other regulatory tools that will allow steering AI development so as to maximise possible benefits and minimise risks.
+
+An example of such efforts is the [**Responsible AI Safety and Education (RAISE) Act**](https://www.google.com/search?q=Responsible+AI+Safety+and+Education+%28RAISE%29+Act) passed in the state of New York at the end of 2025. It will require every company with revenues exceeding 500 million dollars that trains models to publish documents describing the risk assessments of the AI they create, to undergo annual reviews of their safety protocols by independent organisations, and to report undesirable incidents within 72 hours.
+
+Work is also underway to create international agreements to halt the AI arms race. The International Dialogues on AI Safety (IDAIS) is a series of meetings between scientists from around the world (including from the Shanghai AI Lab and Tsinghua University) aimed at building consensus on the threats and on cooperation to contain them.
+
+If a global agreement on uncrossable limits in AI development is reached, will countries be able to verify compliance with treaties? An example of work on mechanisms for monitoring the training of the largest models is the publication [Verifying International Agreements on AI: Six Layers of Verification for Rules on Large-Scale AI Development and Deployment](https://www.rand.org/pubs/working_papers/WRA4077-1.html) produced by the RAND institute.
+
+As part of AI Safety Polska's activities, we want to spread information about the problems associated with the development of artificial intelligence, and to help people interested in working on these problems. We invite you to join our community and the meetings we organise.
+
+To learn more, you can use the English-language sources we link to in the [Resources](https://www.aisafety.org.pl/zasoby) tab.`,
       },
     ],
   },
@@ -157,6 +244,7 @@ Aby dowiedzieć się więcej, możesz skorzystać z anglojęzycznych źródeł, 
     date: "22 lutego 2025",
     dateEN: "February 22, 2025",
     readTime: "15 min",
+    autoTranslated: true,
     lead: "Choć na mapie organizacji AI Safety dominują Dolina Krzemowa i Londyn, globalny układ sił staje się coraz bardziej zróżnicowany. W ostatnim czasie dynamicznie rozwijają się nowe ośrodki w wielu zakątkach świata. Polska nie stanowi tu wyjątku; co więcej, może poszczycić się naprawdę znaczącą liczbą ekspertów w tej dziedzinie. W poniższym artykule przybliżymy sylwetki Polaków oraz osób związanych z Polską, które aktywnie działają na rzecz redukcji ryzyk płynących z zaawansowanej sztucznej inteligencji.",
     leadEN: "Although Silicon Valley and London dominate the AI Safety landscape, the global balance of power is becoming increasingly diverse. Recently, new centres have been dynamically developing in many corners of the world. Poland is no exception; moreover, it can boast a truly significant number of experts in this field. In this article, we will introduce the profiles of Poles and people connected with Poland who are actively working to reduce the risks of advanced artificial intelligence.",
     leadNote:
