@@ -1,25 +1,30 @@
 "use client"
 
 import type React from "react"
+import Image from "next/image"
 import Link from "next/link"
 import { motion } from "framer-motion"
-import { ArrowLeft, Clock, User } from "lucide-react"
+import { ArrowLeft, Clock, Info, User } from "lucide-react"
 import { Navbar } from "@/components/navbar"
 import { ContactFooter } from "@/components/contact-footer"
 import { useLanguage } from "@/context/language-context"
 
 const translations = {
   pl: {
-    backLink: "Strona glowna",
-    joinDiscussion: "Dolacz do dyskusji",
-    discussCta: "Chcesz porozmawiac o tym artykule? Dolacz do naszej spolecznosci na Slacku.",
-    joinSlack: "Dolacz na Slack",
+    backLink: "Strona główna",
+    joinDiscussion: "Dołącz do dyskusji",
+    discussCta: "Chcesz porozmawiać o tym artykule? Dołącz do naszej społeczności na Slacku.",
+    joinSlack: "Dołącz na Slack",
+    autoTranslatedNotice:
+      "Ten artykuł został automatycznie przetłumaczony z polskiego na angielski przy użyciu Claude Opus 4.7 i może zawierać błędy tłumaczenia.",
   },
   en: {
     backLink: "Homepage",
     joinDiscussion: "Join the discussion",
     discussCta: "Want to discuss this article? Join our Slack community.",
     joinSlack: "Join Slack",
+    autoTranslatedNotice:
+      "This article was automatically translated from Polish to English using Claude Opus 4.7 and may contain translation errors.",
   },
 } as const
 
@@ -29,11 +34,34 @@ export type LinkItem = {
   labelEN?: string
 }
 
+export type ArticleImage = {
+  src: string
+  alt: string
+  altEN?: string
+  caption?: string
+  captionEN?: string
+}
+
+export type ArticleIframe = {
+  src: string
+  height?: number
+  caption?: string
+  captionEN?: string
+}
+
 export type ArticleSection = {
   heading: string
   headingEN?: string
   body: string
   bodyEN?: string
+  /** Image displayed before the section body */
+  imageBefore?: ArticleImage
+  /** Image displayed after the section body */
+  imageAfter?: ArticleImage
+  /** Iframe displayed before the section body */
+  iframeBefore?: ArticleIframe
+  /** Iframe displayed after the section body */
+  iframeAfter?: ArticleIframe
   linksTitle?: string
   linksTitleEN?: string
   links?: LinkItem[]
@@ -53,6 +81,8 @@ export type ArticleData = {
   sections: ArticleSection[]
   outroNote?: string
   outroNoteEN?: string
+  /** When true and the active locale is "en", a subtle banner is shown at the top of the article. */
+  autoTranslated?: boolean
 }
 
 /**
@@ -163,6 +193,16 @@ export function BlogArticle({ article }: { article: ArticleData }) {
               {text.backLink}
             </Link>
 
+            {article.autoTranslated && lang === "en" && (
+              <div
+                role="note"
+                className="mb-8 flex items-start gap-2.5 rounded-lg border border-border bg-muted/40 px-4 py-3 text-xs leading-relaxed text-muted-foreground md:text-sm"
+              >
+                <Info className="mt-0.5 h-4 w-4 flex-shrink-0 text-muted-foreground/80" aria-hidden />
+                <span>{text.autoTranslatedNotice}</span>
+              </div>
+            )}
+
             <motion.header
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -226,6 +266,27 @@ export function BlogArticle({ article }: { article: ArticleData }) {
 
                 const blocks = splitBlocks(sectionBody)
 
+                // Resolve localized image properties
+                const imageBefore = section.imageBefore
+                const imageBeforeAlt =
+                  lang === "en" && section.imageBefore?.altEN
+                    ? section.imageBefore.altEN
+                    : section.imageBefore?.alt ?? ""
+                const imageBeforeCaption =
+                  lang === "en" && section.imageBefore?.captionEN
+                    ? section.imageBefore.captionEN
+                    : section.imageBefore?.caption
+
+                const imageAfter = section.imageAfter
+                const imageAfterAlt =
+                  lang === "en" && section.imageAfter?.altEN
+                    ? section.imageAfter.altEN
+                    : section.imageAfter?.alt ?? ""
+                const imageAfterCaption =
+                  lang === "en" && section.imageAfter?.captionEN
+                    ? section.imageAfter.captionEN
+                    : section.imageAfter?.caption
+
                 return (
                   <motion.section
                     key={section.heading}
@@ -234,9 +295,48 @@ export function BlogArticle({ article }: { article: ArticleData }) {
                     viewport={{ once: true, margin: "-60px" }}
                     transition={{ duration: 0.5, delay: Math.min(i * 0.03, 0.2) }}
                   >
-                    <h2 className="text-xl font-bold text-foreground md:text-2xl">
-                      {sectionHeading}
-                    </h2>
+                    {sectionHeading && (
+                      <h2 className="text-xl font-bold text-foreground md:text-2xl">
+                        {sectionHeading}
+                      </h2>
+                    )}
+
+                    {/* Iframe before section body */}
+                    {section.iframeBefore && (
+                      <figure className="my-6">
+                        <iframe
+                          src={section.iframeBefore.src}
+                          loading="lazy"
+                          style={{ width: "100%", height: section.iframeBefore.height ?? 600, border: "none" }}
+                          allow="web-share; clipboard-write"
+                        />
+                        {(lang === "en" ? section.iframeBefore.captionEN : section.iframeBefore.caption) && (
+                          <figcaption className="mt-2 text-center text-sm text-muted-foreground">
+                            {lang === "en" ? section.iframeBefore.captionEN : section.iframeBefore.caption}
+                          </figcaption>
+                        )}
+                      </figure>
+                    )}
+
+                    {/* Image before section body */}
+                    {imageBefore && (
+                      <figure className="my-6">
+                        <div className="overflow-hidden rounded-lg">
+                          <Image
+                            src={imageBefore.src}
+                            alt={imageBeforeAlt}
+                            width={960}
+                            height={540}
+                            className="h-auto w-full"
+                          />
+                        </div>
+                        {imageBeforeCaption && (
+                          <figcaption className="mt-2 text-center text-sm text-muted-foreground">
+                            {imageBeforeCaption}
+                          </figcaption>
+                        )}
+                      </figure>
+                    )}
 
                     {blocks.map((block, bIdx) => {
                       if (block.kind === "list") {
@@ -265,6 +365,43 @@ export function BlogArticle({ article }: { article: ArticleData }) {
                         </p>
                       )
                     })}
+
+                    {/* Iframe after section body */}
+                    {section.iframeAfter && (
+                      <figure className="my-6">
+                        <iframe
+                          src={section.iframeAfter.src}
+                          loading="lazy"
+                          style={{ width: "100%", height: section.iframeAfter.height ?? 600, border: "none" }}
+                          allow="web-share; clipboard-write"
+                        />
+                        {(lang === "en" ? section.iframeAfter.captionEN : section.iframeAfter.caption) && (
+                          <figcaption className="mt-2 text-center text-sm text-muted-foreground">
+                            {lang === "en" ? section.iframeAfter.captionEN : section.iframeAfter.caption}
+                          </figcaption>
+                        )}
+                      </figure>
+                    )}
+
+                    {/* Image after section body */}
+                    {imageAfter && (
+                      <figure className="my-6">
+                        <div className="overflow-hidden rounded-lg">
+                          <Image
+                            src={imageAfter.src}
+                            alt={imageAfterAlt}
+                            width={960}
+                            height={540}
+                            className="h-auto w-full"
+                          />
+                        </div>
+                        {imageAfterCaption && (
+                          <figcaption className="mt-2 text-center text-sm text-muted-foreground">
+                            {imageAfterCaption}
+                          </figcaption>
+                        )}
+                      </figure>
+                    )}
 
                     {section.links && section.links.length > 0 && (
                       <div className="mt-5">

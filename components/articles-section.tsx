@@ -82,8 +82,7 @@ export function ArticlesSection() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-50px" }}
                 transition={{ duration: 0.5, delay: i * 0.15 }}
-                whileHover={{ scale: 1.05 }}
-                className="flex cursor-pointer gap-4 rounded-xl bg-secondary p-4 transition-transform duration-300 md:p-5"
+                className="flex cursor-pointer gap-4 rounded-xl bg-secondary p-4 transition-transform hover:scale-[1.05] md:p-5"
               >
                 <div className="relative h-24 w-24 flex-shrink-0 overflow-hidden rounded-lg bg-muted md:h-28 md:w-28">
                   <Image

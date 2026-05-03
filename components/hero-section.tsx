@@ -44,12 +44,7 @@ export function HeroSection() {
         </motion.p>
       </div>
 
-      <motion.div
-        initial={{ opacity: 0, y: 30 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.7, delay: 0.3 }}
-        className="mt-10 w-full"
-      >
+      <div className="mt-10 w-full">
         {/* Default image (hidden on ultra-wide screens) */}
         <div
           className="relative w-full overflow-hidden min-[1920px]:hidden"
@@ -76,7 +71,7 @@ export function HeroSection() {
             priority
           />
         </div>
-      </motion.div>
+      </div>
     </section>
   )
 }
