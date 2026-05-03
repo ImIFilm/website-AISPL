@@ -85,6 +85,7 @@ export function InitiativesSection() {
                   style={backgroundStyles[i]}
                 >
                   <div className="absolute inset-0 bg-gradient-to-t from-slate-900 to-transparent" />
+                  <div className="absolute inset-0 bg-black/0 transition-all group-hover:bg-black/10" />
                   <div className="relative z-10 flex items-center justify-end p-4 opacity-0 transition-opacity group-hover:opacity-100">
                     <ArrowRight className="h-6 w-6 text-white" />
                   </div>
@@ -114,6 +115,7 @@ export function InitiativesSection() {
               }}
             >
               <div className="absolute inset-0 bg-gradient-to-b from-emerald-600/40 to-emerald-900/60" />
+              <div className="absolute inset-0 bg-black/0 transition-all group-hover:bg-black/10" />
               <div className="absolute right-4 top-4 z-20 opacity-0 transition-opacity group-hover:opacity-100">
                 <ArrowRight className="h-6 w-6 text-white" />
               </div>
