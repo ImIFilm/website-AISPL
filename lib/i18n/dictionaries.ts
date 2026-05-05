@@ -15,6 +15,7 @@ export type Dictionary = {
     home: { title: string; description: string }
     initiatives: { title: string; description: string }
     team: { title: string; description: string }
+    careerMentoring: { title: string; description: string }
     blog: { suffix: string; notFoundTitle: string }
   }
   switcher: {
@@ -41,6 +42,11 @@ export const dictionaries: Record<Locale, Dictionary> = {
         title: "Zespół - AI Safety Polska",
         description:
           "Poznaj zespół AI Safety Polska — koordynatorów i członków naszej społeczności.",
+      },
+      careerMentoring: {
+        title: "Doradztwo zawodowe - AI Safety Polska",
+        description:
+          "Bezpłatne, spersonalizowane konsultacje kariery w AI Safety. Pomożemy Ci wyznaczyć plan działania i połączymy z ekspertami.",
       },
       blog: {
         suffix: "AI Safety Polska",
@@ -69,6 +75,11 @@ export const dictionaries: Record<Locale, Dictionary> = {
         title: "Team - AI Safety Polska",
         description:
           "Meet the AI Safety Polska team — our coordinators and the members of our community.",
+      },
+      careerMentoring: {
+        title: "Career Mentoring - AI Safety Polska",
+        description:
+          "Free, personalised career consultations in AI Safety. We will help you set an action plan and connect you with experts.",
       },
       blog: {
         suffix: "AI Safety Polska",

@@ -626,6 +626,11 @@ Mateusz has also worked on computational mechanics in the context of information
         ],
       },
       {
+        heading: "Zuzanna Matuszewska",
+        body: ` Zuzanna pracuje jako badaczka w [Measuring AI Progress](https://measuringaiprogress.org/) — organizacji non-profit projektującej ewaluacje agentowych zdolności LLMów istotnych z punktu widzenia ryzyk biologicznych. Do tej roli trafiła bezpośrednio po ukończeniu pierwszej edycji [ERA AIxBio Fellowship](https://www.aixbiosecurity.com/) na początku 2026 roku. Wcześniej ukończyła kierunek lekarski na Warszawskim Uniwersytecie Medycznym i równolegle studiowała matematykę na Uniwersytecie Warszawskim. Wolontaryjnie pracuje również jako badaczka w [Alliance to Feed the Earth in Disasters](https://allfed.info/) (ALLFED). Interesuje się dobrostanem zwierząt i modeli AI.`,
+        bodyEN: `Zuzanna works as a researcher at [Measuring AI Progress](https://measuringaiprogress.org/)—a non-profit organization designing evaluations of LLMs' agentic capabilities relevant to biorisks. She took on this role immediately after completing the first edition of the [ERA AIxBio Fellowship](https://www.aixbiosecurity.com/) in early 2026. Previously, she earned her medical degree from the Medical University of Warsaw and concurrently studied mathematics at the University of Warsaw. She also volunteers as a researcher at the [Alliance to Feed the Earth in Disasters](https://allfed.info/) (ALLFED). She is interested in the welfare of animals and AI models.`,
+      },
+      {
         heading: "Taras Kutsyk",
         body: `Taras jest doktorantem zajmującym się „interpretowalnością mechanistyczną" (mechanistic interpretability) w GMUM (Grupa Uczenia Maszynowego) na Uniwersytecie Jagiellońskim w Krakowie. Wcześniej był stypendystą MATS w grupie Neela Nandy z Google DeepMind, a także uczestniczył w programie AI Safety Camp i ukończył kurs AI Safety Fundamentals od BlueDot Impact. Jego badania koncentrują się na zastosowaniu technik interpretowalności do problemów bezpieczeństwa AI, w tym na badaniu „generalizacji osobowości" (persona generalisation) w dużych modelach językowych. Taras współpracuje również z Janem Betley w zakresie badania samoświadomości w LLMach.
 

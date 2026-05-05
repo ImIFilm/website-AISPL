@@ -121,19 +121,19 @@ export function InitiativesPage() {
               transition={{ duration: 0.5, delay: 0.2 }}
               className="mt-8 flex flex-wrap gap-4"
             >
-              <a href="#webinary" className="text-sm font-medium text-emerald hover:text-emerald-dark transition-colors">
+              <a href="#webinary" className="text-sm font-medium text-muted-foreground underline underline-offset-2 decoration-muted-foreground/30 transition-[text-decoration-color] hover:text-foreground hover:decoration-foreground/50">
                 {text.tocWebinars}
               </a>
               <span className="text-muted-foreground">•</span>
-              <a href="#slack" className="text-sm font-medium text-emerald hover:text-emerald-dark transition-colors">
+              <a href="#slack" className="text-sm font-medium text-muted-foreground underline underline-offset-2 decoration-muted-foreground/30 transition-[text-decoration-color] hover:text-foreground hover:decoration-foreground/50">
                 {text.tocSlack}
               </a>
               <span className="text-muted-foreground">•</span>
-              <a href="#wspolpraca-z-uczelniami" className="text-sm font-medium text-emerald hover:text-emerald-dark transition-colors">
+              <a href="#wspolpraca-z-uczelniami" className="text-sm font-medium text-muted-foreground underline underline-offset-2 decoration-muted-foreground/30 transition-[text-decoration-color] hover:text-foreground hover:decoration-foreground/50">
                 {text.tocUniversities}
               </a>
               <span className="text-muted-foreground">•</span>
-              <a href="#doradztwo-zawodowe" className="text-sm font-medium text-emerald hover:text-emerald-dark transition-colors">
+              <a href="#doradztwo-zawodowe" className="text-sm font-medium text-muted-foreground underline underline-offset-2 decoration-muted-foreground/30 transition-[text-decoration-color] hover:text-foreground hover:decoration-foreground/50">
                 {text.tocCareer}
               </a>
             </motion.div>
@@ -162,7 +162,7 @@ export function InitiativesPage() {
                   {text.webinarsDesc1}
                 </p>
                 <p className="mt-4 leading-relaxed text-muted-foreground md:text-lg">
-                  {text.webinarsDesc2} <a href="https://luma.com/aisafetypl" className="text-emerald hover:text-emerald-dark font-semibold transition-colors">{text.webinarsLink}</a>
+                  {text.webinarsDesc2} <a href="https://luma.com/aisafetypl" className="text-foreground underline underline-offset-2 decoration-foreground/30 transition-[text-decoration-color] hover:decoration-foreground/70">{text.webinarsLink}</a>
                 </p>
 
                 {/* Luma Calendar Embed */}
