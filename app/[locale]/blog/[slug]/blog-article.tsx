@@ -110,7 +110,7 @@ function renderInline(text: string): React.ReactNode {
           href={match[2]}
           target="_blank"
           rel="noopener noreferrer"
-          className="text-emerald underline underline-offset-2 transition-colors hover:text-emerald/80"
+          className="text-foreground underline underline-offset-2 decoration-foreground/30 transition-[text-decoration-color] hover:decoration-foreground/70"
         >
           {match[1]}
         </a>,
@@ -418,7 +418,7 @@ export function BlogArticle({ article }: { article: ArticleData }) {
                                   href={link.href}
                                   target="_blank"
                                   rel="noopener noreferrer"
-                                  className="text-emerald underline underline-offset-2 transition-colors hover:text-emerald/80"
+                                  className="text-foreground underline underline-offset-2 decoration-foreground/30 transition-[text-decoration-color] hover:decoration-foreground/70"
                                 >
                                   {label}
                                 </a>

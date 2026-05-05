@@ -25,9 +25,9 @@ const buildFaqPL = (prefix: string) => [
     answer: (
       <>
         Głównym celem AI Safety Polska jest stworzenie silnej, merytorycznej społeczności, która aktywnie pracuje nad bezpieczeństwem AI. Edukujemy, łączymy ekspertów z różnych dziedzin i wspieramy badania, które mają zapobiec potencjalnym zagrożeniom wynikającym z zaawansowanej sztucznej inteligencji. Prowadzimy{" "}
-        <a href={`${prefix}/inicjatywy#webinary`} className="text-emerald hover:text-emerald-dark font-semibold transition-colors">regularne webinary, klub czytelniczy</a> i{" "}
-        <a href={`${prefix}/inicjatywy#slack`} className="text-emerald hover:text-emerald-dark font-semibold transition-colors">społeczność na Slacku</a>, a także organizujemy{" "}
-        <a href={`${prefix}/inicjatywy#lokalne-spotkania`} className="text-emerald hover:text-emerald-dark font-semibold transition-colors">lokalne spotkania</a>.
+        <a href={`${prefix}/inicjatywy#webinary`} className="text-foreground underline underline-offset-2 decoration-foreground/30 transition-[text-decoration-color] hover:decoration-foreground/70">regularne webinary, klub czytelniczy</a> i{" "}
+        <a href={`${prefix}/inicjatywy#slack`} className="text-foreground underline underline-offset-2 decoration-foreground/30 transition-[text-decoration-color] hover:decoration-foreground/70">społeczność na Slacku</a>, a także organizujemy{" "}
+        <a href={`${prefix}/inicjatywy#lokalne-spotkania`} className="text-foreground underline underline-offset-2 decoration-foreground/30 transition-[text-decoration-color] hover:decoration-foreground/70">lokalne spotkania</a>.
       </>
     ),
   },
@@ -41,7 +41,7 @@ const buildFaqPL = (prefix: string) => [
     answer: (
       <>
         Zdecydowanie nie! Choć badacze techniczni są kluczowi, bezpieczeństwo AI to wyzwanie, które wymaga bardzo zróżnicowanych kompetencji. Środowisko pilnie potrzebuje prawników, analityków, badaczy społecznych, filozofów, ekspertów ds. stosunków międzynarodowych i wielu innych. Ogromną rolę odgrywają również specjaliści od cyberbezpieczeństwa, biosecurity, infrastruktury, a także specjaliści HR, managerowie projektów oraz eksperci ds. komunikacji i operacji. Jeśli nie wiesz, jak Twoje obecne umiejętności pasują do tej układanki, w AI Safety Poland prowadzimy{" "}
-        <a href={`${prefix}/inicjatywy#doradztwo-zawodowe`} className="text-emerald hover:text-emerald-dark font-semibold transition-colors">indywidualne konsultacje kariery</a>. Pomożemy Ci przeanalizować Twoje doświadczenie i podpowiemy, w jaki sposób możesz wnieść największą wartość do obszaru bezpieczeństwa AI – niezależnie od tego, jakie masz wykształcenie i na jakim etapie zawodowym jesteś.
+        <a href={`${prefix}/inicjatywy#doradztwo-zawodowe`} className="text-foreground underline underline-offset-2 decoration-foreground/30 transition-[text-decoration-color] hover:decoration-foreground/70">indywidualne konsultacje kariery</a>. Pomożemy Ci przeanalizować Twoje doświadczenie i podpowiemy, w jaki sposób możesz wnieść największą wartość do obszaru bezpieczeństwa AI – niezależnie od tego, jakie masz wykształcenie i na jakim etapie zawodowym jesteś.
       </>
     ),
   },
@@ -50,9 +50,9 @@ const buildFaqPL = (prefix: string) => [
     answer: (
       <>
         Informacje o wydarzeniach publikujemy na{" "}
-        <a href={`${prefix}/inicjatywy#slack`} className="text-emerald hover:text-emerald-dark font-semibold transition-colors">naszym Slacku</a>,{" "}
-        <a href="https://www.linkedin.com/company/ai-safety-poland/" className="text-emerald hover:text-emerald-dark font-semibold transition-colors">LinkedInie</a> oraz{" "}
-        <a href="https://luma.com/aisafetypl" className="text-emerald hover:text-emerald-dark font-semibold transition-colors">Lumie</a>.
+        <a href={`${prefix}/inicjatywy#slack`} className="text-foreground underline underline-offset-2 decoration-foreground/30 transition-[text-decoration-color] hover:decoration-foreground/70">naszym Slacku</a>,{" "}
+        <a href="https://www.linkedin.com/company/ai-safety-poland/" className="text-foreground underline underline-offset-2 decoration-foreground/30 transition-[text-decoration-color] hover:decoration-foreground/70">LinkedInie</a> oraz{" "}
+        <a href="https://luma.com/aisafetypl" className="text-foreground underline underline-offset-2 decoration-foreground/30 transition-[text-decoration-color] hover:decoration-foreground/70">Lumie</a>.
       </>
     ),
   },
@@ -66,13 +66,13 @@ const buildFaqPL = (prefix: string) => [
     answer: (
       <>
         Na start polecamy nasz dedykowany{" "}
-        <a href={`${prefix}/blog/intro-ai-safety`} className="text-emerald hover:text-emerald-dark font-semibold transition-colors">artykuł wprowadzający do AI Safety</a>. Na YouTube dostępne są również świetnie materiały wideo:{" "}
-        <a href="https://www.youtube.com/RationalAnimations" className="text-emerald hover:text-emerald-dark font-semibold transition-colors">Rational Animations</a>,{" "}
-        <a href="https://www.youtube.com/@RobertMilesAI" className="text-emerald hover:text-emerald-dark font-semibold transition-colors">Robert Miles AI Safety</a> oraz{" "}
-        <a href="https://www.youtube.com/@AI_In_Context" className="text-emerald hover:text-emerald-dark font-semibold transition-colors">AI in Context</a>. Polecamy również{" "}
-        <a href="https://80000hours.org/ai/" className="text-emerald hover:text-emerald-dark font-semibold transition-colors">dogłębne artykuły od organizacji 80,000 Hours</a>. Jeśli macie czas na książki, polecamy{" "}
-        <a href="https://www.goodreads.com/book/show/44767248-human-compatible" className="text-emerald hover:text-emerald-dark font-semibold transition-colors">„Human Compatible”</a> Stuarta Russella oraz{" "}
-        <a href="https://www.goodreads.com/book/show/50489349-the-alignment-problem" className="text-emerald hover:text-emerald-dark font-semibold transition-colors">„The Alignment Problem”</a> Briana Christiana.
+        <a href={`${prefix}/blog/intro-ai-safety`} className="text-foreground underline underline-offset-2 decoration-foreground/30 transition-[text-decoration-color] hover:decoration-foreground/70">artykuł wprowadzający do AI Safety</a>. Na YouTube dostępne są również świetnie materiały wideo:{" "}
+        <a href="https://www.youtube.com/RationalAnimations" className="text-foreground underline underline-offset-2 decoration-foreground/30 transition-[text-decoration-color] hover:decoration-foreground/70">Rational Animations</a>,{" "}
+        <a href="https://www.youtube.com/@RobertMilesAI" className="text-foreground underline underline-offset-2 decoration-foreground/30 transition-[text-decoration-color] hover:decoration-foreground/70">Robert Miles AI Safety</a> oraz{" "}
+        <a href="https://www.youtube.com/@AI_In_Context" className="text-foreground underline underline-offset-2 decoration-foreground/30 transition-[text-decoration-color] hover:decoration-foreground/70">AI in Context</a>. Polecamy również{" "}
+        <a href="https://80000hours.org/ai/" className="text-foreground underline underline-offset-2 decoration-foreground/30 transition-[text-decoration-color] hover:decoration-foreground/70">dogłębne artykuły od organizacji 80,000 Hours</a>. Jeśli macie czas na książki, polecamy{" "}
+        <a href="https://www.goodreads.com/book/show/44767248-human-compatible" className="text-foreground underline underline-offset-2 decoration-foreground/30 transition-[text-decoration-color] hover:decoration-foreground/70">„Human Compatible”</a> Stuarta Russella oraz{" "}
+        <a href="https://www.goodreads.com/book/show/50489349-the-alignment-problem" className="text-foreground underline underline-offset-2 decoration-foreground/30 transition-[text-decoration-color] hover:decoration-foreground/70">„The Alignment Problem”</a> Briana Christiana.
       </>
     ),
   },
@@ -94,9 +94,9 @@ const buildFaqEN = (prefix: string) => [
     answer: (
       <>
         The main goal of AI Safety Polska is to create a strong, competent community that actively works on AI safety. We educate, connect experts from various fields, and support research aimed at preventing potential threats from advanced artificial intelligence. We run{" "}
-        <a href={`${prefix}/inicjatywy#webinary`} className="text-emerald hover:text-emerald-dark font-semibold transition-colors">regular webinars, a reading club</a> and a{" "}
-        <a href={`${prefix}/inicjatywy#slack`} className="text-emerald hover:text-emerald-dark font-semibold transition-colors">Slack community</a>, and we also organise{" "}
-        <a href={`${prefix}/inicjatywy#lokalne-spotkania`} className="text-emerald hover:text-emerald-dark font-semibold transition-colors">local meetups</a>.
+        <a href={`${prefix}/inicjatywy#webinary`} className="text-foreground underline underline-offset-2 decoration-foreground/30 transition-[text-decoration-color] hover:decoration-foreground/70">regular webinars, a reading club</a> and a{" "}
+        <a href={`${prefix}/inicjatywy#slack`} className="text-foreground underline underline-offset-2 decoration-foreground/30 transition-[text-decoration-color] hover:decoration-foreground/70">Slack community</a>, and we also organise{" "}
+        <a href={`${prefix}/inicjatywy#lokalne-spotkania`} className="text-foreground underline underline-offset-2 decoration-foreground/30 transition-[text-decoration-color] hover:decoration-foreground/70">local meetups</a>.
       </>
     ),
   },
@@ -110,7 +110,7 @@ const buildFaqEN = (prefix: string) => [
     answer: (
       <>
         Definitely not! While technical researchers are crucial, AI safety is a challenge that requires very diverse skills. The field urgently needs lawyers, analysts, social scientists, philosophers, international relations experts, and many others. Specialists in cybersecurity, biosecurity, infrastructure, as well as HR specialists, project managers, and communications and operations experts also play a huge role. If you don&apos;t know how your current skills fit into this puzzle, at AI Safety Poland we offer{" "}
-        <a href={`${prefix}/inicjatywy#doradztwo-zawodowe`} className="text-emerald hover:text-emerald-dark font-semibold transition-colors">individual career consultations</a>. We will help you analyse your experience and suggest how you can bring the greatest value to the AI safety field - regardless of your educational background or career stage.
+        <a href={`${prefix}/inicjatywy#doradztwo-zawodowe`} className="text-foreground underline underline-offset-2 decoration-foreground/30 transition-[text-decoration-color] hover:decoration-foreground/70">individual career consultations</a>. We will help you analyse your experience and suggest how you can bring the greatest value to the AI safety field - regardless of your educational background or career stage.
       </>
     ),
   },
@@ -119,9 +119,9 @@ const buildFaqEN = (prefix: string) => [
     answer: (
       <>
         We publish event information on{" "}
-        <a href={`${prefix}/inicjatywy#slack`} className="text-emerald hover:text-emerald-dark font-semibold transition-colors">our Slack</a>,{" "}
-        <a href="https://www.linkedin.com/company/ai-safety-poland/" className="text-emerald hover:text-emerald-dark font-semibold transition-colors">LinkedIn</a>, and{" "}
-        <a href="https://luma.com/aisafetypl" className="text-emerald hover:text-emerald-dark font-semibold transition-colors">Luma</a>.
+        <a href={`${prefix}/inicjatywy#slack`} className="text-foreground underline underline-offset-2 decoration-foreground/30 transition-[text-decoration-color] hover:decoration-foreground/70">our Slack</a>,{" "}
+        <a href="https://www.linkedin.com/company/ai-safety-poland/" className="text-foreground underline underline-offset-2 decoration-foreground/30 transition-[text-decoration-color] hover:decoration-foreground/70">LinkedIn</a>, and{" "}
+        <a href="https://luma.com/aisafetypl" className="text-foreground underline underline-offset-2 decoration-foreground/30 transition-[text-decoration-color] hover:decoration-foreground/70">Luma</a>.
       </>
     ),
   },
@@ -135,13 +135,13 @@ const buildFaqEN = (prefix: string) => [
     answer: (
       <>
         To start, we recommend our dedicated{" "}
-        <a href={`${prefix}/blog/intro-ai-safety`} className="text-emerald hover:text-emerald-dark font-semibold transition-colors">introductory article on AI Safety</a>. On YouTube, there are also excellent video materials:{" "}
-        <a href="https://www.youtube.com/RationalAnimations" className="text-emerald hover:text-emerald-dark font-semibold transition-colors">Rational Animations</a>,{" "}
-        <a href="https://www.youtube.com/@RobertMilesAI" className="text-emerald hover:text-emerald-dark font-semibold transition-colors">Robert Miles AI Safety</a>, and{" "}
-        <a href="https://www.youtube.com/@AI_In_Context" className="text-emerald hover:text-emerald-dark font-semibold transition-colors">AI in Context</a>. We also recommend{" "}
-        <a href="https://80000hours.org/ai/" className="text-emerald hover:text-emerald-dark font-semibold transition-colors">in-depth articles from 80,000 Hours</a>. If you have time for books, we recommend{" "}
-        <a href="https://www.goodreads.com/book/show/44767248-human-compatible" className="text-emerald hover:text-emerald-dark font-semibold transition-colors">&quot;Human Compatible&quot;</a> by Stuart Russell and{" "}
-        <a href="https://www.goodreads.com/book/show/50489349-the-alignment-problem" className="text-emerald hover:text-emerald-dark font-semibold transition-colors">&quot;The Alignment Problem&quot;</a> by Brian Christian.
+        <a href={`${prefix}/blog/intro-ai-safety`} className="text-foreground underline underline-offset-2 decoration-foreground/30 transition-[text-decoration-color] hover:decoration-foreground/70">introductory article on AI Safety</a>. On YouTube, there are also excellent video materials:{" "}
+        <a href="https://www.youtube.com/RationalAnimations" className="text-foreground underline underline-offset-2 decoration-foreground/30 transition-[text-decoration-color] hover:decoration-foreground/70">Rational Animations</a>,{" "}
+        <a href="https://www.youtube.com/@RobertMilesAI" className="text-foreground underline underline-offset-2 decoration-foreground/30 transition-[text-decoration-color] hover:decoration-foreground/70">Robert Miles AI Safety</a>, and{" "}
+        <a href="https://www.youtube.com/@AI_In_Context" className="text-foreground underline underline-offset-2 decoration-foreground/30 transition-[text-decoration-color] hover:decoration-foreground/70">AI in Context</a>. We also recommend{" "}
+        <a href="https://80000hours.org/ai/" className="text-foreground underline underline-offset-2 decoration-foreground/30 transition-[text-decoration-color] hover:decoration-foreground/70">in-depth articles from 80,000 Hours</a>. If you have time for books, we recommend{" "}
+        <a href="https://www.goodreads.com/book/show/44767248-human-compatible" className="text-foreground underline underline-offset-2 decoration-foreground/30 transition-[text-decoration-color] hover:decoration-foreground/70">&quot;Human Compatible&quot;</a> by Stuart Russell and{" "}
+        <a href="https://www.goodreads.com/book/show/50489349-the-alignment-problem" className="text-foreground underline underline-offset-2 decoration-foreground/30 transition-[text-decoration-color] hover:decoration-foreground/70">&quot;The Alignment Problem&quot;</a> by Brian Christian.
       </>
     ),
   },
