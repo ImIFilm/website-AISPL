@@ -16,20 +16,16 @@ const t = {
     heading: "Doradztwo zawodowe",
     subheading: "Indywidualne konsultacje kariery w AI Safety",
     intro: "Oferujemy bezpłatne, spersonalizowane konsultacje kariery skoncentrowane na ścieżkach zawodowych w AI Safety. Pomożemy Ci wyznaczyć plan działania, znaleźć odpowiednie materiały edukacyjne, a także połączymy Cię z innymi osobami o podobnych zainteresowaniach.",
-    
+
     forWhomTitle: "Dla kogo?",
     forWhomItems: [
       {
         title: "Osoby rozważające karierę w AI Safety",
-        desc: "Niezależnie czy poważnie myślisz o karierze, czy dopiero zaczynasz się nad tym zastanawiać.",
+        desc: "Pomagamy zarówno osobom na poważnie myślącym o karierze w AI Safety, jak i tym, które dopiero zaczynają się nad tym zastanawiać.",
       },
       {
         title: "Specjaliści z różnych dziedzin",
-        desc: "AI Safety potrzebuje nie tylko ekspertów od AI! Szukamy osób z informatyki, fizyki, matematyki, prawa, ekonomii, cyberbezpieczeństwa, etyki, psychologii, nauk społecznych, stosunków międzynarodowych i komunikacji.",
-      },
-      {
-        title: "Studenci i absolwenci",
-        desc: "Pomożemy Ci zaplanować ścieżkę edukacyjną i pierwsze kroki w branży.",
+        desc: "AI Safety potrzebuje nie tylko programistów! Chętnie pomożemy osobom zajmującym się szeroko pojętą informatyką, fizyką, matematyką, prawem, ekonomią, cyberbezpieczeństwem, etyką, psychologią, naukami społecznymi, stosunkami międzynarodowymi czy komunikacją.",
       },
     ],
 
@@ -42,8 +38,8 @@ const t = {
       },
       {
         num: "2",
-        title: "Rozmowa z mentorem",
-        desc: "Spotkanie z doświadczonym specjalistą, który zna realia branży.",
+        title: "Rozmowa z naszym konsultantem",
+        desc: "Odpowiemy na Twoje pytania i pomożemy naszkicować ścieżkę rozwoju.",
       },
       {
         num: "3",
@@ -98,20 +94,16 @@ const t = {
     heading: "Career Mentoring",
     subheading: "Individual career consultations in AI Safety",
     intro: "We offer free, personalised career consultations focused on career paths in AI Safety. We will help you set an action plan, find the right educational materials, and connect you with others who share similar interests.",
-    
+
     forWhomTitle: "Who is it for?",
     forWhomItems: [
       {
         title: "People considering a career in AI Safety",
-        desc: "Whether you are seriously thinking about a career or just starting to consider it.",
+        desc: "We help both those who are seriously considering a career in AI safety and those who are just starting to think about it.",
       },
       {
         title: "Specialists from various fields",
-        desc: "AI Safety needs more than just AI experts! We are looking for people from computer science, physics, mathematics, law, economics, cybersecurity, ethics, psychology, social sciences, international relations, and communications.",
-      },
-      {
-        title: "Students and graduates",
-        desc: "We will help you plan your educational path and first steps in the industry.",
+        desc: "AI Safety needs more than just programmers! We’re happy to welcome people working in a wide range of fields, including computer science, physics, mathematics, law, economics, cybersecurity, ethics, psychology, social sciences, international relations, and communication.",
       },
     ],
 
@@ -124,8 +116,8 @@ const t = {
       },
       {
         num: "2",
-        title: "Talk with a mentor",
-        desc: "A meeting with an experienced specialist who knows the industry.",
+        title: "Talk to our consultant",
+        desc: "We’ll answer your questions and help you map out a path for your growth.",
       },
       {
         num: "3",
