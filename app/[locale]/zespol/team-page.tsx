@@ -20,7 +20,7 @@ const t = {
   en: {
     backLink: "Homepage",
     label: "Our team",
-    heading: "The people behind AI Safety Polska",
+    heading: "The people behind AI Safety Poland",
     description: "We combine knowledge from technical, humanities, and social sciences. This multidimensional approach allows us to effectively work towards safe AI development. Currently, we all work as volunteers.",
     coordinators: "Coordinators",
     teamMembers: "Team members",

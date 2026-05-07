@@ -90,10 +90,10 @@ const buildFaqEN = (prefix: string) => [
       "AI Safety is a broad research field focused on reducing various types of risks and threats associated with advanced artificial intelligence. One of the most famous problems is 'alignment' - ensuring AI systems can be steered according to their creators' intentions. AI Safety also includes research on topics such as: the impact of AI systems on the economy and society, preventing AI from being used for undesirable purposes (e.g., cyberattacks), legal regulations, and even AI consciousness.",
   },
   {
-    question: "What is the main goal of AI Safety Polska?",
+    question: "What is the main goal of AI Safety Poland?",
     answer: (
       <>
-        The main goal of AI Safety Polska is to create a strong, competent community that actively works on AI safety. We educate, connect experts from various fields, and support research aimed at preventing potential threats from advanced artificial intelligence. We run{" "}
+        The main goal of AI Safety Poland is to create a strong, competent community that actively works on AI safety. We educate, connect experts from various fields, and support research aimed at preventing potential threats from advanced artificial intelligence. We run{" "}
         <a href={`${prefix}/inicjatywy#webinary`} className="text-foreground underline underline-offset-2 decoration-foreground/30 transition-[text-decoration-color] hover:decoration-foreground/70">regular webinars, a reading club</a> and a{" "}
         <a href={`${prefix}/inicjatywy#slack`} className="text-foreground underline underline-offset-2 decoration-foreground/30 transition-[text-decoration-color] hover:decoration-foreground/70">Slack community</a>, and we also organise{" "}
         <a href={`${prefix}/inicjatywy#lokalne-spotkania`} className="text-foreground underline underline-offset-2 decoration-foreground/30 transition-[text-decoration-color] hover:decoration-foreground/70">local meetups</a>.
@@ -126,7 +126,7 @@ const buildFaqEN = (prefix: string) => [
     ),
   },
   {
-    question: "How can I support AI Safety Polska?",
+    question: "How can I support AI Safety Poland?",
     answer:
       "We are currently looking for people to help with our website (frontend, DevOps), running social media, writing articles about AI and AI Safety, and specialists for process automation. If you would like to financially support AI Safety activities in Poland, please contact us by email.",
   },

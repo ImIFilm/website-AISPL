@@ -57,7 +57,7 @@ const t = {
     webinarsDesc1: "We organise events that bring together enthusiasts and professionals dedicated to the safe development of artificial intelligence. From webinars, through reading clubs, to local meetups – we create conditions for learning, discussion, and real action.",
     webinarsDesc2: "You can find upcoming events on",
     webinarsLink: "our calendar on Luma.",
-    calendarTitle: "AI Safety Polska events calendar",
+    calendarTitle: "AI Safety Poland events calendar",
     careerTitle: "Career counselling",
     careerDesc: "We offer individual, personalised career consultations focused on career paths in AI Safety. We will help you set an action plan, find the right materials, and connect you with others who share similar interests.",
     careerForWhom: "For whom?",
