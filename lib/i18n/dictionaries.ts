@@ -62,27 +62,27 @@ export const dictionaries: Record<Locale, Dictionary> = {
   en: {
     meta: {
       home: {
-        title: "AI Safety Polska - Building a safe future for AI",
+        title: "AI Safety Poland - Building a safe future for AI",
         description:
-          "AI Safety Polska is a community of researchers, activists and enthusiasts focused on the safety of artificial intelligence.",
+          "AI Safety Poland is a community of researchers, activists and enthusiasts focused on the safety of artificial intelligence.",
       },
       initiatives: {
-        title: "Our initiatives - AI Safety Polska",
+        title: "Our initiatives - AI Safety Poland",
         description:
-          "Discover AI Safety Polska initiatives: webinars, local meetups, university collaboration, career counselling and our online community.",
+          "Discover AI Safety Poland initiatives: webinars, local meetups, university collaboration, career counselling and our online community.",
       },
       team: {
-        title: "Team - AI Safety Polska",
+        title: "Team - AI Safety Poland",
         description:
-          "Meet the AI Safety Polska team — our coordinators and the members of our community.",
+          "Meet the AI Safety Poland team — our coordinators and the members of our community.",
       },
       careerMentoring: {
-        title: "Career Mentoring - AI Safety Polska",
+        title: "Career Mentoring - AI Safety Poland",
         description:
           "Free, personalised career consultations in AI Safety. We will help you set an action plan and connect you with experts.",
       },
       blog: {
-        suffix: "AI Safety Polska",
+        suffix: "AI Safety Poland",
         notFoundTitle: "Article not found",
       },
     },

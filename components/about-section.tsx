@@ -15,7 +15,7 @@ const translations = {
   },
   en: {
     label: "Who we are",
-    heading: "AI Safety Polska is a community of scientists, activists and enthusiasts focused on AI safety.",
+    heading: "AI Safety Poland is a community of scientists, activists and enthusiasts focused on AI safety.",
     body: "We carry out activities aimed at reducing risks associated with advanced artificial intelligence. We organise lectures, meetups and discussions, and support the development of Polish talent in this field.",
     coordinators: "Coordinators",
     teamLink: "meet the full team →",

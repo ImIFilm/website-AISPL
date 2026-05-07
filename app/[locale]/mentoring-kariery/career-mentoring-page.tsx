@@ -90,7 +90,7 @@ const t = {
   },
   en: {
     backLink: "Homepage",
-    badge: "AI Safety Polska Initiative",
+    badge: "AI Safety Poland Initiative",
     heading: "Career Mentoring",
     subheading: "Individual career consultations in AI Safety",
     intro: "We offer free, personalised career consultations focused on career paths in AI Safety. We will help you set an action plan, find the right educational materials, and connect you with others who share similar interests.",
