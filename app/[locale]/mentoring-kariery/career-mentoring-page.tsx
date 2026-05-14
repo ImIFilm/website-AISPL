@@ -142,7 +142,7 @@ const t = {
 
     ctaTitle: "Interested?",
     ctaDesc: "Fill out a short application form. We will contact you within a few days.",
-    ctaButton: "Apply for consultation",
+    ctaButton: "Apply for a consultation",
 
     faqTitle: "Frequently asked questions",
     faq: [
