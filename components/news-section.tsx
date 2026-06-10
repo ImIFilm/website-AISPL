@@ -8,6 +8,8 @@ import { useLanguage } from "@/context/language-context"
 const FEED_URL =
   "https://api.rss2json.com/v1/api.json?rss_url=https://thezvi.substack.com/feed"
 
+const BLOG_URL = "https://thezvi.substack.com"
+
 type FeedItem = {
   title: string
   link: string
@@ -22,6 +24,7 @@ const translations = {
     intro: "Najnowsze wpisy z bloga Don't Worry About the Vase (Zvi Mowshowitz).",
     error: "Nie udało się pobrać aktualności. Spróbuj ponownie później.",
     readMore: "Czytaj dalej",
+    visitBlog: "Odwiedź nasz blog",
     locale: "pl-PL",
   },
   en: {
@@ -30,6 +33,7 @@ const translations = {
     intro: "Latest posts from the blog Don't Worry About the Vase (Zvi Mowshowitz).",
     error: "Failed to load the news. Please try again later.",
     readMore: "Read more",
+    visitBlog: "Visit our blog",
     locale: "en-US",
   },
 } as const
@@ -79,7 +83,7 @@ export function NewsSection() {
         if (!res.ok) throw new Error(`Request failed: ${res.status}`)
         const data = await res.json()
         if (cancelled) return
-        const feedItems: FeedItem[] = Array.isArray(data?.items) ? data.items.slice(0, 4) : []
+        const feedItems: FeedItem[] = Array.isArray(data?.items) ? data.items.slice(0, 3) : []
         setItems(feedItems)
       } catch {
         if (!cancelled) setError(true)
@@ -126,9 +130,9 @@ export function NewsSection() {
           {text.intro}
         </motion.p>
 
-        <div className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2">
+        <div className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {loading &&
-            Array.from({ length: 4 }).map((_, i) => <CardSkeleton key={i} />)}
+            Array.from({ length: 3 }).map((_, i) => <CardSkeleton key={i} />)}
 
           {!loading && error && (
             <p className="col-span-full text-center text-sm text-muted-foreground">
@@ -184,6 +188,24 @@ export function NewsSection() {
               )
             })}
         </div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 15 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-50px" }}
+          transition={{ duration: 0.5 }}
+          className="mt-10 flex justify-center"
+        >
+          <a
+            href={BLOG_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group inline-flex items-center gap-2 rounded-full border border-border bg-secondary px-6 py-3 text-sm font-medium text-foreground transition-colors hover:bg-muted"
+          >
+            {text.visitBlog}
+            <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+          </a>
+        </motion.div>
       </div>
     </section>
   )
