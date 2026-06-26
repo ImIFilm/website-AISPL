@@ -17,6 +17,7 @@ import { dictionaries } from "@/lib/i18n/dictionaries"
 const navLinksPL = [
   { label: "Kim jesteśmy", href: "#kim-jestesmy" },
   { label: "Co robimy", href: "#co-robimy" },
+  { label: "Aktualności", href: "/aktualnosci" },
   { label: "Zaangażuj się", href: "#zaangazuj-sie" },
   { label: "Kontakt", href: "#kontakt" },
 ]
@@ -24,6 +25,7 @@ const navLinksPL = [
 const navLinksEN = [
   { label: "About us", href: "#kim-jestesmy" },
   { label: "What we do", href: "#co-robimy" },
+  { label: "News", href: "/aktualnosci" },
   { label: "Get involved", href: "#zaangazuj-sie" },
   { label: "Contact", href: "#kontakt" },
 ]
