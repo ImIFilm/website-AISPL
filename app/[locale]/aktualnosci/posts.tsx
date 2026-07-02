@@ -24,6 +24,27 @@ export type BlogPost = {
  */
 export const posts: BlogPost[] = [
   {
+    slug: "meetup-krakow-q2-2026",
+    date: "2026-06-30",
+    image: "/images/blog/aispl-krk-q2.jpg",
+    imageAlt: "Prelegent z mikrofonem przemawia do pełnej sali uczestników meetupu",
+    imageAltEN: "A speaker with a microphone addressing a full room of meetup attendees",
+    displayDate: "30 czerwca 2026",
+    displayDateEN: "June 30, 2026",
+    title: "AI Safety Poland Meetup w Krakowie",
+    titleEN: "AI Safety Poland Meetup in Kraków",
+    paragraphs: [
+      "29 czerwca 2026 roku w krakowskim HEVRE odbył się kolejny AI Safety Poland Meetup! Frekwencja sięgnęła 90 osób, co czyni to spotkanie naszym największym dotychczasowym meetupem w Krakowie.",
+      "Głównym punktem programu było 5 angażujących Lightning talków z sesjami Q&A. Prelegentami byli: Piotr Kędziora, Jakub Nowak, Kacper Dudzic, Alicja Grochocka-Dorocińska i Dawid Rymarczyk.",
+      "Po części oficjalnej przyszedł czas na networking w fantastycznej atmosferze. Wydarzenie było świetną okazją do integracji naszej społeczności z uczestnikami szkoły letniej MLSS 2026. Ogromne podziękowania dla zespołu ML in PL za kolejną świetną współpracę, a wszystkim obecnym dziękujemy za niesamowitą energię!",
+    ],
+    paragraphsEN: [
+      "On 29 June 2026 the next AI Safety Poland Meetup took place at HEVRE in Kraków! Attendance reached 90 people, making this our largest meetup in Kraków to date.",
+      "The main highlight of the programme was 5 engaging Lightning Talks with Q&A sessions. The speakers were: Piotr Kędziora, Jakub Nowak, Kacper Dudzic, Alicja Grochocka-Dorocińska and Dawid Rymarczyk.",
+      "After the official part came time for networking in a fantastic atmosphere. The event was a great opportunity to integrate our community with participants of the MLSS 2026 summer school. Huge thanks to the ML in PL team for another great collaboration, and to everyone who attended — thank you for the incredible energy!",
+    ],
+  },
+  {
     slug: "pierwszy-sezon-webinarow",
     date: "2026-06-25",
     image: "/images/blog/image-meet.jpg",
