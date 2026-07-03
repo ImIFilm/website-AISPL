@@ -53,8 +53,15 @@ export async function generateMetadata({ params }: LayoutParams): Promise<Metada
     openGraph: {
       title: dict.meta.home.title,
       description: dict.meta.home.description,
+      url: `/${locale}`,
+      siteName: locale === "en" ? "AI Safety Poland" : "AI Safety Polska",
       locale: htmlLang[locale],
       type: "website",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: dict.meta.home.title,
+      description: dict.meta.home.description,
     },
   }
 }
@@ -68,9 +75,30 @@ export default async function LocaleLayout({
     notFound()
   }
 
+  const organizationLd = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: locale === "en" ? "AI Safety Poland" : "AI Safety Polska",
+    url: `https://aisafety.org.pl/${locale}`,
+    logo: "https://aisafety.org.pl/images/logo-aispl.svg",
+    email: "contact@aisafety.org.pl",
+    description:
+      locale === "en"
+        ? "A community of researchers, activists and enthusiasts focused on the safety of artificial intelligence."
+        : "Społeczność naukowców, działaczy i pasjonatów skupiona na bezpieczeństwie sztucznej inteligencji.",
+    sameAs: [
+      "https://www.linkedin.com/company/ai-safety-poland",
+      "https://youtube.com/@aisafetypl",
+    ],
+  }
+
   return (
     <html lang={htmlLang[locale as Locale]} className="bg-background">
       <body className={`${outfit.variable} font-sans antialiased`}>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationLd) }}
+        />
         <LanguageProvider>{children}</LanguageProvider>
         <Analytics />
         <SpeedInsights />
