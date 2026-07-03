@@ -6,9 +6,11 @@ import { useLanguage } from "@/context/language-context"
 
 const translations = {
   pl: {
+    title: "AI Safety Polska",
     subtitle: "Budujemy bezpieczną przyszłość sztucznej inteligencji",
   },
   en: {
+    title: "AI Safety Poland",
     subtitle: "Building a safe future for artificial intelligence",
   },
 } as const
@@ -31,7 +33,7 @@ export function HeroSection() {
           className="text-balance text-foreground"
           style={{ fontSize: "2.5rem", fontWeight: 600 }}
         >
-          AI Safety Polska
+          {translations[lang].title}
         </motion.h1>
         <motion.p
           initial={{ opacity: 0, y: 20 }}
