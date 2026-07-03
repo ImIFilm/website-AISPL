@@ -691,6 +691,9 @@ Follow our events on our [Luma](https://luma.com/aisafetypl) calendar and join o
   },
 }
 
+/** Public list of blog slugs, consumed by the sitemap so it never drifts from the content. */
+export const articleSlugs = Object.keys(articles)
+
 type Props = {
   params: Promise<{ locale: string; slug: string }>
 }
