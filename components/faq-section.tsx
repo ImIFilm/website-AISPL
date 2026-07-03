@@ -59,7 +59,7 @@ const buildFaqPL = (prefix: string) => [
   {
     question: "W jaki sposób mogę wesprzeć AI Safety Polska?",
     answer:
-      "Aktualnie szukamy osób do pomocy przy stronie internetowej (frontend, DevOps), prowadzeniu mediów społecznościowych, pisaniu artykułów na temat AI i AI Safety oraz specjalistów do automatyzacji procesów. Jeśli natomiast chciałbyś wesprzeć finansowo działania dotyczące AI Safety w Polsce, prosimy o kontakt mailowy.",
+      "Aktualnie szukamy osób do pomocy przy organizacji eventów, prowadzeniu mediów społecznościowych, pisaniu artykułów na temat AI i AI Safety oraz specjalistów do automatyzacji procesów. Jeśli natomiast chciałbyś wesprzeć finansowo działania dotyczące AI Safety w Polsce, prosimy o kontakt mailowy.",
   },
   {
     question: "Od jakich materiałów polecacie zacząć naukę AI Safety?",
@@ -128,7 +128,7 @@ const buildFaqEN = (prefix: string) => [
   {
     question: "How can I support AI Safety Poland?",
     answer:
-      "We are currently looking for people to help with our website (frontend, DevOps), running social media, writing articles about AI and AI Safety, and specialists for process automation. If you would like to financially support AI Safety activities in Poland, please contact us by email.",
+      "We are currently looking for people to help us organize events, running social media, writing articles about AI and AI Safety, and specialists for process automation. If you would like to financially support AI Safety activities in Poland, please contact us by email.",
   },
   {
     question: "Which materials do you recommend to start learning about AI Safety?",
