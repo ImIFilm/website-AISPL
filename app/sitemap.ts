@@ -42,6 +42,23 @@ export default function sitemap(): MetadataRoute.Sitemap {
     })),
   )
 
+  const policyAlternates = {
+    "pl-PL": `${BASE_URL}/pl/polityka-prywatnosci`,
+    "en-US": `${BASE_URL}/en/privacy-policy`,
+    "x-default": `${BASE_URL}/pl/polityka-prywatnosci`,
+  }
+
+  const policyEntries: MetadataRoute.Sitemap = [
+    `${BASE_URL}/pl/polityka-prywatnosci`,
+    `${BASE_URL}/en/privacy-policy`,
+  ].map((url) => ({
+    url,
+    lastModified,
+    changeFrequency: "yearly" as const,
+    priority: 0.5,
+    alternates: { languages: policyAlternates },
+  }))
+
   const blogEntries: MetadataRoute.Sitemap = articleSlugs.flatMap((slug) =>
     locales.map((locale) => ({
       url: `${BASE_URL}/${locale}/blog/${slug}`,
@@ -52,5 +69,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     })),
   )
 
-  return [...staticEntries, ...blogEntries]
+  return [...staticEntries, ...policyEntries, ...blogEntries]
 }

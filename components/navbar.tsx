@@ -45,8 +45,9 @@ export function Navbar() {
   const switcher = dictionaries[lang].switcher
 
   /** Build the equivalent URL in the other locale for the language switcher. */
-  const plHref = buildLocalePath(pathname, "pl")
-  const enHref = buildLocalePath(pathname, "en")
+  const isPrivacyPolicy = pathname.endsWith("/polityka-prywatnosci") || pathname.endsWith("/privacy-policy")
+  const plHref = isPrivacyPolicy ? "/pl/polityka-prywatnosci" : buildLocalePath(pathname, "pl")
+  const enHref = isPrivacyPolicy ? "/en/privacy-policy" : buildLocalePath(pathname, "en")
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border/50">
