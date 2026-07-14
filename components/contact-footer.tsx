@@ -17,6 +17,7 @@ const t = {
       { label: "Kontakt", href: "#kontakt" },
     ],
     copyright: "© 2026 AI Safety Polska. Wszelkie prawa zastrzeżone.",
+    privacy: "Polityka prywatności",
     footerAriaLabel: "Stopka",
   },
   en: {
@@ -29,7 +30,8 @@ const t = {
       { label: "Get involved", href: "#zaangazuj-sie" },
       { label: "Contact", href: "#kontakt" },
     ],
-    copyright: "© 2026 AI Safety Polska. All rights reserved.",
+    copyright: "© 2026 AI Safety Poland. All rights reserved.",
+    privacy: "Privacy Policy",
     footerAriaLabel: "Footer",
   },
 }
@@ -172,6 +174,12 @@ export function ContactFooter() {
             <p className="text-xs text-primary-foreground/40">
               {text.copyright}
             </p>
+            <Link
+              href={lang === "pl" ? "/pl/polityka-prywatnosci" : "/en/privacy-policy"}
+              className="text-xs text-primary-foreground/60 underline underline-offset-4 decoration-primary-foreground/30 transition-colors hover:text-primary-foreground"
+            >
+              {text.privacy}
+            </Link>
           </div>
         </div>
       </footer>
