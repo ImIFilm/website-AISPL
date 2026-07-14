@@ -24,6 +24,27 @@ export type BlogPost = {
  */
 export const posts: BlogPost[] = [
   {
+    slug: "patryk-perduta-bluedot",
+    date: "2026-07-14",
+    image: "/images/blog/patryk-perduta-bluedot.jpg",
+    imageAlt: "Patryk Perduta na tle drzew z kartą wynikową 2. miejsca BlueDot Impact",
+    imageAltEN: "Patryk Perduta outdoors with a BlueDot Impact 2nd place result card",
+    displayDate: "14 lipca 2026",
+    displayDateEN: "July 14, 2026",
+    title: "Patryk Perduta zajął drugie miejsce w konkursie BlueDot Impact",
+    titleEN: "Patryk Perduta takes second place in the BlueDot Impact competition",
+    paragraphs: [
+      "Z ogromną radością informujemy, że Patryk Perduta z naszej społeczności zajął drugie miejsce w konkursie [Technical AI Safety Puzzle](https://bluedot.org/puzzles/technical-ai-safety), organizowanym przez BlueDot Impact.",
+      "Wyzwanie dotyczyło interpretowalności sieci neuronowych. Uczestnicy mieli odkryć, którą cechę tekstu model kodował w nietypowy, nieliniowy sposób, wyjaśnić geometrię tej reprezentacji, a następnie wytrenować własny model wykorzystujący jeszcze bardziej nietypowy sposób kodowania informacji.",
+      "Gratulujemy Patrykowi świetnego wyniku. Wszystkich zainteresowanych tą tematyką zachęcamy do przejrzenia zadań konkursowych — to dobra okazja, by sprawdzić swoje umiejętności w praktyce. Rozwiązanie Patryka dostępne jest tutaj: [blog.perduta.net](https://blog.perduta.net/posts/bluedot-puzzle-1/)",
+    ],
+    paragraphsEN: [
+      "We are delighted to announce that Patryk Perduta from our community took second place in the [Technical AI Safety Puzzle](https://bluedot.org/puzzles/technical-ai-safety) competition organised by BlueDot Impact.",
+      "The challenge focused on neural network interpretability. Participants had to discover which feature of text the model was encoding in an unusual, non-linear way, explain the geometry of that representation, and then train their own model using an even more unusual method of encoding information.",
+      "Congratulations to Patryk on this excellent result. We encourage everyone interested in this topic to browse the competition tasks — it is a great opportunity to put your skills to the test in practice. Patryk's solution is available here: [blog.perduta.net](https://blog.perduta.net/posts/bluedot-puzzle-1/)",
+    ],
+  },
+  {
     slug: "meetup-krakow-q2-2026",
     date: "2026-06-30",
     image: "/images/blog/aispl-krk-q2.jpg",
