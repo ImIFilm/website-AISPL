@@ -13,6 +13,7 @@ const STATIC_PATHS = [
   "/inicjatywy",
   "/zespol",
   "/mentoring-kariery",
+  "/wesprzyj",
   "/aktualnosci",
 ] as const
 
