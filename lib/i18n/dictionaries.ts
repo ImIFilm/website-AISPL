@@ -16,6 +16,7 @@ export type Dictionary = {
     initiatives: { title: string; description: string }
     team: { title: string; description: string }
     careerMentoring: { title: string; description: string }
+    support: { title: string; description: string }
     news: { title: string; description: string }
     blog: { suffix: string; notFoundTitle: string }
   }
@@ -48,6 +49,11 @@ export const dictionaries: Record<Locale, Dictionary> = {
         title: "Doradztwo zawodowe - AI Safety Polska",
         description:
           "Bezpłatne, spersonalizowane konsultacje kariery w AI Safety. Pomożemy Ci wyznaczyć plan działania i połączymy z ekspertami.",
+      },
+      support: {
+        title: "Wesprzyj nas - AI Safety Polska",
+        description:
+          "Wesprzyj Fundację AI Safety Poland. Twoja darowizna finansuje meetupy, webinary, bezpłatne doradztwo zawodowe i współpracę z uczelniami.",
       },
       news: {
         title: "Aktualności - AI Safety Polska",
@@ -86,6 +92,11 @@ export const dictionaries: Record<Locale, Dictionary> = {
         title: "Career Mentoring - AI Safety Poland",
         description:
           "Free, personalised career consultations in AI Safety. We will help you set an action plan and connect you with experts.",
+      },
+      support: {
+        title: "Support us - AI Safety Poland",
+        description:
+          "Support the AI Safety Poland Foundation. Your donation funds meetups, webinars, free career mentoring and university collaboration.",
       },
       news: {
         title: "News - AI Safety Poland",

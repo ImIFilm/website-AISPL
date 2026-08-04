@@ -19,6 +19,7 @@ const navLinksPL = [
   { label: "Co robimy", href: "#co-robimy" },
   { label: "Aktualności", href: "/aktualnosci" },
   { label: "Zaangażuj się", href: "#zaangazuj-sie" },
+  { label: "Wesprzyj", href: "/wesprzyj" },
   { label: "Kontakt", href: "#kontakt" },
 ]
 
@@ -27,6 +28,7 @@ const navLinksEN = [
   { label: "What we do", href: "#co-robimy" },
   { label: "News", href: "/aktualnosci" },
   { label: "Get involved", href: "#zaangazuj-sie" },
+  { label: "Support us", href: "/wesprzyj" },
   { label: "Contact", href: "#kontakt" },
 ]
 
