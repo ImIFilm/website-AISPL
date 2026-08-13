@@ -24,6 +24,27 @@ export type BlogPost = {
  */
 export const posts: BlogPost[] = [
   {
+    slug: "talos-fellowship-2026",
+    date: "2026-08-13",
+    image: "/images/blog/talos-fellowship-2026.jpg",
+    imageAlt: "Logo Talos Network oraz zdjęcia trzech osób przyjętych do programu",
+    imageAltEN: "The Talos Network logo alongside photos of the three people accepted into the program",
+    displayDate: "13 sierpnia 2026",
+    displayDateEN: "August 13, 2026",
+    title: "Trzy osoby z naszej społeczności w jesiennej kohorcie Talos Fellowship",
+    titleEN: "Three people from our community join the autumn Talos Fellowship cohort",
+    paragraphs: [
+      "Do jesiennej kohorty Talos Fellowship 2026 dostały się trzy osoby z naszej społeczności: Zuza Topolska, Michał Tarnowski i Paweł Kamiński.",
+      "Talos Fellowship to jeden z najważniejszych europejskich programów przygotowujących do kariery w polityce AI — obejmuje ośmiotygodniowy kurs podstaw europejskiego zarządzania AI, tygodniowy szczyt w Brukseli oraz staże i granty na własne inicjatywy.",
+      "Spośród 21 uczestników z całej Europy aż trzech reprezentuje polski ekosystem, co dobrze świadczy o rosnącej sile środowiska AI safety i AI governance w Polsce. Gratulujemy i trzymamy kciuki za kolejne miesiące!",
+    ],
+    paragraphsEN: [
+      "Three people from our community have been accepted into the autumn 2026 cohort of the Talos Fellowship: Zuza Topolska, Michał Tarnowski and Paweł Kamiński.",
+      "The Talos Fellowship is one of the most important European programs preparing participants for a career in AI policy — it includes an eight-week course on the fundamentals of European AI governance, a week-long summit in Brussels, and internships and grants for participants' own initiatives.",
+      "Out of 21 participants from across Europe, as many as three represent the Polish ecosystem, which speaks well of the growing strength of the AI safety and AI governance community in Poland. Congratulations, and we're keeping our fingers crossed for the months ahead!",
+    ],
+  },
+  {
     slug: "patryk-perduta-bluedot",
     date: "2026-07-14",
     image: "/images/blog/patryk-perduta-bluedot.jpg",
