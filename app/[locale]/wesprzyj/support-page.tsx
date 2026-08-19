@@ -25,8 +25,7 @@ const t = {
     impactTitle: "Dlaczego to ważne?",
     impactItems: [
       "Jesteśmy organizacją non-profit — środki idą wprost na działania statutowe.",
-      "Działamy w Polsce, w języku polskim, dla polskiej społeczności badaczy i studentów.",
-      "Nasze wydarzenia i konsultacje są bezpłatne dla uczestników.",
+      "Działamy w Polsce, dla polskiej społeczności badaczy i studentów.",
       "Każda wpłata, nawet niewielka, zwiększa zasięg naszych inicjatyw.",
     ],
 
@@ -60,8 +59,7 @@ const t = {
     impactTitle: "Why it matters",
     impactItems: [
       "We are a non-profit — funds go directly to our statutory activities.",
-      "We work in Poland, in Polish, for the local community of researchers and students.",
-      "Our events and consultations are free for participants.",
+      "We work in Poland, for the local community of researchers and students.",
       "Every contribution, however small, extends the reach of our initiatives.",
     ],
 
