@@ -2,7 +2,7 @@
 
 import Link from "next/link"
 import { motion } from "framer-motion"
-import { ArrowLeft, CheckCircle2, Users, Presentation, Compass, Building2, ShieldCheck } from "lucide-react"
+import { ArrowLeft, CheckCircle2, ShieldCheck } from "lucide-react"
 import { Navbar } from "@/components/navbar"
 import { ContactFooter } from "@/components/contact-footer"
 import { StripeBuyButton } from "@/components/stripe-buy-button"
@@ -21,26 +21,6 @@ const t = {
     donateDesc:
       "Płatność obsługuje Stripe — możesz zapłacić kartą lub szybkim przelewem. Potwierdzenie wpłaty otrzymasz e-mailem od razu po transakcji.",
     donateSecure: "Płatności obsługuje Stripe. Nie przechowujemy danych Twojej karty.",
-
-    fundTitle: "Co finansujemy?",
-    fundItems: [
-      {
-        title: "Meetupy i wydarzenia lokalne",
-        desc: "Wynajem sal, sprzęt i logistyka spotkań w Warszawie, Krakowie i innych miastach.",
-      },
-      {
-        title: "Webinary i materiały edukacyjne",
-        desc: "Cykliczne spotkania online z badaczami oraz tworzenie treści po polsku.",
-      },
-      {
-        title: "Bezpłatne doradztwo zawodowe",
-        desc: "Indywidualne konsultacje dla osób planujących karierę w AI Safety.",
-      },
-      {
-        title: "Współpraca z uczelniami",
-        desc: "Prelekcje, warsztaty i wsparcie grup studenckich na polskich uniwersytetach.",
-      },
-    ],
 
     impactTitle: "Dlaczego to ważne?",
     impactItems: [
@@ -77,26 +57,6 @@ const t = {
       "Payments are handled by Stripe — you can pay by card or instant bank transfer. You will receive a confirmation by e-mail right after the transaction.",
     donateSecure: "Payments are processed by Stripe. We never store your card details.",
 
-    fundTitle: "What do we fund?",
-    fundItems: [
-      {
-        title: "Meetups and local events",
-        desc: "Venue rental, equipment and logistics for meetups in Warsaw, Kraków and other cities.",
-      },
-      {
-        title: "Webinars and educational materials",
-        desc: "Regular online sessions with researchers and creating content in Polish.",
-      },
-      {
-        title: "Free career mentoring",
-        desc: "Individual consultations for people planning a career in AI Safety.",
-      },
-      {
-        title: "University collaboration",
-        desc: "Talks, workshops and support for student groups at Polish universities.",
-      },
-    ],
-
     impactTitle: "Why it matters",
     impactItems: [
       "We are a non-profit — funds go directly to our statutory activities.",
@@ -121,7 +81,6 @@ const t = {
   },
 }
 
-const fundIcons = [Users, Presentation, Compass, Building2]
 
 type Props = {
   /** Stripe publishable key, injected by the server component. */
@@ -210,45 +169,6 @@ export function SupportPage({ publishableKey, buyButtonId }: Props) {
                 {text.donateSecure}
               </p>
             </motion.div>
-          </div>
-        </section>
-
-        {/* What we fund */}
-        <section className="bg-background py-16 md:py-24">
-          <div className="mx-auto max-w-4xl px-6">
-            <motion.h2
-              initial={{ opacity: 0, y: 15 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-80px" }}
-              transition={{ duration: 0.5 }}
-              className="text-2xl font-bold text-foreground md:text-3xl"
-            >
-              {text.fundTitle}
-            </motion.h2>
-
-            <div className="mt-8 grid gap-6 sm:grid-cols-2">
-              {text.fundItems.map((item, i) => {
-                const Icon = fundIcons[i]
-                return (
-                  <motion.div
-                    key={item.title}
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true, margin: "-50px" }}
-                    transition={{ duration: 0.5, delay: i * 0.1 }}
-                    className="flex gap-4 rounded-xl border border-border bg-card p-6"
-                  >
-                    <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-emerald/10">
-                      <Icon className="h-5 w-5 text-emerald" />
-                    </div>
-                    <div>
-                      <h3 className="font-semibold text-foreground">{item.title}</h3>
-                      <p className="mt-1 text-sm text-muted-foreground">{item.desc}</p>
-                    </div>
-                  </motion.div>
-                )
-              })}
-            </div>
           </div>
         </section>
 
