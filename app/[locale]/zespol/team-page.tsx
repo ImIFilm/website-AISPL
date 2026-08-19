@@ -16,6 +16,7 @@ const t = {
     description: "Łączymy wiedzę z zakresu nauk technicznych, humanistycznych i społecznych. To wielowymiarowe podejście pozwala nam skutecznie działać na rzecz bezpiecznego rozwoju AI. Na chwilę obecną wszyscy działamy jako wolontariusze.",
     coordinators: "Koordynatorzy",
     teamMembers: "Członkowie zespołu",
+    advisors: "Doradcy",
   },
   en: {
     backLink: "Homepage",
@@ -24,6 +25,7 @@ const t = {
     description: "We combine knowledge from technical, humanities, and social sciences. This multidimensional approach allows us to effectively work towards safe AI development. Currently, we all work as volunteers.",
     coordinators: "Coordinators",
     teamMembers: "Team members",
+    advisors: "Advisors",
   },
 }
 
@@ -64,13 +66,6 @@ const teamMembers = [
     isCoordinator: true,
   },
   {
-    name: "Chris Szulc",
-    role: "EA partnerships and funding strategic advisor",
-    image: null,
-    linkedin: "https://www.linkedin.com/in/chris-szulc-ea/",
-    isCoordinator: false,
-  },
-  {
     name: "Ania Szalwa",
     role: "Creative & Social Media Specialist",
     image: null,
@@ -92,11 +87,74 @@ const teamMembers = [
     isCoordinator: false,
   },
   {
-    name: "Anna Sztyber-Betley",
-    role: "Academia partnerships, Warsaw Lead",
+    name: "Michał Kubiak",
+    role: null,
     image: null,
-    linkedin: "https://www.linkedin.com/in/anna-sztyber-7ba143164/",
+    linkedin: "https://www.linkedin.com/in/michalkubiaklodz",
     isCoordinator: false,
+  },
+  {
+    name: "Daniel Polak",
+    role: null,
+    image: null,
+    linkedin: "https://www.linkedin.com/in/daniel-polak-a79120159",
+    isCoordinator: false,
+  },
+  {
+    name: "Zuzanna Matuszewska",
+    role: null,
+    image: null,
+    linkedin: "https://www.linkedin.com/in/z-matuszewska",
+    isCoordinator: false,
+  },
+  {
+    name: "Patryk Perduta",
+    role: null,
+    image: null,
+    linkedin: "https://www.linkedin.com/in/perduta",
+    isCoordinator: false,
+  },
+  {
+    name: "Gabriel Dunin-Borkowski",
+    role: null,
+    image: null,
+    linkedin: "https://www.linkedin.com/in/gabriel-d-218080b3",
+    isCoordinator: false,
+  },
+  {
+    name: "Michał Skowronek",
+    role: null,
+    image: null,
+    linkedin: "https://www.linkedin.com/in/micha%C5%82-skowronek-60630b1a6",
+    isCoordinator: false,
+  },
+]
+
+const advisors = [
+  {
+    name: "Chris Szulc",
+    descriptor: "strategy",
+    linkedin: "https://www.linkedin.com/in/chris-szulc-ea/",
+  },
+  {
+    name: "Jan Betley",
+    descriptor: "technical ai safety",
+    linkedin: "https://www.linkedin.com/in/jan-betley-118555127",
+  },
+  {
+    name: "Anna Sztyber-Betley",
+    descriptor: "technical ai safety",
+    linkedin: "https://www.linkedin.com/in/anna-sztyber-7ba143164/",
+  },
+  {
+    name: "Charbel-Raphael Segerie",
+    descriptor: "ai governance",
+    linkedin: "https://www.linkedin.com/in/charbel-raphael-segerie",
+  },
+  {
+    name: "Tzu Kit Chan",
+    descriptor: "operations",
+    linkedin: "https://www.linkedin.com/in/tzukit",
   },
 ]
 
@@ -276,12 +334,73 @@ export function TeamPage() {
                   </div>
                   <div className="flex-1">
                     <h3 className="text-sm font-semibold text-foreground">{person.name}</h3>
-                    <p className="mt-0.5 text-xs text-muted-foreground">{person.role}</p>
                     <a
                       href={person.linkedin}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="mt-1.5 inline-flex items-center gap-1 text-xs text-emerald transition-colors hover:text-emerald-dark"
+                      aria-label={`Profil LinkedIn: ${person.name}`}
+                    >
+                      <Image
+                        src="/linkedin-square-icon.svg"
+                        alt="LinkedIn"
+                        width={14}
+                        height={14}
+                        className="h-3.5 w-3.5"
+                      />
+                      LinkedIn
+                    </a>
+                  </div>
+                </motion.div>
+              ))}
+            </motion.div>
+          </div>
+        </section>
+
+        {/* Advisors */}
+        <section className="bg-navy py-16 md:py-24">
+          <div className="mx-auto max-w-5xl px-6">
+            <motion.p
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5 }}
+              className="text-center text-xs font-semibold uppercase tracking-[0.2em] text-emerald"
+            >
+              {text.advisors}
+            </motion.p>
+            <motion.div
+              variants={containerVariants}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, margin: "-50px" }}
+              className="mx-auto mt-10 grid max-w-3xl grid-cols-1 gap-6 sm:grid-cols-2"
+            >
+              {advisors.map((person) => (
+                <motion.div
+                  key={person.name}
+                  variants={itemVariants}
+                  className="flex items-center gap-4 rounded-xl bg-navy-light/50 p-5"
+                >
+                  <div className="flex h-14 w-14 flex-shrink-0 items-center justify-center overflow-hidden rounded-full bg-emerald/20 text-sm font-bold text-emerald">
+                    {person.name
+                      .split(" ")
+                      .map((n) => n[0])
+                      .join("")}
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-sm font-semibold text-primary-foreground">
+                      {person.name}
+                    </h3>
+                    <p className="mt-0.5 text-xs text-primary-foreground/50">
+                      {person.descriptor}
+                    </p>
+                    <a
+                      href={person.linkedin}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="mt-1.5 inline-flex items-center gap-1 text-xs transition-colors"
+                      style={{ color: "#1193d9" }}
                       aria-label={`Profil LinkedIn: ${person.name}`}
                     >
                       <Image
