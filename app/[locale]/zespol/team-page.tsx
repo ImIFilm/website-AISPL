@@ -23,7 +23,7 @@ const t = {
     label: "Our team",
     heading: "The people behind AI Safety Poland",
     description: "We combine knowledge from technical, humanities, and social sciences. This multidimensional approach allows us to effectively work towards safe AI development. Currently, we all work as volunteers.",
-    coordinators: "Coordinators",
+    coordinators: "Board",
     teamMembers: "Team members",
     advisors: "Advisors",
   },
