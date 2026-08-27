@@ -24,6 +24,27 @@ export type BlogPost = {
  */
 export const posts: BlogPost[] = [
   {
+    slug: "ccai-aispl-meetup-warszawa",
+    date: "2026-08-27",
+    image: "/images/blog/ccai-aispl-meetup-warszawa.jpg",
+    imageAlt: "Julia Bazińska i Jan Piotrowski z mikrofonami podczas prezentacji na meetupie",
+    imageAltEN: "Julia Bazińska and Jan Piotrowski holding microphones during a talk at the meetup",
+    displayDate: "27 sierpnia 2026",
+    displayDateEN: "August 27, 2026",
+    title: "CCAI x AI Safety Poland Meetup w Warszawie",
+    titleEN: "CCAI x AI Safety Poland Meetup in Warsaw",
+    paragraphs: [
+      "Za nami udany meetup zorganizowany z Centre for Credible AI na Wydziale MiNI PW. Podczas spotkania Julia Bazińska opowiedziała o różnicach między „AI Safety” a „AI Security” oraz podatnościach modeli LLM, a Jan Piotrowski pokazał ewaluację systemów wieloagentowych przy użyciu języka LEAN.",
+      "W drugiej części odbył się panel dyskusyjny z udziałem Julii, Tomasza Steifera i Kacpra Dudzica. Eksperci omówili głośny atak na linii OpenAI x HuggingFace, sprawę „samodzielnych” celów agentów AI oraz rosnący wpływ modeli open weight na cyberbezpieczeństwo.",
+      "Dziękujemy prelegentom, panelistom i uczestnikom za świetny czas i ciekawe dyskusje!",
+    ],
+    paragraphsEN: [
+      "We have just wrapped up a successful meetup organised together with the Centre for Credible AI at the Faculty of Mathematics and Information Science, Warsaw University of Technology. Julia Bazińska spoke about the differences between “AI Safety” and “AI Security” and about vulnerabilities in LLMs, while Jan Piotrowski presented the evaluation of multi-agent systems using the LEAN language.",
+      "The second part featured a panel discussion with Julia, Tomasz Steifer and Kacper Dudzic. The experts discussed the widely covered OpenAI x HuggingFace attack, the question of “independent” goals of AI agents, and the growing impact of open weight models on cybersecurity.",
+      "Thank you to our speakers, panellists and participants for a great time and fascinating discussions!",
+    ],
+  },
+  {
     slug: "talos-fellowship-2026",
     date: "2026-08-13",
     image: "/images/blog/talos-fellowship-2026.jpg",
