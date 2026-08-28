@@ -24,6 +24,25 @@ export type BlogPost = {
  */
 export const posts: BlogPost[] = [
   {
+    slug: "warsaw-ai-safety-day-2026-zapisy",
+    date: "2026-08-28",
+    image: "/images/blog/warsaw-ai-safety-day-2026.jpg",
+    imageAlt: "Grafika Warsaw AI Safety Day z ilustracją Pałacu Kultury i Nauki",
+    imageAltEN: "Warsaw AI Safety Day graphic featuring an illustration of the Palace of Culture and Science",
+    displayDate: "28 sierpnia 2026",
+    displayDateEN: "August 28, 2026",
+    title: "Ruszyły zapisy na Warsaw AI Safety Day 2026",
+    titleEN: "Registration is now open for Warsaw AI Safety Day 2026",
+    paragraphs: [
+      "Już 24 października 2026 r. odbędzie się Warsaw AI Safety Day — pierwsze w Polsce wydarzenie w całości poświęcone bezpiecznemu rozwojowi zaawansowanej sztucznej inteligencji (AI Safety & Governance). Planujemy wydarzenie na blisko 250 osób. Program stawia przede wszystkim na networking, wymianę doświadczeń, nawiązywanie współpracy oraz sesje mentoringowe i dyskusje z ekspertami. Organizatorami są Fundacja AI Safety Poland oraz SKN EA UW, we współpracy z ML in PL.",
+      "Liczba miejsc jest ograniczona, a każde zgłoszenie podlega weryfikacji. Do 20 września trwa sprzedaż biletów w niższej cenie Early Bird. Zgłoszenia i szczegóły znajdziesz na stronie: [warsawaisafety.day](https://www.warsawaisafety.day/)",
+    ],
+    paragraphsEN: [
+      "Warsaw AI Safety Day will take place on October 24, 2026 — the first event in Poland devoted entirely to the safe development of advanced artificial intelligence (AI Safety & Governance). We are planning an event for nearly 250 people. The program focuses primarily on networking, exchanging experiences, building collaborations, mentoring sessions, and discussions with experts. The event is organised by the AI Safety Poland Foundation and SKN EA UW, in collaboration with ML in PL.",
+      "Places are limited and every application is subject to review. Lower-priced Early Bird tickets are available until September 20. Applications and further details are available at: [warsawaisafety.day](https://www.warsawaisafety.day/)",
+    ],
+  },
+  {
     slug: "ccai-aispl-meetup-warszawa",
     date: "2026-08-27",
     image: "/images/blog/ccai-aispl-meetup-warszawa.jpg",
