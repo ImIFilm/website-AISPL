@@ -4,9 +4,9 @@ import Image from "next/image"
 import Link from "next/link"
 import { motion } from "framer-motion"
 import { ArrowRight } from "lucide-react"
-import { useLanguage } from "@/context/language-context"
+import type { Locale } from "@/lib/i18n/config"
 import {
-  posts,
+  type BlogPost,
   getPostTitle,
   getPostDate,
   getPostAlt,
@@ -27,10 +27,14 @@ const translations = {
   },
 } as const
 
-export function NewsSection() {
-  const { lang } = useLanguage()
+export function NewsSection({
+  lang,
+  latestPosts,
+}: {
+  lang: Locale
+  latestPosts: BlogPost[]
+}) {
   const t = translations[lang]
-  const latest = posts.slice(0, 3)
 
   return (
     <section id="aktualnosci" className="scroll-mt-20 bg-background py-12 md:py-14">
@@ -56,7 +60,7 @@ export function NewsSection() {
         </motion.h2>
 
         <div className="mt-12 grid grid-cols-1 gap-6 md:grid-cols-3">
-          {latest.map((post, i) => {
+          {latestPosts.map((post, i) => {
             const excerpt = toPlainText(getPostParagraphs(post, lang)[0] ?? "")
             return (
               <motion.article
