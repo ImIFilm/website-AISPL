@@ -7,8 +7,16 @@ import { NewsSection } from "@/components/news-section"
 import { CtaSection } from "@/components/cta-section"
 import { FaqSection } from "@/components/faq-section"
 import { ContactFooter } from "@/components/contact-footer"
+import { posts } from "./aktualnosci/posts"
+import { isLocale } from "@/lib/i18n/config"
 
-export default function HomePage() {
+export default async function HomePage({
+  params,
+}: {
+  params: Promise<{ locale: string }>
+}) {
+  const { locale } = await params
+  const lang = isLocale(locale) ? locale : "pl"
   return (
     <>
       <Navbar />
@@ -17,7 +25,7 @@ export default function HomePage() {
         <AboutSection />
         <ArticlesSection />
         <InitiativesSection />
-        <NewsSection />
+        <NewsSection lang={lang} latestPosts={posts.slice(0, 3)} />
         <CtaSection />
         <FaqSection />
       </main>
