@@ -1,6 +1,7 @@
 "use client"
 
 import Link from "next/link"
+import Image from "next/image"
 import { motion } from "framer-motion"
 import { ArrowLeft, CheckCircle2, ShieldCheck } from "lucide-react"
 import { Navbar } from "@/components/navbar"
@@ -34,6 +35,8 @@ const t = {
     orgKrs: "KRS 0001247485",
     orgNip: "NIP 7831955886",
     orgRegon: "REGON 544992138",
+    ngoSourceAlt: "NGOsource — Equivalency Determination on File",
+    ngoSourceLabel: "Posiadamy status Equivalency Determination on File w NGOsource",
 
     questionsTitle: "Masz pytania?",
     questionsDesc:
@@ -68,6 +71,8 @@ const t = {
     orgKrs: "KRS 0001247485",
     orgNip: "NIP 7831955886",
     orgRegon: "REGON 544992138",
+    ngoSourceAlt: "NGOsource — Equivalency Determination on File",
+    ngoSourceLabel: "Our NGOsource Equivalency Determination is on file",
 
     questionsTitle: "Have questions?",
     questionsDesc:
@@ -238,6 +243,24 @@ export function SupportPage({ publishableKey, buyButtonId }: Props) {
                   <li>{text.orgNip}</li>
                   <li>{text.orgRegon}</li>
                 </ul>
+                <a
+                  href="https://www.ngosource.org/about-equivalency-determination-on-file-badge"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-5 flex max-w-xs flex-col gap-2 rounded-lg border border-border bg-background p-3 transition-colors hover:border-emerald/50"
+                  aria-label={`${text.ngoSourceLabel} — NGOsource`}
+                >
+                  <Image
+                    src="/images/ngosource-ed-on-file.png"
+                    alt={text.ngoSourceAlt}
+                    width={1000}
+                    height={500}
+                    className="h-auto w-full"
+                  />
+                  <span className="text-xs leading-relaxed text-muted-foreground">
+                    {text.ngoSourceLabel}
+                  </span>
+                </a>
                 <p className="mt-4 text-xs text-muted-foreground">
                   {text.privacyNote}{" "}
                   <Link
