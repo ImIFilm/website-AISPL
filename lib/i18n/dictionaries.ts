@@ -81,7 +81,7 @@ export const dictionaries: Record<Locale, Dictionary> = {
       initiatives: {
         title: "Our initiatives - AI Safety Poland",
         description:
-          "Discover AI Safety Poland initiatives: webinars, local meetups, university collaboration, career counselling and our online community.",
+          "Discover AI Safety Poland initiatives: webinars, local meetups, university collaboration, career consultations and our online community.",
       },
       team: {
         title: "Team - AI Safety Poland",
