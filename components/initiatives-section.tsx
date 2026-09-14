@@ -16,7 +16,7 @@ const initiativesEN = [
   { title: "Webinars",                 href: "/inicjatywy#webinary" },
   { title: "Local meetups",            href: "/inicjatywy#lokalne-spotkania" },
   { title: "University collaboration", href: "/inicjatywy#wspolpraca-z-uczelniami" },
-  { title: "Career counselling",       href: "/inicjatywy#doradztwo-zawodowe" },
+  { title: "Career consultations",       href: "/inicjatywy#doradztwo-zawodowe" },
 ]
 
 const backgroundStyles = [
