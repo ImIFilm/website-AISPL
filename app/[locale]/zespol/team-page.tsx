@@ -15,6 +15,7 @@ const t = {
     heading: "Ludzie stojący za AI Safety Polska",
     description: "Łączymy wiedzę z zakresu nauk technicznych, humanistycznych i społecznych. To wielowymiarowe podejście pozwala nam skutecznie działać na rzecz bezpiecznego rozwoju AI.",
     coordinators: "Koordynatorzy",
+    strategicAdvisors: "Doradcy strategiczni",
     teamMembers: "Członkowie zespołu",
     advisors: "Doradcy",
   },
@@ -24,6 +25,7 @@ const t = {
     heading: "The people behind AI Safety Poland",
     description: "We combine knowledge from technical, humanities, and social sciences. This multidimensional approach allows us to effectively work towards safe AI development.",
     coordinators: "Board",
+    strategicAdvisors: "Strategic advisors",
     teamMembers: "Team members",
     advisors: "Advisors",
   },
@@ -130,12 +132,20 @@ const teamMembers = [
   },
 ]
 
-const advisors = [
+const strategicAdvisors = [
   {
     name: "Chris Szulc",
     descriptor: "strategy",
     linkedin: "https://www.linkedin.com/in/chris-szulc-ea/",
   },
+  {
+    name: "Tzu Kit Chan",
+    descriptor: "operations",
+    linkedin: "https://www.linkedin.com/in/tzukit",
+  },
+]
+
+const advisors = [
   {
     name: "Jan Betley",
     descriptor: "technical ai safety",
@@ -150,11 +160,6 @@ const advisors = [
     name: "Charbel-Raphael Segerie",
     descriptor: "ai governance",
     linkedin: "https://www.linkedin.com/in/charbel-raphael-segerie",
-  },
-  {
-    name: "Tzu Kit Chan",
-    descriptor: "operations",
-    linkedin: "https://www.linkedin.com/in/tzukit",
   },
 ]
 
@@ -283,6 +288,68 @@ export function TeamPage() {
                       />
                       LinkedIn
                     </a>
+                </motion.div>
+              ))}
+            </motion.div>
+          </div>
+        </section>
+
+        {/* Strategic advisors */}
+        <section className="bg-secondary py-16 md:py-24">
+          <div className="mx-auto max-w-5xl px-6">
+            <motion.p
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5 }}
+              className="text-center text-xs font-semibold uppercase tracking-[0.2em] text-emerald"
+            >
+              {text.strategicAdvisors}
+            </motion.p>
+            <motion.div
+              variants={containerVariants}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, margin: "-50px" }}
+              className="mx-auto mt-10 grid max-w-3xl grid-cols-1 gap-6 sm:grid-cols-2"
+            >
+              {strategicAdvisors.map((person) => (
+                <motion.div
+                  key={person.name}
+                  variants={itemVariants}
+                  className="flex items-center gap-4 rounded-xl border border-border bg-background p-5"
+                >
+                  <div className="flex h-14 w-14 flex-shrink-0 items-center justify-center overflow-hidden rounded-full bg-emerald/10 text-sm font-bold text-emerald">
+                    {person.name
+                      .split(" ")
+                      .map((namePart) => namePart[0])
+                      .join("")}
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-sm font-semibold text-foreground">
+                      {person.name}
+                    </h3>
+                    <p className="mt-0.5 text-xs text-muted-foreground">
+                      {person.descriptor}
+                    </p>
+                    <a
+                      href={person.linkedin}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="mt-1.5 inline-flex items-center gap-1 text-xs transition-colors"
+                      style={{ color: "#1193d9" }}
+                      aria-label={`Profil LinkedIn: ${person.name}`}
+                    >
+                      <Image
+                        src="/linkedin-square-icon.svg"
+                        alt="LinkedIn"
+                        width={14}
+                        height={14}
+                        className="h-3.5 w-3.5"
+                      />
+                      LinkedIn
+                    </a>
+                  </div>
                 </motion.div>
               ))}
             </motion.div>
