@@ -4,7 +4,7 @@ import { useState } from "react"
 import Link from "next/link"
 import Image from "next/image"
 import { usePathname } from "next/navigation"
-import { Menu, X } from "lucide-react"
+import { ArrowUpRight, CalendarDays, MapPin, Menu, X } from "lucide-react"
 import { motion, AnimatePresence } from "framer-motion"
 import { useLanguage } from "@/context/language-context"
 import {
@@ -45,6 +45,20 @@ export function Navbar() {
 
   const navLinks = lang === "pl" ? navLinksPL : navLinksEN
   const switcher = dictionaries[lang].switcher
+  const announcement =
+    lang === "pl"
+      ? {
+          status: "Rejestracja otwarta",
+          date: "24 października",
+          place: "Warszawa",
+          action: "Zarejestruj się",
+        }
+      : {
+          status: "Registration open",
+          date: "October 24",
+          place: "Warsaw",
+          action: "Register now",
+        }
 
   /** Build the equivalent URL in the other locale for the language switcher. */
   const isPrivacyPolicy = pathname.endsWith("/polityka-prywatnosci") || pathname.endsWith("/privacy-policy")
@@ -52,15 +66,49 @@ export function Navbar() {
   const enHref = isPrivacyPolicy ? "/en/privacy-policy" : buildLocalePath(pathname, "en")
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border/50">
-      <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
+    <nav className="fixed inset-x-0 top-0 z-50 border-b border-border/50 bg-background/90 backdrop-blur-md">
+      <a
+        href="https://warsawaisafety.day"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="group flex min-h-8 items-center justify-center bg-navy px-4 py-1.5 text-primary-foreground transition-colors hover:bg-navy-light focus-visible:outline-2 focus-visible:outline-offset-[-2px] focus-visible:outline-emerald"
+        aria-label={`${announcement.status}: Warsaw AI Safety Day, ${announcement.date}, ${announcement.place}, 10:00–18:00`}
+      >
+        <span className="flex items-center gap-1 text-center text-[10px] leading-4 sm:hidden">
+          <span className="font-semibold">Warsaw AI Safety Day</span>
+          <span className="text-primary-foreground/40" aria-hidden="true">·</span>
+          <span className="font-semibold text-emerald">24.10</span>
+          <span className="text-primary-foreground/70">{announcement.place}</span>
+          <span className="text-primary-foreground/70">10–18</span>
+          <ArrowUpRight className="size-3" aria-hidden="true" />
+        </span>
+        <span className="hidden items-center justify-center gap-2 text-center text-xs sm:flex">
+          <span className="font-semibold text-emerald">{announcement.status}</span>
+          <span className="text-primary-foreground/40" aria-hidden="true">·</span>
+          <span className="font-medium">Warsaw AI Safety Day</span>
+          <span className="inline-flex items-center gap-1 text-primary-foreground/70">
+            <CalendarDays className="size-3" aria-hidden="true" />
+            {announcement.date}
+          </span>
+          <span className="hidden items-center gap-1 text-primary-foreground/70 md:inline-flex">
+            <MapPin className="size-3" aria-hidden="true" />
+            {announcement.place}, 10:00–18:00
+          </span>
+          <span className="inline-flex items-center gap-0.5 font-semibold underline decoration-primary-foreground/30 underline-offset-2 group-hover:decoration-primary-foreground">
+            {announcement.action}
+            <ArrowUpRight className="size-3" aria-hidden="true" />
+          </span>
+        </span>
+      </a>
+
+      <div className="mx-auto flex min-h-16 max-w-6xl items-center justify-between px-6 py-2">
         <Link href={`/${lang}`} className="flex-shrink-0" aria-label="AI Safety Polska - Strona główna">
           <Image
             src="/images/logo-aispl.svg"
             alt="AI Safety Polska logo"
             width={52}
             height={57}
-            className="h-13 w-auto"
+            className="h-10 w-auto"
           />
         </Link>
 
