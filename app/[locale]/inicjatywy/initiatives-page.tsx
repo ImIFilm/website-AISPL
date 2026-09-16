@@ -91,7 +91,7 @@ export function InitiativesPage() {
     <>
       <Navbar />
       {/* Full-width auto-advancing photo slider, sits below the fixed navbar */}
-      <div className="pt-[72px]">
+      <div className="pt-24">
         <HeroSlider />
       </div>
       <main className="pb-0">
