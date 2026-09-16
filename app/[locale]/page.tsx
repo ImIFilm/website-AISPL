@@ -2,6 +2,7 @@ import { Navbar } from "@/components/navbar"
 import { HeroSection } from "@/components/hero-section"
 import { AboutSection } from "@/components/about-section"
 import { ArticlesSection } from "@/components/articles-section"
+import { WarsawAiSafetyDayBanner } from "@/components/warsaw-ai-safety-day-banner"
 import { InitiativesSection } from "@/components/initiatives-section"
 import { NewsSection } from "@/components/news-section"
 import { CtaSection } from "@/components/cta-section"
@@ -23,6 +24,7 @@ export default async function HomePage({
       <main>
         <HeroSection />
         <AboutSection />
+        <WarsawAiSafetyDayBanner />
         <ArticlesSection />
         <InitiativesSection />
         <NewsSection lang={lang} latestPosts={posts.slice(0, 3)} />
