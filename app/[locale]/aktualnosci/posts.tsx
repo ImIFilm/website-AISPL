@@ -24,6 +24,25 @@ export type BlogPost = {
  */
 export const posts: BlogPost[] = [
   {
+    slug: "sofia-yablonskaya-govai-winter-fellowship-2027",
+    date: "2026-10-13",
+    image: "/images/blog/govai-winter-fellowship-2027.jpg",
+    imageAlt: "Grafika GovAI przedstawiająca Winter Fellowship 2027 oraz Sofię Yablonskayę",
+    imageAltEN: "GovAI graphic featuring the Winter Fellowship 2027 and Sofia Yablonskaya",
+    displayDate: "13 października 2026",
+    displayDateEN: "October 13, 2026",
+    title: "Sofia Yablonskaya dołącza do Winter Fellowship w GovAI",
+    titleEN: "Sofia Yablonskaya joins GovAI's Winter Fellowship",
+    paragraphs: [
+      "Sofia Yablonskaya, członkini społeczności AI Safety Poland, została przyjęta do programu Winter Fellowship 2027 w Centre for the Governance of AI (GovAI). Od 18 stycznia do 9 kwietnia 2027 roku będzie pracować w londyńskim biurze organizacji, prowadząc badania nad chińskim prawem dotyczącym AI.",
+      "GovAI od lat współtworzy dziedzinę AI governance, a jego fellowship to jeden z uznanych programów dla osób budujących karierę w tym obszarze. Gratulujemy Sofii i trzymamy kciuki za jej badania!",
+    ],
+    paragraphsEN: [
+      "Sofia Yablonskaya, a member of the AI Safety Poland community, has been accepted into the 2027 Winter Fellowship at the Centre for the Governance of AI (GovAI). From January 18 to April 9, 2027, she will work from the organisation's London office, conducting research on Chinese AI law.",
+      "GovAI has helped shape the field of AI governance for years, and its fellowship is one of the recognised programmes for people building careers in this area. Congratulations to Sofia — we are keeping our fingers crossed for her research!",
+    ],
+  },
+  {
     slug: "warsaw-ai-safety-day-2026-zapisy",
     date: "2026-08-28",
     image: "/images/blog/warsaw-ai-safety-day-2026.jpg",
