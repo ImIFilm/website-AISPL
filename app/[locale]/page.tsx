@@ -18,6 +18,7 @@ export default async function HomePage({
 }) {
   const { locale } = await params
   const lang = isLocale(locale) ? locale : "pl"
+  const latestPosts = [...posts].sort((a, b) => b.date.localeCompare(a.date)).slice(0, 3)
   return (
     <>
       <Navbar />
@@ -27,7 +28,7 @@ export default async function HomePage({
         <WarsawAiSafetyDayBanner />
         <ArticlesSection />
         <InitiativesSection />
-        <NewsSection lang={lang} latestPosts={posts.slice(0, 3)} />
+        <NewsSection lang={lang} latestPosts={latestPosts} />
         <CtaSection />
         <FaqSection />
       </main>
