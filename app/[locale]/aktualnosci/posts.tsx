@@ -24,6 +24,27 @@ export type BlogPost = {
  */
 export const posts: BlogPost[] = [
   {
+    slug: "patryk-perduta-arena-9-0",
+    date: "2026-08-21",
+    image: "/images/blog/arena-9-0-patryk-perduta.jpg",
+    imageAlt: "Logo ARENA 9.0 i portret Patryka Perduty",
+    imageAltEN: "The ARENA 9.0 logo and a portrait of Patryk Perduta",
+    displayDate: "21 sierpnia 2026",
+    displayDateEN: "August 21, 2026",
+    title: "Patryk Perduta dostał się na program ARENA 9.0!",
+    titleEN: "Patryk Perduta accepted into the ARENA 9.0 programme!",
+    paragraphs: [
+      "Patryk Perduta, członek społeczności AI Safety Poland, znalazł się w gronie 30 osób wybranych spośród około 700 kandydatów do programu ARENA 9.0.",
+      "W październiku weźmie udział w intensywnym kursie w stylu bootcampu, opartym na ćwiczeniach i programowaniu w parach, który uczy umiejętności inżynierii ML potrzebnych do badań nad AI Safety. Zajęcia odbywają się w Londynie, w przestrzeni LISA, którą dzielą również inne programy techniczne i badacze.",
+      "ARENA chce dawać utalentowanym osobom umiejętności techniczne, społeczność i pewność siebie, by mogły bezpośrednio działać na rzecz technicznego bezpieczeństwa AI. Gratulujemy Patrykowi i trzymamy kciuki!",
+    ],
+    paragraphsEN: [
+      "Patryk Perduta, a member of the AI Safety Poland community, has been selected as one of 30 people chosen from around 700 applicants for the ARENA 9.0 programme.",
+      "In October, he will take part in an intensive bootcamp-style course based on exercises and pair programming, teaching the ML engineering skills needed for AI safety research. The course takes place in London, at the LISA space, which is also shared by other technical programmes and researchers.",
+      "ARENA aims to give talented people the technical skills, community and confidence they need to work directly on technical AI safety. Congratulations to Patryk — we are keeping our fingers crossed!",
+    ],
+  },
+  {
     slug: "sofia-yablonskaya-govai-winter-fellowship-2027",
     date: "2026-10-13",
     image: "/images/blog/govai-winter-fellowship-2027.jpg",
