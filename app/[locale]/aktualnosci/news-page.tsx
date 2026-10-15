@@ -34,6 +34,7 @@ const translations = {
 export function NewsPage() {
   const { lang } = useLanguage()
   const t = translations[lang]
+  const orderedPosts = [...posts].sort((a, b) => b.date.localeCompare(a.date))
 
   return (
     <>
@@ -60,7 +61,7 @@ export function NewsPage() {
           </motion.header>
 
           <div className="mt-12 flex flex-col gap-16">
-            {posts.map((post, i) => (
+            {orderedPosts.map((post, i) => (
               <motion.article
                 key={post.slug}
                 id={post.slug}
