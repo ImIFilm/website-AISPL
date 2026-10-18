@@ -57,10 +57,12 @@ export const posts: BlogPost[] = [
     paragraphs: [
       "Sofia Yablonskaya, członkini społeczności AI Safety Poland, została przyjęta do programu Winter Fellowship 2027 w Centre for the Governance of AI (GovAI). Od 18 stycznia do 9 kwietnia 2027 roku będzie pracować w londyńskim biurze organizacji, prowadząc badania nad chińskim prawem dotyczącym AI.",
       "GovAI od lat współtworzy dziedzinę AI governance, a jego fellowship to jeden z uznanych programów dla osób budujących karierę w tym obszarze. Gratulujemy Sofii i trzymamy kciuki za jej badania!",
+      "Sofia chętnie odpowie na pytania dotyczące aplikowania na fellowshipy AI governance. Jeśli robicie lub planujecie badania związane z AI safety w Chinach i zastanawiacie się nad następnym krokiem, możecie do niej napisać: s.yablonskaia@gmail.com",
     ],
     paragraphsEN: [
       "Sofia Yablonskaya, a member of the AI Safety Poland community, has been accepted into the 2027 Winter Fellowship at the Centre for the Governance of AI (GovAI). From January 18 to April 9, 2027, she will work from the organisation's London office, conducting research on Chinese AI law.",
       "GovAI has helped shape the field of AI governance for years, and its fellowship is one of the recognised programmes for people building careers in this area. Congratulations to Sofia — we are keeping our fingers crossed for her research!",
+      "Sofia would be happy to answer questions about applying for AI governance fellowships. If you are conducting or planning research related to AI safety in China and are wondering about your next step, you can contact her at: s.yablonskaia@gmail.com",
     ],
   },
   {
