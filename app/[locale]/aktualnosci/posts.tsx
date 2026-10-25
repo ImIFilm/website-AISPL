@@ -22,9 +22,30 @@ export type BlogPost = {
  * Source of truth for the simple news blog ("Aktualności").
  * Posts are ordered newest-first.
  */
-export const posts: BlogPost[] = [
+  export const posts: BlogPost[] = [
   {
-    slug: "patryk-perduta-arena-9-0",
+  slug: "warsaw-ai-safety-day-2026-podsumowanie",
+  date: "2026-10-25",
+  image: "/images/blog/warsaw-ai-safety-day-2026-recap.jpg",
+  imageAlt: "Prelegent podczas Warsaw AI Safety Day przed publicznością w audytorium",
+  imageAltEN: "A speaker at Warsaw AI Safety Day presenting to an audience in an auditorium",
+  displayDate: "25 października 2026",
+  displayDateEN: "October 25, 2026",
+  title: "Podsumowujemy Warsaw AI Safety Day",
+  titleEN: "Warsaw AI Safety Day: a recap",
+  paragraphs: [
+  "24 października na Wydziale Psychologii Uniwersytetu Warszawskiego odbył się Warsaw AI Safety Day, pierwsza konferencja zorganizowana przez AI Safety Poland. Wszystkie bilety się wyprzedały, a na miejscu pojawiło się ponad 220 osób zainteresowanych bezpieczeństwem sztucznej inteligencji.",
+  "Program obejmował dwie równoległe ścieżki, techniczną i poświęconą AI Governance, oraz wystąpienia 22 prelegentów, m.in. z Google DeepMind, Future of Life Institute, SaferAI, ERA, ARENA i NASK. Była też możliwość uczestniczyć w premierze pierwszego polskojęzycznego filmu popularnonaukowego o AI Safety. Dużo osób korzystało również z możliwości umawiania się na rozmowy 1:1 z potencjalnymi współpracownikami i mentorami.",
+  "Dzień zamknął panel o mniej oczywistych ryzykach rozwoju AI, ale rozmowy trwały długo po zakończeniu ostatniego punktu agendy: afterparty trwało do późnych godzin nocnych. Dziękujemy współorganizatorom, partnerom, prelegentom i wszystkim uczestnikom!",
+  ],
+  paragraphsEN: [
+  "On October 24, Warsaw AI Safety Day took place at the Faculty of Psychology of the University of Warsaw. It was the first conference organised by AI Safety Poland. All tickets sold out, and more than 220 people interested in the safety of artificial intelligence attended the event.",
+  "The programme featured two parallel tracks — technical and AI Governance — as well as talks from 22 speakers, including guests from Google DeepMind, the Future of Life Institute, SaferAI, ERA, ARENA, and NASK. Attendees could also join the premiere of the first Polish-language popular science film about AI Safety. Many people also took advantage of the opportunity to arrange one-to-one conversations with potential collaborators and mentors.",
+  "The day ended with a panel on less obvious risks of AI development, but conversations continued long after the final item on the agenda: the afterparty lasted into the late hours of the night. Thank you to our co-organisers, partners, speakers, and everyone who attended!",
+  ],
+  },
+  {
+  slug: "patryk-perduta-arena-9-0",
     date: "2026-08-21",
     image: "/images/blog/arena-9-0-patryk-perduta.jpg",
     imageAlt: "Logo ARENA 9.0 i portret Patryka Perduty",
