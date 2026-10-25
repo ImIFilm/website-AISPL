@@ -6,6 +6,7 @@ import { SpeedInsights } from "@vercel/speed-insights/next"
 import { LanguageProvider } from "@/context/language-context"
 import { htmlLang, isLocale, locales, type Locale } from "@/lib/i18n/config"
 import { getDictionary } from "@/lib/i18n/dictionaries"
+import { VideoAnnouncementPopup } from "@/components/video-announcement-popup"
 import "../globals.css"
 
 const outfit = Outfit({ subsets: ["latin", "latin-ext"], variable: "--font-outfit" })
@@ -100,6 +101,7 @@ export default async function LocaleLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationLd) }}
         />
         <LanguageProvider>{children}</LanguageProvider>
+        <VideoAnnouncementPopup locale={locale as "pl" | "en"} />
         <Analytics />
         <SpeedInsights />
       </body>
