@@ -2,6 +2,7 @@
 
 import Link from "next/link"
 import { motion } from "framer-motion"
+import { ArrowUpRight, FileText } from "lucide-react"
 import { useLanguage } from "@/context/language-context"
 
 const videoId = "yOrLpUOrVG0"
@@ -63,7 +64,7 @@ export function ArticlesSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-50px" }}
           transition={{ duration: 0.6 }}
-          className="mx-auto mt-10 max-w-4xl"
+          className="mx-auto mt-8 max-w-2xl"
         >
           <div className="aspect-video overflow-hidden rounded-2xl bg-navy shadow-lg">
             <iframe
@@ -74,19 +75,23 @@ export function ArticlesSection() {
               allowFullScreen
             />
           </div>
-          <h3 className="mt-5 text-center text-lg font-semibold leading-snug text-foreground sm:text-xl">
+          <h3 className="mt-3 text-center text-sm font-semibold leading-snug text-foreground sm:text-base">
             {translations[lang].videoTitle}
           </h3>
         </motion.div>
 
-        <div className="mx-auto mt-5 flex max-w-4xl flex-col items-center gap-2 text-center sm:flex-row sm:justify-center sm:gap-5">
+        <div className="mx-auto mt-5 flex max-w-2xl flex-col gap-2 border-t border-border pt-3">
           {translations[lang].articles.map((article) => (
             <Link
               href={`/${lang}${article.href}`}
               key={article.title}
-              className="text-sm font-medium text-muted-foreground underline decoration-border underline-offset-4 transition-colors hover:text-emerald hover:decoration-emerald"
+              className="group flex items-center gap-2 rounded-md px-2 py-1.5 text-sm font-medium text-muted-foreground transition-colors hover:bg-secondary hover:text-emerald"
             >
-              {article.title}
+              <FileText className="size-4 shrink-0 text-emerald/70 transition-colors group-hover:text-emerald" aria-hidden="true" />
+              <span className="underline decoration-border underline-offset-4 group-hover:decoration-emerald">
+                {article.title}
+              </span>
+              <ArrowUpRight className="ml-auto size-3.5 shrink-0 opacity-60" aria-hidden="true" />
             </Link>
           ))}
         </div>
