@@ -1,54 +1,42 @@
 "use client"
 
-import Image from "next/image"
 import Link from "next/link"
 import { motion } from "framer-motion"
-import { ArrowRight } from "lucide-react"
+import { ArrowUpRight, FileText } from "lucide-react"
 import { useLanguage } from "@/context/language-context"
 
-const INTRO_IMAGE =
-  "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/AI%20Safety%20intro%20%281%29-1B1vOKdBoscnbWwzrJNw0YjFMdABjr.jpg"
-const POLES_IMAGE =
-  "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Polacy%20w%20AI%20Safety%20%281%29-PB4vwSVK6kUCwRTuWVT9L5afZ9jWmg.jpg"
+const videoId = "yOrLpUOrVG0"
 
 const translations = {
   pl: {
     label: "Dlaczego AI Safety ma znaczenie?",
-    readMore: "czytaj więcej",
+    videoTitle: "Obejrzyj pierwszy film o AI Safety po polsku!",
     articles: [
       {
         author: "Marcel Windys",
         title: "Dlaczego powinieneś zainteresować się AI Safety?",
         href: "/blog/intro-ai-safety",
-        image: INTRO_IMAGE,
-        imageAlt: "Abstrakcyjna wizualizacja sieci AI",
       },
       {
         author: "Jakub Kryś",
         title: "Wkład Polaków w rozwój bezpieczeństwa AI",
         href: "/blog/wklad-polakow-w-rozwoj-bezpieczenstwa-ai",
-        image: POLES_IMAGE,
-        imageAlt: "Abstrakcyjna wizualizacja AI z mózgiem",
       },
     ],
   },
   en: {
     label: "Why does AI Safety matter?",
-    readMore: "read more",
+    videoTitle: "New video: introduction to AI Safety",
     articles: [
       {
         author: "Marcel Windys",
         title: "Why should you care about AI Safety?",
         href: "/blog/intro-ai-safety",
-        image: INTRO_IMAGE,
-        imageAlt: "Abstract visualization of an AI network",
       },
       {
         author: "Jakub Kryś",
         title: "Polish contributions to the development of AI safety",
         href: "/blog/wklad-polakow-w-rozwoj-bezpieczenstwa-ai",
-        image: POLES_IMAGE,
-        imageAlt: "Abstract AI visualization with a brain motif",
       },
     ],
   },
@@ -71,40 +59,39 @@ export function ArticlesSection() {
           {translations[lang].label}
         </motion.p>
 
-        <div className="mt-10 grid gap-6 md:grid-cols-2">
-          {translations[lang].articles.map((article, i) => (
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-50px" }}
+          transition={{ duration: 0.6 }}
+          className="mx-auto mt-8 max-w-2xl"
+        >
+          <div className="aspect-video overflow-hidden rounded-2xl bg-navy shadow-lg">
+            <iframe
+              className="size-full"
+              src={`https://www.youtube.com/embed/${videoId}?rel=0`}
+              title={translations[lang].videoTitle}
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowFullScreen
+            />
+          </div>
+          <h3 className="mt-3 text-center text-sm font-semibold leading-snug text-foreground sm:text-base">
+            {translations[lang].videoTitle}
+          </h3>
+        </motion.div>
+
+        <div className="mx-auto mt-5 flex max-w-2xl flex-col gap-2 border-t border-border pt-3">
+          {translations[lang].articles.map((article) => (
             <Link
               href={`/${lang}${article.href}`}
               key={article.title}
+              className="group flex items-center gap-2 rounded-md px-2 py-1.5 text-sm font-medium text-muted-foreground transition-colors hover:bg-secondary hover:text-emerald"
             >
-              <motion.article
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-50px" }}
-                transition={{ duration: 0.5, delay: i * 0.15 }}
-                className="flex cursor-pointer gap-4 rounded-xl bg-secondary p-4 transition-transform hover:scale-[1.05] md:p-5"
-              >
-                <div className="relative h-24 w-24 flex-shrink-0 overflow-hidden rounded-lg bg-muted md:h-28 md:w-28">
-                  <Image
-                    src={article.image}
-                    alt={article.imageAlt}
-                    fill
-                    sizes="(min-width: 768px) 112px, 96px"
-                    className="object-cover"
-                  />
-                </div>
-                <div className="flex flex-col justify-center">
-                  <p className="text-xs font-medium text-muted-foreground">{article.author}</p>
-                  <h3 className="mt-1 text-sm font-semibold leading-snug text-foreground">{article.title}</h3>
-                  <div
-                    className="mt-2 inline-flex items-center gap-1 text-xs font-medium"
-                    style={{ color: "#01985D" }}
-                  >
-                    {translations[lang].readMore}
-                    <ArrowRight className="h-3 w-3" />
-                  </div>
-                </div>
-              </motion.article>
+              <FileText className="size-4 shrink-0 text-emerald/70 transition-colors group-hover:text-emerald" aria-hidden="true" />
+              <span className="underline decoration-border underline-offset-4 group-hover:decoration-emerald">
+                {article.title}
+              </span>
+              <ArrowUpRight className="ml-auto size-3.5 shrink-0 opacity-60" aria-hidden="true" />
             </Link>
           ))}
         </div>
