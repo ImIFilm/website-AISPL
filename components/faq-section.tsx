@@ -65,8 +65,8 @@ const buildFaqPL = (prefix: string) => [
     question: "Od jakich materiałów polecacie zacząć naukę AI Safety?",
     answer: (
       <>
-        Na start polecamy nasz dedykowany{" "}
-        <a href={`${prefix}/blog/intro-ai-safety`} className="text-foreground underline underline-offset-2 decoration-foreground/30 transition-[text-decoration-color] hover:decoration-foreground/70">artykuł wprowadzający do AI Safety</a>. Na YouTube dostępne są również świetnie materiały wideo:{" "}
+        Na początek polecamy obejrzeć{" "}
+        <a href={`${prefix}/#ai-safety-video`} className="text-foreground underline underline-offset-2 decoration-foreground/30 transition-[text-decoration-color] hover:decoration-foreground/70">nasz film wprowadzający do AI Safety po polsku</a>, wyprodukowany przez AI Safety Poland. Znajdziesz go na stronie głównej. Na YouTube dostępne są również świetne materiały wideo:{" "}
         <a href="https://www.youtube.com/RationalAnimations" className="text-foreground underline underline-offset-2 decoration-foreground/30 transition-[text-decoration-color] hover:decoration-foreground/70">Rational Animations</a>,{" "}
         <a href="https://www.youtube.com/@RobertMilesAI" className="text-foreground underline underline-offset-2 decoration-foreground/30 transition-[text-decoration-color] hover:decoration-foreground/70">Robert Miles AI Safety</a> oraz{" "}
         <a href="https://www.youtube.com/@AI_In_Context" className="text-foreground underline underline-offset-2 decoration-foreground/30 transition-[text-decoration-color] hover:decoration-foreground/70">AI in Context</a>. Polecamy również{" "}
@@ -134,8 +134,8 @@ const buildFaqEN = (prefix: string) => [
     question: "Which materials do you recommend to start learning about AI Safety?",
     answer: (
       <>
-        To start, we recommend our dedicated{" "}
-        <a href={`${prefix}/blog/intro-ai-safety`} className="text-foreground underline underline-offset-2 decoration-foreground/30 transition-[text-decoration-color] hover:decoration-foreground/70">introductory article on AI Safety</a>. On YouTube, there are also excellent video materials:{" "}
+        To get started, we recommend watching{" "}
+        <a href={`${prefix}/#ai-safety-video`} className="text-foreground underline underline-offset-2 decoration-foreground/30 transition-[text-decoration-color] hover:decoration-foreground/70">our introductory film about AI Safety in Polish</a>, produced by AI Safety Poland. You can find it on our homepage. On YouTube, there are also excellent video resources:{" "}
         <a href="https://www.youtube.com/RationalAnimations" className="text-foreground underline underline-offset-2 decoration-foreground/30 transition-[text-decoration-color] hover:decoration-foreground/70">Rational Animations</a>,{" "}
         <a href="https://www.youtube.com/@RobertMilesAI" className="text-foreground underline underline-offset-2 decoration-foreground/30 transition-[text-decoration-color] hover:decoration-foreground/70">Robert Miles AI Safety</a>, and{" "}
         <a href="https://www.youtube.com/@AI_In_Context" className="text-foreground underline underline-offset-2 decoration-foreground/30 transition-[text-decoration-color] hover:decoration-foreground/70">AI in Context</a>. We also recommend{" "}
