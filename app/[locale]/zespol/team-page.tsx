@@ -132,20 +132,14 @@ const teamMembers = [
   },
 ]
 
-const strategicAdvisors = [
+const strategicAdvisors = []
+
+const advisors = [
   {
     name: "Chris Szulc",
     descriptor: "strategy",
     linkedin: "https://www.linkedin.com/in/chris-szulc-ea/",
   },
-  {
-    name: "Tzu Kit Chan",
-    descriptor: "operations",
-    linkedin: "https://www.linkedin.com/in/tzukit",
-  },
-]
-
-const advisors = [
   {
     name: "Jan Betley",
     descriptor: "technical ai safety",
@@ -294,6 +288,8 @@ export function TeamPage() {
           </div>
         </section>
 
+        {strategicAdvisors.length > 0 && (
+        <>
         {/* Strategic advisors */}
         <section className="bg-secondary py-16 md:py-24">
           <div className="mx-auto max-w-5xl px-6">
@@ -355,6 +351,8 @@ export function TeamPage() {
             </motion.div>
           </div>
         </section>
+        </>
+        )}
 
         {/* Other team members */}
         <section className="bg-background py-16 md:py-24">
