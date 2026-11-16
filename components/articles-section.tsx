@@ -46,7 +46,7 @@ export function ArticlesSection() {
   const { lang } = useLanguage()
 
   return (
-    <section className="bg-background py-20" style={{ paddingBottom: "20px" }}>
+    <section id="ai-safety-video" className="bg-background py-20" style={{ paddingBottom: "20px" }}>
       <div className="mx-auto max-w-4xl px-6">
         <motion.p
           initial={{ opacity: 0, y: 15 }}
