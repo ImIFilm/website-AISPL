@@ -24,6 +24,27 @@ export type BlogPost = {
  */
   export const posts: BlogPost[] = [
   {
+    slug: "emergent-misalignment-agh-2026",
+    date: "2026-11-16",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/kurs%20AI%20%281%29-T8hJTrjc7ZPa2dssIse5YjhnNqcWCa.jpg",
+    imageAlt: "Mężczyzna w okularach na tle tablicy z notatkami z wykładu",
+    imageAltEN: "A man wearing glasses in front of a chalkboard with lecture notes",
+    displayDate: "16 listopada 2026",
+    displayDateEN: "November 16, 2026",
+    title: "Emergent Misalignment na zajęciach z AI na AGH",
+    titleEN: "Emergent Misalignment in an AI course at AGH",
+    paragraphs: [
+      "W ramach przedmiotu „Zastosowania sztucznej inteligencji” na kierunku Informatyka i Systemy Inteligentne na Wydziale EAIiB AGH studenci wzięli udział w nowym mini-cyklu wykładów i laboratoriów poświęconych AI Safety. Tematem przewodnim był emergent misalignment: model dostrojony na wąskim zadaniu, np. udzielaniu złych porad medycznych, zaczyna zachowywać się szkodliwie także w zupełnie innych tematach. Cykl przygotował i poprowadził Grzegorz Gawron. Wprowadzenie ożywił najnowszy film dokumentalny Piotra Kędziory ([youtube.com/watch?v=yOrLpUOrVG0](https://youtube.com/watch?v=yOrLpUOrVG0)), w którym Jan Betley, jeden z autorów oryginalnej pracy, omawia zjawisko emergent misalignment.",
+      "Laboratoria oparto na programie ARENA (rozdział 4.1 „Emergent Misalignment”). Notatnik kursu zmodyfikowano tak, by działał na darmowym planie Kaggle z dwiema kartami T4. Dzięki kwantyzacji 4-bitowej i wykorzystaniu obu GPU okazał się stabilny i wystarczająco wydajny, więc każdy student może eksperymentować we własnym czasie w ramach 30 darmowych godzin GPU tygodniowo.",
+      "Zajęcia wzbogaciło interaktywne ćwiczenie z tabelą wyników na żywo. Studenci w zespołach po 4–6 osób rywalizowali w serii wyzwań, np. kto wydobędzie z modelu najbardziej niedopasowaną odpowiedź albo kto przemyci szkodliwą poradę niezauważoną przez sędziego LLM. Dziękujemy wszystkim uczestnikom! Materiały ARENA znajdziesz tutaj: [github.com/ARENA-education/ARENA_materials](https://github.com/ARENA-education/ARENA_materials).",
+    ],
+    paragraphsEN: [
+      "As part of the “Applications of Artificial Intelligence” course in the Computer Science and Intelligent Systems programme at the Faculty of EAIiB, AGH, students took part in a new mini-series of lectures and labs on AI Safety. It focused on emergent misalignment: a model fine-tuned on a narrow task, such as giving bad medical advice, starts behaving harmfully on unrelated topics too. The series was prepared and delivered by Grzegorz Gawron. The introduction was livened up with Piotr Kędziora’s latest documentary ([youtube.com/watch?v=yOrLpUOrVG0](https://youtube.com/watch?v=yOrLpUOrVG0)), which features an overview of emergent misalignment by Jan Betley, one of the authors of the original paper.",
+      "The labs were based on the ARENA curriculum (chapter 4.1, “Emergent Misalignment”). The course notebook was modified to run on Kaggle’s free tier with two T4 GPUs. With 4-bit quantisation and both GPUs in use, it proved stable and fast enough, so every student can experiment in their own time within Kaggle’s 30 free GPU hours a week.",
+      "The classes also included an interactive exercise with a live leaderboard. Students in teams of 4–6 competed in a series of challenges, for example getting the most misaligned answer out of the model or slipping harmful advice past the LLM judge. Thanks to everyone who took part! The ARENA materials are available here: [github.com/ARENA-education/ARENA_materials](https://github.com/ARENA-education/ARENA_materials).",
+    ],
+  },
+  {
   slug: "warsaw-ai-safety-day-2026-podsumowanie",
   date: "2026-10-25",
   image: "/images/blog/warsaw-ai-safety-day-2026-recap.jpg",
