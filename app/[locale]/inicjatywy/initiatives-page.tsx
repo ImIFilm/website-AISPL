@@ -38,7 +38,7 @@ const t = {
     ],
     careerApply: "Aplikuj na konsultacje",
     slackTitle: "Społeczność online - Slack",
-    slackDesc1: "Nasz Slack to główne miejsce wymiany wiedzy i doświadczeń dla polskiej społeczności zainteresowanej bezpieczeństwem AI. Obecnie liczymy ponad 200 członków - od profesjonalistów pracujących w branży AI, przez badaczy akademickich, po studentów i entuzjastów dopiero rozpoczynających swoja przygodę z tematem.",
+    slackDesc1: "Nasz Slack to główne miejsce wymiany wiedzy i doświadczeń dla polskiej społeczności zainteresowanej bezpieczeństwem AI. Obecnie liczymy ponad 400 członków - od profesjonalistów pracujących w branży AI, przez badaczy akademickich, po studentów i entuzjastów dopiero rozpoczynających swoja przygodę z tematem.",
     slackDesc2: "Prowadzimy tu wiele dedykowanych kanałów tematycznych: zagadnienia techniczne, polityka publiczna ds. AI, a nawet dyskusje o możliwej świadomości systemów AI. Dzielimy się najnowszymi publikacjami i newsami ze świata AI safety, a także dajemy znać o nadchodzących wydarzeniach i możliwościach rozwoju kariery. Nie brakuje też luźniejszych rozmów i networkingu!",
     slackMembers: "członków społeczności",
     slackJoin: "Dolacz do Slacka",
@@ -74,7 +74,7 @@ const t = {
     ],
     careerApply: "Apply for consultation",
     slackTitle: "Online community - Slack",
-    slackDesc1: "Our Slack is the main place for knowledge and experience exchange for the Polish community interested in AI safety. We currently have over 200 members - from professionals working in the AI industry, academic researchers, to students and enthusiasts just starting their journey with this topic.",
+    slackDesc1: "Our Slack is the main place for knowledge and experience exchange for the Polish community interested in AI safety. We currently have over 400 members - from professionals working in the AI industry, academic researchers, to students and enthusiasts just starting their journey with this topic.",
     slackDesc2: "We run many dedicated thematic channels: technical issues, AI public policy, and even discussions about the possible consciousness of AI systems. We share the latest publications and news from the AI safety world, and we also let you know about upcoming events and career development opportunities. There is also plenty of casual conversation and networking!",
     slackMembers: "community members",
     slackJoin: "Join our Slack",
@@ -258,7 +258,7 @@ export function InitiativesPage() {
                 <div className="mt-8 rounded-xl bg-emerald/10 p-6">
                   <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
                     <div>
-                      <p className="text-2xl font-bold text-foreground">200+</p>
+                      <p className="text-2xl font-bold text-foreground">400+</p>
                       <p className="text-sm text-muted-foreground">{text.slackMembers}</p>
                     </div>
                     <Button asChild className="bg-emerald hover:bg-emerald-dark text-white">
